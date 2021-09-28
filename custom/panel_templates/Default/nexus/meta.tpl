@@ -100,7 +100,7 @@
 								style="width: 52px;height: 52px;border-radius: 3.14vh;" />
 							<h2 class="name">Nexus Template</h2>
 							<span class="bot-tag">BOT</span>
-							<p class="date">25/1/2021</p>
+							<p class="date">27/09/2021</p>
 						</div>
 						<div class="content-box">
 							<p class="content">This is a preview!</p>
@@ -111,9 +111,7 @@
 									{if isset($OPAL_META_HEADING)}{$OPAL_META_HEADING}{else}ExamplePvP{/if}</p>
 								<p class="description">
 									{if isset($OPAL_META_HEADING)}{$OPAL_META_DESCRIPTION}
-									{else}Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Integer in pulvinar velit, eget vestibulum metus. Vestibulum
-									tincidunt sagittis sapien id efficitur.{/if}
+									{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}
 								</p>
 							</div>
 						</div>

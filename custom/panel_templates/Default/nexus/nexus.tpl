@@ -80,12 +80,6 @@
 									{include file="nexus/widgets.tpl"}
 								</div>
 
-								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'widgetbot'}show active{/if}" id="v-pills-widgetbot"
-									role="tabpanel" aria-labelledby="v-pills-widgetbot-tab">
-									{include file="nexus/widgetbot.tpl"}
-								</div>
-
-
 
 								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'meta'}show active{/if}" id="v-pills-meta"
 									role="tabpanel" aria-labelledby="v-pills-meta-tab">

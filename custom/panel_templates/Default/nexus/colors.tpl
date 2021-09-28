@@ -9,11 +9,11 @@
 
 				<div class="form-group">
 
-					<label for="template_darkmode">Enable Darkmode?</label>
+					<label for="template_darkmode">{$DARKMODE_LABEL}</label>
 					<div class="input-group">
 						<select id="template_darkmode" class="form-control mr-sm-2" name="template_darkmode">
-							<option {if $TEMPLATE_DARKMODE == '1'}selected {/if}value="1">True</option>
-							<option {if $TEMPLATE_DARKMODE == '0'}selected {/if}value="0">False</option>
+							<option {if $TEMPLATE_DARKMODE == '1'}selected {/if}value="1">{$TRUE_LABEL}</option>
+							<option {if $TEMPLATE_DARKMODE == '0'}selected {/if}value="0">{$FALSE_LABEL}</option>
 						</select>
 						</div>
 						</div>
@@ -43,15 +43,8 @@
 				<input type="color" class="form-control" id="footer_color" name="footer_color" value="{$FOOTER_COLOR}">
 
 			</div>
+			
 
-
-
-			<div class="form-group">
-
-				<label for="content_color">{$CONTENT_BACKGROUND_COLOR_LABEL}</label>
-				<input type="color" class="form-control" id="content_color" name="content_color" value="{$CONTENT_COLOR}">
-
-			</div>
 			
 			<div class="form-group">
 

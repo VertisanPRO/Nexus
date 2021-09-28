@@ -35,23 +35,9 @@
 
 					<label for="template_about">{$ABOUT_LABEL}</label>
 					<input type="text" class="form-control" id="template_about" name="template_about"
-						placeholder="write something about your website" value="{$TEMPLATE_ABOUT}">
+						placeholder="{$ABOUT_PLACEHOLDER_LABEL}" value="{$TEMPLATE_ABOUT}">
 
 				</div>
-
-
-
-
-
-				<div class="form-group">
-
-					<label for="donate_email">{$DONATE_EMAIL_LABEL}</label>
-					<input type="text" class="form-control" id="donate_email" name="donate_email" value="{$DONATE_EMAIL}">
-				</div>
-
-
-
-
 
 
 				<div class="form-group">

@@ -31,12 +31,6 @@
 				href="#v-pills-widgets" role="tab" aria-controls="v-pills-widgets" aria-selected="false"><i
 					class="fas fa-th-large"></i> Widgets</a>
 
-
-			<a class="nav-link {if $TPL_NAME_SESSION == 'widgetbot'}active{/if}" id="v-pills-widgetbot-tab" data-toggle="pill"
-				href="#v-pills-widgetbot" role="tab" aria-controls="v-pills-widgetbot" aria-selected="false"><i
-					class="fas fa-robot"></i> WidgetsBot</a>
-
-
 			<a class="nav-link {if $TPL_NAME_SESSION == 'meta'}active{/if}" id="v-pills-meta-tab" data-toggle="pill"
 				href="#v-pills-meta" role="tab" aria-controls="v-pills-meta" aria-selected="false"><i class="fas fa-link"></i>
 				Embed</a>
