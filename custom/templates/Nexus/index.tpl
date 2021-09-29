@@ -30,15 +30,6 @@
 	<div class="ui centered row">
 		{if count($WIDGETS_LEFT)}
 			<div class="ui six wide tablet four wide computer column">
-				{if $INDEX_BUTTON_LOCATION == 'left'}
-					<button
-						onclick="window.location.href='{if isset($INDEX_BUTTON_URL)}{$INDEX_BUTTON_URL}{else}/index.php?route=/forum/new/&fid=4{/if}'"
-						class="ui labeled icon button"
-						style="background: {if isset($TEMPLATE_COLOR)} {$TEMPLATE_COLOR}{else} #7e31e3{/if}">
-						{if isset($INDEX_BUTTON_ICON)} {$INDEX_BUTTON_ICON}{else}<i class="rocket icon"></i>{/if}
-						{if isset($INDEX_BUTTON_TEXT)} {$INDEX_BUTTON_TEXT}{else}NEW POST{/if}
-					</button>
-				{/if}
 				{foreach from=$WIDGETS_LEFT item=widget}
 					{$widget}
 				{/foreach}
@@ -78,15 +69,6 @@
     </div>
 		{if count($WIDGETS_RIGHT)}
 			<div class="ui six wide tablet four wide computer column">
-				{if $INDEX_BUTTON_LOCATION == 'right'}
-					<button
-						onclick="window.location.href='{if isset($INDEX_BUTTON_URL)}{$INDEX_BUTTON_URL}{else}/index.php?route=/forum/new/&fid=4{/if}'"
-						class="ui labeled icon button"
-						style="background:{if isset($TEMPLATE_COLOR)} {$TEMPLATE_COLOR}{else} #7e31e3{/if}">
-						{if isset($INDEX_BUTTON_ICON)} {$INDEX_BUTTON_ICON}{else}<i class="rocket icon"></i>{/if}
-						{if isset($INDEX_BUTTON_TEXT)} {$INDEX_BUTTON_TEXT}{else}NEW POST{/if}
-					</button>
-				{/if}
 				{foreach from=$WIDGETS_RIGHT item=widget}
 					{$widget}
 				{/foreach}
