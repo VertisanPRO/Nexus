@@ -29,16 +29,6 @@
 
 			<div class="form-group">
 
-				<label for="background_color">{$BACKGROUND_COLOR_LABEL}</label>
-				<input type="color" class="form-control" id="background_color" name="background_color"
-					value="{$BACKGROUND_COLOR}">
-
-			</div>
-
-
-
-			<div class="form-group">
-
 				<label for="footer_color">{$FOOTER_BACKGROUND_COLOR_LABEL}</label>
 				<input type="color" class="form-control" id="footer_color" name="footer_color" value="{$FOOTER_COLOR}">
 

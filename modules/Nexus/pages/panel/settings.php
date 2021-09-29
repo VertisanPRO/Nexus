@@ -91,7 +91,6 @@ $smarty->assign(array(
 	'TITLE' => $NexusLanguage->get('general', 'title'),
 	'FAVICON_LABEL' => $NexusLanguage->get('general', 'favicon_label'),
 	'TEMPLATE_COLOR_LABEL' => $NexusLanguage->get('general', 'template_color_label'),
-	'BACKGROUND_COLOR_LABEL' => $NexusLanguage->get('general', 'background_color_label'),
 	'FOOTER_BACKGROUND_COLOR_LABEL' => $NexusLanguage->get('general', 'footer_background_color_label'),
 	'NAV_HEIGHT_LABEL' => $NexusLanguage->get('general', 'nav_height_label'),
 	'INDEX_BUTTON_ICON_LABEL' => $NexusLanguage->get('general', 'index_button_icon_label'),
@@ -103,6 +102,8 @@ $smarty->assign(array(
 	'TRUE_LABEL' => $NexusLanguage->get('general', 'true_label'),
 	'FALSE_LABEL' => $NexusLanguage->get('general', 'false_label'),
 	'DARKMODE_LABEL' => $NexusLanguage->get('general', 'darkmode_label'),
+	'ARC_URL_LABEL' => $NexusLanguage->get('general', 'arc_url_label'),
+	'ARC_LABEL' => $NexusLanguage->get('general', 'arc_label'),
 ));
 
 $settings_data = $queries->getWhere('nexus_settings', array('id', '<>', 0));

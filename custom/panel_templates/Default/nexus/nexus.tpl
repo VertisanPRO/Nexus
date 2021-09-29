@@ -63,16 +63,14 @@
 									{include file="nexus/navbar.tpl"}
 								</div>
 
-
-								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'buttons'}show active{/if}" id="v-pills-buttons"
-									role="tabpanel" aria-labelledby="v-pills-buttons-tab">
-									{include file="nexus/buttons.tpl"}
-								</div>
-
-
 								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'advanced'}show active{/if}" id="v-pills-advanced"
 									role="tabpanel" aria-labelledby="v-pills-advanced-tab">
 									{include file="nexus/advanced.tpl"}
+								</div>
+
+								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'arc'}show active{/if}" id="v-pills-arc"
+									role="tabpanel" aria-labelledby="v-pills-arc-tab">
+									{include file="nexus/arc.tpl"}
 								</div>
 
 								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'widgets'}show active{/if}" id="v-pills-widgets"

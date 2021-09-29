@@ -40,14 +40,13 @@
 							<option {if $NAV_STYLE == '1'}selected {/if}value="1">Dynamic</option>
 							<option {if $NAV_STYLE == '0'}selected {/if}value="0">Elegant</option>
 						</select>
-
-						<div class="input-group-append">
-							<input type="hidden" name="token" value="{$TOKEN}">
-							<button type="submit" class="btn btn-primary"><i class="fas fa-save"></i></button>
-						</div>
 					</div>
 				</div>
-
+					<div class="form-group">
+						<input type="hidden" name="token" value="{$TOKEN}">
+						<button style="width: 100%; margin-top:20px;" type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
+							{$SUBMIT}</button>
+					</div>
 			</form>
 
 		</div>

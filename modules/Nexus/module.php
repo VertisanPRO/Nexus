@@ -28,7 +28,6 @@ class Nexus extends Module
 
 		// StaffCP
 		$pages->add($this->module_name, '/panel/nexus', 'pages/panel/settings.php');
-		$pages->add($this->module_name, '/panel/nexus/test', 'pages/panel/settings.php');
 	}
 
 	public function onInstall()

@@ -23,9 +23,8 @@ $language = array(
 		
 	// Colors
 		'darkmode_label' => 'Включить Чёрную тему?',
-		'template_color_label' => 'Primary Colour', // idk
-		'background_color_label' => 'Фон',
-		'footer_background_color_label' => 'Footer Background',
+		'template_color_label' => 'Основной Цвет',
+		'footer_background_color_label' => 'Фон Футера',
 	
 	// Navbar
 	
@@ -38,6 +37,10 @@ $language = array(
 	
 	// Advanced
 		'nav_height_label' => 'Высота панели',
+
+	// Arc
+		'arc_label' => 'Включить Arc?',
+		'arc_url_label' => 'Ссылка на Виджет',
 	
 	// Widgets
 		// Donation Widget

@@ -23,7 +23,6 @@ $language = array(
 	// Colors
 		'darkmode_label' => 'Enable Darkmode?',
 		'template_color_label' => 'Primary Colour',
-		'background_color_label' => 'Background',
 		'footer_background_color_label' => 'Footer Background',
 
 	// Navbar
@@ -38,6 +37,10 @@ $language = array(
 	// Advanced
 		'nav_height_label' => 'Nav Height',
 
+	// Arc
+	'arc_label' => 'Enable Arc',
+	'arc_url_label' => 'Widget URL',
+	
 	// Widgets
 		// Donation Widget
 			'donate_email_label' => 'PayPal Email',

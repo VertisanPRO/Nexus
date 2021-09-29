@@ -15,6 +15,7 @@
 		}
 	</style>
 
+
 	<div class="ui blue inverted vertical footer segment" style="padding:2rem;">
 		<div class="ui center aligned container">
 			<div class="ui stackable inverted divided grid">
@@ -29,7 +30,7 @@
 					</div>
 				</div>
 				<div class="seven wide column">
-					<h4>{$ABOUT_LABEL}</h4>
+					<h4>About</h4>
 					<p>
 						{if isset($TEMPLATE_ABOUT)} {$TEMPLATE_ABOUT}{else}We are an online platform to help users around the world connect through NamelessMC powered forums. {/if}
 					</p>
@@ -43,23 +44,14 @@
 					</div>
 				</div>
 			</div>
-
-<style id=color_in_footer>
-    .ui.inverted.blue.segment {
-        background_color: #!important;
-        color: #fff !important;
-    }
+	</div>
+	
+<style>
+	.ui.inverted.blue.segment {
+		background-color: {if ("{$FOOTER_COLOR}" === "#000000")} {$TEMPLATE_COLOR}{else} {$FOOTER_COLOR}{/if}!important;  
+		color: #fff !important;
+	}
 </style>
-
-<script>
-    var element = document.getElementById("color_in_footer");
-    if ("{$FOOTER_COLOR}" == "#000000") {
-        element.style.background_color = "{$TEMPLATE_COLOR}";
-    }
-    else {
-        element.style.background_color = "{$FOOTER_COLOR}";
-    }
-</script>
 
 
 {if isset($GLOBAL_WARNING_TITLE)}
@@ -86,5 +78,13 @@
 
 {if !isset($EXCLUDE_END_BODY)}
   </body>
+
   </html>
+{/if}
+
+{if $ARC != 'true'}
+
+{else}
+<script async src="{$ARC_ID}"></script>
+</script>
 {/if}

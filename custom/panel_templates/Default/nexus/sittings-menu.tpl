@@ -19,13 +19,13 @@
 				data-toggle="pill" href="#v-pills-connections" role="tab" aria-controls="v-pills-connections"
 				aria-selected="false"><i class="fas fa-signal"></i> Connections</a>
 
-			<a class="nav-link {if $TPL_NAME_SESSION == 'buttons'}active{/if}" id="v-pills-buttons-tab" data-toggle="pill"
-				href="#v-pills-buttons" role="tab" aria-controls="v-pills-buttons" aria-selected="false"><i
-					class="fas fa-mouse-pointer"></i> Buttons</a>
-
 			<a class="nav-link {if $TPL_NAME_SESSION == 'advanced'}active{/if}" id="v-pills-advanced-tab" data-toggle="pill"
 				href="#v-pills-advanced" role="tab" aria-controls="v-pills-advanced" aria-selected="false"><i
 					class="fas fa-cogs"></i> Advanced</a>
+
+			<a class="nav-link {if $TPL_NAME_SESSION == 'arc'}active{/if}" id="v-pills-arc-tab" data-toggle="pill"
+				href="#v-pills-arc" role="tab" aria-controls="v-pills-arc" aria-selected="false"><i
+					class="fas fa-dot-circle"></i> Arc</a>
 
 			<a class="nav-link {if $TPL_NAME_SESSION == 'widgets'}active{/if}" id="v-pills-widgets-tab" data-toggle="pill"
 				href="#v-pills-widgets" role="tab" aria-controls="v-pills-widgets" aria-selected="false"><i
