@@ -14,6 +14,19 @@ $language = array(
 		'title' => 'Nexus',	
 		'version' => 'v1.4.0',
 
+	// Navigation
+		'navigation' => 'Navigation',
+		'options_page' => 'Options',
+		'colors_page' => 'Colors',
+		'navbar_page' => 'Navbar',
+		'connections_page' => 'Connections',
+		'advanced_page' => 'Advanced',
+		'arc_page_page' => 'Arc',
+		'widgets_page' => 'Widgets',
+		'embed_page' => 'Embed',
+		'updates_page' => 'Updates',
+		'support_page' => 'Support',
+
 	// Options
 		'favicon_label' => 'Favicon',
 		'about_label' => 'About',
@@ -23,23 +36,19 @@ $language = array(
 	// Colors
 		'darkmode_label' => 'Enable Darkmode?',
 		'template_color_label' => 'Primary Colour',
-		'footer_background_color_label' => 'Footer Background',
+		'footer_color_label' => 'Footer Background (#000000 makes it Primary Colour)',
+		'border_color_label' => 'Border Outline Color',
 
 	// Navbar
 
 	// Connections
 
-	// Buttons
-		'index_button_location_label' => 'Index Button Location',
-		'index_button_icon_label' => 'Index Icon',
-		'index_button_text_label' => 'Index Button',
-
 	// Advanced
 		'nav_height_label' => 'Nav Height',
 
 	// Arc
-	'arc_label' => 'Enable Arc',
-	'arc_url_label' => 'Widget URL',
+		'arc_label' => 'Enable Arc?',
+		'arc_url_label' => 'Widget URL',
 	
 	// Widgets
 		// Donation Widget
@@ -52,10 +61,9 @@ $language = array(
 	// Updates
 
 	// Other
-		// Exists
-			'save_successfully' => 'Saved successfully',
-			'save_errors' => 'Save error',
-			'true_label' => 'True',	
-			'false_label' => 'False',
-			'group_permision' => 'Module permission',
+		'save_successfully' => 'Saved successfully',
+		'save_errors' => 'Save error',
+		'true_label' => 'True',	
+		'false_label' => 'False',
+		'group_permision' => 'Module permission',
 );

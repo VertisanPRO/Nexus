@@ -87,4 +87,4 @@
 {else}
 <script async src="{$ARC_ID}"></script>
 </script>
-{/if}
+{/if}	

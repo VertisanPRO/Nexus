@@ -1,6 +1,6 @@
 	<!-- Widgets Content -->
 	<div class="card  mb-3">
-		<h3 class="card-header  mb-3 text-center">Widgets</h3>
+		<h3 class="card-header  mb-3 text-center">{$WIDGETS_PAGE}</h3>
 		<div class="card-body">
 			<!-- Donation Widget Content -->
 			<h4 class="text-center">Donation Widget</h4>

@@ -1,6 +1,6 @@
 	<!-- Options Content -->
 	<div class="card  mb-3">
-		<h3 class="card-header  mb-3 text-center">Options</h3>
+		<h3 class="card-header  mb-3 text-center">{$OPTIONS_PAGE}</h3>
 		<div class="card-body">
 
 			<form action="" method="post" enctype="multipart/form-data">

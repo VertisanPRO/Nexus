@@ -1,6 +1,6 @@
 	<!-- Arc Content -->
 	<div class="card  mb-3">
-		<h3 class="card-header  mb-3 text-center">Arc</h3>
+		<h3 class="card-header  mb-3 text-center">{$ARC_PAGE}</h3>
 		<div class="card-body">
 
 			<form action="" method="POST">

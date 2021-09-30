@@ -1,6 +1,6 @@
 <!-- Connections Content -->
 <div class="card  mb-3">
-	<h3 class="card-header  mb-3 text-center">Connections</h3>
+	<h3 class="card-header  mb-3 text-center">{$CONNECTIONS_PAGE}</h3>
 	<div class="card-body">
 
 		<form action="" method="POST">

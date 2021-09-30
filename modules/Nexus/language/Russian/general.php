@@ -14,7 +14,20 @@ $language = array(
 	// Nexus About
 		'title' => 'Nexus',	
 		'version' => 'v1.4.0',
-	
+
+	// Navigation
+	'navigation' => 'Навигация',
+	'options_page' => 'Опции',
+	'colors_page' => 'Цвета',
+	'navbar_page' => 'Панель Навигации',
+	'connections_page' => 'Соединения',
+	'advanced_page' => 'Для Продвинутых',
+	'arc_page' => 'Arc',
+	'widgets_page' => 'Виджеты',
+	'embed_page' => 'Эмбед',
+	'updates_page' => 'Обновления',
+	'support_page' => 'Помощь',
+
 	// Options
 		'favicon_label' => 'Иконка',
 		'about_label' => 'Об',
@@ -24,16 +37,12 @@ $language = array(
 	// Colors
 		'darkmode_label' => 'Включить Чёрную тему?',
 		'template_color_label' => 'Основной Цвет',
-		'footer_background_color_label' => 'Фон Футера',
-	
+		'footer_color_label' => 'Фон Футера (#000000 делает Основным Цветом)',
+		'border_color_label' => 'Цвет Границы Окна',
+
 	// Navbar
 	
 	// Connections
-	
-	// Buttons
-		'index_button_location_label' => 'Index Button Location', // dont
-		'index_button_icon_label' => 'Index Icon', // dont
-		'index_button_text_label' => 'Index Button', // dont
 	
 	// Advanced
 		'nav_height_label' => 'Высота панели',

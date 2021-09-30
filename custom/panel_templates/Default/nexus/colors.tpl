@@ -1,6 +1,6 @@
 <!-- Colors Content -->
 <div class="card  mb-3">
-	<h3 class="card-header  mb-3 text-center">Colors</h3>
+	<h3 class="card-header  mb-3 text-center">{$COLORS_PAGE}</h3>
 	<div class="card-body">
 
 		<form action="" method="POST">
@@ -29,7 +29,7 @@
 
 			<div class="form-group">
 
-				<label for="footer_color">{$FOOTER_BACKGROUND_COLOR_LABEL}</label>
+				<label for="footer_color">{$FOOTER_COLOR_LABEL}</label>
 				<input type="color" class="form-control" id="footer_color" name="footer_color" value="{$FOOTER_COLOR}">
 
 			</div>
@@ -38,7 +38,7 @@
 			
 			<div class="form-group">
 
-				<label for="border_color">Border-outline-color</label>
+				<label for="border_color">{$BORDER_COLOR_LABEL}</label>
 				<input type="color" class="form-control" id="border_color" name="border_color" value="{$BORDER_COLOR}">
 
 			</div>

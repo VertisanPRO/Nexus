@@ -79,31 +79,69 @@ require_once(ROOT_PATH . '/core/templates/backend_init.php');
 
 
 $smarty->assign(array(
-	'SUBMIT' => $language->get('general', 'submit'),
-	'YES' => $language->get('general', 'yes'),
-	'NO' => $language->get('general', 'no'),
-	'BACK' => $language->get('general', 'back'),
-	'BACK_LINK' => URL::build('/panel/nexus'),
-	'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
-	'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
-	'NAME' => $language->get('admin', 'name'),
-	'DESCRIPTION' => $language->get('admin', 'description'),
+	// NamelessMC 
+		'SUBMIT' => $language->get('general', 'submit'),
+		'YES' => $language->get('general', 'yes'),
+		'NO' => $language->get('general', 'no'),
+		'BACK' => $language->get('general', 'back'),
+		'BACK_LINK' => URL::build('/panel/nexus'),
+		'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
+		'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
+		'NAME' => $language->get('admin', 'name'),
+		'DESCRIPTION' => $language->get('admin', 'description'),
+
+	// Nexus About
 	'TITLE' => $NexusLanguage->get('general', 'title'),
+
+	// Navigation
+	'NAVIGATION' => $NexusLanguage->get('general', 'navigation'),
+	'OPTIONS_PAGE' => $NexusLanguage->get('general', 'options_page'),
+	'COLORS_PAGE' => $NexusLanguage->get('general', 'colors_page'),
+	'NAVBAR_PAGE' => $NexusLanguage->get('general', 'navbar_page'),
+	'CONNECTIONS_PAGE' => $NexusLanguage->get('general', 'connections_page'),
+	'ADVANCED_PAGE' => $NexusLanguage->get('general', 'advanced_page'),
+	'ARC_PAGE' => $NexusLanguage->get('general', 'arc_page'),
+	'WIDGETS_PAGE' => $NexusLanguage->get('general', 'widgets_page'),
+	'EMBED_PAGE' => $NexusLanguage->get('general', 'embed_page'),
+	'UPDATES_PAGE' => $NexusLanguage->get('general', 'updates_page'),
+	'SUPPORT_PAGE' => $NexusLanguage->get('general', 'support_page'),
+
+
+	// Options
 	'FAVICON_LABEL' => $NexusLanguage->get('general', 'favicon_label'),
-	'TEMPLATE_COLOR_LABEL' => $NexusLanguage->get('general', 'template_color_label'),
-	'FOOTER_BACKGROUND_COLOR_LABEL' => $NexusLanguage->get('general', 'footer_background_color_label'),
-	'NAV_HEIGHT_LABEL' => $NexusLanguage->get('general', 'nav_height_label'),
-	'INDEX_BUTTON_ICON_LABEL' => $NexusLanguage->get('general', 'index_button_icon_label'),
-	'INDEX_BUTTON_TEXT_LABEL' => $NexusLanguage->get('general', 'index_button_text_label'),
-	'DONATE_EMAIL_LABEL' => $NexusLanguage->get('general', 'donate_email_label'),
 	'ABOUT_LABEL' => $NexusLanguage->get('general', 'about_label'),
-	'INDEX_BUTTON_LOCATION_LABEL' => $NexusLanguage->get('general', 'index_button_location_label'),
 	'ABOUT_PLACEHOLDER_LABEL' => $NexusLanguage->get('general', 'about_placeholder_label'),
+
+	// Colors
+	'DARKMODE_LABEL' => $NexusLanguage->get('general', 'darkmode_label'),
+	'TEMPLATE_COLOR_LABEL' => $NexusLanguage->get('general', 'template_color_label'),
+	'FOOTER_COLOR_LABEL' => $NexusLanguage->get('general', 'footer_color_label'),
+	'BORDER_COLOR_LABEL' => $NexusLanguage->get('general', 'border_color_label'),
+
+	// Navbar
+
+	// Connections
+
+	// Advanced
+	'NAV_HEIGHT_LABEL' => $NexusLanguage->get('general', 'nav_height_label'),
+
+	// Arc
+	'ARC_LABEL' => $NexusLanguage->get('general', 'arc_label'),
+	'ARC_URL_LABEL' => $NexusLanguage->get('general', 'arc_url_label'),
+	
+	// Widgets
+		// Donation Widget
+		'DONATE_EMAIL_LABEL' => $NexusLanguage->get('general', 'donate_email_label'),
+	
+		// Message Widget
+	
+	// Embed
+	
+	// Updates
+
+	// Other
 	'TRUE_LABEL' => $NexusLanguage->get('general', 'true_label'),
 	'FALSE_LABEL' => $NexusLanguage->get('general', 'false_label'),
-	'DARKMODE_LABEL' => $NexusLanguage->get('general', 'darkmode_label'),
-	'ARC_URL_LABEL' => $NexusLanguage->get('general', 'arc_url_label'),
-	'ARC_LABEL' => $NexusLanguage->get('general', 'arc_label'),
 ));
 
 $settings_data = $queries->getWhere('nexus_settings', array('id', '<>', 0));

@@ -1,7 +1,7 @@
 	<!-- Updates Content -->
-	<div class="card">
+	<div class="card  mb-3">
+		<h3 class="card-header  mb-3 text-center">{$NAVBAR_PAGE}</h3>
 		<div class="card-body">
-			<h3 class="card-header  mb-3 text-center">Navbar</h3>
 
 
 			<form action="" method="POST">
