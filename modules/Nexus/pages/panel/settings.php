@@ -91,57 +91,102 @@ $smarty->assign(array(
 		'DESCRIPTION' => $language->get('admin', 'description'),
 
 	// Nexus About
-	'TITLE' => $NexusLanguage->get('general', 'title'),
+		'TITLE' => $NexusLanguage->get('general', 'title'),
 
 	// Navigation
-	'NAVIGATION' => $NexusLanguage->get('general', 'navigation'),
-	'OPTIONS_PAGE' => $NexusLanguage->get('general', 'options_page'),
-	'COLORS_PAGE' => $NexusLanguage->get('general', 'colors_page'),
-	'NAVBAR_PAGE' => $NexusLanguage->get('general', 'navbar_page'),
-	'CONNECTIONS_PAGE' => $NexusLanguage->get('general', 'connections_page'),
-	'ADVANCED_PAGE' => $NexusLanguage->get('general', 'advanced_page'),
-	'ARC_PAGE' => $NexusLanguage->get('general', 'arc_page'),
-	'WIDGETS_PAGE' => $NexusLanguage->get('general', 'widgets_page'),
-	'EMBED_PAGE' => $NexusLanguage->get('general', 'embed_page'),
-	'UPDATES_PAGE' => $NexusLanguage->get('general', 'updates_page'),
-	'SUPPORT_PAGE' => $NexusLanguage->get('general', 'support_page'),
+		'NAVIGATION' => $NexusLanguage->get('navigation', 'navigation'),
+		'OPTIONS_PAGE' => $NexusLanguage->get('navigation', 'options_page'),
+		'COLORS_PAGE' => $NexusLanguage->get('navigation', 'colors_page'),
+		'NAVBAR_PAGE' => $NexusLanguage->get('navigation', 'navbar_page'),
+		'CONNECTIONS_PAGE' => $NexusLanguage->get('navigation', 'connections_page'),
+		'ADVANCED_PAGE' => $NexusLanguage->get('navigation', 'advanced_page'),
+		'ARC_PAGE' => $NexusLanguage->get('navigation', 'arc_page'),
+		'WIDGETS_PAGE' => $NexusLanguage->get('navigation', 'widgets_page'),
+		'EMBED_PAGE' => $NexusLanguage->get('navigation', 'embed_page'),
+		'UPDATES_PAGE' => $NexusLanguage->get('navigation', 'updates_page'),
+		'SUPPORT_PAGE' => $NexusLanguage->get('navigation', 'support_page'),
 
 
 	// Options
-	'FAVICON_LABEL' => $NexusLanguage->get('general', 'favicon_label'),
-	'ABOUT_LABEL' => $NexusLanguage->get('general', 'about_label'),
-	'ABOUT_PLACEHOLDER_LABEL' => $NexusLanguage->get('general', 'about_placeholder_label'),
+		'FAVICON_LABEL' => $NexusLanguage->get('options', 'favicon_label'),
+		'ABOUT_LABEL' => $NexusLanguage->get('options', 'about_label'),
+		'ABOUT_PLACEHOLDER_LABEL' => $NexusLanguage->get('options', 'about_placeholder_label'),
 
 	// Colors
-	'DARKMODE_LABEL' => $NexusLanguage->get('general', 'darkmode_label'),
-	'TEMPLATE_COLOR_LABEL' => $NexusLanguage->get('general', 'template_color_label'),
-	'FOOTER_COLOR_LABEL' => $NexusLanguage->get('general', 'footer_color_label'),
-	'BORDER_COLOR_LABEL' => $NexusLanguage->get('general', 'border_color_label'),
+		'DARKMODE_LABEL' => $NexusLanguage->get('colors', 'darkmode_label'),
+		'TEMPLATE_COLOR_LABEL' => $NexusLanguage->get('colors', 'template_color_label'),
+		'FOOTER_COLOR_LABEL' => $NexusLanguage->get('colors', 'footer_color_label'),
+		'BORDER_COLOR_LABEL' => $NexusLanguage->get('colors', 'border_color_label'),
 
 	// Navbar
+		'LOGO_LABEL' => $NexusLanguage->get('navbar', 'logo_label'),
+		'NAVIGATION_MENU_LABEL' => $NexusLanguage->get('navbar', 'navigation_menu_label'),
+		'NAVIGATION_STYLE_LABEL' => $NexusLanguage->get('navbar', 'navigation_style_label'),
+		'NAV_TRUE_LABEL' => $NexusLanguage->get('navbar', 'nav_true_label'),
+		'NAV_FALSE_LABEL' => $NexusLanguage->get('navbar', 'nav_false_label'),
+		'DYNAMIC_LABEL' => $NexusLanguage->get('navbar', 'dynamic_label'),
+		'ELEGANT_LABEL' => $NexusLanguage->get('navbar', 'elegant_label'),
 
 	// Connections
+		'SERVER_DOMAIN_LABEL' => $NexusLanguage->get('connections', 'server_domain_label'),
+		'IP_ADDRESS_LABEL' => $NexusLanguage->get('connections', 'ip_address_label'),
+		'SERVER_PORT_LABEL' => $NexusLanguage->get('connections', 'server_port_label'),
+		'STYLE_LABEL' => $NexusLanguage->get('connections', 'style_label'),
+		'SIMPLE_LABEL' => $NexusLanguage->get('connections', 'simple_label'),
+		'ADVANCED_LABEL' => $NexusLanguage->get('connections', 'advanced_label'),
+		'DISCORD_LABEL' => $NexusLanguage->get('connections', 'discord_label'),
 
 	// Advanced
-	'NAV_HEIGHT_LABEL' => $NexusLanguage->get('general', 'nav_height_label'),
+		'ADV_WARNING' => $NexusLanguage->get('advanced', 'adv_warning'),
+		'ADV_NAV_LABEL' => $NexusLanguage->get('advanced', 'adv_nav_label'),
+		'ADV_CONTAINER_LABEL' => $NexusLanguage->get('advanced', 'adv_container_label'),
+		'ADV_MARGIN_TOP_LABEL' => $NexusLanguage->get('advanced', 'adv_margin_top_label'),
+		'ADV_MARGIN_BOTTOM_LABEL' => $NexusLanguage->get('advanced', 'adv_margin_bottom_label'),
+		'ADV_NAV_SIZE_LABEL' => $NexusLanguage->get('advanced', 'adv_nav_size_label'),
+		'MINI_LABEL' => $NexusLanguage->get('advanced', 'mini_label'),
+		'TINY_LABEL' => $NexusLanguage->get('advanced', 'tiny_label'),
+		'SMALL_LABEL' => $NexusLanguage->get('advanced', 'small_label'),
+		'LARGE_LABEL' => $NexusLanguage->get('advanced', 'large_label'),
+		'HUGE_LABEL' => $NexusLanguage->get('advanced', 'huge_label'),
+		'MASSIVE_LABEL' => $NexusLanguage->get('advanced', 'massive_label'),
 
 	// Arc
-	'ARC_LABEL' => $NexusLanguage->get('general', 'arc_label'),
-	'ARC_URL_LABEL' => $NexusLanguage->get('general', 'arc_url_label'),
-	
+		'ARC_LABEL' => $NexusLanguage->get('arc', 'arc_label'),
+		'ARC_URL_LABEL' => $NexusLanguage->get('arc', 'arc_url_label'),
+		'ARC_INFO_1' => $NexusLanguage->get('arc', 'arc_info_1'),
+		'ARC_INFO_2' => $NexusLanguage->get('arc', 'arc_info_2'),
+		'ARC_INFO_3' => $NexusLanguage->get('arc', 'arc_info_3'),
+		'ARC_INFO_4' => $NexusLanguage->get('arc', 'arc_info_4'),
+		'ARC_INFO_5' => $NexusLanguage->get('arc', 'arc_info_5'),
+
 	// Widgets
 		// Donation Widget
-		'DONATE_EMAIL_LABEL' => $NexusLanguage->get('general', 'donate_email_label'),
-	
+			'DONATE_WIDGET_LABEL' => $NexusLanguage->get('widgets', 'donate_widget_label'),
+			'DONATE_EMAIL_LABEL' => $NexusLanguage->get('widgets', 'donate_email_label'),
+			'FIRST_AMOUNT_LABEL' => $NexusLanguage->get('widgets', 'first_amount_label'),
+			'SECOND_AMOUNT_LABEL' => $NexusLanguage->get('widgets', 'second_amount_label'),
+			'THIRD_AMOUNT_LABEL' => $NexusLanguage->get('widgets', 'third_amount_label'),
+
 		// Message Widget
-	
+			'MESSAGE_WIDGET_LABEL' => $NexusLanguage->get('widgets', 'message_widget_label'),
+			'MESSAGE_TITLE_LABEL' => $NexusLanguage->get('widgets', 'message_title_label'),
+			'MESSAGE_TEXT_LABEL' => $NexusLanguage->get('widgets', 'message_text_label'),
+			'MESSAGE_ICON_LABEL' => $NexusLanguage->get('widgets', 'message_icon_label'),
+
 	// Embed
-	
-	// Updates
+		'EMBED_HEAD_LABEL' => $NexusLanguage->get('embed', 'embed_head_label'),
+		'EMBED_DESC_LABEL' => $NexusLanguage->get('embed', 'embed_desc_label'),
+		'EMBED_COLOR_LABEL' => $NexusLanguage->get('embed', 'embed_color_label'),
+		'EMBED_IMAGE_LABEL' => $NexusLanguage->get('embed', 'embed_image_label'),
+		'EMBED_KEYWORDS_LABEL' => $NexusLanguage->get('embed', 'embed_keywords_label'),
+		'EMBED_INFO_LABEL' => $NexusLanguage->get('embed', 'embed_info_label'),
+		'EMBED_IMAGE_INFO_LABEL' => $NexusLanguage->get('embed', 'embed_image_info_label'),
+		'EMBED_KEYWORDS_INFO_LABEL' => $NexusLanguage->get('embed', 'embed_keywords_info_label'),
+		'EMBED_PREVIEW_LABEL' => $NexusLanguage->get('embed', 'embed_preview_label'),
 
 	// Other
-	'TRUE_LABEL' => $NexusLanguage->get('general', 'true_label'),
-	'FALSE_LABEL' => $NexusLanguage->get('general', 'false_label'),
+		'TRUE_LABEL' => $NexusLanguage->get('general', 'true_label'),
+		'FALSE_LABEL' => $NexusLanguage->get('general', 'false_label'),
 ));
 
 $settings_data = $queries->getWhere('nexus_settings', array('id', '<>', 0));

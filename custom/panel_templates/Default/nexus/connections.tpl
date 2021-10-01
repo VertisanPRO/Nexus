@@ -9,7 +9,7 @@
 
 			<div class="form-group">
 
-				<label for="opal_mcserver_name" style="margin-top:5px">Server Domain</label>
+				<label for="opal_mcserver_name" style="margin-top:5px">{$SERVER_DOMAIN_LABEL}</label>
 				<div class="input-group">
 					<input type="text-area" class="form-control" id="opal_mcserver_name" name="opal_mcserver_name"
 						value="{$OPAL_MCSERVER_NAME}" placeholder="MC.HYPIXEL.NET">
@@ -22,7 +22,7 @@
 
 			<div class="form-group">
 
-				<label for="opal_mcserver_ip" style="margin-top:10px">IP Address</label>
+				<label for="opal_mcserver_ip" style="margin-top:10px">{$IP_ADDRESS_LABEL}</label>
 				<div class="input-group">
 					<input type="text-area" class="form-control" id="opal_mcserver_ip" name="opal_mcserver_ip"
 						value="{$OPAL_MCSERVER_IP}" placeholder="MC.HYPIXEL.NET">
@@ -35,7 +35,7 @@
 
 			<div class="form-group">
 
-				<label for="opal_mcserver_port" style="margin-top:10px">Server Port</label>
+				<label for="opal_mcserver_port" style="margin-top:10px">{$SERVER_PORT_LABEL}</label>
 				<div class="input-group">
 					<input type="text-area" class="form-control" id="opal_mcserver_port" name="opal_mcserver_port"
 						value="{$OPAL_MCSERVER_PORT}" placeholder="25565">
@@ -49,10 +49,10 @@
 
 			<div class="form-group">
 
-				<label for="opal_mcserver_style" style="margin-top:10px;">Style</label>
+				<label for="opal_mcserver_style" style="margin-top:10px;">{$STYLE_LABEL}</label>
 				<select class="form-control mr-sm-2" id="opal_mcserver_style" name="opal_mcserver_style">
-					<option {if $OPAL_MCSERVER_STYLE == 'true'}selected {/if}value="true">Simple</option>
-					<option {if $OPAL_MCSERVER_STYLE == 'false'}selected {/if}value="false">Advanced</option>
+					<option {if $OPAL_MCSERVER_STYLE == 'true'}selected {/if}value="true">{$SIMPLE_LABEL}</option>
+					<option {if $OPAL_MCSERVER_STYLE == 'false'}selected {/if}value="false">{$ADVANCED_LABEL}</option>
 				</select>
 			</div>
 
@@ -60,13 +60,13 @@
 
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary" style="width:100%; margin-top: 10px; margin-bottom: 20px;"><i
-						class="fas fa-save"></i> Save</button>
+						class="fas fa-save"></i> {$SUBMIT}</button>
 			</div>
 
 
 		
 		<hr>
-		<h3 style="text-align:center;">Discord</h3>
+		<h3 style="text-align:center;">{$DISCORD_LABEL}</h3>
 
 				<div class="form-group">
 
@@ -77,7 +77,7 @@
 				
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary" style="width:100%; margin-top: 10px; margin-bottom: 20px;"><i
-						class="fas fa-save"></i> Save</button>
+						class="fas fa-save"></i> {$SUBMIT}</button>
 			</div>
 			
 		</form>

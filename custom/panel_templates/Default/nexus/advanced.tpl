@@ -3,8 +3,7 @@
 	<h3 class="card-header  mb-3 text-center">{$ADVANCED_PAGE}</h3>
 	<div class="card-body">
 
-		<p style="margin-bottom:10px;color:red;"><i class="fas fa-exclamation-triangle"></i> Only make changes if you know
-			what you are doing! <i class="fas fa-exclamation-triangle"></i></p>
+		<p style="margin-bottom:10px;color:red;"><i class="fas fa-exclamation-triangle"></i> {$ADV_WARNING} <i class="fas fa-exclamation-triangle"></i></p>
 		<hr>
 		<form action="" method="POST">
 
@@ -12,7 +11,7 @@
 
 			<div class="form-group">
 
-				<label for="nav_height">{$NAV_HEIGHT_LABEL}</label>
+				<label for="nav_height">{$ADV_NAV_LABEL}</label>
 				<div class="input-group">
 					<input type="number" class="form-control" id="nav_height" name="nav_height" value="{$NAV_HEIGHT}">
 				</div>
@@ -29,7 +28,7 @@
 				<label for="container_width">Container Width in %</label>
 				<div class="input-group">
 					<input type="number" class="form-control" id="container_width" name="container_width"
-						value="{$CONTAINER_WIDTH}">
+						value="{$ADV_CONTAINER_LABEL}">
 				</div>
 
 			</div>
@@ -41,7 +40,7 @@
 
 			<div class="form-group">
 
-				<label for="margin_top">Margin Top</label>
+				<label for="margin_top">{$ADV_MARGIN_TOP_LABEL}</label>
 				<div class="input-group">
 					<input type="number" class="form-control" id="margin_top" name="margin_top" value="{$MARGIN_TOP}">
 
@@ -55,7 +54,7 @@
 
 			<div class="form-group">
 
-				<label for="margin_bottom">Margin Bottom</label>
+				<label for="margin_bottom">{$ADV_MARGIN_BOTTOM_LABEL}</label>
 				<div class="input-group">
 					<input type="number" class="form-control" id="margin_bottom" name="margin_bottom" value="{$MARGIN_BOTTOM}">
 				</div>
@@ -66,16 +65,16 @@
 
 			<div class="form-group">
 
-				<label for="navbar_size">Navbar Size</label>
+				<label for="navbar_size">{$ADV_NAV_SIZE_LABEL}</label>
 				<div class="input-group">
 
 					<select class="form-control mr-sm-2" id="navbar_size" name="navbar_size">
-						<option {if $NAVBAR_SIZE == 'mini'}selected {/if}value="mini">Mini</option>
-						<option {if $NAVBAR_SIZE == 'tiny'}selected {/if}value="tiny">Tiny</option>
-						<option {if $NAVBAR_SIZE == 'small'}selected {/if}value="small">Small</option>
-						<option {if $NAVBAR_SIZE == 'large'}selected {/if}value="large">Large</option>
-						<option {if $NAVBAR_SIZE == 'huge'}selected {/if}value="huge">Huge</option>
-						<option {if $NAVBAR_SIZE == 'massive'}selected {/if}value="massive">Massive</option>
+						<option {if $NAVBAR_SIZE == 'mini'}selected {/if}value="mini">{$MINI_LABEL}</option>
+						<option {if $NAVBAR_SIZE == 'tiny'}selected {/if}value="tiny">{$TINY_LABEL}</option>
+						<option {if $NAVBAR_SIZE == 'small'}selected {/if}value="small">{$SMALL_LABEL}</option>
+						<option {if $NAVBAR_SIZE == 'large'}selected {/if}value="large">{$LARGE_LABEL}</option>
+						<option {if $NAVBAR_SIZE == 'huge'}selected {/if}value="huge">{$HUGE_LABEL}</option>
+						<option {if $NAVBAR_SIZE == 'massive'}selected {/if}value="massive">{$MASSIVE_LABEL}</option>
 					</select>
 				</div>
 			</div>

@@ -8,7 +8,7 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_heading">Embed Heading</label>
+					<label for="opal_meta_heading">{$EMBED_HEAD_LABEL}</label>
 					<div class="input-group">
 						<input type="text" class="form-control" id="opal_meta_heading" name="opal_meta_heading"
 							value="{$OPAL_META_HEADING}">
@@ -21,7 +21,7 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_description" style="margin-top:5px">Embed Description</label>
+					<label for="opal_meta_description" style="margin-top:5px">{$EMBED_DESC_LABEL}</label>
 					<div class="input-group">
 						<textarea class="form-control" id="opal_meta_description"
 							name="opal_meta_description">{$OPAL_META_DESCRIPTION}</textarea>
@@ -34,7 +34,7 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_color" style="margin-top:5px">Embed Color</label>
+					<label for="opal_meta_color" style="margin-top:5px">{$EMBED_COLOR_LABEL}</label>
 					<div class="input-group">
 						<input type="color" class="form-control" id="opal_meta_color" name="opal_meta_color"
 							value="{$OPAL_META_color}">
@@ -48,10 +48,10 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_image" style="margin-top:5px">Embed Image <span class="badge badge-info"><i
-								class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title=""
-								data-content="Enter a valid link to an image ending with .png, .jpeg, .gif example: https://example.com/img/logo.png"
-								data-original-title="Info Box"></i></span></label>
+					<label for="opal_meta_image" style="margin-top:5px">{$EMBED_IMAGE_LABEL} <span class="badge badge-info"><i
+								class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="" placeholder="https://example.com/img/logo.png"
+								data-content="{$EMBED_IMAGE_INFO_LABEL}"
+								data-original-title="{$EMBED_INFO_LABEL}"></i></span></label>
 					<div class="input-group">
 						<input type="text" class="form-control" id="opal_meta_image" name="opal_meta_image"
 							value="{$OPAL_META_IMAGE}">
@@ -65,11 +65,11 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_keywords" style="margin-top:5px">Embed Keywords
+					<label for="opal_meta_keywords" style="margin-top:5px">{$EMBED_KEYWORDS_LABEL}
 						<span class="badge badge-info"><i class="fas fa-question-circle" data-container="body" data-toggle="popover"
 								data-placement="top" title=""
-								data-content="Search Engines make use of keywords to help determine what to show for searches made by users. Seperate with ',' e.g mc, server, Website etc"
-								data-original-title="Info Box"></i></span>
+								data-content="{$EMBED_KEYWORDS_INFO_LABEL}"
+								data-original-title="{$EMBED_INFO_LABEL}"></i></span>
 					</label>
 					<div class="input-group">
 						<input type="text" class="form-control" id="opal_meta_keywords" name="opal_meta_keywords"
@@ -83,15 +83,14 @@
 
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary" style="width:100%; margin-top: 10px; margin-bottom: 20px;"><i
-							class="fas fa-save"></i> Save &
-						Preview</button>
+							class="fas fa-save"></i> {$SUBMIT}</button>
 				</div>
 			</form>
 
 			<!-- Approach -->
 			<div class="card shadow mb-4">
 				<div class="card-header py-3">
-					<h6 class="m-0 font-weight-bold text-primary">Embed Preview</h6>
+					<h6 class="m-0 font-weight-bold text-primary">{$EMBED_PREVIEW_LABEL}</h6>
 				</div>
 				<div class="card-body">
 					<div class="message">

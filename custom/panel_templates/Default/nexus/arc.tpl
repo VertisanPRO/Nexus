@@ -7,12 +7,11 @@
 				<input type="hidden" name="sel_btn_session" value="arc">
 
 				<div class="form-group">
-					<label for="arc_info">To enable Arc you need to register at</label>
-					<a href="https://arc.io">Arc</a><label for="arc_info">.</label>
-					<label for="arc_info">Then you need to add a website.</label>
-					<label for="arc_info">Then you need to click the "I already have a Service Worker and will integrate Arc." button and put "modules/Nexus/arc/sw.js"</label>
-					<label for="arc_info">Then you need scroll down to "Add Arc's widget to your site" and copy the URL (not the whole thing).</label>
-					<label for="arc_info">The last thing is to add the url in the input below.</label>
+					<label for="arc_info">{$ARC_INFO_1}</label>
+					<a href="https://arc.io">Arc</a><label for="arc_info">. {$ARC_INFO_2}</label>
+					<label for="arc_info">{$ARC_INFO_3}</label>
+					<label for="arc_info">{$ARC_INFO_4}</label>
+					<label for="arc_info">{$ARC_INFO_5}</label>
 				</div>
 
 				<div class="form-group">
