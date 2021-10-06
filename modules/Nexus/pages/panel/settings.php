@@ -106,7 +106,6 @@ $smarty->assign(array(
 		'UPDATES_PAGE' => $NexusLanguage->get('navigation', 'updates_page'),
 		'SUPPORT_PAGE' => $NexusLanguage->get('navigation', 'support_page'),
 
-
 	// Options
 		'FAVICON_LABEL' => $NexusLanguage->get('options', 'favicon_label'),
 		'ABOUT_LABEL' => $NexusLanguage->get('options', 'about_label'),

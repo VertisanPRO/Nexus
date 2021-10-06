@@ -76,7 +76,7 @@ class Nexus extends Module
 			$group_permissions = json_encode($group_permissions);
 			$queries->update('groups', 2, array('permissions' => $group_permissions));
 		} catch (Exception $e) {
-			// Ошибка
+			// Error
 		}
 	}
 
@@ -139,15 +139,6 @@ class Nexus extends Module
 						'id' => Output::getClean($value->id),
 						'value' => Output::getClean($value->value)
 					);
-
-					if ($value->name == 'login_skin') {
-						$login_skin = "https://api.mojang.com/users/profiles/minecraft/" . $settings_data_array[$value->name]['value'];
-						$login_skin = json_decode(file_get_contents($login_skin))->id;
-						$smarty->assign(array(
-							strtoupper($value->name) => $login_skin
-						));
-						continue;
-					}
 
 					if ($value->name == 'discord_id') {
 

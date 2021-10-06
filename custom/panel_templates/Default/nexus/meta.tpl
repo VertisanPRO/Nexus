@@ -104,14 +104,14 @@
 						<div class="content-box">
 							<p class="content">This is a preview!</p>
 							<div class="embed-box">
-								<img src="{if isset($OPAL_META_IMAGE)}{$OPAL_META_IMAGE}{else}https://i.imgur.com/e6YHD.gif{/if}"
-									alt="Error: Failed to load image" class="thumbnail-picture" />
 								<p class="title link" onclick="window.open('/')">
 									{if isset($OPAL_META_HEADING)}{$OPAL_META_HEADING}{else}ExamplePvP{/if}</p>
 								<p class="description">
 									{if isset($OPAL_META_HEADING)}{$OPAL_META_DESCRIPTION}
 									{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}
 								</p>
+								<img src="{if isset($OPAL_META_IMAGE)}{$OPAL_META_IMAGE}{else}https://i.imgur.com/e6YHD.gif{/if}"
+									alt="Error: Failed to load image" class="thumbnail-picture" />
 							</div>
 						</div>
 					</div>
