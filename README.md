@@ -1,4 +1,4 @@
-# Nexus module
+# Nexus Template 1.4.0
 
 To download you have to upload files, go to StaffCP > Templates > Install > You will see nexus > Active it
 
