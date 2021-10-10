@@ -6,7 +6,7 @@
             <div class="ui segment header">
                 <div class="ui grid">
                     <div class="eight wide column" style="margin: auto">
-                        <div class="ui breadcrumb">
+                        <div class="ui breadcrumb" style="margin-left: 1rem; margin-bottom: 1rem">
                             {if $PAGE_RESULT == 0}
                                 <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                             {elseif $PAGE_RESULT == 1}
