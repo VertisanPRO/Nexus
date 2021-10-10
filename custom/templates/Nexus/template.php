@@ -2,7 +2,7 @@
 /*
  *	NamelessMC by Samerton | Template by Mubeen
  *	https://github.com/NamelessMC/Nameless/
- *	NamelessMC version 2.0.0-pr11
+ *	NamelessMC version 2.0.0-pr12
  
  *	License: MIT
  *
@@ -29,7 +29,7 @@ class Nexus_Template extends TemplateBase
 			'name' => 'Nexus',
 			'version' => '2.0.0-pr12',
 			'nl_version' => "2.0.0-pr12",
-			'author' => '<a href="https://lectrichost.com" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a> & <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & <a href="" target="_blank" rel="nofollow noopener">Sylensky</a>',
+			'author' => '<a href="https://lectrichost.com" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & <a target="_blank" rel="nofollow noopener">Sylensky</a>',
 		);
 
 		$template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
