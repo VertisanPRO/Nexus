@@ -1,12 +1,21 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="ui container">
   <div class="ui padded segment">
     <div class="ui stackable grid">
 	    <div class="ui row">
 		    <div class="ui ten wide column">
-			    <h2 style="display:inline;">{$VIEWING_RESOURCE}</h2> {$RELEASE_TAG}
+			<div class="description">
+				<div class="ui relaxed list">
+					<div class="item">
+						<img class="ui rounded centered image" src="{$RESOURCE_ICON}" alt="{$RESOURCE_NAME}" style="max-height:64; max-width:64px;">
+						<div class="content">
+							<h2 class="header" style="display: block;">{$VIEWING_RESOURCE}</h2>
+							<span>[{$RELEASE_TAG}] {$RESOURCE_SHORT_DESCRIPTION}</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		    </div>
 		    <div class="ui six wide column">
 			    <div class="res right floated">
@@ -21,11 +30,17 @@
 
 	  <div class="ui row">
 	    <div class="twelve wide column">
+		<div class="ui tabular menu">
+            		<a class="item active" href="{$OVERVIEW_LINK}">{$OVERVIEW_TITLE}</a>
+            		<a class="item" href="{$OTHER_RELEASES_LINK}">{$RELEASES_TITLE}</a>
+            		<a class="item" href="{$VERSIONS_LINK}">{$VERSIONS_TITLE}</a>
+            		<a class="item" href="{$REVIEWS_LINK}">{$REVIEWS_TITLE}</a>
+        	</div>
 	      <div class="forum_post">
 	        {$DESCRIPTION}
 	      </div>
 
-		  <br />{if $HAS_CONTRIBUTORS eq 1}{$CONTRIBUTORS} {$RESOURCE_CONTRIBUTORS}{/if}
+		  <br />{if $HAS_CONTRIBUTORS eq 1}{$CONTRIBUTORS}{/if}
 
 		  <div class="ui divider"></div>
 
@@ -41,9 +56,33 @@
 		  {/if}
 
 		  <span class="pull-right">
-			{if isset($CAN_EDIT)}<a href="{$EDIT_LINK}" class="ui button">{$EDIT}</a>{/if}
+			{if isset($CAN_EDIT)}
+				<a href="{$EDIT_LINK}" class="ui button">{$EDIT}</a>
+				<a data-toggle="modal" data-target="#modal-icon-upload" class="ui button">{$CHANGE_ICON}</a>
+				<div class="ui small modal" id="modal-icon-upload">
+					<div class="header">
+						{$CHANGE_ICON}
+					</div>
+					<div class="content">
+					<form action="{$CHANGE_ICON_ACTION}" method="post" enctype="multipart/form-data" class="ui form" id="form-resource-icon">
+						<div class="field">
+							<input type="file" name="file" id="uploadFileButton" hidden onchange="$('#fileName').html(this.files[0].name)" />
+							<label class="ui icon labeled default button" for="uploadFileButton">
+								<i class="ui cloud upload icon"></i> <span id="fileName">{$UPLOAD_ICON}</span>
+							</label>
+						</div>
+						<input type="hidden" name="token" value="{$TOKEN}">
+						<input type="hidden" name="resource_id" value="{$RESOURCE_ID}" />
+					</form>
+					</div>
+					<div class="actions">
+						<a class="ui negative button">{$CANCEL}</a>
+						<a class="ui positive button" onclick="$('#form-resource-icon').submit();">{$SUBMIT}</a>
+					</div>
+				</div>
+			{/if}
 			{if isset($MODERATION) && count($MODERATION)}
-				<div class="ui top right pointing dropdown small primary button" tabindex="0">
+				<div class="ui pointing dropdown small primary button upward" tabindex="0">
 				<span class="text">{$MODERATION_TEXT}</span>
 					<i class="dropdown icon"></i>
 					<div class="menu" tabindex="-1">
@@ -60,37 +99,97 @@
 		</div>
 
 		<div class="four wide column">
-		  <div class="ui center aligned segment">
-			  {$RESOURCE}
+		  <div class="ui aligned segment">
+			  <h4 class="ui header">{$RESOURCE}</h4>
 			  <div class="ui divider"></div>
 
-		    <div class="card-body">
-				<div class="star-rating view">
-				  <span class="far fa-star" data-rating="1" style="color:gold;"></span>
-				  <span class="far fa-star" data-rating="2" style="color:gold"></span>
-				  <span class="far fa-star" data-rating="3" style="color:gold;"></span>
-				  <span class="far fa-star" data-rating="4" style="color:gold;"></span>
-				  <span class="far fa-star" data-rating="5" style="color:gold;"></span>
-				  <input type="hidden" name="rating" class="rating-value" value="{$RATING}">
-				</div>
-			    {$VIEWS}<br />
-			    {$DOWNLOADS}
-			</div>
+              <div class="description">
+                <div class="ui list">
+                  <div class="item">
+                    <span class="text">{$VIEWS}</span>
+                    <div class="description right floated"><b>{$VIEWS_VALUE}</b></div>
+                  </div>
+                  <div class="item">
+                    <span class="text">{$TOTAL_DOWNLOADS}</span>
+                    <div class="description right floated"><b>{$TOTAL_DOWNLOADS_VALUE}</b></div>
+                  </div>
+                  <div class="item">
+                    <span class="text">{$FIRST_RELEASE}</span>
+                    <div class="description right floated"><b>{$FIRST_RELEASE_DATE}</b></div>
+                  </div>
+                  <div class="item">
+                    <span class="text">{$LAST_RELEASE}</span>
+                    <div class="description right floated"><b>{$LAST_RELEASE_DATE}</b></div>
+                  </div>
+                  <div class="item">
+                    <span class="text">{$CATEGORY}</span>
+                    <div class="description right floated"><b>{$CATEGORY_VALUE}</b></div>
+                  </div>
+                  <div class="item">
+                    <span class="text">{$RATING}</span>
+                    <div class="description right floated">
+                      <div class="star-rating view">
+                        <span class="far fa-star" data-rating="1" style="color:gold;"></span>
+                        <span class="far fa-star" data-rating="2" style="color:gold"></span>
+                        <span class="far fa-star" data-rating="3" style="color:gold;"></span>
+                        <span class="far fa-star" data-rating="4" style="color:gold;"></span>
+                        <span class="far fa-star" data-rating="5" style="color:gold;"></span>
+                        <input type="hidden" name="rating" class="rating-value" value="{$RATING_VALUE}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 		  </div>
-		  <br />
-		  <div class="ui center aligned segment">
-			{$AUTHOR}
+
+		  <div class="ui aligned segment">
+			  <h4 class="ui header">{$RELEASE_VERSION}</h4>
+			  <div class="ui divider"></div>
+
+              <div class="description">
+                <div class="ui list">
+                  <div class="item">
+                    <span class="text">{$DOWNLOADS}</span>
+                    <div class="description right floated"><b>{$RELEASE_DOWNLOADS}</b></div>
+                  </div>
+                  <div class="item">
+                    <span class="text">{$RELEASE}</span>
+                    <div class="description right floated"><b>{$RELEASE_DATE_FULL}</b></div>
+                  </div>
+                  <div class="item">
+                    <span class="text">{$RATING}</span>
+                    <div class="description right floated">
+                      <div class="star-rating view">
+                        <span class="far fa-star" data-rating="1" style="color:gold;"></span>
+                        <span class="far fa-star" data-rating="2" style="color:gold"></span>
+                        <span class="far fa-star" data-rating="3" style="color:gold;"></span>
+                        <span class="far fa-star" data-rating="4" style="color:gold;"></span>
+                        <span class="far fa-star" data-rating="5" style="color:gold;"></span>
+                        <input type="hidden" name="rating" class="rating-value" value="{$RELEASE_RATING}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+		  </div>
+
+		  <div class="ui aligned segment">
+            <h4 class="ui header">{$AUTHOR}</h4>
 			<div class="ui divider"></div>
 
+            <center>
 			<a href="{$AUTHOR_PROFILE}"><img src="{$AUTHOR_AVATAR}" class="ui rounded centered image" alt="{$AUTHOR_NICKNAME}" style="max-height:80px; max-width:80px;" /></a><br />
 			<a href="{$AUTHOR_PROFILE}" style="{$AUTHOR_STYLE}">{$AUTHOR_NICKNAME}</a>
 			<div class="ui divider"></div>
 
 			<a href="{$AUTHOR_RESOURCES}">&raquo; {$VIEW_OTHER_RESOURCES}</a>
-			</div>
+            </center>
 		  </div>
 		</div>
-	  </div>
+      </div>
+	</div>
 
 	  <div class="ui divider"></div>
 
@@ -152,9 +251,6 @@
 		</div>
 	  </form>
 	  {/if}
-
     </div>
-  </div>
-</div>
 
 {include file='footer.tpl'}

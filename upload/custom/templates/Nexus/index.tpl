@@ -77,9 +77,6 @@
 	</div>
 </div>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
 <div class="ui modal">
 	<i class="close icon"></i>
 	<div class="ui padded segment" id="login">

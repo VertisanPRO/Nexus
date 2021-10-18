@@ -18,6 +18,11 @@
                 <label for="inputTitle">{$NAME}</label>
                 <input type="text" id="inputTitle" name="title" placeholder="{$NAME}" value="{$RESOURCE_NAME}">
             </div>
+            
+            <div class="field">
+                <label for="inputShort_description">{$SHORT_DESCRIPTION}</label>
+                <input type="text" id="inputShort_description" name="short_description" placeholder="{$SHORT_DESCRIPTION}" value="{$RESOURCE_SHORT_DESCRIPTION}">
+            </div>
 
             {if isset($MARKDOWN)}
                 <div class="field">

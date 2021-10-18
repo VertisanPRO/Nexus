@@ -33,6 +33,11 @@
 		</div>
 		
 		<div class="field">
+		  <label for="inputShort_description">{$RESOURCE_SHORT_DESCRIPTION} <small>{$REQUIRED}</small></label>
+		  <input type="text" name="short_description" id="inputShort_description">
+		</div>
+		
+		<div class="field">
 		  <label for="inputDescription">{$RESOURCE_DESCRIPTION} <small>{$REQUIRED}</small></label>
 		  
 		  {if !isset($MARKDOWN)}

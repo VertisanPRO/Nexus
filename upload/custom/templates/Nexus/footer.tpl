@@ -15,33 +15,54 @@
 		}
 	</style>
 
-
 	<div class="ui blue inverted vertical footer segment" style="padding:2rem;">
 		<div class="ui center aligned container">
 			<div class="ui stackable inverted divided grid">
 				<div class="five wide column">
 					<h4><span class="item">&copy; {$SITE_NAME} {'Y'|date}</span></h4>
 					<div class="ui inverted link list">
+						<span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span>
+						<span class="item">Template By <a href="https://lectrichost.com" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky</span>
 						{if $PAGE_LOAD_TIME}
 							<span class="item" id="page_load"></span>
 						{/if}
-						<span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span>
-						<span class="item">Template By <a href="https://lectrichost.com" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a> & <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a></span>
 					</div>
 				</div>
-				<div class="seven wide column">
+				<div class="three wide column">
+					<h4>{$FOOTER_LINKS_TITLE}</h4>
+					<div class="ui inverted link list">
+           				{foreach from=$FOOTER_NAVIGATION key=name item=item}
+            {if isset($item.items)}
+                <div class="ui pointing dropdown link item">
+					<span class="text">{$item.icon} {$item.title}</span> <i class="dropdown icon"></i>
+                  <div class="menu">
+                    <div class="header">{$item.title}</div>
+                  		{foreach from=$item.items item=dropdown}
+                   			<a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon} {$dropdown.title}</a>
+                		{/foreach}
+               		 </div>
+        		</div>
+            		{else}
+               			<a class="item" href="{$item.link}" target="{$item.target}">{$item.icon} {$item.title}</a>
+          		{/if}
+           				{/foreach}
+						<a class="item" href="{$TERMS_LINK}">{$TERMS_TEXT}</a>
+						<a class="item" href="{$PRIVACY_LINK}">{$PRIVACY_TEXT}</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4>{$FOOTER_SOCIAL_TITLE}</h4>
+					<div class="ui inverted link list">
+           				{foreach from=$SOCIAL_MEDIA_ICONS item=icon}
+            				<a class="item" href="{$icon.link}">{$icon.text}</a>
+            			{/foreach}
+					</div>
+				</div>
+				<div class="five wide column">
 					<h4>About</h4>
 					<p>
 						{if isset($TEMPLATE_ABOUT)} {$TEMPLATE_ABOUT}{else}We are an online platform to help users around the world connect through NamelessMC powered forums. {/if}
 					</p>
-				</div>
-				<div class="three wide column">
-					<h4>Links</h4>
-					<div class="ui inverted link list">
-						<a class="item" href="/contact">Contact Us</a>
-						<a class="item" href="{$TERMS_LINK}">{$TERMS_TEXT}</a>
-						<a class="item" href="{$PRIVACY_LINK}">{$PRIVACY_TEXT}</a>
-					</div>
 				</div>
 			</div>
 	</div>
