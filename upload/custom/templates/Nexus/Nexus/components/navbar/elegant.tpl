@@ -45,7 +45,7 @@
 </head>
 
 <div class="ui secondary {$DEFAULT_REVAMP_NAVBAR_EXTRA_CLASSES} {if isset($NAVBAR_SIZE)}{$NAVBAR_SIZE}{else}small{/if} menu" id="navbar"
-	style="background: {if isset($TEMPLATE_COLOR)} {$TEMPLATE_COLOR}{else} #7e31e3{/if};">
+	style="background: {if ("{$NAVBAR_COLOR}" === "#000000")} {$TEMPLATE_COLOR}{else} {$NAVBAR_COLOR}{/if};">
 	<div class="ui container">
 		{foreach from=$NAV_LINKS key=name item=item}
 			{if isset($item.items)}
@@ -115,6 +115,10 @@
 <div class="ui stackable three column grid" {if isset($BANNER_IMAGE)}
 		style="background-image:url('{$BANNER_IMAGE}'); padding: {if isset($NAV_HEIGHT)} {$NAV_HEIGHT}{else} 45{/if}px;margin-top:0px!important;border-bottom-left-radius: 85% 20%;border-bottom-right-radius: 85% 20%;"
 	{/if}>
+	{if $DISCORD != 'true'}
+	<div class="column" style="text-align: center;margin-top: 5rem;">
+	</div>
+	{else}
 	<div onclick="dsInvite('{$DISCORD_SERVER['link']}')" class="column" style="text-align: center;margin-top: 5rem;">
 		<div class="ui steps">
 			<div class="step" style="background: transparent;color: white;">
@@ -127,13 +131,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="column" style="text-align: center;">
+	{/if}
+	<div class="column" style="text-align: center; align: middle;">
 		<div class="ui medium image" href="/" target="_blank">
 			<img onclick="window.location.href='/'"
 				src="{if isset($TEMPLATE_LOGO)} {$TEMPLATE_LOGO}{else}https://i.redd.it/2kdpm1d9kkx41.png{/if}"
 				style="cursor:pointer; display: unset;max-width: 100%;height: auto;">
 		</div>
 	</div>
+	{if $MINECRAFT != 'true'}
+	{else}
 	<div class="column" onclick="copyIP('{$OPAL_MCSERVER_IP}:{$OPAL_MCSERVER_PORT}')"
 		style="text-align: center;margin-top: 5rem;">
 		<div class="ui steps">
@@ -142,11 +149,12 @@
 				<div class="content" onclick="change_copied_ip()">
 					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>
 					<div id="rest">Loading ...</div>
-					<div id="copy_ip" class="description" style="color: white;"><strong>Click to join</strong></div>
+					<div id="copy_ip" class="description" style="color: white;"><strong>Click to copy</strong></div>
 				</div>
 			</div>
 		</div>
 	</div>
+	{/if}
 </div>
 
 <script>

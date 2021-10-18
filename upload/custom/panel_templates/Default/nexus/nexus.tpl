@@ -79,9 +79,9 @@
 								</div>
 
 
-								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'meta'}show active{/if}" id="v-pills-meta"
-									role="tabpanel" aria-labelledby="v-pills-meta-tab">
-									{include file="nexus/meta.tpl"}
+								<div class="tab-pane fade {if $TPL_NAME_SESSION == 'embed'}show active{/if}" id="v-pills-embed"
+									role="tabpanel" aria-labelledby="v-pills-embed-tab">
+									{include file="nexus/embed.tpl"}
 								</div>
 
 

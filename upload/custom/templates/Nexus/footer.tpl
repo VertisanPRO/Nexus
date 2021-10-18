@@ -69,7 +69,7 @@
 	
 <style>
 	.ui.inverted.blue.segment {
-		background-color: {if ("{$FOOTER_COLOR}" === "#000000")} {$TEMPLATE_COLOR}{else} {$FOOTER_COLOR}{/if}!important;  
+		background-color: {if ("{$FOOTER_COLOR}" === "#000000")} {$TEMPLATE_COLOR}{else} {$FOOTER_COLOR}{/if}!important;
 		color: #fff !important;
 	}
 </style>
@@ -103,9 +103,7 @@
   </html>
 {/if}
 
-{if $ARC != 'true'}
-
-{else}
+{if $ARC == 'true'}
 <script async src="{$ARC_ID}"></script>
 </script>
 {/if}	

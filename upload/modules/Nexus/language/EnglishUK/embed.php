@@ -15,8 +15,7 @@ $language = array(
     'embed_color_label' => 'Embed Color',
     'embed_image_label' => 'Embed Image',
     'embed_keywords_label' => 'Embed Keywords',
-    'embed_info_label' => 'Info Box',
     'embed_image_info_label' => 'Enter a valid link to an image ending with .png, .jpeg, .gif.',
-    'embed_keywords_info_label' => 'Search Engines make use of keywords to help determine what to show for searches made by users. Seperate with ',' e.g mc, server, website and etc.',
+    'embed_keywords_info_label' => 'Search Engines make use of keywords to help determine what to show for searches made by users. Seperate with \',\' e.g mc, server, website and etc.',
     'embed_preview_label' => 'Embed Preview',
 );

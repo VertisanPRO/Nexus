@@ -20,4 +20,5 @@ $language = array(
 		'true_label' => 'True',	
 		'false_label' => 'False',
 		'group_permision' => 'Module permission',
+		'info_box_label' => 'Info Box',
 );

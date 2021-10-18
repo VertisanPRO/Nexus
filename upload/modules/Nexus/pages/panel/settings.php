@@ -2,7 +2,7 @@
 /*
  *	Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr11
+ *  NamelessMC version 2.0.0-pr12
  *
  *  License: MIT
  *
@@ -114,8 +114,10 @@ $smarty->assign(array(
 	// Colors
 		'DARKMODE_LABEL' => $NexusLanguage->get('colors', 'darkmode_label'),
 		'TEMPLATE_COLOR_LABEL' => $NexusLanguage->get('colors', 'template_color_label'),
+		'NAVBAR_COLOR_LABEL' => $NexusLanguage->get('colors', 'navbar_color_label'),
 		'FOOTER_COLOR_LABEL' => $NexusLanguage->get('colors', 'footer_color_label'),
 		'BORDER_COLOR_LABEL' => $NexusLanguage->get('colors', 'border_color_label'),
+		'COLORS_INFO_LABEL' => $NexusLanguage->get('colors', 'colors_info_label'),
 
 	// Navbar
 		'LOGO_LABEL' => $NexusLanguage->get('navbar', 'logo_label'),
@@ -134,6 +136,9 @@ $smarty->assign(array(
 		'SIMPLE_LABEL' => $NexusLanguage->get('connections', 'simple_label'),
 		'ADVANCED_LABEL' => $NexusLanguage->get('connections', 'advanced_label'),
 		'DISCORD_LABEL' => $NexusLanguage->get('connections', 'discord_label'),
+		'DISCORD_ID_LABEL' => $NexusLanguage->get('connections', 'discord_id_label'),
+		'ENABLE_DISCORD_LABEL' => $NexusLanguage->get('connections', 'enable_discord_label'),
+		'ENABLE_MINECRAFT_LABEL' => $NexusLanguage->get('connections', 'enable_minecraft_label'),
 
 	// Advanced
 		'ADV_WARNING' => $NexusLanguage->get('advanced', 'adv_warning'),
@@ -178,7 +183,6 @@ $smarty->assign(array(
 		'EMBED_COLOR_LABEL' => $NexusLanguage->get('embed', 'embed_color_label'),
 		'EMBED_IMAGE_LABEL' => $NexusLanguage->get('embed', 'embed_image_label'),
 		'EMBED_KEYWORDS_LABEL' => $NexusLanguage->get('embed', 'embed_keywords_label'),
-		'EMBED_INFO_LABEL' => $NexusLanguage->get('embed', 'embed_info_label'),
 		'EMBED_IMAGE_INFO_LABEL' => $NexusLanguage->get('embed', 'embed_image_info_label'),
 		'EMBED_KEYWORDS_INFO_LABEL' => $NexusLanguage->get('embed', 'embed_keywords_info_label'),
 		'EMBED_PREVIEW_LABEL' => $NexusLanguage->get('embed', 'embed_preview_label'),
@@ -186,6 +190,7 @@ $smarty->assign(array(
 	// Other
 		'TRUE_LABEL' => $NexusLanguage->get('general', 'true_label'),
 		'FALSE_LABEL' => $NexusLanguage->get('general', 'false_label'),
+		'INFO_BOX_LABEL' => $NexusLanguage->get('general', 'info_box_label'),
 ));
 
 $settings_data = $queries->getWhere('nexus_settings', array('id', '<>', 0));

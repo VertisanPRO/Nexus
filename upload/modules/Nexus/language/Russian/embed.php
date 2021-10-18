@@ -16,7 +16,6 @@ $language = array(
     'embed_color_label' => 'Цвета Эмбеда',
     'embed_image_label' => 'Картинка Эмбеда',
     'embed_keywords_label' => 'Ключевые Слова Эмбеда',
-    'embed_info_label' => 'Информационное Окно',
     'embed_image_info_label' => 'Напишите действительную ссылку с окончанием .png, .jpeg, .gif.',
     'embed_keywords_info_label' => 'Поисковые Системы используют по ключевым словам что бы помочь с поиском от пользователей. Разделяя \',\' например mc, server, website и другое.',
     'embed_preview_label' => 'Показ Эмбеда',

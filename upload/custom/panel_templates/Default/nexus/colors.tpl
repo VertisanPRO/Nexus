@@ -26,10 +26,23 @@
 			</div>
 
 
+			<div class="form-group">
+
+				<label for="footer_color">{$NAVBAR_COLOR_LABEL} <span class="badge badge-info"><i
+								class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="" placeholder="https://example.com/img/logo.png"
+								data-content="{$COLORS_INFO_LABEL}"
+								data-original-title="{$INFO_BOX_LABEL}"></i></span></label>
+				<input type="color" class="form-control" id="navbar_color" name="navbar_color" value="{$NAVBAR_COLOR}">
+
+			</div>
+
 
 			<div class="form-group">
 
-				<label for="footer_color">{$FOOTER_COLOR_LABEL}</label>
+				<label for="footer_color">{$FOOTER_COLOR_LABEL}  <span class="badge badge-info"><i
+								class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="" placeholder="https://example.com/img/logo.png"
+								data-content="{$COLORS_INFO_LABEL}"
+								data-original-title="{$INFO_BOX_LABEL}"></i></span></label>
 				<input type="color" class="form-control" id="footer_color" name="footer_color" value="{$FOOTER_COLOR}">
 
 			</div>

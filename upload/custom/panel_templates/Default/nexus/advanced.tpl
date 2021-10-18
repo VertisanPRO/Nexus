@@ -25,10 +25,10 @@
 
 			<div class="form-group">
 
-				<label for="container_width">Container Width in %</label>
+				<label for="container_width">{$ADV_CONTAINER_LABEL}</label>
 				<div class="input-group">
 					<input type="number" class="form-control" id="container_width" name="container_width"
-						value="{$ADV_CONTAINER_LABEL}">
+						value="{$ADV_CONTAINER}">
 				</div>
 
 			</div>

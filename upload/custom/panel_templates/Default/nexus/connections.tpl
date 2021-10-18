@@ -7,6 +7,16 @@
 
 			<input type="hidden" name="sel_btn_session" value="connections">
 
+				<div class="form-group">
+
+					<label for="minecraft">{$ENABLE_MINECRAFT_LABEL}</label>
+					<select class="form-control mr-sm-2" id="discord" name="minecraft">
+						<option {if $MINECRAFT == 'true'}selected{/if} value="true">{$TRUE_LABEL}</option>
+						<option {if $MINECRAFT == 'false'}selected {/if}value="false">{$FALSE_LABEL}</option>
+					</select>
+
+				</div>
+
 			<div class="form-group">
 
 				<label for="opal_mcserver_name" style="margin-top:5px">{$SERVER_DOMAIN_LABEL}</label>
@@ -68,12 +78,28 @@
 		<hr>
 		<h3 style="text-align:center;">{$DISCORD_LABEL}</h3>
 
-				<div class="form-group">
+			<div class="form-group">
 
-					<label for="discord_id">{$DISCORD_ID_LABEL}</label>
-					<input type="text" class="form-control" id="discord_id" name="discord_id" value="{$DISCORD_ID}">
+				<label for="discord">{$ENABLE_DISCORD_LABEL}</label>
+				<select class="form-control mr-sm-2" id="discord" name="discord">
+					<option {if $DISCORD == 'true'}selected{/if} value="true">{$TRUE_LABEL}</option>
+					<option {if $DISCORD == 'false'}selected {/if}value="false">{$FALSE_LABEL}</option>
+				</select>
 
+			</div>
+
+			<div class="form-group">
+
+				<label for="discord_id" style="margin-top:10px">{$DISCORD_ID_LABEL}</label>
+				<div class="input-group">
+					<input type="text-area" class="form-control" id="discord_id" name="discord_id"
+						value="{$DISCORD_ID}" placeholder="760945720470667294">
+					<div class="input-group-append">
+						<input type="hidden" name="token" value="{$TOKEN}">
+					</div>
 				</div>
+
+			</div>
 				
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary" style="width:100%; margin-top: 10px; margin-bottom: 20px;"><i

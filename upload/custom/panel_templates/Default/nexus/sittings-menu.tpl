@@ -31,8 +31,8 @@
 				href="#v-pills-widgets" role="tab" aria-controls="v-pills-widgets" aria-selected="false"><i
 					class="fas fa-th-large"></i> {$WIDGETS_PAGE}</a>
 
-			<a class="nav-link {if $TPL_NAME_SESSION == 'meta'}active{/if}" id="v-pills-meta-tab" data-toggle="pill"
-				href="#v-pills-meta" role="tab" aria-controls="v-pills-meta" aria-selected="false"><i class="fas fa-link"></i>
+			<a class="nav-link {if $TPL_NAME_SESSION == 'embed'}active{/if}" id="v-pills-embed-tab" data-toggle="pill"
+				href="#v-pills-embed" role="tab" aria-controls="v-pills-embed" aria-selected="false"><i class="fas fa-link"></i>
 				{$EMBED_PAGE}</a>
 
 
@@ -40,7 +40,7 @@
 				href="#v-pills-update" role="tab" aria-controls="v-pills-update" aria-selected="false"><i
 					class="fas fa-cloud-download-alt"></i> {$UPDATES_PAGE}</a>
 
-			<a class="nav-link" href="https://template.mubeen.eu/discord" target="_blank"><i class="fas fa-life-ring"></i>
+			<a class="nav-link" href="https://resourcemc.net/discord" target="_blank"><i class="fas fa-life-ring"></i>
 				{$SUPPORT_PAGE}</a>
 
 			<style>

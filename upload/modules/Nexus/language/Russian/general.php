@@ -2,7 +2,7 @@
 /*
  *	Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr11
+ *  NamelessMC version 2.0.0-pr12
  *
  *  License: MIT
  *
@@ -21,4 +21,5 @@ $language = array(
 		'true_label' => 'Включить',	
 		'false_label' => 'Выключить',
 		'group_permision' => 'Права модуля',
+		'info_box_label' => 'Информационное Окно',
 );
