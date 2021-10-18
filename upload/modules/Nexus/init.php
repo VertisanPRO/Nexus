@@ -11,7 +11,7 @@
 
 $INFO_MODULE = array(
 	'name' => 'Nexus',
-	'author' => '<a href="https://lectrichost.com" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky',
+	'author' => '<a href="https://resourcemc.net/discord" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky',
 	'module_ver' => '1.4.0',
 	'nml_ver' => '2.0.0-pr11',
 );

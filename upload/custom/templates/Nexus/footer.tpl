@@ -22,7 +22,7 @@
 					<h4><span class="item">&copy; {$SITE_NAME} {'Y'|date}</span></h4>
 					<div class="ui inverted link list">
 						<span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span>
-						<span class="item">Template By <a href="https://lectrichost.com" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky</span>
+						<span class="item">Template By <a href="https://resourcemc.net/discord" target="_blank" rel="nofollow noopener">Mubeen</a>, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky</span>
 						{if $PAGE_LOAD_TIME}
 							<span class="item" id="page_load"></span>
 						{/if}
