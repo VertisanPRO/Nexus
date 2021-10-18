@@ -8,12 +8,12 @@
 <br />
 
 {if count($SERVERS)}
-  <div class="ui centered three stackable cards id="servers">
+  <div class="ui centered three stackable cards" id="servers">
     {foreach from=$SERVERS item=server}
-      <div class="ui fluid card center aligned server" style="width:100%!important;" id="server{$server->id|escape}" data-id="{$server->id|escape}" data-bungee="{$server->bungee|escape}" data-players="{$server->player_list|escape}">
+      <div class="ui fluid card center aligned server" id="server{$server->id|escape}" data-id="{$server->id|escape}" data-bungee="{$server->bungee|escape}" data-players="{$server->player_list|escape}">
         <div class="content">
           <div class="header">
-              <div class="circletag" id="nay">
+                        <div class="circletag" id="nay">
     <img src="https://api.minetools.eu/favicon/{$server->query_ip|escape:'html'}/">
 </div>
             {if $server->show_ip}<div class="ui top right attached label" data-toggle="popup" data-html="<span id='copy{$server->id|escape}'>{$server->query_ip|escape:'html'}{if $server->port && $server->port != 25565}:{$server->port|escape:'html'}{/if}</span>" onclick="copy('#copy{$server->id|escape}')">{$IP}</div>{/if}
