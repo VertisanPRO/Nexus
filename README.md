@@ -12,3 +12,4 @@ Open your NamelessMC dashboard => Layout => Templates => Click on "Install" - En
 Open your NamelessMC dashboard => Modules => Click on "Install" - Enable after you've installed it. You're done :)
 
 Get your support here https://resourcemc.net/discord
+Created by Mubeen, xGIGABAITx, PadowYT2, Sylensky
