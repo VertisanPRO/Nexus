@@ -1,7 +1,14 @@
 # Nexus Template 1.4.0
 
-To download you have to upload files, go to StaffCP > Templates > Install > You will see nexus > Active it
+For better experience read "README.html"
 
-To customize it you have, go to StaffCP > Modules > Install > You will see nexus > Active it > Nexus should appear in the sidebar
+## Upload
+Upload "custom" and the "modules" folder to your NamelessMC Root directory (public_html, html, htdocs)
+
+## Installing Template
+Open your NamelessMC dashboard => Layout => Templates => Click on "Install" - Enable after you've installed it.
+
+## Installing Backend
+Open your NamelessMC dashboard => Modules => Click on "Install" - Enable after you've installed it. You're done :)
 
 Get your support here https://resourcemc.net/discord
