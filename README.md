@@ -13,4 +13,8 @@ Open your NamelessMC dashboard => Modules => Click on "Install" - Enable after y
 
 Get your support here https://resourcemc.net/discord
 
-Created by Mubeen, xGIGABAITx, PadowYT2, Sylensky
+Template By
+* Mubeen
+* xGIGABAITx
+* PadowYT2
+* Sylensky
