@@ -15,6 +15,7 @@
 		}
 	</style>
 
+	
 	<div class="ui blue inverted vertical footer segment" style="padding:2rem;">
 		<div class="ui center aligned container">
 			<div class="ui stackable inverted divided grid">

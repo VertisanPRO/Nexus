@@ -1,17 +1,17 @@
-	<!-- Meta Content -->
+	<!-- Embed Content -->
 	<div class="card  mb-3">
 		<h3 class="card-header  mb-3 text-center">{$EMBED_PAGE}</h3>
 		<div class="card-body">
 
 			<form action="" method="POST">
-				<input type="hidden" name="sel_btn_session" value="meta">
+				<input type="hidden" name="sel_btn_session" value="embed">
 
 				<div class="form-group">
 
-					<label for="opal_meta_heading">{$EMBED_HEAD_LABEL}</label>
+					<label for="opal_embed_heading">{$EMBED_HEAD_LABEL}</label>
 					<div class="input-group">
-						<input type="text" class="form-control" id="opal_meta_heading" name="opal_meta_heading"
-							value="{$OPAL_META_HEADING}">
+						<input type="text" class="form-control" id="opal_embed_heading" name="opal_embed_heading"
+							value="{$OPAL_EMBED_HEADING}">
 
 					</div>
 
@@ -19,10 +19,10 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_description" style="margin-top:5px">{$EMBED_DESC_LABEL}</label>
+					<label for="opal_embed_description" style="margin-top:5px">{$EMBED_DESC_LABEL}</label>
 					<div class="input-group">
-						<textarea class="form-control" id="opal_meta_description"
-							name="opal_meta_description">{$OPAL_META_DESCRIPTION}</textarea>
+						<textarea class="form-control" id="opal_embed_description"
+							name="opal_embed_description">{$OPAL_EMBED_DESCRIPTION}</textarea>
 
 					</div>
 
@@ -30,23 +30,23 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_color" style="margin-top:5px">{$EMBED_COLOR_LABEL}</label>
+					<label for="opal_embed_color" style="margin-top:5px">{$EMBED_COLOR_LABEL}</label>
 					<div class="input-group">
-						<input type="color" class="form-control" id="opal_meta_color" name="opal_meta_color"
-							value="{$OPAL_META_color}">
+						<input type="color" class="form-control" id="opal_embed_color" name="opal_embed_color"
+							value="{$OPAL_EMBED_color}">
 					</div>
 
 				</div>
 
 				<div class="form-group">
 
-					<label for="opal_meta_image" style="margin-top:5px">{$EMBED_IMAGE_LABEL} <span class="badge badge-info"><i
+					<label for="opal_embed_image" style="margin-top:5px">{$EMBED_IMAGE_LABEL} <span class="badge badge-info"><i
 								class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="" placeholder="https://example.com/img/logo.png"
 								data-content="{$EMBED_IMAGE_INFO_LABEL}"
 								data-original-title="{$INFO_BOX_LABEL}"></i></span></label>
 					<div class="input-group">
-						<input type="text" class="form-control" id="opal_meta_image" name="opal_meta_image"
-							value="{$OPAL_META_IMAGE}">
+						<input type="text" class="form-control" id="opal_embed_image" name="opal_embed_image"
+							value="{$OPAL_EMBED_IMAGE}">
 					</div>
 
 				</div>
@@ -54,15 +54,15 @@
 
 				<div class="form-group">
 
-					<label for="opal_meta_keywords" style="margin-top:5px">{$EMBED_KEYWORDS_LABEL}
+					<label for="opal_embed_keywords" style="margin-top:5px">{$EMBED_KEYWORDS_LABEL}
 						<span class="badge badge-info"><i class="fas fa-question-circle" data-container="body" data-toggle="popover"
 								data-placement="top" title=""
 								data-content="{$EMBED_KEYWORDS_INFO_LABEL}"
 								data-original-title="{$INFO_BOX_LABEL}"></i></span>
 					</label>
 					<div class="input-group">
-						<input type="text" class="form-control" id="opal_meta_keywords" name="opal_meta_keywords"
-							value="{$OPAL_META_KEYWORDS}">
+						<input type="text" class="form-control" id="opal_embed_keywords" name="opal_embed_keywords"
+							value="{$OPAL_EMBED_KEYWORDS}">
 					</div>
 
 				</div>
@@ -92,12 +92,12 @@
 							<p class="content">This is a preview!</p>
 							<div class="embed-box">
 								<p class="title link" onclick="window.open('/')">
-									{if isset($OPAL_META_HEADING)}{$OPAL_META_HEADING}{else}ExamplePvP{/if}</p>
+									{if isset($OPAL_EMBED_HEADING)}{$OPAL_EMBED_HEADING}{else}ExamplePvP{/if}</p>
 								<p class="description">
-									{if isset($OPAL_META_HEADING)}{$OPAL_META_DESCRIPTION}
+									{if isset($OPAL_EMBED_HEADING)}{$OPAL_EMBED_DESCRIPTION}
 									{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}
 								</p>
-								<img src="{if isset($OPAL_META_IMAGE)}{$OPAL_META_IMAGE}{else}https://i.imgur.com/e6YHD.gif{/if}"
+								<img src="{if isset($OPAL_EMBED_IMAGE)}{$OPAL_EMBED_IMAGE}{else}https://i.imgur.com/e6YHD.gif{/if}"
 									alt="Error: Failed to load image" class="thumbnail-picture" />
 							</div>
 						</div>
@@ -186,7 +186,7 @@
 			margin-top: -10px;
 			width: 135%;
 			height: 160px;
-			border-left: 5px solid {if isset($OPAL_META_HEADING)}{$OPAL_META_COLOR}{else}#46d0e6{/if};
+			border-left: 5px solid {if isset($OPAL_EMBED_HEADING)}{$OPAL_EMBED_COLOR}{else}#46d0e6{/if};
 			border-radius: 4px;
 		}
 
