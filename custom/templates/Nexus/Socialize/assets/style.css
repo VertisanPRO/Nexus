@@ -1,0 +1,17 @@
+.soc-like, .soc-comment{
+  color: #666 !important;
+}
+
+.soc-like.active{
+  color: #e64b4b !important;
+}
+
+.socialize-post img {
+  max-width:100% !important;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+.socialize-post img:hover {
+  max-width:100% !important;
+  border-radius: 2px;
+}
