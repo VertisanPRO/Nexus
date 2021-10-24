@@ -1,0 +1,8 @@
+/*
+!custom/templates/Nexus/
+!custom/panel_templates/Default/nexus/
+!modules/Nexus/
+!README.html
+!README.md
+!create_release.sh
+!.gitignore
