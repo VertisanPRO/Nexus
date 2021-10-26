@@ -29,7 +29,7 @@
                     {include file='wiki/widgets/search-box.tpl'}
                 </div>
             </div>
-            <div class="ui segment context" style="padding: 28px">
+            <div class="ui segment context fluid image" style="padding: 28px">
                 {if $PAGE_RESULT == 0}
                     {$HOME_PAGE_CONTEXT}
                 {elseif $PAGE_RESULT == 1}
