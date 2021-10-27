@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="ui sixteen wide mobile four wide tablet four wide computer column">
+    <div class="ui sixteen wide mobile four wide tablet four wide computer column" style="padding-top: 0">
         {include file='wiki/widgets/side-menu.tpl'}
     </div>  
 </div>
