@@ -5,8 +5,8 @@
         <div class="ui segments">
             <div class="ui segment header">
                 <div class="ui grid">
-                    <div class="eight wide column" style="margin: auto">
-                        <div class="ui breadcrumb" style="margin-left: 1rem; margin-bottom: 1rem">
+                    <div class="eight wide column" style="margin-left: 1rem; margin-top: 0.25rem; width: 45%!important">
+                        <div class="ui breadcrumb" style="margin-left: 1rem">
                             {if $PAGE_RESULT == 0}
                                 <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                             {elseif $PAGE_RESULT == 1}
@@ -29,7 +29,7 @@
                     {include file='wiki/widgets/search-box.tpl'}
                 </div>
             </div>
-            <div class="ui segment context" style="padding: 28px">
+            <div class="ui segment context fluid image" style="padding: 28px">
                 {if $PAGE_RESULT == 0}
                     {$HOME_PAGE_CONTEXT}
                 {elseif $PAGE_RESULT == 1}
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    <div class="ui sixteen wide mobile four wide tablet four wide computer column">
+    <div class="ui sixteen wide mobile four wide tablet four wide computer column" style="padding-top: 0">
         {include file='wiki/widgets/side-menu.tpl'}
     </div>  
 </div>

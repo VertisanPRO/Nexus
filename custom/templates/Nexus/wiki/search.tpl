@@ -5,8 +5,8 @@
         <div class="ui segments">
             <div class="ui segment header">
                 <div class="ui grid">
-                    <div class="eight wide column" style="margin: auto">
-                        <div class="ui breadcrumb">
+                    <div class="eight wide column" style="margin-left: 1rem; margin-top: 0.25rem; width: 45%!important">
+                        <div class="ui breadcrumb" style="margin-left: 1rem">
                             <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                             <div class="divider"> / </div>
                             <div class="active section">{$SEARCH_RESULTS_LANG} {$SEARCH_RESULT}</div>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="ui sixteen wide mobile four wide tablet four wide computer column">
+    <div class="ui sixteen wide mobile four wide tablet four wide computer column" style="padding-top: 0">
         {include file='wiki/widgets/side-menu.tpl'}
     </div>  
 </div>
