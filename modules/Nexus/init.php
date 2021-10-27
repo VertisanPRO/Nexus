@@ -12,8 +12,8 @@
 $INFO_MODULE = array(
 	'name' => 'Nexus',
 	'author' => 'Mubeen, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky',
-	'module_ver' => '1.4.0',
-	'nml_ver' => '2.0.0-pr11',
+	'module_ver' => '1.5.0',
+	'nml_ver' => '2.0.0-pr12',
 );
 
 $NexusLanguage = new Language(ROOT_PATH . '/modules/' . $INFO_MODULE['name'] . '/language', LANGUAGE);

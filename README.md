@@ -1,4 +1,4 @@
-# Nexus Template 1.4.0
+# Nexus Template 1.5.0
 
 For better experience read "README.html"
 

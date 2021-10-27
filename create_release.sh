@@ -9,4 +9,4 @@ fi
 
 echo " zipping template files for $version"
 
-zip -r Nexus_"$version".zip custom/templates/Nexus/ custom/panel_templates/Default/nexus/ modules/Nexus/ README.html
+zip -r "Nexus "$version".zip" custom/templates/Nexus/ custom/panel_templates/Default/nexus/ modules/Nexus/ README.html README.md

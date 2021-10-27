@@ -28,7 +28,7 @@ class Nexus_Template extends TemplateBase
 		$template = array(
 			'name' => 'Nexus',
 			'version' => '2.0.0-pr12',
-			'nl_version' => "2.0.0-pr12",
+			'nl_version' => '2.0.0-pr12',
 			'author' => 'Mubeen, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky',
 		);
 
