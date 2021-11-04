@@ -27,10 +27,14 @@
 
 
 
-	<div class="ui fluid card" id="widget-online-staff">
+	<div class="ui fluid card" id="widget-poll">
 		<div class="content">
-			<h4 class="ui header"><a
-					href="{$VIEW_URL}{$POLL_DATA[$key]['poll']['id']}">{$POLL_DATA[$key]['poll']['subject']}</a></h4>
+			<h4 class="header">
+				<a class="ui {if isset($WIDGET_LABEL_COLOR)} {$WIDGET_LABEL_COLOR}{else} violet{/if} ribbon label" style="margin-bottom: 10px;" 
+					href="{$VIEW_URL}{$POLL_DATA[$key]['poll']['id']}"><i class="fas fa-vote-yea"></i>{$POLL_DATA[$key]['poll']['subject']}
+				</a>
+					
+			</h4>
 			<div class="description">
 				{if isset($NO_LOGIN_TEXT)}
 					<p>{$NO_LOGIN_TEXT}</p>
