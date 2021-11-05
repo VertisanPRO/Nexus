@@ -43,7 +43,7 @@
 						{foreach from=$CAROUSEL_LIST item=carousel}
 							<div class="ui side{if $i === 1} active{/if}">
 
-								<img src="{$carousel.src}" class="ui hunge bordered image" alt="{$carousel.alt}">
+								<img src="{$carousel.src}" class="ui hunge bordered rounded image" alt="{$carousel.alt}">
 								<div>
 									<div class="ui center aligned header {$carousel.carousel_head_class}">{$carousel.carousel_head}</div>
 									<div class="ui center aligned description {$carousel.carousel_title_class}">{$carousel.carousel_title}
@@ -76,23 +76,23 @@
 				</div>
 
 				<div class="ui four column centered row">
-					<div class="ui medium images">
+					<div class="ui medium images rounded">
 						{$i = 1}
 						{foreach from=$IMAGES_LIST item=image}
-							<img src="{$image.small_src}" onclick="imgModal({$i})">
+							<img src="{$image.small_src}" class="image rounded" onclick="imgModal({$i})">
 
 							<div class="ui longer modal {$i}">
 								<div class="content">
-									<div class="ui fluid image">
+									<div class="ui fluid image rounded" style="padding-bottom: 0 !important">
 										<img src="{$image.src}">
 									</div>
 								</div>
 								<div class="actions">
 
-									<button type="button" class="ui left floated button" onclick="imgModalBack({$i})"><i
+									<button type="button" class="ui left floated button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalBack({$i})"><i
 											class="arrow left icon"></i></button>
 
-									<button type="button" class="ui button" onclick="imgModalNext({$i})"><i
+									<button type="button" class="ui right floated button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalNext({$i})"><i
 											class="arrow right icon"></i></button>
 
 								</div>
