@@ -37,13 +37,24 @@
 
 
 			<div class="ui relaxed centered grid">
+
+			<div style="margin-top: 2rem">
+				<a class="ui green button{if !isset($SELECT_CATEGORY_ID)} active{/if}" id="cat"
+					href="{$ALL_LINK}">{$SHOW_ALL}</a>
+				{foreach from=$CATEGORY_LIST item=category}
+					<a class="ui green button{if $SELECT_CATEGORY_ID === $category.id} active{/if}" id="cat{$category.id}"
+						href="{$category.link}">{$category.name}</a>
+
+				{/foreach}
+			</div>
+
 				<div class="ui shape" onclick="slider()">
 					<div class="ui sides">
 						{$i = 1}
 						{foreach from=$CAROUSEL_LIST item=carousel}
 							<div class="ui side{if $i === 1} active{/if}">
 
-								<img src="{$carousel.src}" class="ui hunge bordered rounded image" alt="{$carousel.alt}">
+								<img src="{$carousel.src}" class="ui hunge bordered rounded image" style="margin-top: 2rem" alt="{$carousel.alt}">
 								<div>
 									<div class="ui center aligned header {$carousel.carousel_head_class}">{$carousel.carousel_head}</div>
 									<div class="ui center aligned description {$carousel.carousel_title_class}">{$carousel.carousel_title}
@@ -59,22 +70,16 @@
 
 			<div class="ui two column centered grid">
 
-				<div class="ui relaxed centered grid">
+				<div class="ui relaxed" style="width: 100%; padding-top: 1rem">
 					<div class="row">
-					    <div class="ui left floated animated button" onclick="sliderBack()">
+					    <div class="ui left floated animated fade button" onclick="sliderBack()">
 							<div class="visible content">Back</div>
 								<div class="hidden content">
 									<i class="arrow left icon"></i>
 								</div>
 						</div>
-						<a class="ui green button{if !isset($SELECT_CATEGORY_ID)} active{/if}" id="cat"
-							href="{$ALL_LINK}">{$SHOW_ALL}</a>
-						{foreach from=$CATEGORY_LIST item=category}
-							<a class="ui green button{if $SELECT_CATEGORY_ID === $category.id} active{/if}" id="cat{$category.id}"
-								href="{$category.link}">{$category.name}</a>
-
-						{/foreach}
-						<div class="ui right floated animated button" onclick="sliderNext()">
+						
+						<div class="ui right floated animated fade button" onclick="sliderNext()">
 							<div class="visible content">Next</div>
 								<div class="hidden content">
 									<i class="arrow right icon"></i>
@@ -96,14 +101,14 @@
 									</div>
 								</div>
 								<div class="actions">
-									<div class="ui left floated animated button"  style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalBack({$i})">
+									<div class="ui left floated animated fade button" style="margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 1rem" onclick="imgModalBack({$i})">
 										<div class="visible content">Back</div>
 										<div class="hidden content">
 											<i class="arrow left icon"></i>
 										</div>
 									</div>
 
-									<div class="ui right floated animated button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalNext({$i})">
+									<div class="ui right floated animated fade button" style="margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 1rem" onclick="imgModalNext({$i})">
 										<div class="visible content">Next</div>
 										<div class="hidden content">
 											<i class="arrow right icon"></i>
