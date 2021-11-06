@@ -88,12 +88,19 @@
 									</div>
 								</div>
 								<div class="actions">
+									<div class="ui toggle left floated animated button"  style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalBack({$i})">
+										<div class="visible content">Back</div>
+										<div class="hidden content">
+											<i class="arrow left icon"></i>
+										</div>
+									</div>
 
-									<button type="button" class="ui left floated button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalBack({$i})"><i
-											class="arrow left icon"></i></button>
-
-									<button type="button" class="ui right floated button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalNext({$i})"><i
-											class="arrow right icon"></i></button>
+									<div class="ui right floated animated button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalNext({$i})">
+										<div class="visible content">Next</div>
+										<div class="hidden content">
+											<i class="arrow right icon"></i>
+										</div>
+									</div>
 
 								</div>
 							</div>
