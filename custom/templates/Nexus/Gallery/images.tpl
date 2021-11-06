@@ -61,8 +61,12 @@
 
 				<div class="ui relaxed centered grid">
 					<div class="row">
-						<button type="button" class="ui left floated button" onclick="sliderBack()"><i
-								class="arrow left icon"></i></button>
+					    <div class="ui left floated animated button" onclick="sliderBack()">
+							<div class="visible content">Back</div>
+								<div class="hidden content">
+									<i class="arrow left icon"></i>
+								</div>
+						</div>
 						<a class="ui green button{if !isset($SELECT_CATEGORY_ID)} active{/if}" id="cat"
 							href="{$ALL_LINK}">{$SHOW_ALL}</a>
 						{foreach from=$CATEGORY_LIST item=category}
@@ -70,8 +74,12 @@
 								href="{$category.link}">{$category.name}</a>
 
 						{/foreach}
-						<button type="button" class="ui right floated button" onclick="sliderNext()"><i
-								class="arrow right icon"></i></button>
+						<div class="ui right floated animated button" onclick="sliderNext()">
+							<div class="visible content">Next</div>
+								<div class="hidden content">
+									<i class="arrow right icon"></i>
+								</div>
+						</div>
 					</div>
 				</div>
 
@@ -88,7 +96,7 @@
 									</div>
 								</div>
 								<div class="actions">
-									<div class="ui toggle left floated animated button"  style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalBack({$i})">
+									<div class="ui left floated animated button"  style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalBack({$i})">
 										<div class="visible content">Back</div>
 										<div class="hidden content">
 											<i class="arrow left icon"></i>
