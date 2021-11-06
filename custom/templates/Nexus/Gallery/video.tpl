@@ -40,7 +40,7 @@
 
 
 				{* Category *}
-				<div class="ui relaxed centered grid">
+				<div class="ui relaxed centered grid" style="margin-top: 2rem">
 					<div class="row">
 						<a class="ui green button{if !isset($SELECT_CATEGORY_ID)} active{/if}" id="cat"
 							href="{$ALL_LINK}">{$SHOW_ALL}</a>
