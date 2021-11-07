@@ -26,10 +26,10 @@ class Nexus_Template extends TemplateBase
 	{
 
 		$template = array(
-			'name' => 'Nexus',
+			'name' => '<img src="https://namelessmc.com/uploads/resources_icons/162.png" style="margin-top: 5px;width: 40px;margin-right: 0.75rem;float: left;"> Nexus',
 			'version' => '2.0.0-pr12',
 			'nl_version' => '2.0.0-pr12',
-			'author' => 'Mubeen, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky',
+			'author' => '<a href="https://discord.gg/RJfCxC2W3e" target="_blank">Gigabait Development</a>',
 		);
 
 		$template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
