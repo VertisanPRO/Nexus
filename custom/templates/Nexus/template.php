@@ -3,7 +3,7 @@
  *	NamelessMC by Samerton | Template by Mubeen
  *	https://github.com/NamelessMC/Nameless/
  *	NamelessMC version 2.0.0-pr11
- 
+
  *	License: MIT
  *
  *	Nexus Template
@@ -26,7 +26,7 @@ class Nexus_Template extends TemplateBase
 	{
 
 		$template = array(
-			'name' => '<img src="https://namelessmc.com/uploads/resources_icons/162.png" style="margin-top: 5px;width: 40px;margin-right: 0.75rem;float: left;"> Nexus',
+			'name' => 'Nexus',
 			'version' => '2.0.0-pr12',
 			'nl_version' => '2.0.0-pr12',
 			'author' => '<a href="https://discord.gg/RJfCxC2W3e" target="_blank">Gigabait Development</a>',
@@ -35,6 +35,8 @@ class Nexus_Template extends TemplateBase
 		$template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
 
 		parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
+
+		$this->_settings = ROOT_PATH . '/custom/templates/Nexus/template_settings/settings.php';
 
 		$this->addCSSFiles(array(
 			$template['path'] . 'css/semantic.min.css' => array(),
