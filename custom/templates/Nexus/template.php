@@ -26,7 +26,7 @@ class Nexus_Template extends TemplateBase
 	{
 
 		$template = array(
-			'name' => '<img src="https://namelessmc.com/uploads/resources_icons/162.png" style="margin-top: 5px;width: 40px;margin-right: 0.75rem;float: left;"> Nexus',
+			'name' => '<img src="https://namelessmc.com/uploads/resources_icons/162.png" style="margin-top: 5px;width: 40px;margin-right: 0.75rem;float: left;"> Nexus</img>',
 			'version' => '2.0.0-pr12',
 			'nl_version' => '2.0.0-pr12',
 			'author' => '<a href="https://discord.gg/RJfCxC2W3e" target="_blank">Gigabait Development</a>',
