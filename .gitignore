@@ -5,3 +5,5 @@
 !README.md
 !create_release.sh
 !.gitignore
+.vscode
+.vscode/sftp.json
