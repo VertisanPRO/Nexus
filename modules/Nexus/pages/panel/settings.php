@@ -9,43 +9,6 @@
  *  Nexus By Mubeen & xGIGABAITx
  */
 
-
-// function getExtension($filename)
-// // Chek file type. Return array
-// {
-// 	return explode('.', $filename);
-// }
-
-
-// function getEndRoute()
-// // Get last argument from route. Return string
-// {
-// 	if (empty(end(explode('/', $_SERVER['QUERY_STRING'])))) {
-// 		$route = explode('/', $_SERVER['QUERY_STRING']);
-// 		array_pop($route);
-// 		$route = end($route);
-// 	} else {
-// 		$route = end(explode('/', $_SERVER['QUERY_STRING']));
-// 	}
-// 	return $route;
-// }
-
-// function getTemplateName($panel = '')
-// // no argument return front-end template name
-// // argument 'panel_' return staff template name
-// {
-// 	global $queries;
-// 	$template_name = $queries->getWhere($panel . 'templates', array('is_default', '=', 1))['0']->name;
-// 	if (empty($template_name)) {
-// 		if ($panel == 'panel_') {
-// 			$template_name = 'Default';
-// 		} else {
-// 			$template_name = 'DefaultRevamp';
-// 		}
-// 	}
-// 	return $template_name;
-// }
-
 $NexusLanguage = $GLOBALS['NexusLanguage'];
 $page_title = $NexusLanguage->get('general', 'title');
 
@@ -315,37 +278,14 @@ if (!isset($_POST['sel_btn'])) {
 
 
 
-
-
-// Smarty variables for links to tpl files admin panel
-// $tpl_panel_files = scandir(join(DIRECTORY_SEPARATOR, array(ROOT_PATH, 'custom', 'panel_templates', getTemplateName('panel_'), 'nexus')));
-// foreach ($tpl_panel_files as $key => $file) {
-// 	$file = getExtension($file);
-// 	if ($file['1'] != 'tpl') {
-// 		continue;
-// 	}
-
-// 	$smarty->assign(array(
-// 		strtoupper($file['0']) . '_URL' => URL::build('/panel/nexus/' . $file['0'])
-
-// 	));
-// }
-
-
-// Route == name tpl file
-// $template_file = 'nexus/' . getEndRoute() . '.tpl';
 $template_file = 'nexus/nexus.tpl';
-// $smarty->assign(array(
-// 	'TPL_NAME' => $_POST['sel_btn']
-// ));
-
-
 
 // Load modules + template
 Module::loadPage($user, $pages, $cache, $smarty, array($navigation, $cc_nav, $mod_nav), $widgets, $template);
 $page_load = microtime(true) - $start;
 define('PAGE_LOAD_TIME', str_replace('{x}', round($page_load, 3), $language->get('general', 'page_loaded_in')));
 $template->onPageLoad();
+
 if (Session::exists('select_btn')) {
 	$smarty->assign(array(
 		'TPL_NAME_SESSION' =>  Session::flash('select_btn')

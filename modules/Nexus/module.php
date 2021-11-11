@@ -2,7 +2,7 @@
 /*
  *	Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr10
+ *  NamelessMC version 2.0.0-pr12
  *
  *  License: MIT
  *
@@ -32,28 +32,7 @@ class Nexus extends Module
 
 	public function onInstall()
 	{
-
-		try {
-			$engine = Config::get('mysql/engine');
-			$charset = Config::get('mysql/charset');
-		} catch (Exception $e) {
-			$engine = 'InnoDB';
-			$charset = 'utf8mb4';
-		}
-		if (!$engine || is_array($engine))
-			$engine = 'InnoDB';
-
-		if (!$charset || is_array($charset))
-			$charset = 'latin1';
-
-		// Queries
-		$queries = new Queries();
-
-		try {
-			$queries->createTable("nexus_settings", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)", "ENGINE=$engine DEFAULT CHARSET=$charset");
-		} catch (Exception $e) {
-			var_dump($e);
-		}
+		$this->initialise();
 	}
 
 	public function onUninstall()
@@ -62,22 +41,7 @@ class Nexus extends Module
 
 	public function onEnable()
 	{
-
-		$queries = new Queries();
-
-		try {
-
-			$group = $queries->getWhere('groups', array('id', '=', 2));
-			$group = $group[0];
-
-			$group_permissions = json_decode($group->permissions, TRUE);
-			$group_permissions['admincp.nexus'] = 1;
-
-			$group_permissions = json_encode($group_permissions);
-			$queries->update('groups', 2, array('permissions' => $group_permissions));
-		} catch (Exception $e) {
-			// Error
-		}
+		$this->initialise();
 	}
 
 	public function onDisable()
@@ -92,8 +56,6 @@ class Nexus extends Module
 		));
 
 
-
-
 		// Widgets
 		require_once(ROOT_PATH . '/modules/Nexus/widgets/donate.php');
 		$module_pages = $widgets->getPages('Donate');
@@ -106,19 +68,6 @@ class Nexus extends Module
 		$NexusLanguage = $this->NexusLanguage;
 		$Message = new Message($module_pages, $smarty, $user, $NexusLanguage);
 		$widgets->add($Message);
-
-
-
-
-		// $jsonIn = file_get_contents('https://discordapp.com/api/servers/760945720470667294/widget.json');
-		// $JSON = json_decode($jsonIn, true);
-		// $dsOnlineUsers = $JSON['presence_count'];
-		// $dsName = $JSON['name'];
-
-
-		// echo '<pre>DS NAME = ' . $dsName . '<br>';
-		// echo 'DS ONLINE USERS = ' . $dsOnlineUsers . '</pre>';
-
 
 		$icon = '<i class="fas fa-palette"></i>';
 		$order = 19;
@@ -192,5 +141,45 @@ class Nexus extends Module
 				$navs[2]->add('nexus_items', $title, URL::build('/panel/nexus'), 'top', null, $order + 0.1, $icon);
 			}
 		}
+	}
+
+	private function initialise()
+  {
+
+		$queries = new Queries();
+
+		try {
+
+			$group = $queries->getWhere('groups', array('id', '=', 2));
+			$group = $group[0];
+
+			$group_permissions = json_decode($group->permissions, TRUE);
+			$group_permissions['admincp.nexus'] = 1;
+
+			$group_permissions = json_encode($group_permissions);
+			$queries->update('groups', 2, array('permissions' => $group_permissions));
+		} catch (Exception $e) {
+			// Error
+		}
+
+		try {
+			$engine = Config::get('mysql/engine');
+			$charset = Config::get('mysql/charset');
+		} catch (Exception $e) {
+			$engine = 'InnoDB';
+			$charset = 'utf8mb4';
+		}
+		if (!$engine || is_array($engine))
+			$engine = 'InnoDB';
+
+		if (!$charset || is_array($charset))
+			$charset = 'latin1';
+
+		try {
+			$queries->createTable("nexus_settings", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)", "ENGINE=$engine DEFAULT CHARSET=$charset");
+		} catch (Exception $e) {
+			// Error
+		}
+
 	}
 }
