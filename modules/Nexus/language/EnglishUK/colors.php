@@ -16,4 +16,7 @@ $language = array(
     'footer_color_label' => 'Footer Colour',
     'border_color_label' => 'Border Outline Colour',
     'colors_info_label' => '#000000 makes it Primary Colour',
+    'navbar_text_label' => 'Navbar Text Colour',
+    'black_label' => 'Black',
+    'white_label' => 'White',
 );

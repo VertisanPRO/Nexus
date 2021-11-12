@@ -81,6 +81,10 @@ $smarty->assign(array(
 		'FOOTER_COLOR_LABEL' => $NexusLanguage->get('colors', 'footer_color_label'),
 		'BORDER_COLOR_LABEL' => $NexusLanguage->get('colors', 'border_color_label'),
 		'COLORS_INFO_LABEL' => $NexusLanguage->get('colors', 'colors_info_label'),
+		'NAVBAR_TEXT_LABEL' => $NexusLanguage->get('colors', 'navbar_text_label'),
+		'BLACK_LABEL' => $NexusLanguage->get('colors', 'black_label'),
+		'WHITE_LABEL' => $NexusLanguage->get('colors', 'white_label'),
+
 
 	// Navbar
 		'LOGO_LABEL' => $NexusLanguage->get('navbar', 'logo_label'),
@@ -225,7 +229,7 @@ if (!isset($_POST['sel_btn'])) {
 							die();
 						}
 					} else {
-						$errors = $NexusLanguage->get('general', 'img_empty_and_size') . ini_get('upload_max_filesize');
+						$errors = $NexusLanguage->get('options', 'img_empty_and_size') . ini_get('upload_max_filesize');
 					}
 				}
 			} else {
