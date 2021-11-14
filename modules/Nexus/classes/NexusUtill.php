@@ -2,13 +2,13 @@
 
 class NexusUtill {
 
-  private static Language $_discord_integration_language;
+  private static Language $_nexus_language;
 
   public static function getLanguage(string $file, string $term): string {
-    if (!isset(self::$_discord_integration_language)) {
-        self::$_discord_integration_language = new Language(ROOT_PATH . '/modules/Nexus/language', LANGUAGE);
+    if (!isset(self::$_nexus_language)) {
+        self::$_nexus_language = new Language(ROOT_PATH . '/modules/Nexus/language', LANGUAGE);
     }
-    return self::$_discord_integration_language->get($file, $term);
+    return self::$_nexus_language->get($file, $term);
   }
 
   public static function getDsServer($id)
