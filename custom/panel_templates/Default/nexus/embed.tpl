@@ -33,7 +33,7 @@
 					<label for="opal_embed_color" style="margin-top:5px">{$EMBED_COLOR_LABEL}</label>
 					<div class="input-group">
 						<input type="color" class="form-control" id="opal_embed_color" name="opal_embed_color"
-							value="{$OPAL_EMBED_color}">
+							value="{$OPAL_EMBED_COLOR}">
 					</div>
 
 				</div>
