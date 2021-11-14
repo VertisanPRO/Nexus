@@ -28,7 +28,7 @@
 					<!-- Update Notification -->
 					{include file='includes/update.tpl'}
 
-					<div class="card shadow mb-4">
+					<div>
 						<!-- Success and Error Alerts -->
 						{include file='includes/alerts.tpl'}
 					</div>

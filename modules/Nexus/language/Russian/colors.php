@@ -17,4 +17,7 @@ $language = array(
     'footer_color_label' => 'Цвет Футера',
     'border_color_label' => 'Цвет Границы Окна',
     'colors_info_label' => '#000000 делает Основным Цветом',
+    'navbar_text_label' => 'Цвет Текста Панели Навигации',
+    'black_label' => 'Чёрный',
+    'white_label' => 'Белый',
 );

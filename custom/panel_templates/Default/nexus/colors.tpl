@@ -55,6 +55,17 @@
 				<input type="color" class="form-control" id="border_color" name="border_color" value="{$BORDER_COLOR}">
 
 			</div>
+
+							<div class="form-group">
+
+					<label for="navbar_text">{$NAVBAR_TEXT_LABEL}</label>
+					<div class="input-group">
+						<select id="navbar_text" class="form-control mr-sm-2" name="navbar_text">
+							<option {if $NAVBAR_TEXT == 'black'}selected {/if}value="black">{$BLACK_LABEL}</option>
+							<option {if $NAVBAR_TEXT == 'white'}selected {/if}value="white">{$WHITE_LABEL}</option>
+						</select>
+						</div>
+						</div>
 			
 
 

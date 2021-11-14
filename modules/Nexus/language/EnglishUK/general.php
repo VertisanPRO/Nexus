@@ -21,4 +21,5 @@ $language = array(
 		'false_label' => 'False',
 		'group_permision' => 'Module permission',
 		'info_box_label' => 'Info Box',
+		'invalid_token' => 'Invalid Token'
 );

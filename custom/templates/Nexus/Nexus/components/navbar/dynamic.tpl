@@ -47,8 +47,14 @@
 				</div>
 			</div>
 		{else}
-			<a class="item{if isset($item.active)} active{/if}" href="{$item.link}" target="{$item.target}">{$item.icon}
-				{$item.title}</a>
+			{if $NAVBAR_TEXT == 'black'}
+				<a class="item{if isset($item.active)} active{/if}" style="color:black" href="{$item.link}" target="{$item.target}">{$item.icon}
+					{$item.title}</a>
+			{else}
+				<a class="item{if isset($item.active)} active{/if}" style="color:white" href="{$item.link}" target="{$item.target}">{$item.icon}
+					{$item.title}</a>
+			{/if}
+			{/if}
 		{/if}
 	{/foreach}
 </div>
