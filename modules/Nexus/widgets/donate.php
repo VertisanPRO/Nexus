@@ -10,12 +10,11 @@
  */
 class Donate extends WidgetBase
 {
-	private $_smarty, $NexusLanguage;
-	public function __construct($pages = array(), $smarty, $user, $NexusLanguage)
+	private $_smarty;
+	public function __construct($pages = array(), $smarty, $user)
 	{
 		parent::__construct($pages);
 		$this->_smarty = $smarty;
-		$this->NexusLanguage = $NexusLanguage;
 		$this->_user = $user;
 		// Get order
 		$order = DB::getInstance()->query('SELECT `location`, `order` FROM nl2_widgets WHERE `name` = ?', array('Donate'))->first();

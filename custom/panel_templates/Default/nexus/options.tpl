@@ -14,7 +14,7 @@
 						<div class="custom-file">
 							<input type="file" name="favicon" class="custom-file-input" id="favicon" accept="image/*"
 								onchange="$('#favicon').html(this.files[0].name)">
-							<label for="favicon" class="custom-file-label" id="favicon"></label>
+							<label for="favicon" class="custom-file-label" id="favicon">{$FAVICON}</label>
 						</div>
 						<div class="input-group-append">
 							<input type="hidden" name="token" value="{$TOKEN}">
