@@ -11,6 +11,15 @@ class NexusUtill {
     return self::$_nexus_language->get($file, $term);
   }
 
+	public static function languageFileToSmarty(string $file): array {
+    require ROOT_PATH . '/modules/Nexus/language/' . LANGUAGE . DIRECTORY_SEPARATOR . $file . '.php';
+    $result = array();
+    foreach ($language as $key => $value) {
+      $result[strtoupper($key)] = $value;
+    }
+    return $result;
+  } 
+
   public static function getDsServer($id)
   {
     $discord_server = array();
