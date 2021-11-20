@@ -6,17 +6,17 @@
 </h2>
 
 {if count($ERROR)}
-  <div class="ui error icon message">
-    <i class="x icon"></i>
-    <div class="content">
-      <div class="header">{$ERROR_TITLE}</div>
-      <ul class="list">
-        {foreach from=$ERROR item=error}
-          <li>{$error}</li>
-        {/foreach}
-      </ul>
-    </div>
+<div class="ui error icon message">
+  <i class="x icon"></i>
+  <div class="content">
+    <div class="header">{$ERROR_TITLE}</div>
+    <ul class="list">
+      {foreach from=$ERROR item=error}
+      <li>{$error}</li>
+      {/foreach}
+    </ul>
   </div>
+</div>
 {/if}
 
 <div class="ui padded segment" id="login">
@@ -25,15 +25,16 @@
       <div class="ui sixteen wide tablet ten wide computer column">
         <form class="ui form" action="" method="post" id="form-login">
           {if isset($EMAIL)}
-            <div class="field">
-              <label>{$EMAIL}</label>
-              <input type="email" name="email" id="email" value="{$USERNAME_INPUT}" placeholder="{$EMAIL}" tabindex="1">
-            </div>
+          <div class="field">
+            <label>{$EMAIL}</label>
+            <input type="email" name="email" id="email" value="{$USERNAME_INPUT}" placeholder="{$EMAIL}" tabindex="1">
+          </div>
           {else}
-            <div class="field">
-              <label>{$USERNAME}</label>
-              <input type="text" name="username" id="username" value="{$USERNAME_INPUT}" placeholder="{$USERNAME}" tabindex="1">
-            </div>
+          <div class="field">
+            <label>{$USERNAME}</label>
+            <input type="text" name="username" id="username" value="{$USERNAME_INPUT}" placeholder="{$USERNAME}"
+              tabindex="1">
+          </div>
           {/if}
           <div class="field">
             <label>{$PASSWORD}</label>
@@ -46,9 +47,9 @@
             </div>
           </div>
           {if $CAPTCHA}
-            <div class="field">
-              {$CAPTCHA}
-            </div>
+          <div class="field">
+            {$CAPTCHA}
+          </div>
           {/if}
           <input type="hidden" name="token" value="{$FORM_TOKEN}">
           <input type="submit" class="ui primary button" value="{$SIGN_IN}" tabindex="5">

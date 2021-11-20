@@ -9,11 +9,11 @@
         <hr />
 
         {if isset($ERRORS)}
-          <div class="alert alert-danger">
-            {foreach from=$ERRORS item=error}
-              {$error}<br />
-            {/foreach}
-          </div>
+        <div class="alert alert-danger">
+          {foreach from=$ERRORS item=error}
+          {$error}<br />
+          {/foreach}
+        </div>
         {/if}
 
         <div class="alert alert-info">
@@ -27,10 +27,10 @@
         </div>
 
         {if isset($NICKNAME)}
-          <div class="form-group">
-            <label for="inputNickname">{$NICKNAME}</label>
-            <input type="text" id="inputNickname" name="nickname" class="form-control" placeholder="{$NICKNAME}">
-          </div>
+        <div class="form-group">
+          <label for="inputNickname">{$NICKNAME}</label>
+          <input type="text" id="inputNickname" name="nickname" class="form-control" placeholder="{$NICKNAME}">
+        </div>
         {/if}
 
         <div class="form-group">

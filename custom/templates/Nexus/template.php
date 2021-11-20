@@ -11,7 +11,7 @@
 
 class Nexus_Template extends TemplateBase
 {
-	private $_template;
+  private $_template;
     
     /** @var Language */
     private $_language;
@@ -22,104 +22,143 @@ class Nexus_Template extends TemplateBase
     /** @var Pages */
     private $_pages;
 
-	public function __construct($cache, $smarty, $language, $user, $pages)
-	{
+  public function __construct($cache, $smarty, $language, $user, $pages)
+  {
 
-		$template = array(
-			'name' => 'Nexus',
-			'version' => '2.0.0-pr12',
-			'nl_version' => '2.0.0-pr12',
-			'author' => '<a href="https://discord.gg/RJfCxC2W3e" target="_blank">Gigabait Development</a>',
-		);
+    $template = array(
+      'name' => 'Nexus',
+      'version' => '2.0.0-pr12',
+      'nl_version' => '2.0.0-pr12',
+      'author' => '<a href="https://discord.gg/RJfCxC2W3e" target="_blank">Gigabait Development</a>',
+    );
 
-		$template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
+    $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
 
-		parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
+    parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
 
-		$this->addCSSFiles(array(
-			$template['path'] . 'css/semantic.min.css' => array(),
-			$template['path'] . 'css/toastr.min.css' => array(),
-			'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' => array('integrity' => 'sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==', 'crossorigin' => 'anonymous')
-		));
+    $this->_settings = ROOT_PATH . '/custom/templates/Nexus/template_settings/settings.php';
 
-		$this->addJSFiles(array(
-			$template['path'] . 'js/jquery.min.js' => array(),
-			$template['path'] . 'js/jquery.cookie.js' => array(),
-			$template['path'] . 'js/semantic.min.js' => array(),
-			$template['path'] . 'js/toastr.min.js' => array(),
-		));
+    $this->addCSSFiles(array(
+      $template['path'] . 'css/fomantic.min.css' => array(),
+      $template['path'] . 'css/toastr.min.css' => array(),
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' => array('integrity' => 'sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==', 'crossorigin' => 'anonymous')
+    ));
 
-		$smarty->assign('TEMPLATE', $template);
+    $this->addJSFiles(array(
+      $template['path'] . 'js/jquery.min.js' => array(),
+      $template['path'] . 'js/jquery.cookie.js' => array(),
+      $template['path'] . 'js/fomantic.min.js' => array(),
+      $template['path'] . 'js/toastr.min.js' => array(),
+    ));
 
-		// Other variables
-		$smarty->assign('FORUM_SPAM_WARNING_TITLE', $language->get('general', 'warning'));
+    $smarty->assign('TEMPLATE', $template);
 
-		$this->_template = $template;
-		$this->_language = $language;
-		$this->_user = $user;
-		$this->_pages = $pages;
-	}
+    // Other variables
+    $smarty->assign('FORUM_SPAM_WARNING_TITLE', $language->get('general', 'warning'));
 
-	public function onPageLoad()
-	{
+    $this->_template = $template;
+    $this->_language = $language;
+    $this->_user = $user;
+    $this->_pages = $pages;
+    $this->_smarty = $smarty;
+    $this->_cache = $cache;
+  }
 
-		$this->addCSSFiles(array(
-			$this->_template['path'] . 'css/custom.css' => array()
-		));
+  public function onPageLoad()
+  {
 
-		$route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
+    if ($this->_user->isLoggedIn()) {
+      $this->_smarty->assign(array(
+        'USER_LOGIN' => 1
+      ));
+    }
 
-		$JSVariables = array(
-			'siteName' => SITE_NAME,
-			'siteURL' => URL::build('/'),
-			'fullSiteUrl' => Util::getSelfURL() . ltrim(URL::build('/'), '/'),
-			'page' => PAGE,
-			'avatarSource' => Util::getAvatarSource(),
-			'copied' => $this->_language->get('general', 'copied'),
-			'cookieNotice' => $this->_language->get('general', 'cookie_notice'),
-			'noMessages' => $this->_language->get('user', 'no_messages'),
-			'newMessage1' => $this->_language->get('user', '1_new_message'),
-			'newMessagesX' => $this->_language->get('user', 'x_new_messages'),
-			'noAlerts' => $this->_language->get('user', 'no_alerts'),
-			'newAlert1' => $this->_language->get('user', '1_new_alert'),
-			'newAlertsX' => $this->_language->get('user', 'x_new_alerts'),
-			'bungeeInstance' => $this->_language->get('general', 'bungee_instance'),
-			'andMoreX' => $this->_language->get('general', 'and_x_more'),
-			'noPlayersOnline' => $this->_language->get('general', 'no_players_online'),
-			'offline' => $this->_language->get('general', 'offline'),
-			'confirmDelete' => $this->_language->get('general', 'confirm_deletion'),
-			'debugging' => ((defined('DEBUGGING') && DEBUGGING == 1) ? '1' : '0'),
-			'loggedIn' => ($this->_user->isLoggedIn() ? '1' : '0'),
-			'cookie'  => (defined('COOKIE_NOTICE') ? '1' : '0'),
-			'loadingTime' => ((defined('PAGE_LOADING') && PAGE_LOADING == 1) ? PAGE_LOAD_TIME : ''),
-			'route' => $route
-		);
+    require_once('template_settings/classes/NexusUtill.php');
+    $settings_data = NexusUtill::getSettingsToSmarty();
+    $this->_smarty->assign($settings_data);
 
-		if (strpos($route, '/forum/topic/') !== false || PAGE == 'profile') {
-			$this->addJSFiles(array(
-				$this->_template['path'] . 'js/jquery-ui.min.js' => array()
-			));
-		}
+    if ($this->_cache->isCached('ds_status_ping')) {
+      $discord_server = $this->_cache->retrieve('ds_status_ping');
+    } else {
+      $discord_server = NexusUtill::getDsServer($settings_data['DISCORD_ID']);
+    }
+    $this->_cache->store('ds_status_ping', $discord_server, 60);
+    $this->_smarty->assign(array(
+      'DISCORD_SERVER' => $discord_server,
+    ));
 
-		$JSVars = '';
-		$i = 0;
-		foreach ($JSVariables as $var => $value) {
-			$JSVars .= ($i == 0 ? 'var ' : ', ') . $var . ' = "' . $value . '"';
-			$i++;
-		}
+    // Widgets
+    // require_once(ROOT_PATH . '/custom/templates/Nexus/template_settings/widgets/donate.php');
+    // $module_pages = $this->_widgets->getPages('Donate');
 
-		$this->addJSScript($JSVars);
+    // $Donate = new Donate($module_pages, $this->_smarty, $this->_user);
+    // $this->_widgets->add($Donate);
 
-		$this->addJSFiles(array(
-			$this->_template['path'] . 'js/core/core.js' => array(),
-			$this->_template['path'] . 'js/core/user.js' => array(),
-			$this->_template['path'] . 'js/core/pages.js' => array(),
-			$this->_template['path'] . 'js/scripts.js' => array(),
-		));
+    // require_once(ROOT_PATH . '/custom/templates/Nexus/template_settings/widgets/message.php');
+    // $module_pages = $this->_widgets->getPages('Message');
 
-		foreach ($this->_pages->getAjaxScripts() as $script)
-			$this->addJSScript('$.getJSON(\'' . $script . '\', function(data) {});');
-	}
+    // $Message = new Message($module_pages, $this->_smarty, $this->_user);
+    // $this->_widgets->add($Message);
+    
+
+    $this->addCSSFiles(array(
+      $this->_template['path'] . 'css/custom.css' => array()
+    ));
+
+
+    $route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
+
+    $JSVariables = array(
+      'siteName' => SITE_NAME,
+      'siteURL' => URL::build('/'),
+      'fullSiteUrl' => Util::getSelfURL() . ltrim(URL::build('/'), '/'),
+      'page' => PAGE,
+      'avatarSource' => Util::getAvatarSource(),
+      'copied' => $this->_language->get('general', 'copied'),
+      'cookieNotice' => $this->_language->get('general', 'cookie_notice'),
+      'noMessages' => $this->_language->get('user', 'no_messages'),
+      'newMessage1' => $this->_language->get('user', '1_new_message'),
+      'newMessagesX' => $this->_language->get('user', 'x_new_messages'),
+      'noAlerts' => $this->_language->get('user', 'no_alerts'),
+      'newAlert1' => $this->_language->get('user', '1_new_alert'),
+      'newAlertsX' => $this->_language->get('user', 'x_new_alerts'),
+      'bungeeInstance' => $this->_language->get('general', 'bungee_instance'),
+      'andMoreX' => $this->_language->get('general', 'and_x_more'),
+      'noPlayersOnline' => $this->_language->get('general', 'no_players_online'),
+      'offline' => $this->_language->get('general', 'offline'),
+      'confirmDelete' => $this->_language->get('general', 'confirm_deletion'),
+      'debugging' => ((defined('DEBUGGING') && DEBUGGING == 1) ? '1' : '0'),
+      'loggedIn' => ($this->_user->isLoggedIn() ? '1' : '0'),
+      'cookie'  => (defined('COOKIE_NOTICE') ? '1' : '0'),
+      'loadingTime' => ((defined('PAGE_LOADING') && PAGE_LOADING == 1) ? PAGE_LOAD_TIME : ''),
+      'route' => $route
+    );
+
+    if (strpos($route, '/forum/topic/') !== false || PAGE == 'profile') {
+      $this->addJSFiles(array(
+        $this->_template['path'] . 'js/jquery-ui.min.js' => array()
+      ));
+    }
+
+    $JSVars = '';
+    $i = 0;
+    foreach ($JSVariables as $var => $value) {
+      $JSVars .= ($i == 0 ? 'var ' : ', ') . $var . ' = "' . $value . '"';
+      $i++;
+    }
+
+    $this->addJSScript($JSVars);
+
+    $this->addJSFiles(array(
+      $this->_template['path'] . 'js/core/core.js' => array(),
+      $this->_template['path'] . 'js/core/user.js' => array(),
+      $this->_template['path'] . 'js/core/pages.js' => array(),
+      $this->_template['path'] . 'js/scripts.js' => array(),
+    ));
+
+    foreach ($this->_pages->getAjaxScripts() as $script)
+      $this->addJSScript('$.getJSON(\'' . $script . '\', function(data) {});');
+  }
 }
 
 $template = new Nexus_Template($cache, $smarty, $language, $user, $pages);

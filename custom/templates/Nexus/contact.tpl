@@ -6,47 +6,47 @@
 </h2>
 
 {if isset($SUCCESS)}
-  <div class="ui success icon message">
-    <i class="check icon"></i>
-    <div class="content">
-      <div class="header">{$SUCCESS_TITLE}</div>
-      {$SUCCESS}
-    </div>
+<div class="ui success icon message">
+  <i class="check icon"></i>
+  <div class="content">
+    <div class="header">{$SUCCESS_TITLE}</div>
+    {$SUCCESS}
   </div>
+</div>
 {/if}
 
 {if isset($ERRORS)}
-  <div class="ui error icon message">
-    <i class="x icon"></i>
-    <div class="content">
-      <div class="header">Error</div>
-      <ul class="list">
-        {foreach from=$ERRORS item=error}
-          <li>{$error}</li>
-        {/foreach}
-      </ul>
-    </div>
+<div class="ui error icon message">
+  <i class="x icon"></i>
+  <div class="content">
+    <div class="header">Error</div>
+    <ul class="list">
+      {foreach from=$ERRORS item=error}
+      <li>{$error}</li>
+      {/foreach}
+    </ul>
   </div>
+</div>
 {/if}
 
 {if isset($ERROR_EMAIL)}
-  <div class="ui negative icon message">
-    <i class="x icon"></i>
-    <div class="content">
-      <div class="header">{$ERROR_TITLE}</div>
-      {$ERROR_EMAIL}
-    </div>
+<div class="ui negative icon message">
+  <i class="x icon"></i>
+  <div class="content">
+    <div class="header">{$ERROR_TITLE}</div>
+    {$ERROR_EMAIL}
   </div>
+</div>
 {/if}
 
 {if isset($ERROR_CONTENT)}
-  <div class="ui negative icon message">
-    <i class="x icon"></i>
-    <div class="content">
-      <div class="header">{$ERROR_TITLE}</div>
-      {$ERROR_CONTENT}
-    </div>
+<div class="ui negative icon message">
+  <i class="x icon"></i>
+  <div class="content">
+    <div class="header">{$ERROR_TITLE}</div>
+    {$ERROR_CONTENT}
   </div>
+</div>
 {/if}
 
 <div class="ui padded segment" id="contact">
@@ -63,9 +63,9 @@
             <textarea id="inputMessage" name="content" placeholder="{$MESSAGE}" tabindex="2"></textarea>
           </div>
           {if $CAPTCHA}
-            <div class="field">
-              {$CAPTCHA}
-            </div>
+          <div class="field">
+            {$CAPTCHA}
+          </div>
           {/if}
           <div class="field">
             <input type="hidden" name="token" value="{$TOKEN}">
