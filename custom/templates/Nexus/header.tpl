@@ -16,7 +16,6 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
 		<link rel="shortcut icon"
 			href="{if isset($FAVICON)}{$FAVICON}{else}https://cdn.resourcemc.net/zAsa7/rIBOyeRU58.png/raw{/if}">
-		<script type="text/javascript" src="/custom/templates/Nexus/js/custom.js"></script>
 
 		<meta charset="{$METACHARSET}">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
