@@ -19,7 +19,7 @@
                                 {if isset($SERVER.format_player_list) && count($SERVER.format_player_list)}
                                 <p>
                                     {foreach from=$SERVER.format_player_list item=player}
-                                        <a href="{$player.profile}" data-toggle="tooltip" data-content="{$player.username}"><img class="ui avatar" src="{$player.avatar}" alt="{$player.username}" /></a>
+                                    <a {if ($REGISTRATION_ENABLED)}href="{$player.profile}"{/if} data-toggle="tooltip" data-content="{$player.username}"><img class="ui avatar" src="{$player.avatar}" alt="{$player.username}" /></a>
                                     {/foreach}
                                 </p>
                                 {/if}
