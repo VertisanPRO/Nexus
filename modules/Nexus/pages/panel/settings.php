@@ -79,6 +79,9 @@ $smarty->assign(array(
     'FOOTER_COLOR_LABEL' => NexusUtill::getLanguage('colors', 'footer_color_label'),
     'BORDER_COLOR_LABEL' => NexusUtill::getLanguage('colors', 'border_color_label'),
     'COLORS_INFO_LABEL' => NexusUtill::getLanguage('colors', 'colors_info_label'),
+    'NAVBAR_TEXT_LABEL' => NexusUtill::getLanguage('colors', 'navbar_text_label'),
+    'BLACK_LABEL' => NexusUtill::getLanguage('colors', 'black_label'),
+    'WHITE_LABEL' => NexusUtill::getLanguage('colors', 'white_label'),
 
   // Navbar
     'LOGO_LABEL' => NexusUtill::getLanguage('navbar', 'logo_label'),

@@ -10,6 +10,10 @@
 	.ui.steps {
 		border: 0 !important;
 	}
+
+	.ui.white.button {
+	background: transparent;
+	}
 </style>
 
 
@@ -134,8 +138,14 @@
 				<i class="discord icon"></i>
 				<div class="content">
 					<div class="title">{$DISCORD_SERVER['name']}</div>
-					<div class="description" style="color: white;">Members Online: {$DISCORD_SERVER['members']}</div>
-					<div class="description" style="color: white;"><strong>Click to join</strong></div>
+						<div class="ui vertical white animated button">
+							<div class="hidden content">
+								<div class="description" style="color: white;"><strong>Click to join</strong></div>
+							</div>
+							<div class="visible content">
+							<div class="description" style="color: white;"><strong>Members Online: {$DISCORD_SERVER['members']}</strong></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -144,7 +154,7 @@
 	<div class="column" style="text-align: center; align: middle;">
 		<div class="ui medium image" href="/" target="_blank">
 			<img onclick="window.location.href='/'"
-				src="{if isset($TEMPLATE_LOGO)} {$TEMPLATE_LOGO}{else}https://i.redd.it/2kdpm1d9kkx41.png{/if}"
+				src="{if isset($TEMPLATE_LOGO)} {$TEMPLATE_LOGO}{else}https://namelessmc.com/uploads/resources_icons/162.png{/if}"
 				style="cursor:pointer; display: unset;max-width: 100%;height: auto;">
 		</div>
 	</div>
@@ -155,11 +165,16 @@
 		<div class="ui steps">
 			<div class="step" style="background: transparent;color: white;">
 				<i class="signal icon"></i>
-				<div class="content" id="copied-ip">
-					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}
+				<div class="content" id="copied-ip" class="ui text shape" id="copy-ip">
+					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>					
+						<div class="ui vertical white animated button">
+							<div class="hidden content">
+								<div class="description" style="color: white;"><strong>Click to copy</strong></div>
+							</div>
+							<div class="visible content">
+							<div class="description" style="color: white;"><strong><div id="rest">Loading ...</div></strong></div>
+						</div>
 					</div>
-					<div id="rest">Loading ...</div>
-					<div class="description" style="color: white;"><strong>Click to copy</strong></div>
 				</div>
 			</div>
 		</div>
@@ -200,6 +215,7 @@
 		return false;
 	}
 
+	{if $TEMPLATE_DARKMODE == 1}
 		$(function () {
 		$('#copied-ip').click(function () {
 			$('body').toast({
@@ -214,6 +230,22 @@
 			});
 		})
 	});
+	{else}
+		$(function () {
+		$('#copied-ip').click(function () {
+			$('body').toast({
+				showIcon: 'keyboard',
+				message: 'Copied!',
+				class: 'white',
+				progressUp: true,
+				displayTime: 2000,
+				classProgress: 'black',
+				showProgress: 'bottom',
+				pauseOnHover: false,
+			});
+		})
+	});
+	{/if}
 </script>
 
 {include file='Nexus/components/colors.tpl'}

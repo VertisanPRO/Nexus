@@ -61,48 +61,60 @@
 </div>
 
 <div class="ui stackable three column grid" {if isset($BANNER_IMAGE)}
-  style="background-image:url('{$BANNER_IMAGE}'); padding: {if isset($NAV_HEIGHT)} {$NAV_HEIGHT}{else} -3{/if}px;"
-  {/if}>
-  {if $DISCORD != 'true'}
-  <div class="column" style="text-align: center;margin-top: 5rem;">
-  </div>
-  {else}
-  <div onclick="dsInvite('{$DISCORD_SERVER['link']}')" class="column" style="text-align: center;margin-top: 5rem;">
-    <div class="ui steps">
-      <div class="step" style="background: transparent;color: white;">
-        <i class="discord icon"></i>
-        <div class="content">
-          <div class="title">{$DISCORD_SERVER['name']}</div>
-          <div class="description" style="color: white;">Members Online: {$DISCORD_SERVER['members']}</div>
-          <div class="description" style="color: white;"><strong>Click to join</strong></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/if}
-  <div class="column" style="text-align: center; align: middle;">
-    <div class="ui medium image" href="/" target="_blank">
-      <img onclick="window.location.href='/'"
-        src="{if isset($TEMPLATE_LOGO)} {$TEMPLATE_LOGO}{else}https://i.redd.it/2kdpm1d9kkx41.png{/if}"
-        style="cursor:pointer; display: unset;max-width: 100%;height: auto;">
-    </div>
-  </div>
-  {if $MINECRAFT != 'true'}
-  {else}
-  <div class="column" id="copied-ip" onclick="copyIP('{$OPAL_MCSERVER_IP}:{$OPAL_MCSERVER_PORT}')"
-    style="text-align: center;margin-top: 5rem;">
-    <div class="ui steps">
-      <div class="step" style="background: transparent;color: white;">
-        <i class="signal icon"></i>
-				<div class="content" id="copied-ip">
-          <div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>
-          <div id="rest">Loading ...</div>
-          <div id="copy_ip" class="description" style="color: white;"><strong>Click to copy</strong></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/if}
+	style="background-image:url('{$BANNER_IMAGE}'); padding: {if isset($NAV_HEIGHT)} {$NAV_HEIGHT}{else} 45{/if}px;margin-top:0px!important;border-bottom-left-radius: 85% 20%;border-bottom-right-radius: 85% 20%;"
+	{/if}>
+	{if $DISCORD != 'true'}
+	<div class="column" style="text-align: center;margin-top: 5rem;">
+	</div>
+	{else}
+	<div onclick="dsInvite('{$DISCORD_SERVER['link']}')" class="column" style="text-align: center;margin-top: 5rem;">
+		<div class="ui steps">
+			<div class="step" style="background: transparent;color: white;">
+				<i class="discord icon"></i>
+				<div class="content">
+					<div class="title">{$DISCORD_SERVER['name']}</div>
+						<div class="ui vertical white animated button">
+							<div class="hidden content">
+								<div class="description" style="color: white;"><strong>Click to join</strong></div>
+							</div>
+							<div class="visible content">
+							<div class="description" style="color: white;"><strong>Members Online: {$DISCORD_SERVER['members']}</strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{/if}
+	<div class="column" style="text-align: center; align: middle;">
+		<div class="ui medium image" href="/" target="_blank">
+			<img onclick="window.location.href='/'"
+				src="{if isset($TEMPLATE_LOGO)} {$TEMPLATE_LOGO}{else}https://namelessmc.com/uploads/resources_icons/162.png{/if}"
+				style="cursor:pointer; display: unset;max-width: 100%;height: auto;">
+		</div>
+	</div>
+	{if $MINECRAFT != 'true'}
+	{else}
+	<div class="column" onclick="copyIP('{$OPAL_MCSERVER_IP}:{$OPAL_MCSERVER_PORT}')"
+		style="text-align: center;margin-top: 5rem;">
+		<div class="ui steps">
+			<div class="step" style="background: transparent;color: white;">
+				<i class="signal icon"></i>
+				<div class="content" id="copied-ip" class="ui text shape" id="copy-ip">
+					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>					
+						<div class="ui vertical white animated button">
+							<div class="hidden content">
+								<div class="description" style="color: white;"><strong>Click to copy</strong></div>
+							</div>
+							<div class="visible content">
+							<div class="description" style="color: white;"><strong><div id="rest">Loading ...</div></strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{/if}
 </div>
 
 <div
@@ -208,6 +220,7 @@
 		return false;
 	}
 
+	{if $TEMPLATE_DARKMODE == 1}
 		$(function () {
 		$('#copied-ip').click(function () {
 			$('body').toast({
@@ -222,6 +235,22 @@
 			});
 		})
 	});
+	{else}
+		$(function () {
+		$('#copied-ip').click(function () {
+			$('body').toast({
+				showIcon: 'keyboard',
+				message: 'Copied!',
+				class: 'white',
+				progressUp: true,
+				displayTime: 2000,
+				classProgress: 'black',
+				showProgress: 'bottom',
+				pauseOnHover: false,
+			});
+		})
+	});
+	{/if}
 </script>
 
 {include file='Nexus/components/colors.tpl'}
