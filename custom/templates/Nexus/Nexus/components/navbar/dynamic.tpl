@@ -89,7 +89,7 @@
   </div>
   {if $MINECRAFT != 'true'}
   {else}
-    <div class="column" id="copied-ip" onclick="copyIP('{$OPAL_MCSERVER_IP}:{$OPAL_MCSERVER_PORT}')"
+    <div class="column" id="copied-ip" onclick="copyIP('{$OPAL_MCSERVER_IP}{if ($OPAL_MCSERVER_PORT && $OPAL_MCSERVER_PORT != 25565)}:{$OPAL_MCSERVER_PORT}{/if}')"
       style="text-align: center;margin-top: 5rem;">
       <div class="ui steps">
         <div class="step" style="background: transparent;color: white;">
