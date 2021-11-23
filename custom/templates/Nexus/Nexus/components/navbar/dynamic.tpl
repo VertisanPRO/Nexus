@@ -165,9 +165,7 @@
           {if ($name == "panel")}
             <a class="ui small primary icon button" href="{$item.link}" target="{$item.target}">{$item.icon}</a>
           {elseif ($name == "register")}
-            {if ($REGISTRATION_ENABLED)}
               <a class="ui small inverted button" href="{$item.link}" target="{$item.target}">{$item.title}</a>
-            {/if}
           {else}
             <a class="ui small inverted button" href="{$item.link}" target="{$item.target}">{$item.title}</a>
           {/if}
