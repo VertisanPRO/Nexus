@@ -23,6 +23,10 @@
   .ui.steps {
     border: 0 !important;
   }
+
+  .ui.white.button {
+	background: transparent;
+	}
 </style>
 
 {if $OPAL_MCSERVER_STYLE != 'false'}
@@ -61,7 +65,7 @@
 </div>
 
 <div class="ui stackable three column grid" {if isset($BANNER_IMAGE)}
-	style="background-image:url('{$BANNER_IMAGE}'); padding: {if isset($NAV_HEIGHT)} {$NAV_HEIGHT}{else} 45{/if}px;margin-top:0px!important;border-bottom-left-radius: 85% 20%;border-bottom-right-radius: 85% 20%;"
+  style="background-image:url('{$BANNER_IMAGE}'); padding: {if isset($NAV_HEIGHT)} {$NAV_HEIGHT}{else} -3{/if}px;"
 	{/if}>
 	{if $DISCORD != 'true'}
 	<div class="column" style="text-align: center;margin-top: 5rem;">
@@ -101,19 +105,22 @@
 			<div class="step" style="background: transparent;color: white;">
 				<i class="signal icon"></i>
 				<div class="content" id="copied-ip" class="ui text shape" id="copy-ip">
-					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>					
-						<div class="ui vertical white animated button">
-							<div class="hidden content">
-								<div class="description" style="color: white;"><strong>Click to copy</strong></div>
-							</div>
-							<div class="visible content">
-							<div class="description" style="color: white;"><strong><div id="rest">Loading ...</div></strong></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>	
+					{if $OPAL_MCSERVER_STYLE == 'false'}
+						<div class="description" style="color: white;"><div id="mc_description"></div></div>
+					{/if}
+						  <div class="ui vertical white animated button">
+							  <div class="hidden content">
+								  <div class="description" style="color: white;"><strong>Click to copy</strong></div>
+							  </div>
+							  <div class="visible content">
+							  <div class="description" style="color: white;"><strong><div id="playercounter">Loading ...</div></strong></div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
 	{/if}
 </div>
 

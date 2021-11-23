@@ -5,10 +5,10 @@
 	$.getJSON(url, function(r) {
 		//data is the JSON string
 		if (r.error) {
-			$('#rest').html('Server Offline');
+			$('#playercounter').html('Server Offline');
 			return false;
 		}
-		$('#rest').html((/§(.+?)/gi, '') + 'Players Online: ' + r.players.online);
+		$('#playercounter').html((/§(.+?)/gi, '') + 'Players Online: ' + r.players.online);
 		$('#favicon').attr('src', r.favicon);
 
 	});

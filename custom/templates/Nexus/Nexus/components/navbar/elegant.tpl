@@ -166,19 +166,22 @@
 			<div class="step" style="background: transparent;color: white;">
 				<i class="signal icon"></i>
 				<div class="content" id="copied-ip" class="ui text shape" id="copy-ip">
-					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>					
-						<div class="ui vertical white animated button">
-							<div class="hidden content">
-								<div class="description" style="color: white;"><strong>Click to copy</strong></div>
-							</div>
-							<div class="visible content">
-							<div class="description" style="color: white;"><strong><div id="rest">Loading ...</div></strong></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+					<div class="title">{if isset($OPAL_MCSERVER_NAME)} {$OPAL_MCSERVER_NAME}{else}MC.HYPIXEL.NET{/if}</div>	
+					{if $OPAL_MCSERVER_STYLE == 'false'}
+						<div class="description" style="color: white;"><div id="mc_description"></div></div>
+					{/if}
+						  <div class="ui vertical white animated button">
+							  <div class="hidden content">
+								  <div class="description" style="color: white;"><strong>Click to copy</strong></div>
+							  </div>
+							  <div class="visible content">
+							  <div class="description" style="color: white;"><strong><div id="playercounter">Loading ...</div></strong></div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
 	{/if}
 </div>
 
