@@ -3,7 +3,7 @@
  *	NamelessMC by Samerton | Template by Mubeen
  *	https://github.com/NamelessMC/Nameless/
  *	NamelessMC version 2.0.0-pr11
- 
+
  *	License: MIT
  *
  *	Nexus Template
@@ -27,7 +27,7 @@ class Nexus_Template extends TemplateBase
   
       $template = array(
         'name' => 'Nexus',
-        'version' => '2.0.0-pr12',
+        'version' => '1.5.0',
         'nl_version' => '2.0.0-pr12',
         'author' => '<a href="https://discord.gg/RJfCxC2W3e" target="_blank">Gigabait Development</a>',
       );
