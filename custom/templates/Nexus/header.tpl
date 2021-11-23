@@ -24,7 +24,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 		<title>{$TITLE} • {$smarty.const.SITE_NAME}</title>
 
 		{if isset($FAVICON)}
-		<link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
+		  <link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
 		{/if}
 
 		<meta charset="utf-8">
@@ -33,19 +33,19 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
 		<meta name="author" content="{$TITLE} • {$smarty.const.SITE_NAME}">
 		<meta name="description"
-			content="{if isset($OPAL_META_HEADING)}{$OPAL_META_DESCRIPTION}{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}">
+			content="{if isset($OPAL_EMBED_DESCRIPTION)}{$OPAL_EMBED_DESCRIPTION}{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}">
 		<meta name="keywords"
-			content="{if isset($OPAL_META_KEYWORDS)}{$OPAL_META_KEYWORDS}{else}Minecraft, Minecraft Sever, Forums, NamelessMC{/if}">
+			content="{if isset($OPAL_EMBED_KEYWORDS)}{$OPAL_EMBED_KEYWORDS}{else}Minecraft, Minecraft Sever, Forums, NamelessMC{/if}">
 
-		<meta name="theme-color" content="{if isset($OPAL_META_HEADING)}{$OPAL_META_COLOR}{else}#46d0e6{/if}">
+		<meta name="theme-color" content="{if isset($OPAL_EMBED_COLOR)}{$OPAL_EMBED_COLOR}{else}#46d0e6{/if}">
 		<meta property="author" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
-		<meta property="og:title" content="{if isset($OPAL_META_HEADING)}{$OPAL_META_HEADING}{else}Home{/if}">
+		<meta property="og:title" content="{if isset($OPAL_EMBED_HEADING)}{$OPAL_EMBED_HEADING}{else}Home{/if}">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{$OG_URL}">
 		<meta property="og:image"
-			content="{if isset($OPAL_META_IMAGE)}{$OPAL_META_IMAGE}{else}https://i.imgur.com/e6YHD.gif{/if}">
+			content="{if isset($OPAL_EMBED_IMAGE)}{$OPAL_EMBED_IMAGE}{else}https://i.imgur.com/e6YHD.gif{/if}">
 		<meta property="og:description"
-			content="{if isset($OPAL_META_HEADING)}{$OPAL_META_DESCRIPTION}{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}">
+			content="{if isset($OPAL_EMBED_DESCRIPTION)}{$OPAL_EMBED_DESCRIPTION}{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}">
 
 
 
@@ -55,24 +55,24 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 		<meta name="twitter:image" content="{$OG_IMAGE}" />
 
 		{if isset($PAGE_DESCRIPTION) && $PAGE_DESCRIPTION|count_characters > 0}
-		<meta name="twitter:description" content="{$PAGE_DESCRIPTION}" />
+		  <meta name="twitter:description" content="{$PAGE_DESCRIPTION}" />
 		{/if}
 
 		{foreach from=$TEMPLATE_CSS item=css}
-		{$css}
+		  {$css}
 		{/foreach}
 
 		{if isset($ANALYTICS_ID)}
-		{literal}
-		<script async src="https://www.googletagmanager.com/gtag/js?id={/literal}{$ANALYTICS_ID}{literal}"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
+      {literal}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={/literal}{$ANALYTICS_ID}{literal}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
 
-			gtag('config', '{/literal}{$ANALYTICS_ID}{literal}');
-		</script>
-		{/literal}
+          gtag('config', '{/literal}{$ANALYTICS_ID}{literal}');
+        </script>
+      {/literal}
 		{/if}
 	</head>
 
