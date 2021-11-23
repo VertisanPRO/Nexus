@@ -1,6 +1,7 @@
 <div class="ui fluid card" id="widget-latest-posts">
 	<div class="content">
-		<a class="ui {if isset($WIDGET_LABEL_COLOR)} {$WIDGET_LABEL_COLOR}{else} violet{/if} ribbon label">{if isset($MESSAGE_WIDGET_ICON)}
+		<a class="ui {if isset($WIDGET_LABEL_COLOR)} {$WIDGET_LABEL_COLOR}{else} violet{/if} ribbon label">{if
+			isset($MESSAGE_WIDGET_ICON)}
 			{$MESSAGE_WIDGET_ICON}{else}<i class="bullhorn icon"></i>{/if} {if isset($MESSAGE_WIDGET_TITLE)}
 			{$MESSAGE_WIDGET_TITLE}{else}Message Widget
 			{/if}</a>

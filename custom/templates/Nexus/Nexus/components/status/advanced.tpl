@@ -2,7 +2,7 @@
 <script>
 	var url = "https://api.minetools.eu/ping/{if isset($OPAL_MCSERVER_IP)}{$OPAL_MCSERVER_IP}{else}mc.hypixel.net{/if}/{if isset($OPAL_MCSERVER_PORT)}{$OPAL_MCSERVER_PORT}{else}25565{/if}";
 
-	$.getJSON(url, function(r) {
+	$.getJSON(url, function (r) {
 		//data is the JSON string
 		if (r.error) {
 			$('#playercounter').html('Server Offline');

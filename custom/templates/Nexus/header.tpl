@@ -24,7 +24,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 		<title>{$TITLE} • {$smarty.const.SITE_NAME}</title>
 
 		{if isset($FAVICON)}
-		  <link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
+		<link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
 		{/if}
 
 		<meta charset="utf-8">
@@ -55,24 +55,24 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 		<meta name="twitter:image" content="{$OG_IMAGE}" />
 
 		{if isset($PAGE_DESCRIPTION) && $PAGE_DESCRIPTION|count_characters > 0}
-		  <meta name="twitter:description" content="{$PAGE_DESCRIPTION}" />
+		<meta name="twitter:description" content="{$PAGE_DESCRIPTION}" />
 		{/if}
 
 		{foreach from=$TEMPLATE_CSS item=css}
-		  {$css}
+		{$css}
 		{/foreach}
 
 		{if isset($ANALYTICS_ID)}
-      {literal}
-        <script async src="https://www.googletagmanager.com/gtag/js?id={/literal}{$ANALYTICS_ID}{literal}"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
+		{literal}
+		<script async src="https://www.googletagmanager.com/gtag/js?id={/literal}{$ANALYTICS_ID}{literal}"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
 
-          gtag('config', '{/literal}{$ANALYTICS_ID}{literal}');
-        </script>
-      {/literal}
+			gtag('config', '{/literal}{$ANALYTICS_ID}{literal}');
+		</script>
+		{/literal}
 		{/if}
 	</head>
 

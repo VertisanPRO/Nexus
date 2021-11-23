@@ -13,27 +13,26 @@
 						<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
 							<div class="fixed-values mb-2">
-								<div class="mb-2" style="
-    margin-top: 8px;
-    margin-bottom: 8px;
-">Choose amount</div>
-								<a href="#" class="ui primary button" data-value="{if isset($WIDGET_FIRST_AMOUNT)}{$WIDGET_FIRST_AMOUNT}{else}5{/if}" style="
-    padding: .78571429em 1.2em .78571429em;margin-bottom:15px;
-">{if isset($WIDGET_FIRST_AMOUNT)}{$WIDGET_FIRST_AMOUNT}{else}5{/if}€</a>
-								<a href="#" class="ui primary button" data-value="{if isset($WIDGET_SECOND_AMOUNT)}{$WIDGET_SECOND_AMOUNT}{else}10{/if}" style="
-    padding: .78571429em 1.2em .78571429em;
-">{if isset($WIDGET_SECOND_AMOUNT)}{$WIDGET_SECOND_AMOUNT}{else}10{/if}€</a>
-								<a href="#" class="ui primary button" data-value="{if isset($WIDGET_THIRD_AMOUNT)}{$WIDGET_THIRD_AMOUNT}{else}20{/if}" style="
-    padding: .78571429em 1.2em .78571429em;
-">{if isset($WIDGET_THIRD_AMOUNT)}{$WIDGET_THIRD_AMOUNT}{else}20{/if}€</a>
+								<div class="mb-2" style="margin-top: 8px; margin-bottom: 8px;">Choose amount</div>
+								<a href="#" class="ui primary button"
+									data-value="{if isset($WIDGET_FIRST_AMOUNT)}{$WIDGET_FIRST_AMOUNT}{else}5{/if}"
+									style="padding: .78571429em 1.2em .78571429em;margin-bottom:15px;">{if
+									isset($WIDGET_FIRST_AMOUNT)}{$WIDGET_FIRST_AMOUNT}{else}5{/if}€</a>
+								<a href="#" class="ui primary button"
+									data-value="{if isset($WIDGET_SECOND_AMOUNT)}{$WIDGET_SECOND_AMOUNT}{else}10{/if}"
+									style="padding: .78571429em 1.2em .78571429em;">{if
+									isset($WIDGET_SECOND_AMOUNT)}{$WIDGET_SECOND_AMOUNT}{else}10{/if}€</a>
+								<a href="#" class="ui primary button"
+									data-value="{if isset($WIDGET_THIRD_AMOUNT)}{$WIDGET_THIRD_AMOUNT}{else}20{/if}"
+									style="padding: .78571429em 1.2em .78571429em;">{if
+									isset($WIDGET_THIRD_AMOUNT)}{$WIDGET_THIRD_AMOUNT}{else}20{/if}€</a>
 							</div>
 
 
 							<div class="ui right labeled input">
 								<label for="amount" class="ui label">€</label>
-								<input type="number" name="value-custom" placeholder="amount" id="amount" style="
-    width: 120px;
-">
+								<input type="number" name="value-custom" placeholder="amount" id="amount"
+									style="width: 120px;">
 								<div class="ui basic label">.00</div>
 							</div>
 
@@ -41,8 +40,7 @@
 
 								<div class="form-check">
 									<input class="form-check-input" type="radio" name="cmd" value="_xclick" checked>
-									<label class="form-check-label" for="exampleRadios1" style="margin-top: 5px;
-">
+									<label class="form-check-label" for="exampleRadios1" style="margin-top: 5px;">
 										one-time
 									</label>
 								</div>
@@ -66,7 +64,8 @@
 							<input type="hidden" name="src" value="1">
 							<input type="hidden" name="sra" value="1">
 
-							<button class="ui primary right labeled icon button" type="submit" formtarget="blank" style="margin-top: 15px; background:{if isset($TEMPLATE_COLOR)} {$TEMPLATE_COLOR}{else} #7e31e3{/if}">
+							<button class="ui primary right labeled icon button" type="submit" formtarget="blank"
+								style="margin-top: 15px; background:{if isset($TEMPLATE_COLOR)} {$TEMPLATE_COLOR}{else} #7e31e3{/if}">
 								<i class="right arrow icon"></i>
 								Donate using PayPal
 							</button>
@@ -78,13 +77,13 @@
 		</div>
 
 		<script>
-			$(function() {
+			$(function () {
 				function setValue(value) {
 					$("input[name='amount'], input[name='a3']").val(value);
 					console.log(value);
 				}
 
-				$(".fixed-values a").on("click", function(e) {
+				$(".fixed-values a").on("click", function (e) {
 					let value = $(this).data("value");
 
 					$(".fixed-values a").removeClass("btn-primary").addClass("btn-secondary");
@@ -94,7 +93,7 @@
 					e.preventDefault();
 				});
 
-				$("input[name='value-custom']").on("keyup", function(e) {
+				$("input[name='value-custom']").on("keyup", function (e) {
 					$(".fixed-values a").removeClass("btn-primary").addClass("btn-secondary");
 					setValue($(this).val());
 				});

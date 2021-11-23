@@ -68,6 +68,8 @@ $smarty->assign(array(
     'SUPPORT_PAGE' => NexusUtill::getLanguage('navigation', 'support_page'),
 
   // Options
+    'NOTE' => NexusUtill::getLanguage('options', 'note'),
+    'NOTE_REVIEW' => NexusUtill::getLanguage('options', 'note_review'),
     'FAVICON_LABEL' => NexusUtill::getLanguage('options', 'favicon_label'),
     'ABOUT_LABEL' => NexusUtill::getLanguage('options', 'about_label'),
     'ABOUT_PLACEHOLDER_LABEL' => NexusUtill::getLanguage('options', 'about_placeholder_label'),
@@ -213,7 +215,7 @@ if (!isset($_POST['sel_btn'])) {
               die();
             }
           } else {
-            $errors = NexusUtill::getLanguage('general', 'img_empty_and_size') . ini_get('upload_max_filesize');
+            $errors = NexusUtill::getLanguage('options', 'img_empty_and_size') . ini_get('upload_max_filesize');
           }
         }
       } else {
