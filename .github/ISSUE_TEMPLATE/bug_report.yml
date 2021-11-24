@@ -38,11 +38,8 @@ body:
     label: To Reproduce
     description: "Steps to reproduce the behaviour."
     placeholder: "1. Go to '...'
-
      2. Click on '....'
-
      3. Scroll down to '.....'
-
      4. See error"
   validations:
     required: true
@@ -62,5 +59,29 @@ body:
       - OS: [e.g. Windows]
       - Browser [e.g. chrome, safari]
       - Version [e.g. 22]
+  validations:
+    required: false
+- type: textarea      
+  attributes:
+    label: Smartphone
+    description: Please complete the following information.
+    value: |
+      - Device: [e.g. iPhone6]
+      - OS: [e.g. iOS8.1]
+      - Browser [e.g. stock browser, safari]
+      - Version [e.g. 22]
+  validations:
+    required: false
+- type: textarea      
+  attributes:
+    label: Screenshots
+    description: If applicable, add screenshots to help explain your problem.
+  validations:
+    required: false
+
+- type: textarea      
+  attributes:
+    label: Additional Information
+    description: Add more information about the problem if necessary.
   validations:
     required: false
