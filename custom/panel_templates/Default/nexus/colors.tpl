@@ -32,7 +32,7 @@
                             title=""
                             placeholder="https://example.com/img/logo.png"
                             data-content="{$COLORS_INFO_LABEL}"
-                            data-original-title="{$INFO_BOX_LABEL}"
+                            data-original-title="{$INFO_LABEL}"
                         ></i>
                     </span>
                 </label>
@@ -51,7 +51,7 @@
                             title=""
                             placeholder="https://example.com/img/logo.png"
                             data-content="{$COLORS_INFO_LABEL}"
-                            data-original-title="{$INFO_BOX_LABEL}"
+                            data-original-title="{$INFO_LABEL}"
                         ></i>
                     </span>
                 </label>

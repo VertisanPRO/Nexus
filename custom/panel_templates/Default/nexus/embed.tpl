@@ -38,7 +38,7 @@
                             title=""
                             placeholder="https://example.com/img/logo.png"
                             data-content="{$EMBED_IMAGE_INFO_LABEL}"
-                            data-original-title="{$INFO_BOX_LABEL}"
+                            data-original-title="{$INFO_LABEL}"
                         ></i>
                     </span>
                 </label>
@@ -51,7 +51,7 @@
                 <label for="opal_embed_keywords" style="margin-top: 5px;">
                     {$EMBED_KEYWORDS_LABEL}
                     <span class="badge badge-info">
-                        <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="" data-content="{$EMBED_KEYWORDS_INFO_LABEL}" data-original-title="{$INFO_BOX_LABEL}"></i>
+                        <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="" data-content="{$EMBED_KEYWORDS_INFO_LABEL}" data-original-title="{$INFO_LABEL}"></i>
                     </span>
                 </label>
                 <div class="input-group">
@@ -102,7 +102,10 @@
     	padding: 0;
     }
 
-
+    @viewport {
+        width: device-width ;
+        zoom: 1.0 ;
+    }
 
     .screen-size-error-container,
     .screen-size-error {
@@ -110,7 +113,7 @@
     }
 
     .link {
-    	color: #00b0f4;
+        color: #00b0f4;
     	cursor: pointer;
     	font-family: "Whitney";
     }

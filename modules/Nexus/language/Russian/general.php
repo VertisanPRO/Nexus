@@ -21,6 +21,6 @@ $language = array(
 		'true_label' => 'Включить',	
 		'false_label' => 'Выключить',
 		'group_permision' => 'Права модуля',
-		'info_box_label' => 'Информационное Окно',
+		'info_label' => 'Информация',
 		'invalid_token' => 'Неправильный Токен'
 );

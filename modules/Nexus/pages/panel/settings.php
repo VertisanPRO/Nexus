@@ -156,7 +156,7 @@ $smarty->assign(array(
   // Other
     'TRUE_LABEL' => NexusUtill::getLanguage('general', 'true_label'),
     'FALSE_LABEL' => NexusUtill::getLanguage('general', 'false_label'),
-    'INFO_BOX_LABEL' => NexusUtill::getLanguage('general', 'info_box_label'),
+    'INFO_LABEL' => NexusUtill::getLanguage('general', 'info_label'),
 ));
 
 
