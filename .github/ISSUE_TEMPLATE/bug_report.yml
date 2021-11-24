@@ -53,3 +53,14 @@ body:
     description: What were you expecting to happen?
   validations:
     required: true
+
+- type: textarea      
+  attributes:
+    label: Desktop
+    description: Please complete the following information.
+    value: |
+      - OS: [e.g. Windows]
+      - Browser [e.g. chrome, safari]
+      - Version [e.g. 22]
+  validations:
+    required: false
