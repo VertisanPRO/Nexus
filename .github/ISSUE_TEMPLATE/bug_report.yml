@@ -10,7 +10,7 @@ body:
     required: true
 
 - type: dropdown
-  id: version
+  id: nameless_version
   attributes:
     label: NamelessMC Version
     description: From StaffCP -> Overview
@@ -23,7 +23,7 @@ body:
     required: true
 
 - type: dropdown
-  id: version
+  id: nexus_version
   attributes:
     label: Nexus Version
     description: From StaffCP -> Nexus -> Updates
