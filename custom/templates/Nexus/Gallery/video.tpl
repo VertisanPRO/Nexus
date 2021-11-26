@@ -63,13 +63,16 @@
 								<img class="rounded" src="http://img.youtube.com/vi/{$video.code}/mqdefault.jpg">
 							</div>
 
-							<div class="ui longer modal {$i}">
+							<div class="ui longer modal {$i} inverted">
+								
+								
+								
 								<div class="content">
-
+								<div class="ui header centered aligned">{$video.name}</div>
 									<div class="ui embed" data-url="https://youtube.com/embed/{$video.code}"
 										data-placeholder="http://img.youtube.com/vi/{$video.code}/mqdefault.jpg"></div>
 
-									<div class="actions">
+									<div class="actions" style="margin-top: 2rem">
 										<div class="ui center aligned description">{$video.description}</div>
 									</div>
 								</div>
