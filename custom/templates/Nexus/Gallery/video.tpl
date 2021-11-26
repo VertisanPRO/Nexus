@@ -41,7 +41,6 @@
 
 				{* Category *}
 				<div class="ui relaxed centered grid" style="margin-top: 2rem">
-					<div class="row">
 						<a class="ui green button{if !isset($SELECT_CATEGORY_ID)} active{/if}" id="cat"
 							href="{$ALL_LINK}">{$SHOW_ALL}</a>
 
@@ -50,10 +49,9 @@
 								href="{$category.link}">{$category.name}</a>
 
 						{/foreach}
-					</div>
 				</div>
 
-				<div class="ui four column centered row">
+				<div class="ui four column centered row" style="margin-top: 2rem">
 
 					<div class="ui medium images">
 
