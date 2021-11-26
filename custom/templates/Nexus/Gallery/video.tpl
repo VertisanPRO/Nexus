@@ -58,9 +58,9 @@
 						{$i = 1}
 						{foreach from=$VIDEO_LIST item=video}
 
-							<div class="ui image" onclick="videoModal({$i})">
+							<div class="ui image rounded" onclick="videoModal({$i})">
 								<h3 class="ui header">{$video.name}</h3>
-								<img src="http://img.youtube.com/vi/{$video.code}/mqdefault.jpg">
+								<img class="rounded" src="http://img.youtube.com/vi/{$video.code}/mqdefault.jpg">
 							</div>
 
 							<div class="ui longer modal {$i}">
