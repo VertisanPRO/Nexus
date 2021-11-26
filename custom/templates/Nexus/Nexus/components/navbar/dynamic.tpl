@@ -132,7 +132,7 @@
 
 <div
   class="ui secondary {$DEFAULT_REVAMP_NAVBAR_EXTRA_CLASSES} {if isset($NAVBAR_SIZE)}{$NAVBAR_SIZE}{else}small{/if} menu"
-  id="navbar" style="background: {if (" {$NAVBAR_COLOR}"==="#000000" )} {$TEMPLATE_COLOR}{else} {$NAVBAR_COLOR}{/if};
+  id="navbar" style="background: {if ("{$NAVBAR_COLOR}" == "#000000")} {$TEMPLATE_COLOR}{else}{$NAVBAR_COLOR}{/if};
   margin-bottom:20px;">
   <div class="ui container">
     {foreach from=$NAV_LINKS key=name item=item}
