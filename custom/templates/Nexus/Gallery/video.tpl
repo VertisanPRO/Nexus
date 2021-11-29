@@ -67,7 +67,7 @@
 								
 								
 								
-								<div class="content">
+								<div class="content" style="background-color: #303030">
 								<div class="ui header centered aligned">{$video.name}</div>
 									<div class="ui embed" data-url="https://youtube.com/embed/{$video.code}"
 										data-placeholder="http://img.youtube.com/vi/{$video.code}/mqdefault.jpg"></div>
