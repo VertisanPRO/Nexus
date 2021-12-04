@@ -50,6 +50,7 @@ $smarty->assign(array(
     'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
     'NAME' => $language->get('admin', 'name'),
     'DESCRIPTION' => $language->get('admin', 'description'),
+    'INFO' => $language->get('general', 'info'),
 
   // Nexus About
     'TITLE' => NexusUtill::getLanguage('general', 'title'),
@@ -156,7 +157,6 @@ $smarty->assign(array(
   // Other
     'TRUE_LABEL' => NexusUtill::getLanguage('general', 'true_label'),
     'FALSE_LABEL' => NexusUtill::getLanguage('general', 'false_label'),
-    'INFO_LABEL' => NexusUtill::getLanguage('general', 'info_label'),
 ));
 
 
