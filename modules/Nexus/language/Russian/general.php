@@ -12,8 +12,7 @@
 
 $language = array(
 	// Nexus About
-		'title' => 'Nexus',	
-		'version' => 'v1.4.0',
+		'title' => 'Nexus',
 	
 	// Other
 		'save_successfully' => 'Успешно сохранено',
