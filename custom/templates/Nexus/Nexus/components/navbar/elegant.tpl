@@ -1,3 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+
 <style>
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
   .mainsticky {
@@ -47,13 +51,17 @@
 </div>
 
 <div
-  class="ui secondary {$DEFAULT_REVAMP_NAVBAR_EXTRA_CLASSES} {if isset($NAVBAR_SIZE)}{$NAVBAR_SIZE}{else}small{/if} menu"
+  class="ui secondary {if isset($NAVBAR_SIZE)}{$NAVBAR_SIZE}{else}small{/if} menu"
   id="navbar" style="background: {if ("{$NAVBAR_COLOR}" == "#000000")} {$TEMPLATE_COLOR}{else}{$NAVBAR_COLOR}{/if};">
   <div class="ui container">
     {foreach from=$NAV_LINKS key=name item=item}
     {if isset($item.items)}
     <div class="ui pointing dropdown link item">
-      <span class="text">{$item.icon} {$item.title}</span> <i class="dropdown icon"></i>
+      {if $NAVBAR_TEXT == 'black'}
+        <span class="text" style="color:black">{$item.icon} {$item.title}</span> <i class="dropdown icon" style="color:black"></i>
+      {else}
+        <span class="text" style="color:white">{$item.icon} {$item.title}</span> <i class="dropdown icon" style="color:white"></i>
+      {/if}
       <div class="menu">
         <div class="header">{$item.title}</div>
         {foreach from=$item.items item=dropdown}
@@ -213,7 +221,6 @@
   }
 </script>
 {/if}
-
 
 <script>
   function dsInvite(link) {

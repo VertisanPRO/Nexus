@@ -11,8 +11,8 @@
 
 $INFO_MODULE = array(
 	'name' => 'Nexus',
-	'author' => 'Mubeen, <a href="https://tensa.co.ua" target="_blank" rel="nofollow noopener">xGIGABAITx</a>, <a href="https://padow.ru" target="_blank" rel="nofollow noopener">PadowYT2</a> & Sylensky',
-	'module_ver' => '1.5.1',
+	'author' => '<a href="https://github.com/GIGABAIT-Official" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
+	'module_ver' => '1.6.0',
 	'nml_ver' => '2.0.0-pr12',
 );
 

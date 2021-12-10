@@ -1,3 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+
 <style>
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
   .mainsticky {
@@ -41,26 +45,18 @@
     <h3>{$SITE_NAME}</h3>
   </div>
   {foreach from=$NAV_LINKS key=name item=item}
-  {if isset($item.items)}
-  <div class="item">
-    <div class="header">{$item.title} <span class="icon">{$item.icon}</span></div>
-    <div class="menu">
-      {foreach from=$item.items item=dropdown}
-      <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon} {$dropdown.title}</a>
-      {/foreach}
-    </div>
-  </div>
-  {else}
-  {if $NAVBAR_TEXT == 'black'}
-  <a class="item{if isset($item.active)} active{/if}" style="color:black" href="{$item.link}"
-    target="{$item.target}">{$item.icon}
-    {$item.title}</a>
-  {else}
-  <a class="item{if isset($item.active)} active{/if}" style="color:white" href="{$item.link}"
-    target="{$item.target}">{$item.icon}
-    {$item.title}</a>
-  {/if}
-  {/if}
+    {if isset($item.items)}
+      <div class="item">
+        <div class="header">{$item.title} <span class="icon">{$item.icon}</span></div>
+        <div class="menu">
+          {foreach from=$item.items item=dropdown}
+            <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon} {$dropdown.title}</a>
+          {/foreach}
+        </div>
+      </div>
+    {else}
+      <a class="item{if isset($item.active)} active{/if}" href="{$item.link}" target="{$item.target}">{$item.icon} {$item.title}</a>
+    {/if}
   {/foreach}
 </div>
 
@@ -131,28 +127,39 @@
 </div>
 
 <div
-  class="ui secondary {$DEFAULT_REVAMP_NAVBAR_EXTRA_CLASSES} {if isset($NAVBAR_SIZE)}{$NAVBAR_SIZE}{else}small{/if} menu"
-  id="navbar" style="background: {if ("{$NAVBAR_COLOR}" == "#000000")} {$TEMPLATE_COLOR}{else}{$NAVBAR_COLOR}{/if};
-  margin-bottom:20px;">
+  class="ui secondary {if isset($NAVBAR_SIZE)}{$NAVBAR_SIZE}{else}small{/if} menu"
+  id="navbar" style="background: {if ("{$NAVBAR_COLOR}" == "#000000")} {$TEMPLATE_COLOR}{else}{$NAVBAR_COLOR}{/if};">
   <div class="ui container">
     {foreach from=$NAV_LINKS key=name item=item}
     {if isset($item.items)}
     <div class="ui pointing dropdown link item">
-      <span class="text">{$item.icon} {$item.title}</span> <i class="dropdown icon"></i>
+      {if $NAVBAR_TEXT == 'black'}
+        <span class="text" style="color:black">{$item.icon} {$item.title}</span> <i class="dropdown icon" style="color:black"></i>
+      {else}
+        <span class="text" style="color:white">{$item.icon} {$item.title}</span> <i class="dropdown icon" style="color:white"></i>
+      {/if}
       <div class="menu">
         <div class="header">{$item.title}</div>
         {foreach from=$item.items item=dropdown}
         {if isset($dropdown.separator)}
         <div class="divider"></div>
         {else}
-        <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon} {$dropdown.title}</a>
+        <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
+          {$dropdown.title}</a>
         {/if}
         {/foreach}
       </div>
     </div>
     {else}
-    <a class="item{if isset($item.active)} active{/if}" href="{$item.link}" target="{$item.target}">{$item.icon}
+    {if $NAVBAR_TEXT == 'black'}
+    <a class="item{if isset($item.active)} active{/if}" style="color:black" href="{$item.link}"
+      target="{$item.target}">{$item.icon}
       {$item.title}</a>
+    {else}
+    <a class="item{if isset($item.active)} active{/if}" style="color:white" href="{$item.link}"
+      target="{$item.target}">{$item.icon}
+      {$item.title}</a>
+    {/if}
     {/if}
     {/foreach}
     <a class="toc item">
@@ -175,7 +182,8 @@
           {if isset($dropdown.separator)}
           <div class="ui divider"></div>
           {else}
-          <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon} {$dropdown.title}</a>
+          <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
+            {$dropdown.title}</a>
           {/if}
           {/foreach}
         </div>
@@ -273,6 +281,10 @@
 		document.execCommand("copy");
 		document.body.removeChild(servIP);
 	}
+
+  $('.tabular.menu .item').tab({
+  autoTabActivation: false
+  });
 </script>
 
 {include file='Nexus/components/colors.tpl'}

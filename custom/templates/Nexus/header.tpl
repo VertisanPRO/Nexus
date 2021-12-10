@@ -38,7 +38,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 			content="{if isset($OPAL_EMBED_KEYWORDS)}{$OPAL_EMBED_KEYWORDS}{else}Minecraft, Minecraft Sever, Forums, NamelessMC{/if}">
 
 		<meta name="theme-color" content="{if isset($OPAL_EMBED_COLOR)}{$OPAL_EMBED_COLOR}{else}#46d0e6{/if}">
-		<meta property="author" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+		<meta property="author" content="{$TITLE} • {$smarty.const.SITE_NAME}" />
 		<meta property="og:title" content="{if isset($OPAL_EMBED_HEADING)}{$OPAL_EMBED_HEADING}{else}Home{/if}">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{$OG_URL}">
@@ -50,7 +50,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
 
 		<!-- Twitter Card Properties -->
-		<meta name="twitter:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+		<meta name="twitter:title" content="{$TITLE} • {$smarty.const.SITE_NAME}" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:image" content="{$OG_IMAGE}" />
 

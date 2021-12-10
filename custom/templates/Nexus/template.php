@@ -2,7 +2,7 @@
 /*
  *	NamelessMC by Samerton | Template by Mubeen
  *	https://github.com/NamelessMC/Nameless/
- *	NamelessMC version 2.0.0-pr11
+ *	NamelessMC version 2.0.0-pr12
 
  *	License: MIT
  *
@@ -27,9 +27,9 @@ class Nexus_Template extends TemplateBase
   
       $template = array(
         'name' => 'Nexus',
-        'version' => '1.5.0',
+        'version' => '1.6.0',
         'nl_version' => '2.0.0-pr12',
-        'author' => '<a href="https://discord.gg/RJfCxC2W3e" target="_blank">Gigabait Development</a>',
+        'author' => '<a href="https://github.com/GIGABAIT-Official" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
       );
   
       $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
