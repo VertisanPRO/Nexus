@@ -139,4 +139,8 @@ class Nexus extends Module
     }
 
   }
+
+    public function getDebugInfo(): array {
+        return [];
+    }
 }
