@@ -7,7 +7,7 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
