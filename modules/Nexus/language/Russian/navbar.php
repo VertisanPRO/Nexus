@@ -12,7 +12,7 @@
 
 $language = array(
     'logo_label' => 'Прямая ссылка на лого',
-    'navigation_menu_label' => 'Включено ли Меню Навигации?',
+    'navigation_menu_label' => 'Включено ли Меню навигации?',
     'nav_true_label' => 'Да',
     'nav_false_label' => 'Нет',
     'navigation_style_label' => 'Стиль навигации',
