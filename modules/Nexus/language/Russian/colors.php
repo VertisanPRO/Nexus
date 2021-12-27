@@ -11,13 +11,13 @@
 */
 
 $language = array(
-    'darkmode_label' => 'Включить Чёрную тему?',
-    'template_color_label' => 'Основной Цвет',
-    'navbar_color_label' => 'Цвет Панели Навигации',
+    'darkmode_label' => 'Включить Тёмную тему?',
+    'template_color_label' => 'Основной цвет',
+    'navbar_color_label' => 'Цвет Панели навигации',
     'footer_color_label' => 'Цвет Футера',
-    'border_color_label' => 'Цвет Границы Окна',
-    'colors_info_label' => '#000000 делает Основным Цветом',
-    'navbar_text_label' => 'Цвет Текста Панели Навигации',
+    'border_color_label' => 'Цвет Границы окна',
+    'colors_info_label' => '#000000 делает Основным цветом',
+    'navbar_text_label' => 'Цвет текста Панели навигации',
     'black_label' => 'Чёрный',
     'white_label' => 'Белый',
 );
