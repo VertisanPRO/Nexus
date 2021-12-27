@@ -11,11 +11,11 @@
 */
 
 $language = array(
-    'logo_label' => 'URL Лого',
-    'navigation_menu_label' => 'Работает ли Меню Навигации?',
+    'logo_label' => 'Прямая ссылка на лого',
+    'navigation_menu_label' => 'Включено ли Меню Навигации?',
     'nav_true_label' => 'Да',
     'nav_false_label' => 'Нет',
-    'navigation_style_label' => 'Стиль Навигации',
+    'navigation_style_label' => 'Стиль навигации',
     'dynamic_label' => 'Динамический',
     'elegant_label' => 'Элегантный',
 );
