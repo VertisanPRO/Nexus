@@ -12,14 +12,14 @@
 
 $language = array(
 	// Nexus About
-		'title' => 'Nexus',
+    'title' => 'Nexus',
 	
 	// Other
-		'save_successfully' => 'Успешно сохранено',
-		'save_errors' => 'Ошибка сохранения',
-		'true_label' => 'Включить',	
-		'false_label' => 'Выключить',
-		'group_permision' => 'Права модуля',
-		'info_label' => 'Информация',
-		'invalid_token' => 'Неверный токен'
+    'save_successfully' => 'Успешно сохранено',
+    'save_errors' => 'Ошибка сохранения',
+    'true_label' => 'Включить',	
+    'false_label' => 'Выключить',
+    'group_permision' => 'Права модуля',
+    'info_label' => 'Информация',
+    'invalid_token' => 'Неверный токен'
 );
