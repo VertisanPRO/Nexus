@@ -16,7 +16,7 @@ $language = array(
     'embed_color_label' => 'Цвет полоски панели',
     'embed_image_label' => 'Картинка в панели',
     'embed_keywords_label' => 'Ключевые слова',
-    'embed_image_info_label' => 'Напишите действительную ссылку с окончанием .png, .jpeg, .gif.',
-    'embed_keywords_info_label' => 'Поисковые системы используют ключевые слова для лучших результатов. Используйте \',\' как разделитель (Пример: mc, website).',
+    'embed_image_info_label' => 'Напишите действительную ссылку с окончанием на .png, .jpeg, .gif.',
+    'embed_keywords_info_label' => 'Поисковики используют ключевые слова для лучших результатов поиска. Используйте \',\' как разделитель (Пример: mc, website).',
     'embed_preview_label' => 'Предпросмотр панели',
 );
