@@ -12,9 +12,9 @@
 
 $language = array(
     'note' => 'Заметка',
-    'note_review' => 'Вы изменяете Nexus тему. Если вам она понравилась, мы были бы рады за оценку <a style="color: #E1D9D1;" href="https://namelessmc.com/resources/resource/162-nexus-template--available-for-free--supported-for-pre12/">здесь</a>.',
+    'note_review' => 'Вы изменяете тему Nexus. Если вам она понравилась, мы были бы рады за оценку <a style="color: #E1D9D1;" href="https://namelessmc.com/resources/resource/162-nexus-template--available-for-free--supported-for-pre12/">здесь</a>.',
     'favicon_label' => 'Иконка',
-    'about_label' => 'Об',
-    'about_placeholder_label' => 'напишите что то о вашем сайте',
-    'img_empty_and_size' => 'Вы выбрали не картинку или оно превысило лимит! Лимит: ',
+    'about_label' => 'Описание',
+    'about_placeholder_label' => 'Опишите ваш сайт',
+    'img_empty_and_size' => 'Вы выбрали неверный формат файла или он привысил лимит! Лимит: ',
 );
