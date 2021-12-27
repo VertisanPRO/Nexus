@@ -21,5 +21,5 @@ $language = array(
 		'false_label' => 'Выключить',
 		'group_permision' => 'Права модуля',
 		'info_label' => 'Информация',
-		'invalid_token' => 'Неправильный Токен'
+		'invalid_token' => 'Неверный токен'
 );
