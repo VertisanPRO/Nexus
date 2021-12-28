@@ -68,12 +68,15 @@
 								
 								
 								<div class="content" style="background-color: #303030">
-								<div class="ui header centered aligned">{$video.name}</div>
-									<div class="ui embed"
-										data-url="https://youtube.com/embed/{$video.code}"
-										data-placeholder="http://img.youtube.com/vi/{$video.code}/mqdefault.jpg"
-										data-icon="youtube"
-										></div>
+								<div class="ui header centered aligned"
+									 style="background: {if ("{$NAVBAR_COLOR}" == "#000000")} {$TEMPLATE_COLOR}{else}{$NAVBAR_COLOR}{/if}">{$video.name}
+								</div>
+
+								<div class="ui embed"
+									data-url="https://youtube.com/embed/{$video.code}"
+									data-placeholder="http://img.youtube.com/vi/{$video.code}/mqdefault.jpg"
+									data-icon="youtube">
+								</div>
 
 									<div class="actions" style="margin-top: 2rem">
 										<div class="ui center aligned description">{$video.description}</div>
