@@ -54,11 +54,14 @@
 						{foreach from=$CAROUSEL_LIST item=carousel}
 							<div class="ui side{if $i === 1} active{/if}">
 
-								<img src="{$carousel.src}" class="ui hunge bordered rounded image" style="margin-top: 2rem" alt="{$carousel.alt}">
-								<div>
-									<div class="ui center aligned header {$carousel.carousel_head_class}">{$carousel.carousel_head}</div>
-									<div class="ui center aligned description {$carousel.carousel_title_class}">{$carousel.carousel_title}
-									</div>
+								<div class="ui center aligned header {$carousel.carousel_head_class}"
+									 style="margin-top: 1rem">{$carousel.carousel_head}
+								</div>
+
+								<img src="{$carousel.src}" class="ui hunge bordered rounded image" style="margin-top: 1rem" alt="{$carousel.alt}">
+
+								<div class="ui center aligned description {$carousel.carousel_title_class}"
+									 style="margin-top: 1rem">{$carousel.carousel_title}
 								</div>
 							</div>
 							{$i = 0}
