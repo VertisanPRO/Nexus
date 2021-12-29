@@ -4,7 +4,7 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="ui stackable grid">
+<div class="ui stackable grid" style="margin-top: 1rem">
   <div class="ui centered row">
 
   {if $TRENDING_STATUS == 1 || $TOP_USERS_STATUS == 1}
