@@ -6,7 +6,10 @@
 
 <div class="ui stackable grid">
   <div class="ui centered row">
+
+  {if $TRENDING_STATUS == 1 || $TOP_USERS_STATUS == 1}
     <div class="ui six wide tablet four wide computer column">
+    {if $TRENDING_STATUS == 1}
       <div class="ui fluid card" id="">
         <div class="content">
           <h4 class="ui header"><i class="fas fa-fire"></i> {$LANG.trending_title}</h4>
@@ -26,7 +29,8 @@
           </div>
         </div>
       </div>
-
+      {/if}
+      {if $TOP_USERS_STATUS == 1}
       <div class="ui fluid card" id="">
         <div class="content">
           <h4 class="ui header"><i class="fas fa-medal"></i> {$LANG.top_users_title}</h4>
@@ -44,8 +48,55 @@
           </div>
         </div>
       </div>
+      {/if}
+
+      {if $CHANNELS_ENABLED == 1}
+      <div class="ui fluid card" id="">
+        <div class="content">
+          <h4 class="ui header"><i class="far fa-comment-dots"></i> Channels</h4>
+          <div class="description">
+            <div class="ui list">
+              <div class="item">
+                <a  href="/socialize/home"class="ui mini button blue fluid" type="button" name="button"><i class="fas fa-home"></i></a>
+                <div class="description right floated"><b></b></div>
+              </div>
+              {foreach $CHANNELS as $item}
+              <div class="item">
+                # <a href="/socialize/home?channel_id={$item.id}"><span class="text">{$item.name}</span></a>
+                <div class="description right floated"><b>{$item.posts_count}</b></div>
+              </div>
+              {/foreach}
+            </div>
+          </div>
+        </div>
+      </div>
+      {/if}
+
     </div>
+    {/if}
+
     <div class="ui four wide tablet eight wide computer column" id="socialize_post_list">
+
+      {if isset($CHANNEL_ID_VIEW)}
+        <div class="ui info icon message">
+          <i class="comments outline icon"></i>
+          <div class="content">
+            <div class="header">{$LANG.channel_view_title}</div>
+              {$LANG.channel_view_desc} <b>{$CHANNEL_ID_VIEW}</b>
+          </div>
+        </div>
+      {/if}
+
+
+      <div class="ui icon message" id="socializeUploadingIndicator" style="display:none;">
+        <i class="notched circle loading icon"></i>
+        <div class="content">
+          <div class="header">
+            Please wait!
+          </div>
+          <p>We're creating and uploading media content for your post, if files are bigger size it may take some minutes.</p>
+        </div>
+      </div>
 
       {if $POSTS != null && count($POSTS)}
           {if $USERINFO.userposts.status == 'POST_PUBLISHED'}
@@ -57,6 +108,7 @@
               </div>
             </div>
           {/if}
+
           <div id="postsSection">
             {foreach from=$POSTS item=item}
             <div class="ui fluid card socialize-post" id="socialize-post-{$item.id}">
@@ -71,32 +123,101 @@
                   </h5>
                 </div>
 
+                  {if $CHANNELS_ENABLED == 1}
+                  <style>
+                  #ctag-{$item.channel}{
+                    background: {$item.channel_color} !important;
+                    color: {$item.channel_text_color} !important;
+
+                  }
+                  #ctag-{$item.channel}.ribbon.label::after{
+                    border-right-color: {$item.channel_color} !important;
+                    filter: brightness(85%) !important;
+                  }
+                  {}
+                    </style>
+                    <span id="ctag-{$item.channel}" class="ui ribbon label" style="margin-top:5px;margin-bottom:5px;">
+                      {$item.channel_name}
+                    </span>
+                  {/if}
+
                   <div class="description">
                     <p>{$item.content}</p>
+                    {$totalImages=0}
+                    {foreach from=$item.images item=image}
+                      {if $totalImages >= 2}
+                      <br />
+                        <a href="/socialize/post?id={$item.id}">
+                          <div class="ui message">
+                            <p>{$LANG.post_total_media_content|replace:'{x}':{count($item.images)}}</p>
+                          </div>
+                        </a>
+                        {break}
+                      {/if}
+                      {if $image.ext != 'mp4'}
+                        <img class="mediaFile" src="{$image.url_media}{$image.normal_name}{$image.ext}" alt=""><br>
+                      {else}
+                        <video class="mediaFile" loop="true" autoplay="autoplay" controls muted style="">
+                         <source src="{$image.url_media}{$image.normal_name}{$image.ext}" type="video/mp4">
+                           {$LANG.video_no_support}
+                        </video><br>
+                      {/if}
+                      {$totalImages=$totalImages+1}
+                    {/foreach}
                   </div>
                 </div>
               <div class="extra content">
-                <div class="sub header" style="justify-content:space-around;display:flex;font-size:16px;">
-                  {if $USERINFO.loggeduser.loggedin == 'true'}
-                    {if $item.ownPost == true}
-                      <a onclick="likePost(this, {$item.id}, {$item.authorId}, 1)" style="cursor: not-allowed;" class="soc-like {if $item.isLiked == true}active{/if} no_selection"><span>{$item.likesCount} <i class="{if $item.isLiked == true}fas {else} far{/if} fa-heart"></i></span></a>
-                    {else}
-                    <a onclick="likePost(this, {$item.id}, {$item.authorId}, 0)" style="" class="soc-like {if $item.isLiked == true}active{/if} no_selection"><span>{$item.likesCount} <i class="{if $item.isLiked == true}fas {else} far{/if} fa-heart"></i></span></a>
-                    {/if}
+
+                {if $USERINFO.loggeduser.loggedin == 'true'}
+                  {if $item.ownPost == true}
+                  <a onclick="likePost(this, {$item.id}, {$item.authorId}, 1)" style="cursor: not-allowed;" class="soc-like {if $item.isLiked == true}active{/if} no_selection">
+                    <button class="ui compact labeled icon {if $item.isLiked == true}red{/if} button" style="cursor: not-allowed;">
+                      <i class="heart icon"></i>
+                      <span>{$item.likesCount}</span>
+                    </button>
+                  </a>
                   {else}
-                    <a onclick="return false;" style="cursor: not-allowed;" class="soc-like no_selection"><span>{$item.likesCount} <i class="{if $item.isLiked == true}fas {else} far{/if} fa-heart"></i></span></a>
+                  <a onclick="likePost(this, {$item.id}, {$item.authorId}, 0)" style="" class="soc-like {if $item.isLiked == true}active{/if} no_selection">
+                    <button class="ui compact labeled icon {if $item.isLiked == true}red{/if} button">
+                      <i class="heart icon"></i>
+                      <span>{$item.likesCount}</span>
+                    </button>
+                  </a>
                   {/if}
-                  <a href="/socialize/post?id={$item.id}" class="soc-comment no_selection"><span>{$item.commentsCount} <i class="far fa-comment"></i></span></a>
-                  {if $USERINFO.loggeduser.canDeletePost == 'true' or $item.ownPost == true}
-                  <a onclick="return deletePost({if $USERINFO.loggeduser.canDeletePost == 'true'}1{else}0{/if}, {$item.id})" class="soc-comment no_selection"><span><i class="far fa-trash-alt"></i></span></a>
-                  {/if}
-                </div>
+                {else}
+                  <a onclick="return false;" class="soc-like">
+                    <button class="ui compact labeled icon {if $item.isLiked == true}red{/if} button" style="cursor: not-allowed;">
+                      <i class="heart icon"></i>
+                      <span>{$item.likesCount}</span>
+                    </button>
+                  </a>
+                {/if}
+
+                <a href="/socialize/post?id={$item.id}" class="soc-comment no_selection">
+                  <span>
+                    <button class="ui compact labeled icon button">
+                      <i class="comment icon"></i>
+                      {$item.commentsCount}
+                    </button>
+                  </span>
+                </a>
+
+                {if $USERINFO.loggeduser.canDeletePost == 'true' or $item.ownPost == true}
+                <a onclick="return deletePost({if $USERINFO.loggeduser.canDeletePost == 'true'}1{else}0{/if}, {$item.id})" class="soc-comment no_selection">
+                  <span>
+                    <button class="ui compact icon button" style="float:right;">
+                      <i class="trash icon"></i>
+                    </button>
+                  </span>
+                </a>
+                {/if}
+
               </div>
             </div>
             {/foreach}
           </div>
           <br />
-          {if {$PAGE_LOAD_MORE} == true}
+          {if {$PAGE_LOAD_MORE} == true && empty($CHANNEL_ID_VIEW)}
             <a href="/socialize/home?page={$PAGE}" class="ui button blue fluid">Next page</a>
           {/if}
 
@@ -138,7 +259,7 @@
             </div>
           </div>
         </div>
-        {if $USERINFO.loggeduser.loggedin == 'true'}
+        {if $USERINFO.loggeduser.loggedin == 'true' && $USER_STATS_STATUS == 1}
         <div class="ui fluid card">
           <div class="content">
             <h4 class="ui header"><i class="fas fa-chart-bar"></i> {$LANG.stats_title}</h4>
@@ -174,9 +295,58 @@
      {$LANG.creating_new_post_title}
   </div>
   <div class="content">
-    <form class="ui form" action="" method="post" id="newSocializePostForm">
+    <form class="ui form" action="" method="post" id="newSocializePostForm" enctype="multipart/form-data">
+
+      <h5 class="ui image header">
+        <img class="ui circular image" src="{$USERINFO.loggeduser.avatar}">
+        <div class="content">
+          <a style="font-size:18px;{$USERINFO.loggeduser.style}" onclick="return false;">{$USERINFO.loggeduser.username}</a>
+          <!-- <div class="sub header" data-toggle="tooltip" data-content=""></div> -->
+        </div>
+      </h5>
+
+      {if $POST_TYPE == 5 || $POST_TYPE == 1}
       <div class="field">
         <textarea id="newSocializePostInput" style="resize:none;"rows="6" name="content" placeholder="{$LANG.creating_new_post_placeholder}"></textarea>
+      </div>
+      {/if}
+      {if $POST_TYPE != 5}
+        <div class="field">
+          <div>
+              <label for="file" class="ui icon button fluid">
+                  <i class="file icon"></i>
+                  <span id="socializeMediaNum">0</span> {$LANG.file_selected}</label>
+              <input type="file" id="file" name="mediaFiles[]" multiple style="display:none">
+          </div>
+        </div>
+      {/if}
+      <script type="text/javascript">
+      </script>
+
+      {if $CHANNELS_ENABLED == 1}
+      <div class="field">
+        <select class="ui dropdown" name="channel">
+          <option value="">{$LANG.Channel}</option>
+          {foreach $CHANNELS as $item}
+          <option value="{$item.id}">{$item.name}</option>
+          {/foreach}
+        </select>
+      </div>
+      {/if}
+
+      <div class="field">
+        <select class="ui dropdown" name="optionVisibility">
+          <option value="">{$LANG.sett_visibility_post}</option>
+          <option value="1">{$LANG.sett_opt_everyone}</option>
+          <option value="2">{$LANG.sett_opt_loggedin}</option>
+        </select>
+      </div>
+      <div class="field">
+        <select class="ui dropdown" name="optionComment">
+          <option value="">{$LANG.sett_comment_post}</option>
+          <option value="1">{$LANG.sett_opt_loggedin}</option>
+          <option value="2">{$LANG.sett_opt_disabled_comments}</option>
+        </select>
       </div>
       <input type="hidden" name="token" id="formtoken" value="{$USERINFO.loggeduser.token}">
       <input type="hidden" name="post" value="1">
