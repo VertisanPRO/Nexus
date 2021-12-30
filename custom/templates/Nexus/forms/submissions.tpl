@@ -29,10 +29,14 @@
 			    {foreach from=$SUBMISSIONS_LIST item=submission}
 				  <tr>
 					<td>{$submission.form_name}</td>
-					<td>
-					  <a href="{$submission.updated_by_profile}" style="{$submission.updated_by_style}"><img src="{$submission.updated_by_avatar}" style="max-height:25px;max-width:25px;" alt="{$submission.updated_by_name}" class="ui mini avatar image"> {$submission.updated_by_name}</a>
-					  <br /><span data-toggle="tooltip" data-original-title="{$submission.reported_at_full}">{$submission.updated_at}</span>
-					</td>
+                    <td>
+                      {if !empty($submission.updated_by_avatar)}
+                        <a href="{$submission.updated_by_profile}" style="{$submission.updated_by_style}"><img src="{$submission.updated_by_avatar}" style="max-height:25px;max-width:25px;" alt="{$submission.updated_by_name}" class="ui mini avatar image"> {$submission.updated_by_name}</a>
+                      {else}
+                        <i class="fa fa-user"></i> {$submission.updated_by_name}:
+                      {/if}
+                      <br /><span data-toggle="tooltip" data-original-title="{$submission.reported_at_full}">{$submission.updated_at}</span>
+                    </td>
 					<td><h4>{$submission.status}</h4></td>
 					<td><a href="{$submission.link}" class="ui right floated small primary button float">{$VIEW} &raquo;</a></td>
 				  </tr>

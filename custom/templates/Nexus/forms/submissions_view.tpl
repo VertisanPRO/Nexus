@@ -60,8 +60,12 @@
 		  {if count($COMMENTS)}
 			{foreach from=$COMMENTS item=comment}
               <div class="ui segment">
-				<a href="{$comment.profile}" style="{$comment.style}" target="_blank"><img src="{$comment.avatar}" class="ui mini avatar image" style="max-height:25px;max-width:25px;" alt="{$comment.username}" /> {$comment.username}</a>:
-				<span class="pull-right" data-toggle="tooltip" data-original-title="{$comment.date}">{$comment.date_friendly}</span>
+				{if !empty($comment.avatar)}
+                  <a href="{$comment.avatar}" style="{$comment.style}" target="_blank"><img src="{$comment.avatar}" class="ui mini avatar image" style="max-height:25px;max-width:25px;" alt="{$comment.username}" /> {$comment.username}</a>:
+                {else}
+                  <i class="fa fa-user"></i> {$comment.username}:
+                {/if}
+                <span class="pull-right" data-toggle="tooltip" data-original-title="{$comment.date}">{$comment.date_friendly}</span>
 				<hr>
 				{$comment.content}
               </div>
