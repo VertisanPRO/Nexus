@@ -36,6 +36,11 @@
 		  </div>
 	    </div>
 	  {/if}
+      
+      {if isset($CONTENT)}
+        {$CONTENT}
+        </br></br>
+      {/if}
 			
 	  <form class="ui form" action="" method="post">
 		{foreach from=$FIELDS item=field}
@@ -45,23 +50,56 @@
 			  {elseif $field.type == 4}
 				  {', '|implode:$field.options}
 			  {else}
-				  <label for="{$field.id}">{$field.name} {if $field.required} <span class="text-danger"><strong>*</strong></span>{/if}</label>
+                  <label for="{$field.id}">{$field.name} {if $field.required} <span class="text-danger"><strong>*</strong></span>{/if}
+                    {if $field.info}
+                      <div class="ui icon mini blue button" data-tooltip="{$field.info}" data-position="top left" data-inverted="" data-variation="mini">
+                        <i class="question circle icon"></i>
+                      </div>
+                    {/if}
+                  </label>
 			  {/if}
 			{if $field.type == "1"}
-			<input type="text" name="{$field.id}" id="{$field.id}" placeholder="{$field.name}">
+              <input type="text" name="{$field.id}" id="{$field.id}" value="{$field.value}" placeholder="{$field.name}" {if $field.required}required{/if}>
 			{elseif $field.type == "2"}
-			<select name="{$field.id}" id="{$field.id}">
-			  {foreach from=$field.options item=option}
-			  <option value="{$option}">{$option}</option>
-			  {/foreach}
-			</select>
+			  <select class="ui fluid dropdown" name="{$field.id}" id="{$field.id}" {if $field.required}required{/if}>
+                {foreach from=$field.options item=option}
+                  <option value="{$option}" {if $option eq $field.value} selected{/if}>{$option}</option>
+                {/foreach}
+              </select>
 			{elseif $field.type == "3"}
-			<textarea name="{$field.id}" id="{$field.id}"></textarea>
+			  <textarea name="{$field.id}" id="{$field.id}" {if $field.required}required{/if}>{$field.value}</textarea>
             {elseif $field.type == "6"}
-            <input type="number" name="{$field.id}" id="{$field.id}" placeholder="{$field.name}">
-			{/if}
+              <input type="number" name="{$field.id}" id="{$field.id}" value="{$field.value}" placeholder="{$field.name}" {if $field.required}required{/if}>
+			{elseif $field.type == "7"}
+              <input type="email" name="{$field.id}" id="{$field.id}" value="{$field.value}" placeholder="{$field.name}" {if $field.required}required{/if}>
+            {elseif $field.type == "8"}
+              {foreach from=$field.options item=option}
+               <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="{$field.id}" value="{$option}" {if $field.required}required{/if}>
+                    <label>{$option}</label>
+                  </div>
+                </div>
+              {/foreach}
+            {elseif $field.type == "9"}
+                {foreach from=$field.options item=option}
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="{$field.id}[]" value="{$option}">
+                    <label>{$option}</label>
+                  </div>
+                </div>
+                {/foreach}
+            {/if}
 		  </div>
 		{/foreach}
+        
+        {if $CAPTCHA}
+          <div class="field">
+            {$CAPTCHA}
+          </div>
+        {/if}
+        
 		<input type="hidden" name="token" value="{$TOKEN}">
 		<input type="submit" class="ui primary button" value="{$SUBMIT}">
 	  </form>
