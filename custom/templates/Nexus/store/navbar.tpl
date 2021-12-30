@@ -1,26 +1,29 @@
-		{if isset($STORE_PLAYER)}
-		  <span class="right floated">
-			<form class="ui form" action="" method="post">
-			  <div class="ui labeled button" tabindex="0">
-				<div class="ui label">
-				  {$STORE_PLAYER}
-				</div>
-				<input type="hidden" name="token" value="{$TOKEN}">
-				<input type="hidden" name="type" value="store_logout">
-				<input type="submit" class="ui red button" value="{$LOGOUT}">
-                {if count($SHOPPING_CART_PRODUCTS)}
-                  <a href="{$CHECKOUT_LINK}" class="ui blue label">
-                    {$X_ITEMS_FOR_Y}
-				  </a>
-                {else}
-                  <a class="ui blue disabled label">
-                    {$X_ITEMS_FOR_Y}
-				  </a>
-                {/if}
-			  </div>
-			</form>
-		  </span>
-		{/if}
+        <span class="right floated">
+          <div class="ui buttons">
+            
+            {if isset($STORE_PLAYER)}
+              <div class="ui button">
+                {$STORE_PLAYER}
+              </div>
+              <form class="ui form" action="" method="post">
+                <input type="hidden" name="token" value="{$TOKEN}">
+                <input type="hidden" name="type" value="store_logout">
+                <input type="submit" class="ui red button" value="{$LOGOUT}">
+              </form>
+            {/if}
+            
+            {if count($SHOPPING_CART_PRODUCTS)}
+              <a href="{$CHECKOUT_LINK}" class="ui blue button">
+                {$X_ITEMS_FOR_Y}
+              </a>
+            {else}
+              <a class="ui blue disabled button">
+                {$X_ITEMS_FOR_Y}
+              </a>
+            {/if}
+            
+          </div>
+        </span>
 
         <div class="ui top attached menu">
            {foreach from=$CATEGORIES item=category}
@@ -29,7 +32,9 @@
                 <span class="text">{$category.title}</span>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                  <a class="{if $category.active}active {/if}item" href="{$category.url}">{$category.title}</a>
+                  {if !$category.only_subcategories}
+                   <a class="{if $category.active}active {/if}item" href="{$category.url}">{$category.title}</a>
+                  {/if}
                   {foreach from=$category.subcategories item=subcategory}
                     <a class="{if $subcategory.active}active {/if}item" href="{$subcategory.url}">{$subcategory.title}</a>
                   {/foreach}
