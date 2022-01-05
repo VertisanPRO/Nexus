@@ -30,7 +30,6 @@
                             data-toggle="popover"
                             data-placement="top"
                             title=""
-                            placeholder="https://example.com/img/logo.png"
                             data-content="{$COLORS_INFO_LABEL}"
                             data-original-title="{$INFO}"
                         ></i>
@@ -49,7 +48,6 @@
                             data-toggle="popover"
                             data-placement="top"
                             title=""
-                            placeholder="https://example.com/img/logo.png"
                             data-content="{$COLORS_INFO_LABEL}"
                             data-original-title="{$INFO}"
                         ></i>
