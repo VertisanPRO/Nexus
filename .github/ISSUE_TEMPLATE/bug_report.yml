@@ -28,8 +28,8 @@ body:
     label: Nexus Version
     description: From StaffCP -> Nexus -> Updates
     options:
-      - 1.5.0
-      - <= 1.4.0
+      - 1.6.1
+      - <= 1.6.0
   validations:
     required: true
 
