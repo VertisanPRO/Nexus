@@ -16,6 +16,7 @@ body:
     description: From StaffCP -> Overview
     options:
       - 2.0.0-pr12
+      - 2.0.0-pr11
       - <= 2.0.0-pr11
       - 1.0.21
       - <= 1.0.20
@@ -29,7 +30,10 @@ body:
     description: From StaffCP -> Nexus -> Updates
     options:
       - 1.6.1
-      - <= 1.6.0
+      - 1.6.0
+      - 1.5.0
+      - 1.4.0
+      - < 1.4.0 (Legacy)
   validations:
     required: true
 
