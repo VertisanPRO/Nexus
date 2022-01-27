@@ -11,8 +11,8 @@
 */
 
 $language = array(
-    'logo_label' => 'URL Лого',
-    'navigation_menu_label' => 'Липкая Панель Навигации?',
+    'logo_label' => 'Ссылка на лого',
+    'navigation_menu_label' => 'Липкая панель навигации?',
     'navigation_menu_info_label' => 'Это экспериментальная функция. Она может не работать на вашем сайте.',
     'nav_true_label' => 'Да',
     'nav_false_label' => 'Нет',

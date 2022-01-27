@@ -13,7 +13,7 @@
 $language = array(
     'adv_warning' => 'Делайте изменения только если знаете что делаете!',
     'adv_nav_label' => 'Высота панели',
-    'adv_container_label' => 'Ширина окна в %',
+    'adv_container_label' => 'Ширина окна (%)',
     'adv_margin_top_label' => 'Верхняя граница',
     'adv_margin_bottom_label' => 'Нижняя граница',
     'adv_nav_size_label' => 'Размер навигации',
