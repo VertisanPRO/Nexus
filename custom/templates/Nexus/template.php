@@ -27,7 +27,7 @@ class Nexus_Template extends TemplateBase
   
       $template = array(
         'name' => 'Nexus',
-        'version' => '1.6.0',
+        'version' => '1.6.1',
         'nl_version' => '2.0.0-pr12',
         'author' => '<a href="https://github.com/GIGABAIT-Official" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
       );

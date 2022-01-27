@@ -89,6 +89,7 @@ $smarty->assign(array(
   // Navbar
     'LOGO_LABEL' => NexusUtill::getLanguage('navbar', 'logo_label'),
     'NAVIGATION_MENU_LABEL' => NexusUtill::getLanguage('navbar', 'navigation_menu_label'),
+    'NAVIGATION_MENU_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navigation_menu_info_label'),
     'NAVIGATION_STYLE_LABEL' => NexusUtill::getLanguage('navbar', 'navigation_style_label'),
     'NAV_TRUE_LABEL' => NexusUtill::getLanguage('navbar', 'nav_true_label'),
     'NAV_FALSE_LABEL' => NexusUtill::getLanguage('navbar', 'nav_false_label'),
@@ -297,7 +298,7 @@ if (isset($errors) && count($errors))
 $smarty->assign(array(
   'TOKEN' => Token::get(),
   'PAGE' => PANEL_PAGE,
-  'PARENT_PAGE' => PARENT_PAGE,
+  'PARENT_PAGE' => PARENT_PAGE
 ));
 
 require(ROOT_PATH . '/core/templates/panel_navbar.php');

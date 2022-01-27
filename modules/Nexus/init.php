@@ -12,7 +12,7 @@
 $INFO_MODULE = array(
 	'name' => 'Nexus',
 	'author' => '<a href="https://github.com/GIGABAIT-Official" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
-	'module_ver' => '1.6.0',
+	'module_ver' => '1.6.1',
 	'nml_ver' => '2.0.0-pr12',
 );
 

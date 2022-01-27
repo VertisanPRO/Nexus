@@ -46,6 +46,7 @@
             <thead>
               <tr>
                 <th>{$NAME}</th>
+                <th>{$OPTIONS}</th>
                 <th>{$QUANTITY}</th>
                 <th>{$PRICE}</th>
                 <th></th>
@@ -55,6 +56,7 @@
               {foreach from=$SHOPPING_CART_LIST item=item}
                 <tr>
                   <td>{$item.name}</td>
+                  <td>{if count($item.fields)} {foreach from=$item.fields item=field name=fields}<strong>{$field.description}</strong>: {$field.value}{if not $smarty.foreach.fields.last}</br>{/if}{/foreach} {/if}</td>
                   <td>{$item.quantity}</td>
                   <td>{$CURRENCY_SYMBOL}{$item.price} {$CURRENCY}</td>
                   <td><a href="{$item.remove_link}" class="ui icon remove red tiny button right floated"><i class="icon remove"></i></a></td>
@@ -75,7 +77,6 @@
               </div>
             </div>
           {/foreach}
-        
         
           <h3>{$PURCHASE}</h3>
           <hr />

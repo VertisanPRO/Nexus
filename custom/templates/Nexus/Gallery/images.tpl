@@ -54,11 +54,14 @@
 						{foreach from=$CAROUSEL_LIST item=carousel}
 							<div class="ui side{if $i === 1} active{/if}">
 
-								<img src="{$carousel.src}" class="ui hunge bordered rounded image" style="margin-top: 2rem" alt="{$carousel.alt}">
-								<div>
-									<div class="ui center aligned header {$carousel.carousel_head_class}">{$carousel.carousel_head}</div>
-									<div class="ui center aligned description {$carousel.carousel_title_class}">{$carousel.carousel_title}
-									</div>
+								<div class="ui center aligned header {$carousel.carousel_head_class}"
+									 style="margin-top: 1rem">{$carousel.carousel_head}
+								</div>
+
+								<img src="{$carousel.src}" class="ui hunge bordered rounded image" style="margin-top: 1rem" alt="{$carousel.alt}">
+
+								<div class="ui center aligned description {$carousel.carousel_title_class}"
+									 style="margin-top: 1rem">{$carousel.carousel_title}
 								</div>
 							</div>
 							{$i = 0}
@@ -70,7 +73,7 @@
 
 			<div class="ui two column centered grid">
 
-				<div class="ui relaxed" style="width: 100%; padding-top: 1rem">
+				<div class="ui relaxed" style="width: 100%">
 					<div class="row">
 					    <div class="ui left floated animated fade button" onclick="sliderBack()">
 							<div class="visible content">Back</div>
@@ -94,27 +97,33 @@
 						{foreach from=$IMAGES_LIST item=image}
 							<img src="{$image.small_src}" class="image rounded" onclick="imgModal({$i})">
 
-							<div class="ui longer modal {$i}">
-								<div class="content">
+							<div class="ui longer modal {$i} grid">
+								<div class="content twelve wide row"  style="background-color: #303030">
 									<div class="ui fluid image rounded" style="padding-bottom: 0 !important">
 										<img src="{$image.src}">
 									</div>
 								</div>
-								<div class="actions">
-									<div class="ui left floated animated fade button" style="margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 1rem" onclick="imgModalBack({$i})">
-										<div class="visible content">Back</div>
-										<div class="hidden content">
-											<i class="arrow left icon"></i>
+								<div class="actions twelve wide row" style="background-color: #303030">
+									<div class="three wide column">
+
+										<div class="ui left floated animated fade button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalBack({$i})">
+											<div class="visible content">Back</div>
+											<div class="hidden content">
+												<i class="arrow left icon"></i>
+											</div>
 										</div>
 									</div>
 
-									<div class="ui right floated animated fade button" style="margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 1rem" onclick="imgModalNext({$i})">
-										<div class="visible content">Next</div>
-										<div class="hidden content">
-											<i class="arrow right icon"></i>
+									<div class="ten wide column"></div>
+
+									<div class="three wide column">
+										<div class="ui right floated animated fade button" style="margin-left: 0 !important; margin-right: 0 !important" onclick="imgModalNext({$i})">
+											<div class="visible content">Next</div>
+											<div class="hidden content">
+												<i class="arrow right icon"></i>
+											</div>
 										</div>
 									</div>
-
 								</div>
 							</div>
 							{$i++}
