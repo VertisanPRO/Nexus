@@ -13,7 +13,7 @@
 $language = array(
     'enable_minecraft_label' => 'Включить показ Майнкрафт сервера?',
     'server_domain_label' => 'Домен сервера',
-    'ip_address_label' => 'Айпи-адресс сервера',
+    'ip_address_label' => 'Айпи-адрес сервера',
     'server_port_label' => 'Порт сервера',
     'style_label' => 'Стиль',
     'simple_label' => 'Лёгкий',
