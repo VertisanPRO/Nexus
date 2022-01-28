@@ -7,16 +7,16 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
-    'embed_head_label' => 'Название Эмбеда',
-    'embed_desc_label' => 'Описание Эмбеда',
-    'embed_color_label' => 'Цвета Эмбеда',
-    'embed_image_label' => 'Картинка Эмбеда',
-    'embed_keywords_label' => 'Ключевые Слова Эмбеда',
-    'embed_image_info_label' => 'Напишите действительную ссылку с окончанием .png, .jpeg, .gif.',
-    'embed_keywords_info_label' => 'Поисковые Системы используют по ключевым словам что бы помочь с поиском от пользователей. Разделяя \',\' например mc, server, website и другое.',
-    'embed_preview_label' => 'Показ Эмбеда',
+    'embed_head_label' => 'Название панели',
+    'embed_desc_label' => 'Описание панели',
+    'embed_color_label' => 'Цвет полоски панели',
+    'embed_image_label' => 'Картинка в панели',
+    'embed_keywords_label' => 'Ключевые слова',
+    'embed_image_info_label' => 'Напишите действительную ссылку с окончанием на .png, .jpeg, .gif.',
+    'embed_keywords_info_label' => 'Поисковики используют ключевые слова для лучших результатов поиска. Используйте \',\' как разделитель (Пример: mc, website).',
+    'embed_preview_label' => 'Предпросмотр панели',
 );

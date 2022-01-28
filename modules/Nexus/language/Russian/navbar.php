@@ -7,16 +7,16 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
-    'logo_label' => 'URL Лого',
-    'navigation_menu_label' => 'Липкая Панель Навигации?',
+    'logo_label' => 'Ссылка на лого',
+    'navigation_menu_label' => 'Липкая панель навигации?',
     'navigation_menu_info_label' => 'Это экспериментальная функция. Она может не работать на вашем сайте.',
     'nav_true_label' => 'Да',
     'nav_false_label' => 'Нет',
-    'navigation_style_label' => 'Стиль Навигации',
+    'navigation_style_label' => 'Стиль навигации',
     'dynamic_label' => 'Динамический',
     'elegant_label' => 'Элегантный',
 );

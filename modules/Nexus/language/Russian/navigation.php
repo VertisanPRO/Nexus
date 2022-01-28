@@ -7,19 +7,19 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
     'navigation' => 'Навигация',
     'options_page' => 'Опции',
     'colors_page' => 'Цвета',
-    'navbar_page' => 'Панель Навигации',
-    'connections_page' => 'Соединения',
-    'advanced_page' => 'Для Продвинутых',
-    'arc_page' => 'Arc',
+    'navbar_page' => 'Панель навигации',
+    'connections_page' => 'Интеграции',
+    'advanced_page' => 'Для продвинутых',
+    'arc_page' => 'Arc-интеграция',
     'widgets_page' => 'Виджеты',
-    'embed_page' => 'Эмбед',
+    'embed_page' => 'Панель',
     'updates_page' => 'Обновления',
     'support_page' => 'Помощь',
 );

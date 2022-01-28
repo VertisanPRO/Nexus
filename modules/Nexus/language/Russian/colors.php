@@ -7,17 +7,17 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
-    'darkmode_label' => 'Включить Чёрную тему?',
-    'template_color_label' => 'Основной Цвет',
-    'navbar_color_label' => 'Цвет Панели Навигации',
-    'footer_color_label' => 'Цвет Футера',
-    'border_color_label' => 'Цвет Границы Окна',
-    'colors_info_label' => '#000000 делает Основным Цветом',
-    'navbar_text_label' => 'Цвет Текста Панели Навигации',
+    'darkmode_label' => 'Включить тёмный режим?',
+    'template_color_label' => 'Основной цвет',
+    'navbar_color_label' => 'Цвет панели навигации',
+    'footer_color_label' => 'Цвет футера',
+    'border_color_label' => 'Цвет границы окна',
+    'colors_info_label' => '#000000 делает основным цветом',
+    'navbar_text_label' => 'Цвет текста панели навигации',
     'black_label' => 'Чёрный',
     'white_label' => 'Белый',
 );

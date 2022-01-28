@@ -7,15 +7,15 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
     'arc_label' => 'Включить Arc?',
     'arc_url_label' => 'Ссылка на Виджет',
-    'arc_info_1' => 'Что бы включить Arc вы должены зарегистрироваться на',
-    'arc_info_2' => 'Затем вы должны добавить сайт.',
-    'arc_info_3' => 'Затем вы должны скопировать <a href="https://arc.io/arc-sw.js">arc-sw.js</a> в рут сайта.',
-    'arc_info_4' => 'Затем вы должны пролистать вниз до "Add Arc\'s widget to your site" и скопировать ссылку (не весь код).',
-    'arc_info_5' => 'Последняя вещь это добавить ссылку ниже.',
+    'arc_info_1' => 'Что бы включить Arc вы должны зарегистрироваться на',
+    'arc_info_2' => 'Теперь добавьте сайт.',
+    'arc_info_3' => 'Затем нажмите на "I already have a Service Worker and will integrate Arc." и вставьте в поле ввода "modules/Nexus/arc/sw.js".',
+    'arc_info_4' => 'Затем вы должны пролистать вниз до "Add Arc\'s widget to your site" и скопировать только ссылку на виджет (не весь код).',
+    'arc_info_5' => 'Напоследок вставьте ссылку ниже.',
 );

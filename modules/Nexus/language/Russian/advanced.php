@@ -7,16 +7,16 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
-    'adv_warning' => 'Делайте изменения если знаете что делайте!',
-    'adv_nav_label' => 'Высота Панели',
-    'adv_container_label' => 'Ширина Окна в %',
-    'adv_margin_top_label' => 'Верхняя Граница',
-    'adv_margin_bottom_label' => 'Нижняя Граница',
-    'adv_nav_size_label' => 'Размер Навигации',
+    'adv_warning' => 'Делайте изменения только если знаете что делаете!',
+    'adv_nav_label' => 'Высота панели',
+    'adv_container_label' => 'Ширина окна (%)',
+    'adv_margin_top_label' => 'Верхняя граница',
+    'adv_margin_bottom_label' => 'Нижняя граница',
+    'adv_nav_size_label' => 'Размер навигации',
     'mini_label' => 'Мини',
     'tiny_label' => 'Крошечный',
     'small_label' => 'Маленький',

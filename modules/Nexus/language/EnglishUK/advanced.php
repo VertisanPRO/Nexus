@@ -11,11 +11,11 @@
 
 $language = array(
 	'adv_warning' => 'Only make changes if you know what you are doing!',
-	'adv_nav_label' => 'Nav Height',
-	'adv_container_label' => 'Container Width in %',
-	'adv_margin_top_label' => 'Margin Top',
-	'adv_margin_bottom_label' => 'Margin Bottom',
-	'adv_nav_size_label' => 'Navbar Size',
+	'adv_nav_label' => 'Nav height',
+	'adv_container_label' => 'Container width (%)',
+	'adv_margin_top_label' => 'Margin top',
+	'adv_margin_bottom_label' => 'Margin bottom',
+	'adv_nav_size_label' => 'Navbar size',
 	'mini_label' => 'Mini',
 	'tiny_label' => 'Tiny',
 	'small_label' => 'Small',

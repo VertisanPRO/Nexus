@@ -16,9 +16,9 @@ $language = array(
 	// Other
 		'save_successfully' => 'Saved successfully',
 		'save_errors' => 'Save error',
-		'true_label' => 'True',	
+		'true_label' => 'True',
 		'false_label' => 'False',
 		'group_permision' => 'Module permission',
 		'info_label' => 'Info',
-		'invalid_token' => 'Invalid Token'
+		'invalid_token' => 'Invalid token'
 );

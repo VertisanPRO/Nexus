@@ -7,18 +7,18 @@
  *  License: MIT
  *
  *  Nexus By Mubeen & xGIGABAITx
- *  Translated by PadowYT2
+ *  Translated by PadowYT2 & itzJOHv
 */
 
 $language = array(
-    'enable_minecraft_label' => 'Включить Показ Майнкрафт Сервера?',
-    'server_domain_label' => 'Домен Сервера',
-    'ip_address_label' => 'Айпи Сервера',
-    'server_port_label' => 'Порт Сервера',
+    'enable_minecraft_label' => 'Включить показ Майнкрафт сервера?',
+    'server_domain_label' => 'Домен сервера',
+    'ip_address_label' => 'Айпи-адрес сервера',
+    'server_port_label' => 'Порт сервера',
     'style_label' => 'Стиль',
     'simple_label' => 'Лёгкий',
     'advanced_label' => 'Продвинутый',
     'discord_label' => 'Дискорд',
-    'enable_discord_label' => 'Включить Показ Дискорда?',
+    'enable_discord_label' => 'Включить показ Дискорда?',
     'discord_id_label' => 'Дискорд ID',
 );

@@ -10,14 +10,14 @@
 */
 
 $language = array(
-    'enable_minecraft_label' => 'Enable View of a Minecraft Server?',
-    'server_domain_label' => 'Server Domain',
-    'ip_address_label' => 'IP Address',
-    'server_port_label' => 'Server Port',
+    'enable_minecraft_label' => 'Enable view of a Minecraft server?',
+    'server_domain_label' => 'Server domain',
+    'ip_address_label' => 'IP address',
+    'server_port_label' => 'Server port',
     'style_label' => 'Style',
     'simple_label' => 'Simple',
     'advanced_label' => 'Advanced',
     'discord_label' => 'Discord',
-    'enable_discord_label' => 'Enable View of Discord?',
+    'enable_discord_label' => 'Enable view of Discord?',
     'discord_id_label' => 'Discord ID',
 );
