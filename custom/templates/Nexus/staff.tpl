@@ -12,12 +12,12 @@
     {/if}
     {if count($STAFF_GROUPS)}
     <div
-      class="ui {if count($WIDGETS_LEFT) && count($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif count($WIDGETS_LEFT) || count($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
+      class="ui {if count($WIDGETS_LEFT) && count($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif count($WIDGETS_LEFT) || count($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column" style="margin-top: 1rem">
       {foreach from=$STAFF_GROUPS item=group}
       {if count($group.members)}
       <div class="ui fluid card" style="border-bottom: solid 1.5px {$group.color};">
         <div class="content">
-          <div class="ui dividing header" style="color: {$group.color};">
+          <div class="ui dividing header" style="color: {$group.color}!important;">
             {$group.name}
           </div>
           <div class="description">
