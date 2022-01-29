@@ -1,11 +1,15 @@
 {include file='header.tpl'} 
 {include file='navbar.tpl'}
-    <div class="ui grid">
+<div class="ui grid">
+
     <div class="ui sixteen wide mobile twelve wide tablet twelve wide computer column">
+        <div>
+            <h2 class="ui header" style="margin-top: 1rem">Wiki</h2>
+        </div>
         <div class="ui segments">
             <div class="ui segment header">
                 <div class="ui grid">
-                    <div class="eight wide column" style="margin-left: 1rem; margin-top: 0.25rem; width: 45%!important">
+                    <div class="twelve wide column" style="margin-left: 1rem; margin-top: 0.25rem; width: 45%!important">
                         <div class="ui breadcrumb" style="margin-left: 1rem">
                             {if $PAGE_RESULT == 0}
                                 <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
@@ -72,24 +76,39 @@
         </div>
     </div>
 
+
+
+
+
+
+
+
     <div class="ui mini modal">
         <div class="header">{$ALL_LIKES} {$WP_TITLE}</div>
-        <div class="list content">
-            <div class="description">
-                {if {$LIKES|@count} == 0}
-                    {$NO_LIKES_MESSAGE}
+        
+        <div class="ui segment" style="box-shadow: none;">
+            <div class="ui feed">
+                {if {$LIKES|@count} <= 0}
+                        {$NO_LIKES_MESSAGE}
                 {elseif {$LIKES|@count} >= 1}
-                    <ul>
-                        {foreach from=$LIKES item=liker}
-                            <li>{$liker->username}</li>
-                        {/foreach}
-                    </ul>
+                    {foreach from=$LIKES item=liker}
+                        
+                            <div class="event">
+                                    <div class="label">
+                                        <a href="{$liker.link}"><img src={$liker.avatar}></a>
+                                    </div>
+                                    <div class="content">
+                                        <a href="{$liker.link}">{$liker.username}</a>
+                                    </div>
+                            
+                            </div>
+                    
+                    {/foreach}
                 {/if}
             </div>
         </div>
     </div>
-
-    <div class="ui sixteen wide mobile four wide tablet four wide computer column" style="padding-top: 0">
+    <div class="ui sixteen wide mobile four wide tablet four wide computer column" style="margin-top: 2rem">
         {include file='wiki/widgets/side-menu.tpl'}
     </div>  
 </div>
