@@ -15,7 +15,7 @@
     <div class="content">
       <div class="header">
         <div class="circletag" id="nay">
-          <img src="https://api.minetools.eu/favicon/{$server->query_ip|escape:'html'}/">
+          <i class="fas fa-server fa-lg"></i>
         </div>
         {if $server->show_ip}<div class="ui top right attached label" data-toggle="popup"
           data-html="<span id='copy{$server->id|escape}'>{$server->query_ip|escape:'html'}{if $server->port && $server->port != 25565}:{$server->port|escape:'html'}{/if}</span>"
