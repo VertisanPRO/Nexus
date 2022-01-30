@@ -10,7 +10,7 @@
                     $catagory.icon|count_characters > 0}{$catagory.icon} {/if}{$catagory.name}</a>
                 {/foreach}
             </div>
-            <div class="ui bottom attached tab segment active" data-tab="home" id="home">
+            <div class="ui bottom attached tab inverted segment active" data-tab="home" id="home">
                 {$MESSAGE}
                 {if !empty($BUTTONS)}<br />
                 <div style="text-align:center">
@@ -21,7 +21,7 @@
                 </div>{/if}
             </div>
             {foreach from=$CATAGORIES item=catagory}
-            <div class="ui bottom attached tab segment" id="id-{$catagory.id}" data-tab="id-{$catagory.id}">
+            <div class="ui bottom attached tab inverted segment" id="id-{$catagory.id}" data-tab="id-{$catagory.id}">
                 {$catagory.rules}</div>
             {/foreach}
         </div>
