@@ -32,7 +32,7 @@
                         {/if}
                     {/foreach}
                 </div>
-                <div class="ui bottom attached segment">
+                <div class="ui bottom attached inverted segment">
                     {if isset($NO_PACKAGES)}
                         <div class="ui icon message">
                             <i class="info icon"></i>
@@ -44,7 +44,7 @@
                         <div class="ui centered stackable grid">
                             {foreach from=$PACKAGES item=package}
                                 <div class="four wide column">
-                                    <div class="ui card" style="height: 100%">
+                                    <div class="ui card" style="height: 100%; background-color: {$CONTENT_COLOR}">
                                         {if $package.image}
                                             <div class="image">
                                                 {if $package.sale_active}

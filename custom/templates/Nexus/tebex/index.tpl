@@ -8,7 +8,7 @@
 <div class="ui stackable grid">
     <div class="ui centered row">
         <div class="ui {if count($WIDGETS)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
-            <div class="ui padded segment">
+            <div class="ui padded inverted segment">
                 <div class="ui top attached menu">
                     <a class="active item" href="{$HOME_URL}">
                         {$HOME}
@@ -32,7 +32,7 @@
                         {/if}
                     {/foreach}
                 </div>
-                <div class="ui bottom attached segment">
+                <div class="ui bottom attached inverted segment">
                     {$CONTENT}
                 </div>
             </div>
