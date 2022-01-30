@@ -9,7 +9,7 @@
         <div class="ui segments">
             <div class="ui segment header">
                 <div class="ui grid">
-                    <div class="twelve wide column" style="margin-left: 1rem; margin-top: 0.25rem; width: 45%!important">
+                    <div class="twelve wide column" style="margin-left: 1rem; margin-top: 0.5rem; width: 45%!important">
                         <div class="ui breadcrumb" style="margin-left: 1rem">
                             {if $PAGE_RESULT == 0}
                                 <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
