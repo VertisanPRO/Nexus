@@ -3,8 +3,8 @@
 <div class="ui grid">
 
     <div class="ui sixteen wide mobile twelve wide tablet twelve wide computer column">
-        <div>
-            <h2 class="ui header" style="margin-top: 1rem">Wiki</h2>
+        <div style="margin-top: 1rem; margin-left: 1rem; padding-bottom: 1rem">
+            <h2 class="ui header">Wiki</h2>
         </div>
         <div class="ui segments">
             <div class="ui segment header">
