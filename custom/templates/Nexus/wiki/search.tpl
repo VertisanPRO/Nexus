@@ -1,12 +1,12 @@
 {include file='header.tpl'} 
 {include file='navbar.tpl'}
     <div class="ui grid">
-    <div class="ui sixteen wide mobile twelve wide tablet twelve wide computer column">
+    <div class="ui sixteen wide mobile twelve wide tablet twelve wide computer column" style="margin-left: 1rem; margin-top: 0.25rem; width:45%!important">
         <div class="ui segments">
             <div class="ui segment header">
                 <div class="ui grid">
-                    <div class="eight wide column" style="margin-left: 1rem; margin-top: 0.25rem; width: 45%!important">
-                        <div class="ui breadcrumb" style="margin-left: 1rem">
+                    <div class="eight wide column" style="margin: auto">
+                        <div class="ui breadcrumb">
                             <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                             <div class="divider"> / </div>
                             <div class="active section">{$SEARCH_RESULTS_LANG} {$SEARCH_RESULT}</div>

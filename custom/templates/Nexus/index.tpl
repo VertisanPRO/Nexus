@@ -21,7 +21,7 @@
 </div>
 {/if}
 
-<div class="ui stackable grid">
+<div class="ui stackable grid" style="margin-top: 1rem">
   <div class="ui centered row">
     {if count($WIDGETS_LEFT)}
     <div class="ui six wide tablet four wide computer column">

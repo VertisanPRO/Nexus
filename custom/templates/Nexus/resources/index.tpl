@@ -3,7 +3,7 @@
 
 <div class="ui centered row">
 	<div class="ui stackable grid">
-		<div class="ui row">
+		<div class="ui row" style="margin-top: 1rem">
 			<div class="twelve wide column">
 				<h1 style="display:inline" class="white">{$RESOURCES}</h1>
 
@@ -24,22 +24,26 @@
 
 				{if $LATEST_RESOURCES}
 
-					<table class="ui fixed single line selectable unstackable small padded res table" id="sticky-threads">
+					<table class="ui fixed single line selectable unstackable small padded res inverted table" id="sticky-threads">
 						<thead>
 						<tr>
-							<th class="eight wide"><h4>{$RESOURCE}</h4></th>
-							<th class="three wide"><h4>{$STATS}</h4></th>
-							<th class="five wide"><h4>{$AUTHOR}</h4></th>
+							<th class="eight wide left aligned"><h4>{$RESOURCE}</h4></th>
+							<th class="two wide center aligned"><h4>{$STATS}</h4></th>
+							<th class="four wide right aligned"><h4>{$AUTHOR}</h4></th>
 						</tr>
 						</thead>
 						<tbody>
 						{foreach from=$LATEST_RESOURCES item=resource}
 							<tr>
-								<td>
-									<h5 class="ui image header" style="margin: 0;">
+								<td  class="selectable">
+									<a href="{$resource.link}">
+										<h5 class="ui image header" style="margin: 0;">
 										<img src="{$resource.icon}" class="ui medium rounded image">
 										<div class="content">
-											<a href="{$resource.link}">{$resource.name}</a> <small>{$resource.version}</small> {if isset($resource.price)}<span class="res right floated ui mini label" style="margin-left:5px;">{$resource.price} {$CURRENCY}</span>{/if}<br />
+											<span>{$resource.name}</span>
+											<small>{$resource.version}</small> 
+												{if isset($resource.price)}
+													<span class="res right floated ui mini label" style="margin-left:5px;">{$resource.price} {$CURRENCY}</span>{/if}<br />
 											<div class="sub header">
 												{if $resource.short_description}
 													{$resource.short_description}
@@ -49,7 +53,8 @@
 												<br />{$resource.category}
 											</div>
 										</div>
-									</h5>
+										</h5>
+									</a>
 								</td>
 								<td>
 									<div class="star-rating view">

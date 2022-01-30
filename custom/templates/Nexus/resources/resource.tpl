@@ -10,8 +10,8 @@
 					<div class="item">
 						<img class="ui rounded centered image" src="{$RESOURCE_ICON}" alt="{$RESOURCE_NAME}" style="max-height:64; max-width:64px;">
 						<div class="content">
-							<h2 class="header" style="display: block;">{$VIEWING_RESOURCE}</h2>
-							<span>[{$RELEASE_TAG}] {$RESOURCE_SHORT_DESCRIPTION}</span>
+							<h2 class="ui header" style="display: block;">{$VIEWING_RESOURCE}</h2>
+							<p>[{$RELEASE_TAG}] {$RESOURCE_SHORT_DESCRIPTION}</p>
 						</div>
 					</div>
 				</div>

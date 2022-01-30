@@ -2,7 +2,7 @@
 {include file='navbar.tpl'}
 
 <div class="ui container">
-  <div class="ui padded segment">
+  <div class="ui padded segment" style="margin-top: 1rem">
 	<div class="ui stackable grid">
 		<div class="ui row">
 			<div class="ui ten wide column">

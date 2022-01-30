@@ -8,7 +8,7 @@
                         <img class="ui mini circular image" src="{$purchase.avatar}" alt="{$purchase.username}">
                         <div class="content">
                             <a class="header" {if $purchase.user_id}href="{$purchase.profile}" data-poload="{$USER_INFO_URL}{$purchase.user_id}"{/if} style="{$purchase.style|replace:';':''}!important;margin-bottom:2px">{$purchase.username}</a>
-                            {$purchase.currency_symbol}{$purchase.price}
+                            <small style="color: {$TEMPLATE_COLOR}">{$purchase.currency_symbol}{$purchase.price}</small>
                         </div>
                     </div>
                 </div>
