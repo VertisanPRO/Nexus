@@ -1,7 +1,10 @@
 <div class="ui segment">
     <div class="title_container" style="margin: 4px 0 8px 0;">
-        <a href="{$WIKI_HOME_LINK}" class="subheader">{$SITE_NAME} {$WIKI}</a>
+        <a href="{$WIKI_HOME_LINK}" class="subheader">
+            <h4>{$SITE_NAME} {$WIKI}</h4>
+        </a>
     </div>
+    <div class="ui divider" style="margin-top: 0"></div>
     <div class="active content">
         <div class="ui fluid vertical menu" style="border: 0;">
             {foreach from=$WIKI_PAGES item=page}
