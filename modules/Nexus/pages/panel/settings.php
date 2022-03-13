@@ -297,8 +297,7 @@ if (isset($errors) && count($errors))
 
 $smarty->assign(array(
   'TOKEN' => Token::get(),
-  'PAGE' => PANEL_PAGE,
-  'PARENT_PAGE' => PARENT_PAGE
+  'PAGE' => PANEL_PAGE
 ));
 
 require(ROOT_PATH . '/core/templates/panel_navbar.php');
