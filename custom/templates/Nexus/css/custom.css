@@ -1045,6 +1045,24 @@ a.badge-dark:focus {
     border-radius: 0.25rem;
 }
 
+@media only screen and (max-width: 767px) {
+    .post-card-small {
+        grid-area: span 1 / span 6;
+    }
+    .post-card-medium {
+        grid-area: span 1 / span 6;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .post-card-small {
+        grid-area: span 1 / span 3;
+    }
+    .post-card-medium {
+        grid-area: span 1 / span 6;
+    }
+}
+
 .post-card-small .ghost-card-img {
     height: 200px;
     position: relative;
