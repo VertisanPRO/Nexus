@@ -22,6 +22,9 @@
 {/if}
 
 <div class="ui stackable grid" style="margin-top: 1rem">
+  {if isset($GHOST)}
+    {include file='ghost/index.tpl'}
+  {else}
   <div class="ui centered row">
     {if count($WIDGETS_LEFT)}
     <div class="ui six wide tablet four wide computer column">
@@ -74,6 +77,7 @@
     </div>
     {/if}
   </div>
+  {/if}
 </div>
 
 {include file='footer.tpl'}
