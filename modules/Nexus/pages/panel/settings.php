@@ -34,7 +34,7 @@ if ($user->isLoggedIn()) {
 }
 
 define('PAGE', 'panel');
-define('PANEL_PAGE', 'nexus_items');
+define('PARENT_PAGE', 'nexus_items');
 
 require_once(ROOT_PATH . '/core/templates/backend_init.php');
 
@@ -297,7 +297,8 @@ if (isset($errors) && count($errors))
 
 $smarty->assign(array(
   'TOKEN' => Token::get(),
-  'PAGE' => PANEL_PAGE
+  'PAGE' => PANEL_PAGE,
+  'PARENT_PAGE' => PARENT_PAGE
 ));
 
 require(ROOT_PATH . '/core/templates/panel_navbar.php');
