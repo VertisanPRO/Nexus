@@ -11,30 +11,32 @@
 
 class Nexus_Template extends TemplateBase
 {
-  private $_template;
-    
-    /** @var Language */
-    private $_language;
+  private array $_template;
 
-    /** @var User */
-    private $_user;
+  /** @var Language */
+  private Language $_language;
 
-    /** @var Pages */
-    private $_pages;
+  /** @var User */
+  private User $_user;
+
+  /** @var Pages */
+  private Pages $_pages;
 
     public function __construct($cache, $smarty, $language, $user, $pages)
     {
   
-      $template = array(
+      $template = [
         'name' => 'Nexus',
         'version' => '1.6.1',
         'nl_version' => '2.0.0-pr12',
         'author' => '<a href="https://github.com/GIGABAIT-Official" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
-      );
+      ];
   
       $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
   
       parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
+
+      $this->_settings = ROOT_PATH . '/custom/templates/Nexus/template_settings/settings.php';
   
       $this->addCSSFiles(array(
         $template['path'] . 'css/fomantic.min.css' => array(),
@@ -48,6 +50,36 @@ class Nexus_Template extends TemplateBase
         $template['path'] . 'js/fomantic.min.js' => array(),
         $template['path'] . 'js/toastr.min.js' => array(),
       ));
+    
+// Caches
+$cache->setCache('template_settings');
+if ($cache->isCached('aboutFooter')) {
+    $aboutFooter = $cache->retrieve('aboutFooter');
+} else {
+    $aboutFooter = 'We are an online platform to help users
+      around the world connect through NamelessMC powered forums.';
+    $cache->store('aboutFooter', $aboutFooter);
+}
+
+if ($cache->isCached('darkMode')) {
+  $darkMode = $cache->retrieve('darkMode');
+} else {
+  $darkMode = '0';
+  $cache->store('darkMode', $darkMode);
+}
+
+if ($cache->isCached('primaryColor')) {
+  $primaryColor = $cache->retrieve('primaryColor');
+} else {
+  $primaryColor = '#dc3545';
+  $cache->store('primaryColor', $primaryColor);
+}
+
+    $smarty->assign(array(
+      'ABOUTFOOTER' => $aboutFooter,
+      'DARKMODE' => $darkMode,
+      'PRIMARYCOLOR' => $primaryColor,
+    ));
   
       $smarty->assign('TEMPLATE', $template);
   

@@ -11,7 +11,7 @@
 
 $language = array(
     'note' => 'Note',
-    'note_review' => 'You are editing the Nexus Template. If you like the theme, we would appreciate getting a review <a style="color: #E1D9D1;" href="https://namelessmc.com/resources/resource/162-nexus-template--available-for-free--supported-for-pre12/">here</a>.',
+    'note_review' => 'You are editing the Nexus Template. If you like the theme, we would appreciate getting a review <a style="color: #E1D9D1;" href="https://namelessmc.com/resources/resource/162">here</a>.',
     'favicon_label' => 'Favicon',
     'about_label' => 'About',
     'about_placeholder_label' => 'write something about your website',

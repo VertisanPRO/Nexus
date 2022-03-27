@@ -4,7 +4,7 @@
 	{include file='Nexus/components/navbar/dynamic.tpl'}
 {/if}
 
-{if $TEMPLATE_DARKMODE != '1'}
+{if $DARKMODE != '1'}
 
 {else}
 	{include file='Nexus/components/dm.tpl'}

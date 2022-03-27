@@ -237,7 +237,7 @@
     return false;
   }
 
-	{if $TEMPLATE_DARKMODE == 1}
+	{if $DARKMODE == 1}
 		$(function () {
 		$('#copied-ip').click(function () {
 			$('body').toast({

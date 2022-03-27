@@ -12,7 +12,7 @@
 
 $language = array(
     'note' => 'Заметка',
-    'note_review' => 'Вы изменяете тему Nexus. Если вам она понравилась, мы были бы рады за оценку <a style="color: #E1D9D1;" href="https://namelessmc.com/resources/resource/162-nexus-template--available-for-free--supported-for-pre12/">здесь</a>.',
+    'note_review' => 'Вы изменяете тему Nexus. Если вам она понравилась, мы были бы рады за оценку <a style="color: #E1D9D1;" href="https://namelessmc.com/resources/resource/162">здесь</a>.',
     'favicon_label' => 'Иконка',
     'about_label' => 'Описание',
     'about_placeholder_label' => 'Опишите ваш сайт',

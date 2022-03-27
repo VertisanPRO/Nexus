@@ -65,7 +65,7 @@
 				<div class="five wide column">
 					<h4>About</h4>
 					<p>
-						{if isset($TEMPLATE_ABOUT)} {$TEMPLATE_ABOUT}{else}We are an online platform to help users
+						{if isset($ABOUTFOOTER)} {$ABOUTFOOTER}{else}We are an online platform to help users
 						around the world connect through NamelessMC powered forums. {/if}
 					</p>
 				</div>
