@@ -50,36 +50,12 @@ class Nexus_Template extends TemplateBase
         $template['path'] . 'js/fomantic.min.js' => array(),
         $template['path'] . 'js/toastr.min.js' => array(),
       ));
-    
+
 // Caches
-$cache->setCache('template_settings');
-if ($cache->isCached('aboutFooter')) {
-    $aboutFooter = $cache->retrieve('aboutFooter');
-} else {
-    $aboutFooter = 'We are an online platform to help users
-      around the world connect through NamelessMC powered forums.';
-    $cache->store('aboutFooter', $aboutFooter);
-}
+include 'template_settings/includes/caches.php';
 
-if ($cache->isCached('darkMode')) {
-  $darkMode = $cache->retrieve('darkMode');
-} else {
-  $darkMode = '0';
-  $cache->store('darkMode', $darkMode);
-}
-
-if ($cache->isCached('primaryColor')) {
-  $primaryColor = $cache->retrieve('primaryColor');
-} else {
-  $primaryColor = '#dc3545';
-  $cache->store('primaryColor', $primaryColor);
-}
-
-    $smarty->assign(array(
-      'ABOUTFOOTER' => $aboutFooter,
-      'DARKMODE' => $darkMode,
-      'PRIMARYCOLOR' => $primaryColor,
-    ));
+// Functions
+include 'template_settings/includes/functions.php';
   
       $smarty->assign('TEMPLATE', $template);
   

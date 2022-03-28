@@ -11,67 +11,24 @@
 
 require_once('classes/NexusUtill.php');
 
-if (Input::exists()) {
-    if (Token::check()) {
-        $cache->setCache('template_settings');
-
-        if (isset($_POST['aboutFooter'])) {
-            $cache->store('aboutFooter', $_POST['aboutFooter']);
-        }
-
-        if (isset($_POST['darkMode'])) {
-          $cache->store('darkMode', $_POST['darkMode']);
-        }
-
-        if (isset($_POST['primaryColor'])) {
-          $cache->store('primaryColor', $_POST['primaryColor']);
-        }
-
-        Session::flash('admin_templates', $language->get('admin', 'successfully_updated'));
-
-    } else {
-        $errors = [$language->get('general', 'invalid_token')];
-    }
-}
+// Cache Store
+include 'includes/cachestore.php';
 
 // Caches
-$cache->setCache('template_settings');
-if ($cache->isCached('aboutFooter')) {
-    $aboutFooter = $cache->retrieve('aboutFooter');
-} else {
-    $aboutFooter = 'We are an online platform to help users
-      around the world connect through NamelessMC powered forums.';
-    $cache->store('aboutFooter', $aboutFooter);
-}
-
-if ($cache->isCached('darkMode')) {
-  $darkMode = $cache->retrieve('darkMode');
-} else {
-  $darkMode = '0';
-  $cache->store('darkMode', $darkMode);
-}
-
-if ($cache->isCached('primaryColor')) {
-  $primaryColor = $cache->retrieve('primaryColor');
-} else {
-  $primaryColor = '#dc3545';
-  $cache->store('primaryColor', $primaryColor);
-}
+include 'includes/caches.php';
 
 // Debugging
-var_dump($cache->retrieve('aboutFooter'));
-var_dump($cache->retrieve('darkMode'));
-var_dump($cache->retrieve('primaryColor'));
+include 'includes/debug.php';
 
 // Functions & Text
 $template_file = 'tpl/nexus.tpl';
+
+include 'includes/functions.php';
+
 $smarty->assign(array(
     // Functions
     'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
     'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Nexus/template_settings/' . $template_file,
-    'ABOUTFOOTER' => $aboutFooter,
-    'DARKMODE' => $darkMode,
-    'PRIMARYCOLOR' => $primaryColor,
 
     // Text
       // NamelessMC 
@@ -79,7 +36,6 @@ $smarty->assign(array(
         'YES' => $language->get('general', 'yes'),
         'NO' => $language->get('general', 'no'),
         'BACK' => $language->get('general', 'back'),
-        'BACK_LINK' => URL::build('/panel/nexus'),
         'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
         'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
         'NAME' => $language->get('admin', 'name'),
@@ -104,7 +60,6 @@ $smarty->assign(array(
 // Options
   'NOTE' => NexusUtill::getLanguage('options', 'note'),
   'NOTE_REVIEW' => NexusUtill::getLanguage('options', 'note_review'),
-  'FAVICON_LABEL' => NexusUtill::getLanguage('options', 'favicon_label'),
   'ABOUT_LABEL' => NexusUtill::getLanguage('options', 'about_label'),
   'ABOUT_PLACEHOLDER_LABEL' => NexusUtill::getLanguage('options', 'about_placeholder_label'),
 
