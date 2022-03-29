@@ -4,8 +4,12 @@ if (Input::exists()) {
         $cache->setCache('template_settings');
 
         // Options
-            if (isset($_POST['aboutFooter'])) {
-                $cache->store('aboutFooter', $_POST['aboutFooter']);
+            if (isset($_POST['footerView'])) {
+                $cache->store('footerView', $_POST['footerView']);
+            }
+
+            if (isset($_POST['footerAbout'])) {
+                $cache->store('footerAbout', $_POST['footerAbout']);
             }
 
         // Colors
@@ -76,6 +80,67 @@ if (Input::exists()) {
                 if (isset($_POST['minecraftStyle'])) {
                     $cache->store('minecraftStyle', $_POST['minecraftStyle']);
                 }
+
+        // Arc
+            if (isset($_POST['arcView'])) {
+                $cache->store('arcView', $_POST['arcView']);
+            }
+
+            if (isset($_POST['arcURL'])) {
+                $cache->store('arcURL', $_POST['arcURL']);
+            }
+
+        // Widgets
+            // Donation
+                if (isset($_POST['donateEmail'])) {
+                    $cache->store('donateEmail', $_POST['donateEmail']);
+                }
+
+                if (isset($_POST['donateFirstAmount'])) {
+                    $cache->store('donateFirstAmount', $_POST['donateFirstAmount']);
+                }
+
+                if (isset($_POST['donateSecondAmount'])) {
+                    $cache->store('donateSecondAmount', $_POST['donateSecondAmount']);
+                }
+
+                if (isset($_POST['donateThirdAmount'])) {
+                    $cache->store('donateThirdAmount', $_POST['donateThirdAmount']);
+                }
+
+            // Message
+                if (isset($_POST['messageTitle'])) {
+                    $cache->store('messageTitle', $_POST['messageTitle']);
+                }
+
+                if (isset($_POST['messageText'])) {
+                    $cache->store('messageText', $_POST['messageText']);
+                }
+
+                if (isset($_POST['messageIcon'])) {
+                    $cache->store('messageIcon', $_POST['messageIcon']);
+                }
+
+    // Embed
+        if (isset($_POST['embedTitle'])) {
+            $cache->store('embedTitle', $_POST['embedTitle']);
+        }
+
+        if (isset($_POST['embedText'])) {
+            $cache->store('embedText', $_POST['embedText']);
+        }
+
+        if (isset($_POST['embedColor'])) {
+            $cache->store('embedColor', $_POST['embedColor']);
+        }
+
+        if (isset($_POST['embedIcon'])) {
+            $cache->store('embedIcon', $_POST['embedIcon']);
+        }
+
+        if (isset($_POST['embedKeywords'])) {
+            $cache->store('embedKeywords', $_POST['embedKeywords']);
+        }
 
         Session::flash('admin_templates', $language->get('admin', 'successfully_updated'));
 

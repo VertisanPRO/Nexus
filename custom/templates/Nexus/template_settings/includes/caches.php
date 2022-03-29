@@ -2,12 +2,18 @@
 $cache->setCache('template_settings');
 
 // Options
-    if ($cache->isCached('aboutFooter')) {
-        $aboutFooter = $cache->retrieve('aboutFooter');
+    if ($cache->isCached('footerView')) {
+        $footerView = $cache->retrieve('footerView');
     } else {
-        $aboutFooter = 'We are an online platform to help users
-            around the world connect through NamelessMC powered forums.';
-        $cache->store('aboutFooter', $aboutFooter);
+        $footerView = '1';
+        $cache->store('footerView', $footerView);
+    }
+
+    if ($cache->isCached('footerAbout')) {
+        $footerAbout = $cache->retrieve('footerAbout');
+    } else {
+        $footerAbout = 'We are an online platform to help users around the world connect through NamelessMC powered forums.';
+        $cache->store('footerAbout', $footerAbout);
     }
 
 // Colors
@@ -127,3 +133,105 @@ $cache->setCache('template_settings');
             $cache->store('minecraftStyle', $minecraftStyle);
         }
 
+// Arc
+    if ($cache->isCached('arcView')) {
+        $arcView = $cache->retrieve('arcView');
+    } else {
+        $arcView = '0';
+        $cache->store('arcView', $arcView);
+    }
+
+    if ($cache->isCached('arcURL')) {
+        $arcURL = $cache->retrieve('arcURL');
+    } else {
+        $arcURL = 'https://arc.io/widget.min.js#9YB4rHQn';
+        $cache->store('arcURL', $arcURL);
+    }
+
+// Widgets
+    // Donation
+        if ($cache->isCached('donateEmail')) {
+            $donateEmail = $cache->retrieve('donateEmail');
+        } else {
+            $donateEmail = 'mubeenullah323@gmail.com';
+            $cache->store('donateEmail', $donateEmail);
+        }
+
+        if ($cache->isCached('donateFirstAmount')) {
+            $donateFirstAmount = $cache->retrieve('donateFirstAmount');
+        } else {
+            $donateFirstAmount = '5';
+            $cache->store('donateFirstAmount', $donateFirstAmount);
+        }
+
+        if ($cache->isCached('donateSecondAmount')) {
+            $donateSecondAmount = $cache->retrieve('donateSecondAmount');
+        } else {
+            $donateSecondAmount = '10';
+            $cache->store('donateSecondAmount', $donateSecondAmount);
+        }
+
+        if ($cache->isCached('donateThirdAmount')) {
+            $donateThirdAmount = $cache->retrieve('donateThirdAmount');
+        } else {
+            $donateThirdAmount = '20';
+            $cache->store('donateThirdAmount', $donateThirdAmount);
+        }
+
+    // Message
+        if ($cache->isCached('messageTitle')) {
+            $messageTitle = $cache->retrieve('messageTitle');
+        } else {
+            $messageTitle = 'About';
+            $cache->store('messageTitle', $messageTitle);
+        }
+
+        if ($cache->isCached('messageText')) {
+            $messageText = $cache->retrieve('messageText');
+        } else {
+            $messageText = 'We are an online platform to help users around the world connect through NamelessMC powered forums.';
+            $cache->store('messageText', $messageText);
+        }
+
+        if ($cache->isCached('messageIcon')) {
+            $messageIcon = $cache->retrieve('messageIcon');
+        } else {
+            $messageIcon = 'fas fa-hand-holding-usd';
+            $cache->store('messageIcon', $messageIcon);
+        }
+
+// Arc
+    if ($cache->isCached('embedTitle')) {
+        $embedTitle = $cache->retrieve('embedTitle');
+    } else {
+        $embedTitle = '{$TITLE} • {$smarty.const.SITE_NAME}';
+        $cache->store('embedTitle', $embedTitle);
+    }
+
+    if ($cache->isCached('embedText')) {
+        $embedText = $cache->retrieve('embedText');
+    } else {
+        $embedText = 'We are an online platform to help users around the world connect through NamelessMC powered forums.';
+        $cache->store('embedText', $embedText);
+    }
+
+    if ($cache->isCached('embedColor')) {
+        $embedColor = $cache->retrieve('embedColor');
+    } else {
+        $embedColor = '#46d0e6';
+        $cache->store('embedColor', $embedColor);
+    }
+
+    if ($cache->isCached('embedIcon')) {
+        $embedIcon = $cache->retrieve('embedIcon');
+    } else {
+        $embedIcon = 'https://i.imgur.com/e6YHD.gif';
+        $cache->store('embedIcon', $embedIcon);
+    }
+
+    if ($cache->isCached('embedKeywords')) {
+        $embedKeywords = $cache->retrieve('embedKeywords');
+    } else {
+        $embedKeywords = '';
+        $cache->store('embedKeywords', $embedKeywords);
+    }

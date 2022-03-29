@@ -1,6 +1,6 @@
 <?php
 /*
- *	Made by Samerton
+ *    Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
  *  NamelessMC version 2.0.0-pr12
  *
@@ -11,10 +11,10 @@
 */
 
 $language = array(
-	// Nexus About
-		'title' => 'Nexus',
+    // Nexus About
+        'title' => 'Nexus',
 
-	// Other
+    // Other
     'save_successfully' => 'Успешно сохранено',
     'save_errors' => 'Ошибка сохранения',
     'true_label' => 'Включить',

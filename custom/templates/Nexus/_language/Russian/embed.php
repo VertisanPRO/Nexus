@@ -1,6 +1,6 @@
 <?php
 /*
- *	Made by Samerton
+ *    Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
  *  NamelessMC version 2.0.0-pr12
  *

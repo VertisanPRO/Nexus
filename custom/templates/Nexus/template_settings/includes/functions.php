@@ -1,7 +1,8 @@
 <?php
 $smarty->assign(array(
     // Options
-        'ABOUTFOOTER' => $aboutFooter,
+        'FOOTERVIEW' => $footerView,
+        'FOOTERABOUT' => $footerAbout,
 
     // Colors
         'DARKMODE' => $darkMode,
@@ -27,4 +28,27 @@ $smarty->assign(array(
             'MINECRAFTIP' => $minecraftIP,
             'MINECRAFTPORT' => $minecraftPort,
             'MINECRAFTSTYLE' => $minecraftStyle,
+
+    // Arc
+        'ARCVIEW' => $arcView,
+        'ARCURL' => $arcURL,
+
+    // Widgets
+        // Donation
+            'DONATEEMAIL' => $donateEmail,
+            'DONATEFIRSTAMOUNT' => $donateFirstAmount,
+            'DONATESECONDAMOUNT' => $donateSecondAmount,
+            'DONATETHIRDAMOUNT' => $donateThirdAmount,
+
+        // Message
+            'MESSAGETITLE' => $messageTitle,
+            'MESSAGETEXT' => $messageText,
+            'MESSAGEICON' => $messageIcon,
+
+    // Arc
+        'EMBEDTITLE' => $embedTitle,
+        'EMBEDTEXT' => $embedText,
+        'EMBEDCOLOR' => $embedColor,
+        'EMBEDICON' => $embedIcon,
+        'EMBEDKEYWORDS' => $embedKeywords,
 ));

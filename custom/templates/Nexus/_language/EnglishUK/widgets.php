@@ -1,6 +1,6 @@
 <?php
 /*
- *	Made by Samerton
+ *    Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
  *  NamelessMC version 2.0.0-pr12
  *
@@ -10,7 +10,7 @@
 */
 
 $language = array(
-	// Donation Widget
+    // Donation Widget
         'donate_widget_label' => 'Donation widget',
         'donate_email_label' => 'PayPal email',
         'first_amount_label' => 'First amount',

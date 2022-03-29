@@ -11,32 +11,30 @@
 
 class Nexus_Template extends TemplateBase
 {
-  private array $_template;
+  private $_template;
+    
+    /** @var Language */
+    private $_language;
 
-  /** @var Language */
-  private Language $_language;
+    /** @var User */
+    private $_user;
 
-  /** @var User */
-  private User $_user;
-
-  /** @var Pages */
-  private Pages $_pages;
+    /** @var Pages */
+    private $_pages;
 
     public function __construct($cache, $smarty, $language, $user, $pages)
     {
   
-      $template = [
+      $template = array(
         'name' => 'Nexus',
         'version' => '1.6.1',
         'nl_version' => '2.0.0-pr12',
         'author' => '<a href="https://github.com/GIGABAIT-Official" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
-      ];
+      );
   
       $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
   
       parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
-
-      $this->_settings = ROOT_PATH . '/custom/templates/Nexus/template_settings/settings.php';
   
       $this->addCSSFiles(array(
         $template['path'] . 'css/fomantic.min.css' => array(),
@@ -50,12 +48,6 @@ class Nexus_Template extends TemplateBase
         $template['path'] . 'js/fomantic.min.js' => array(),
         $template['path'] . 'js/toastr.min.js' => array(),
       ));
-
-// Caches
-include 'template_settings/includes/caches.php';
-
-// Functions
-include 'template_settings/includes/functions.php';
   
       $smarty->assign('TEMPLATE', $template);
   
