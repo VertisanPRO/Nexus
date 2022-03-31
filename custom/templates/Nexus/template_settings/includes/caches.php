@@ -16,6 +16,18 @@ $cache->setCache('template_settings');
         $cache->store('footerAbout', $footerAbout);
     }
 
+    if ($cache->isCached('customCSS')) {
+        $customCSS = $cache->retrieve('customCSS');
+    } else {
+        $cache->store('customCSS', $customCSS);
+    }
+
+    if ($cache->isCached('customJS')) {
+        $customJS = $cache->retrieve('customJS');
+    } else {
+        $cache->store('customJS', $customJS);
+    }
+
 // Colors
     if ($cache->isCached('darkMode')) {
         $darkMode = $cache->retrieve('darkMode');
@@ -200,7 +212,7 @@ $cache->setCache('template_settings');
             $cache->store('messageIcon', $messageIcon);
         }
 
-// Arc
+// Embed
     if ($cache->isCached('embedTitle')) {
         $embedTitle = $cache->retrieve('embedTitle');
     } else {
@@ -232,6 +244,5 @@ $cache->setCache('template_settings');
     if ($cache->isCached('embedKeywords')) {
         $embedKeywords = $cache->retrieve('embedKeywords');
     } else {
-        $embedKeywords = '';
         $cache->store('embedKeywords', $embedKeywords);
     }

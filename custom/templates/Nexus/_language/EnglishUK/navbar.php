@@ -17,5 +17,5 @@ $language = [
     'navbarstyle' => 'Navigation style',
     'navbarstyle_info' => 'Elegant style has links at the top. Dynamic style has links below the banner.',
     'navbarelegant' => 'Elegant',
-    'navbardynamic' => 'Dynamic',
+    'navbardynamic' => 'Dynamic'
 ];

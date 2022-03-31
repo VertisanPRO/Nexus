@@ -26,5 +26,5 @@ $language = [
         'minecraftstyle' => 'Style',
         'minecraftstyle_info' => 'Simple is without MOTD. Advanced is with MOTD.',
         'simple' => 'Simple',
-        'advanced' => 'Advanced',
+        'advanced' => 'Advanced'
 ];

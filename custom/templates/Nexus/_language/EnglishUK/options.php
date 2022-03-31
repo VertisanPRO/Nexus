@@ -11,9 +11,13 @@
 
 $language = [
     'note' => 'Note',
-    'note_review' => 'You are editing the Nexus Template. If you like the theme, we would appreciate getting a review <a style="color: #E1D9D1;" href="https://namelessmc.com/resources/resource/162">here</a>.',
+    'note_review' => 'You are editing the Nexus Template. If you like the theme, we would appreciate getting a review <a class="text-secondary" href="https://namelessmc.com/resources/resource/162">here</a>.',
     'footerview' => 'About section',
     'footerview_info' => 'This is located in footer. When disabled, items in footer will be reorganised.',
     'footerabout' => 'About',
     'footerabout_placeholder' => 'write something about your website',
+    'customcss' => 'Custom CSS',
+    'customcss_info' => 'Here you can paste your CSS.',
+    'customjs' => 'Custom JS',
+    'customjs_info' => 'Here you can paste your JS.'
 ];

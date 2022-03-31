@@ -23,5 +23,5 @@ $language = [
         'messagetitle' => 'Название виджета',
         'messagetext' => 'Текст виджета',
         'messageicon' => 'Картинка виджета',
-        'messageicon_info' => 'Вы должны вставить что находится в class. Вы можете найти иконки на https://fomantic-ui.com или на https://fontawesome.com.',
+        'messageicon_info' => 'Вы должны вставить что находится в class. Вы можете найти иконки на https://fomantic-ui.com или на https://fontawesome.com.'
 ];

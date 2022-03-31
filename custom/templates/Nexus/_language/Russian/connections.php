@@ -20,12 +20,12 @@ $language = [
 
     // Minecraft
         'minecraft' => 'Майнкрафт',
-        'enable_minecraft' => 'Майнкрафт Сервер статус',
-        'server_domain' => 'Домен сервера',
-        'ip_address' => 'Айпи-адрес сервера',
-        'server_port' => 'Порт сервера',
-        'style' => 'Стиль',
+        'minecraftview' => 'Майнкрафт Сервер статус',
+        'minecraftdomain' => 'Домен сервера',
+        'minecraftip' => 'Айпи-адрес сервера',
+        'minecraftport' => 'Порт сервера',
+        'minecraftstyle' => 'Стиль',
         'minecraftstyle_info' => 'Лёгкий стиль без MOTD. Продвинутый стиль с MOTD.',
         'simple' => 'Лёгкий',
-        'advanced' => 'Продвинутый',
+        'advanced' => 'Продвинутый'
 ];

@@ -18,7 +18,7 @@ include 'includes/cachestore.php';
 include 'includes/caches.php';
 
 // Debugging
-include 'includes/debug.php';
+// include 'includes/debug.php';
 
 // Functions & Text
 $template_file = 'tpl/nexus.tpl';
@@ -42,7 +42,6 @@ $smarty->assign(array(
         'INFO' => $language->get('general', 'info'),
         'ENABLED' => $language->get('admin', 'enabled'),
         'DISABLED' => $language->get('admin', 'disabled'),
-        'DESCRIPTION' => $language->get('admin', 'description'),
   
   // Navigation
   'NAVIGATION' => NexusUtill::getLanguage('navigation', 'navigation'),
@@ -63,6 +62,10 @@ $smarty->assign(array(
   'FOOTERVIEW_INFO_LABEL' => NexusUtill::getLanguage('options', 'footerview_info'),
   'FOOTERABOUT_LABEL' => NexusUtill::getLanguage('options', 'footerabout'),
   'FOOTERABOUT_PLACEHOLDER_LABEL' => NexusUtill::getLanguage('options', 'footerabout_placeholder'),
+  'CUSTOMCSS_LABEL' => NexusUtill::getLanguage('options', 'customcss'),
+  'CUSTOMCSS_INFO_LABEL' => NexusUtill::getLanguage('options', 'customcss_info'),
+  'CUSTOMJS_LABEL' => NexusUtill::getLanguage('options', 'customjs'),
+  'CUSTOMJS_INFO_LABEL' => NexusUtill::getLanguage('options', 'customjs_info'),
 
 // Colors
   'DARKMODE_LABEL' => NexusUtill::getLanguage('colors', 'darkmode'),

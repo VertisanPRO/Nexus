@@ -19,5 +19,5 @@ $language = [
     'colors_info' => '#000000 делает основным цветом',
     'navbartextcolor' => 'Цвет текста панели навигации',
     'navbartextblack' => 'Чёрный',
-    'navbartextwhite' => 'Белый',
+    'navbartextwhite' => 'Белый'
 ];

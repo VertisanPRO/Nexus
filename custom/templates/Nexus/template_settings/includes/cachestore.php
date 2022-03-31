@@ -12,6 +12,14 @@ if (Input::exists()) {
                 $cache->store('footerAbout', $_POST['footerAbout']);
             }
 
+            if (isset($_POST['customCSS'])) {
+                $cache->store('customCSS', $_POST['customCSS']);
+            }
+
+            if (isset($_POST['customJS'])) {
+                $cache->store('customJS', $_POST['customJS']);
+            }
+
         // Colors
             if (isset($_POST['darkMode'])) {
                 $cache->store('darkMode', $_POST['darkMode']);

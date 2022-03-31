@@ -21,5 +21,5 @@ $language = [
     'widgets_page' => 'Виджеты',
     'embed_page' => 'Панель',
     'updates_page' => 'Обновления',
-    'support_page' => 'Помощь',
+    'support_page' => 'Помощь'
 ];

@@ -20,5 +20,5 @@ $language = [
     'widgets_page' => 'Widgets',
     'embed_page' => 'Embed',
     'updates_page' => 'Updates',
-    'support_page' => 'Support',
+    'support_page' => 'Support'
 ];

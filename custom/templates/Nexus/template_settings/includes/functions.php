@@ -3,6 +3,8 @@ $smarty->assign(array(
     // Options
         'FOOTERVIEW' => $footerView,
         'FOOTERABOUT' => $footerAbout,
+        'CUSTOMCSS' => $customCSS,
+        'CUSTOMJS' => $customJS,
 
     // Colors
         'DARKMODE' => $darkMode,
@@ -45,10 +47,10 @@ $smarty->assign(array(
             'MESSAGETEXT' => $messageText,
             'MESSAGEICON' => $messageIcon,
 
-    // Arc
+    // Embed
         'EMBEDTITLE' => $embedTitle,
         'EMBEDTEXT' => $embedText,
         'EMBEDCOLOR' => $embedColor,
         'EMBEDICON' => $embedIcon,
-        'EMBEDKEYWORDS' => $embedKeywords,
+        'EMBEDKEYWORDS' => $embedKeywords
 ));

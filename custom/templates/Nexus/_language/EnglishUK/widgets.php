@@ -22,5 +22,5 @@ $language = [
         'messagetitle' => 'Widget title',
         'messagetext' => 'Widget text',
         'messageicon' => 'Widget icon',
-        'messageicon_info' => 'You need to paste what is in class. You can get icons from https://fomantic-ui.com or https://fontawesome.com.',
+        'messageicon_info' => 'You need to paste what is in class. You can get icons from https://fomantic-ui.com or https://fontawesome.com.'
 ];

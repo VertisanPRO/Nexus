@@ -20,5 +20,5 @@ $language = [
     'embedpreview' => 'Embed preview',
     'embedtemplate' => 'Template',
     'embedbot' => 'BOT',
-    'embedmessagepreview' => 'This is a preview!',
+    'embedmessagepreview' => 'This is a preview!'
 ];

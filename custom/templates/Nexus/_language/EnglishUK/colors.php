@@ -18,5 +18,5 @@ $language = [
     'colors_info' => '#000000 makes it primary colour',
     'navbartextcolor' => 'Navbar text colour',
     'navbartextblack' => 'Black',
-    'navbartextwhite' => 'White',
+    'navbartextwhite' => 'White'
 ];
