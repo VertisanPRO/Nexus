@@ -4,56 +4,55 @@
 	<div class="card-body">
 		<form action="" method="POST">
 			<div class="form-group">
-				<label for="embedTitle">{$EMBED_HEAD_LABEL}</label>
+				<label for="embedTitle">{$EMBEDTITLE_LABEL}</label>
 				<input type="text" name="embedTitle" class="form-control" id="inputEmbedTitle" placeholder="{$TITLE}"
 					value="{$EMBEDTITLE}">
 			</div>
 			<div class="form-group">
-				<label for="embedText">{$EMBED_DESC_LABEL}</label>
-				<textarea type="text" name="embedText" class="form-control" id="inputEmbedText"
-					value="{$EMBEDTEXT}"></textarea>
+				<label for="embedText">{$EMBEDTEXT_LABEL}</label>
+				<input type="text" name="embedText" class="form-control" id="inputEmbedText" value="{$EMBEDTEXT}">
 			</div>
 			<div class="form-group">
-				<label for="embedColor">{$EMBED_COLOR_LABEL}</label>
+				<label for="embedColor">{$EMBEDCOLOR_LABEL}</label>
 				<input type="color" class="form-control" id="inputEmbedColor" name="embedColor" value="{$EMBEDCOLOR}">
 			</div>
 			<div class="form-group">
-				<label for="embedIcon">{$EMBED_IMAGE_LABEL} <span class="badge badge-info"><i
+				<label for="embedIcon">{$EMBEDICON_LABEL} <span class="badge badge-info"><i
 							class="fas fa-question-circle" data-container="body" data-toggle="popover"
-							data-placement="top" data-content="{$EMBED_IMAGE_INFO_LABEL}"
+							data-placement="top" data-content="{$EMBEDICON_INFO_LABEL}"
 							data-original-title="{$INFO}"></i></span></label>
 				<input type="text" name="embedIcon" class="form-control" id="inputEmbedIcon"
 					placeholder="https://example.com/img/logo.png" value="{$EMBEDICON}">
 			</div>
 			<div class="form-group">
-				<label for="embedKeywords">{$EMBED_KEYWORDS_LABEL} <span class="badge badge-info"><i
+				<label for="embedKeywords">{$EMBEDKEYWORDS_LABEL} <span class="badge badge-info"><i
 							class="fas fa-question-circle" data-container="body" data-toggle="popover"
-							data-placement="top" data-content="{$EMBED_KEYWORDS_INFO_LABEL}"
+							data-placement="top" data-content="{$EMBEDKEYWORDS_INFO_LABEL}"
 							data-original-title="{$INFO}"></i></span></label>
 				<input type="text" name="embedKeywords" class="form-control" id="inputEmbedKeywords"
 					value="{$EMBEDKEYWORDS}">
 			</div>
 			<div class="form-group">
 				<input type="hidden" name="token" value="{$TOKEN}">
-				<button style="width: 100%;" type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
+				<button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
 					{$SUBMIT}</button>
 			</div>
 		</form>
-		<div class="card shadow mb-4">
+		<div class="card shadow mb-4 embed-preview">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">{$EMBED_PREVIEW_LABEL}</h6>
+				<h6 class="m-0 font-weight-bold text-primary">{$EMBEDPREVIEW_LABEL}</h6>
 			</div>
-			<div class="card-body">
+			<div class="card-body ">
 				<div class="message">
 					<div class="name-box">
 						<img src="https://i.imgur.com/B8B0Zrc.png"
 							style="width: 52px;height: 52px;border-radius: 3.14vh;" />
-						<h2 class="name">Nexus Template</h2>
-						<span class="bot-tag">BOT</span>
+						<h2 class="name">Nexus {$EMBEDTEMPLATE_LABEL}</h2>
+						<span class="bot-tag">{$EMBEDBOT_LABEL}</span>
 						<p class="date">27/09/2022</p>
 					</div>
 					<div class="content-box">
-						<p class="content">This is a preview!</p>
+						<p class="content">{$EMBEDMESSAGEPREVIEW_LABEL}</p>
 						<div class="embed-box">
 							<p class="title link" onclick="window.open('/')">
 								{if isset($EMBEDTITLE)}{$EMBEDTITLE}{else}{$TITLE} •
@@ -182,7 +181,7 @@
 		height: 100px;
 		border-radius: 5px;
 		position: absolute;
-		left: 380px;
+		left: 260px;
 		top: 75px;
 	}
 
@@ -201,5 +200,11 @@
 		font-size: 14px;
 		font-weight: 500;
 		max-width: 360px;
+	}
+
+	@media screen and (max-width: 1024px) {
+		.embed-preview {
+			display: none !important;
+		}
 	}
 </style>

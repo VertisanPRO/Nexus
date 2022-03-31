@@ -1,20 +1,16 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
 */
 
-$language = array(
-    'arc_label' => 'Enable Arc?',
-    'arc_url_label' => 'Widget URL',
-    'arc_info_1' => 'To enable Arc you need to register at',
-    'arc_info_2' => 'Then you need to add a website.',
-    'arc_info_3' => 'Then you need to copy <a href="https://arc.io/arc-sw.js">arc-sw.js</a> to your root website.',
-    'arc_info_4' => 'Then you need scroll down to "Add Arc\'s widget to your site" and copy the URL (not the whole thing).',
-    'arc_info_5' => 'The last thing is to add the URL in the input below.',
-);
+$language = [
+    'arcview' => 'Arc',
+    'arcview_info' => 'To enable Arc you need to register at https://arc.io. Then you need to add a website. Then you need to copy https://arc.io/arc-sw.js to your root website. Then you need scroll down to \'Add Arc\'s widget to your site\' and copy the URL (not the whole thing). The last thing is to add the URL in the input below.',
+    'arcurl' => 'Widget URL',
+];

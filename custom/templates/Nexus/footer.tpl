@@ -24,7 +24,7 @@
 					<div class="ui inverted link list">
 						<span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span>
 						{* We kindly ask to not remove the copyright *}
-						<span class="item">Template By <a href="https://github.com/GIGABAIT-Official" target="_blank"
+						<span class="item">Template By <a href="https://github.com/Vertisan" target="_blank"
 								rel="nofollow noopener">GIGABAIT Official</a></span>
 						{if $PAGE_LOAD_TIME}
 						<span class="item" id="page_load"></span>

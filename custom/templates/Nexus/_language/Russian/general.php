@@ -1,25 +1,25 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
  *  Translated by PadowYT2 & itzJOHv
 */
 
-$language = array(
+$language = [
     // Nexus About
         'title' => 'Nexus',
 
     // Other
     'save_successfully' => 'Успешно сохранено',
     'save_errors' => 'Ошибка сохранения',
-    'true_label' => 'Включить',
-    'false_label' => 'Выключить',
+    'true' => 'Включить',
+    'false' => 'Выключить',
     'group_permision' => 'Права модуля',
-    'info_label' => 'Информация',
+    'info' => 'Информация',
     'invalid_token' => 'Неверный токен'
-);
+];

@@ -1,16 +1,16 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
  *  Translated by PadowYT2 & itzJOHv
 */
 
-$language = array(
+$language = [
     'navigation' => 'Навигация',
     'options_page' => 'Опции',
     'colors_page' => 'Цвета',
@@ -22,4 +22,4 @@ $language = array(
     'embed_page' => 'Панель',
     'updates_page' => 'Обновления',
     'support_page' => 'Помощь',
-);
+];

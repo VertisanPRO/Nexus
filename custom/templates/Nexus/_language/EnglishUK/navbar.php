@@ -1,21 +1,21 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
 */
 
-$language = array(
-    'logo_label' => 'Logo URL',
-    'navigation_menu_label' => 'Sticky navbar?',
-    'navigation_menu_info_label' => 'This is an experimental feature. It may not work on your site yet.',
-    'nav_true_label' => 'True',
-    'nav_false_label' => 'False',
-    'navigation_style_label' => 'Navigation style',
-    'dynamic_label' => 'Dynamic',
-    'elegant_label' => 'Elegant',
-);
+$language = [
+    'navbarlogo' => 'Logo URL',
+    'navbarlogo_info' => 'This is a logo in the middle of navbar.',
+    'navbarsticky' => 'Sticky navbar?',
+    'navbarsticky_info' => 'This is an experimental feature. It may not work on your site yet.',
+    'navbarstyle' => 'Navigation style',
+    'navbarstyle_info' => 'Elegant style has links at the top. Dynamic style has links below the banner.',
+    'navbarelegant' => 'Elegant',
+    'navbardynamic' => 'Dynamic',
+];

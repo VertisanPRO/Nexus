@@ -1,22 +1,22 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
  *  Translated by PadowYT2 & itzJOHv
 */
 
-$language = array(
-    'embed_head_label' => 'Название панели',
-    'embed_desc_label' => 'Описание панели',
-    'embed_color_label' => 'Цвет полоски панели',
-    'embed_image_label' => 'Картинка в панели',
-    'embed_keywords_label' => 'Ключевые слова',
-    'embed_image_info_label' => 'Напишите действительную ссылку с окончанием на .png, .jpeg, .gif.',
-    'embed_keywords_info_label' => 'Поисковики используют ключевые слова для лучших результатов поиска. Используйте \',\' как разделитель (Пример: mc, website).',
-    'embed_preview_label' => 'Предпросмотр панели',
-);
+$language = [
+    'embed_head' => 'Название панели',
+    'embed_desc' => 'Описание панели',
+    'embed_color' => 'Цвет полоски панели',
+    'embed_image' => 'Картинка в панели',
+    'embed_keywords' => 'Ключевые слова',
+    'embed_image_info' => 'Напишите действительную ссылку с окончанием на .png, .jpeg, .gif.',
+    'embed_keywords_info' => 'Поисковики используют ключевые слова для лучших результатов поиска. Используйте \',\' как разделитель (Пример: mc, website).',
+    'embed_preview' => 'Предпросмотр панели',
+];

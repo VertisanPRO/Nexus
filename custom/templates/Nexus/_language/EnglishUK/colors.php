@@ -1,22 +1,22 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
 */
 
-$language = array(
-    'darkmode_label' => 'Enable darkmode?',
-    'template_color_label' => 'Primary colour',
-    'navbar_color_label' => 'Navbar colour',
-    'footer_color_label' => 'Footer colour',
-    'border_color_label' => 'Border outline colour',
-    'colors_info_label' => '#000000 makes it primary colour',
-    'navbar_text_label' => 'Navbar text colour',
-    'black_label' => 'Black',
-    'white_label' => 'White',
-);
+$language = [
+    'darkmode' => 'Darkmode',
+    'primarycolor' => 'Primary colour',
+    'navbarcolor' => 'Navbar colour',
+    'footercolor' => 'Footer colour',
+    'outlinecolor' => 'Border outline colour',
+    'colors_info' => '#000000 makes it primary colour',
+    'navbartextcolor' => 'Navbar text colour',
+    'navbartextblack' => 'Black',
+    'navbartextwhite' => 'White',
+];

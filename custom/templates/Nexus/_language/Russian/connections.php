@@ -1,24 +1,31 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
  *  Translated by PadowYT2 & itzJOHv
 */
 
-$language = array(
-    'enable_minecraft_label' => 'Включить показ Майнкрафт сервера?',
-    'server_domain_label' => 'Домен сервера',
-    'ip_address_label' => 'Айпи-адрес сервера',
-    'server_port_label' => 'Порт сервера',
-    'style_label' => 'Стиль',
-    'simple_label' => 'Лёгкий',
-    'advanced_label' => 'Продвинутый',
-    'discord_label' => 'Дискорд',
-    'enable_discord_label' => 'Включить показ Дискорда?',
-    'discord_id_label' => 'Дискорд ID',
-);
+$language = [
+    // Discord
+        'discord' => 'Дискорд',
+        'discordview' => 'Дискорд статус',
+        'discordview_info' => 'Это находится в панели навигации слево. Что бы это заработало, вы должны включить виджет сервера в Discord сервер > Настройки сервера > Виджет. Не забудьте сделать Канал для приглашений.',
+        'discordid' => 'Дискорд Сервер ID',
+        'discordid_info' => 'Чтобы получить ID Сервера, перейдите в Discord сервер > Настройки сервера > Виджет > ID Сервера > Копировать.',
+
+    // Minecraft
+        'minecraft' => 'Майнкрафт',
+        'enable_minecraft' => 'Майнкрафт Сервер статус',
+        'server_domain' => 'Домен сервера',
+        'ip_address' => 'Айпи-адрес сервера',
+        'server_port' => 'Порт сервера',
+        'style' => 'Стиль',
+        'minecraftstyle_info' => 'Лёгкий стиль без MOTD. Продвинутый стиль с MOTD.',
+        'simple' => 'Лёгкий',
+        'advanced' => 'Продвинутый',
+];

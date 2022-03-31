@@ -1,23 +1,30 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
 */
 
-$language = array(
-    'enable_minecraft_label' => 'Enable view of a Minecraft server?',
-    'server_domain_label' => 'Server domain',
-    'ip_address_label' => 'IP address',
-    'server_port_label' => 'Server port',
-    'style_label' => 'Style',
-    'simple_label' => 'Simple',
-    'advanced_label' => 'Advanced',
-    'discord_label' => 'Discord',
-    'enable_discord_label' => 'Enable view of Discord?',
-    'discord_id_label' => 'Discord ID',
-);
+$language = [
+    // Discord
+        'discord' => 'Discord',
+        'discordview' => 'Discord status',
+        'discordview_info' => 'This in navbar on the left. To get it to work, you have to enable Server Widget in Discord Server > Server Settings > Widget. Don\'t forget to make an Invite Channel.',
+        'discordid' => 'Discord Server ID',
+        'discordid_info' => 'To get the Server ID, go to Discord Server > Server Settings > Widget > Server ID > Copy.',
+
+    // Minecraft
+        'minecraft' => 'Minecraft',
+        'minecraftview' => 'Minecraft Server status',
+        'minecraftdomain' => 'Server domain',
+        'minecraftip' => 'Server IP address',
+        'minecraftport' => 'Server port',
+        'minecraftstyle' => 'Style',
+        'minecraftstyle_info' => 'Simple is without MOTD. Advanced is with MOTD.',
+        'simple' => 'Simple',
+        'advanced' => 'Advanced',
+];

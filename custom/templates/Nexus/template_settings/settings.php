@@ -1,12 +1,12 @@
 <?php
 /*
- *  Made by Samerton
+ *Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
  */
 
 require_once('classes/NexusUtill.php');
@@ -50,7 +50,6 @@ $smarty->assign(array(
   'COLORS_PAGE' => NexusUtill::getLanguage('navigation', 'colors_page'),
   'NAVBAR_PAGE' => NexusUtill::getLanguage('navigation', 'navbar_page'),
   'CONNECTIONS_PAGE' => NexusUtill::getLanguage('navigation', 'connections_page'),
-  'ADVANCED_PAGE' => NexusUtill::getLanguage('navigation', 'advanced_page'),
   'ARC_PAGE' => NexusUtill::getLanguage('navigation', 'arc_page'),
   'WIDGETS_PAGE' => NexusUtill::getLanguage('navigation', 'widgets_page'),
   'EMBED_PAGE' => NexusUtill::getLanguage('navigation', 'embed_page'),
@@ -60,86 +59,81 @@ $smarty->assign(array(
 // Options
   'NOTE' => NexusUtill::getLanguage('options', 'note'),
   'NOTE_REVIEW' => NexusUtill::getLanguage('options', 'note_review'),
-  'ABOUT_LABEL' => NexusUtill::getLanguage('options', 'about_label'),
-  'ABOUT_PLACEHOLDER_LABEL' => NexusUtill::getLanguage('options', 'about_placeholder_label'),
+  'FOOTERVIEW_LABEL' => NexusUtill::getLanguage('options', 'footerview'),
+  'FOOTERVIEW_INFO_LABEL' => NexusUtill::getLanguage('options', 'footerview_info'),
+  'FOOTERABOUT_LABEL' => NexusUtill::getLanguage('options', 'footerabout'),
+  'FOOTERABOUT_PLACEHOLDER_LABEL' => NexusUtill::getLanguage('options', 'footerabout_placeholder'),
 
 // Colors
-  'DARKMODE_LABEL' => NexusUtill::getLanguage('colors', 'darkmode_label'),
-  'TEMPLATE_COLOR_LABEL' => NexusUtill::getLanguage('colors', 'template_color_label'),
-  'NAVBAR_COLOR_LABEL' => NexusUtill::getLanguage('colors', 'navbar_color_label'),
-  'FOOTER_COLOR_LABEL' => NexusUtill::getLanguage('colors', 'footer_color_label'),
-  'BORDER_COLOR_LABEL' => NexusUtill::getLanguage('colors', 'border_color_label'),
-  'COLORS_INFO_LABEL' => NexusUtill::getLanguage('colors', 'colors_info_label'),
-  'NAVBAR_TEXT_LABEL' => NexusUtill::getLanguage('colors', 'navbar_text_label'),
-  'BLACK_LABEL' => NexusUtill::getLanguage('colors', 'black_label'),
-  'WHITE_LABEL' => NexusUtill::getLanguage('colors', 'white_label'),
+  'DARKMODE_LABEL' => NexusUtill::getLanguage('colors', 'darkmode'),
+  'PRIMARYCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'primarycolor'),
+  'NAVBARCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'navbarcolor'),
+  'FOOTERCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'footercolor'),
+  'OUTLINECOLOR_LABEL' => NexusUtill::getLanguage('colors', 'outlinecolor'),
+  'COLORS_INFO_LABEL' => NexusUtill::getLanguage('colors', 'colors_info'),
+  'NAVBARTEXTCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'navbartextcolor'),
+  'NAVBARTEXTBLACK_LABEL' => NexusUtill::getLanguage('colors', 'navbartextblack'),
+  'NAVBARTEXTWHITE_LABEL' => NexusUtill::getLanguage('colors', 'navbartextwhite'),
 
 // Navbar
-  'LOGO_LABEL' => NexusUtill::getLanguage('navbar', 'logo_label'),
-  'NAVIGATION_MENU_LABEL' => NexusUtill::getLanguage('navbar', 'navigation_menu_label'),
-  'NAVIGATION_MENU_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navigation_menu_info_label'),
-  'NAVIGATION_STYLE_LABEL' => NexusUtill::getLanguage('navbar', 'navigation_style_label'),
-  'NAV_TRUE_LABEL' => NexusUtill::getLanguage('navbar', 'nav_true_label'),
-  'NAV_FALSE_LABEL' => NexusUtill::getLanguage('navbar', 'nav_false_label'),
-  'DYNAMIC_LABEL' => NexusUtill::getLanguage('navbar', 'dynamic_label'),
-  'ELEGANT_LABEL' => NexusUtill::getLanguage('navbar', 'elegant_label'),
+  'NAVBARLOGO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarlogo'),
+  'NAVBARLOGO_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarlogo_info'),
+  'NAVBARSTICKY_LABEL' => NexusUtill::getLanguage('navbar', 'navbarsticky'),
+  'NAVBARSTICKY_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarsticky_info'),
+  'NAVBARSTYLE_LABEL' => NexusUtill::getLanguage('navbar', 'navbarstyle'),
+  'NAVBARSTYLE_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarstyle_info'),
+  'NAVBARELEGANT_LABEL' => NexusUtill::getLanguage('navbar', 'navbarelegant'),
+  'NAVBARDYNAMIC_LABEL' => NexusUtill::getLanguage('navbar', 'navbardynamic'),
 
 // Connections
-  'SERVER_DOMAIN_LABEL' => NexusUtill::getLanguage('connections', 'server_domain_label'),
-  'IP_ADDRESS_LABEL' => NexusUtill::getLanguage('connections', 'ip_address_label'),
-  'SERVER_PORT_LABEL' => NexusUtill::getLanguage('connections', 'server_port_label'),
-  'STYLE_LABEL' => NexusUtill::getLanguage('connections', 'style_label'),
-  'SIMPLE_LABEL' => NexusUtill::getLanguage('connections', 'simple_label'),
-  'ADVANCED_LABEL' => NexusUtill::getLanguage('connections', 'advanced_label'),
-  'DISCORD_LABEL' => NexusUtill::getLanguage('connections', 'discord_label'),
-  'DISCORD_ID_LABEL' => NexusUtill::getLanguage('connections', 'discord_id_label'),
-  'ENABLE_DISCORD_LABEL' => NexusUtill::getLanguage('connections', 'enable_discord_label'),
-  'ENABLE_MINECRAFT_LABEL' => NexusUtill::getLanguage('connections', 'enable_minecraft_label'),
+  // Discord
+    'DISCORD_LABEL' => NexusUtill::getLanguage('connections', 'discord'),
+    'DISCORDVIEW_LABEL' => NexusUtill::getLanguage('connections', 'discordview'),
+    'DISCORDVIEW_INFO_LABEL' => NexusUtill::getLanguage('connections', 'discordview_info'),
+    'DISCORDID_LABEL' => NexusUtill::getLanguage('connections', 'discordid'),
+    'DISCORDID_INFO_LABEL' => NexusUtill::getLanguage('connections', 'discordid_info'),
 
-// Advanced
-  'ADV_WARNING' => NexusUtill::getLanguage('advanced', 'adv_warning'),
-  'ADV_NAV_LABEL' => NexusUtill::getLanguage('advanced', 'adv_nav_label'),
-  'ADV_CONTAINER_LABEL' => NexusUtill::getLanguage('advanced', 'adv_container_label'),
-  'ADV_MARGIN_TOP_LABEL' => NexusUtill::getLanguage('advanced', 'adv_margin_top_label'),
-  'ADV_MARGIN_BOTTOM_LABEL' => NexusUtill::getLanguage('advanced', 'adv_margin_bottom_label'),
-  'ADV_NAV_SIZE_LABEL' => NexusUtill::getLanguage('advanced', 'adv_nav_size_label'),
-  'MINI_LABEL' => NexusUtill::getLanguage('advanced', 'mini_label'),
-  'TINY_LABEL' => NexusUtill::getLanguage('advanced', 'tiny_label'),
-  'SMALL_LABEL' => NexusUtill::getLanguage('advanced', 'small_label'),
-  'LARGE_LABEL' => NexusUtill::getLanguage('advanced', 'large_label'),
-  'HUGE_LABEL' => NexusUtill::getLanguage('advanced', 'huge_label'),
-  'MASSIVE_LABEL' => NexusUtill::getLanguage('advanced', 'massive_label'),
+  // Minecraft
+    'MINECRAFT_LABEL' => NexusUtill::getLanguage('connections', 'minecraft'),
+    'MINECRAFTVIEW_LABEL' => NexusUtill::getLanguage('connections', 'minecraftview'),
+    'MINECRAFTDOMAIN_LABEL' => NexusUtill::getLanguage('connections', 'minecraftdomain'),
+    'MINECRAFTIP_LABEL' => NexusUtill::getLanguage('connections', 'minecraftip'),
+    'MINECRAFTPORT_LABEL' => NexusUtill::getLanguage('connections', 'minecraftport'),
+    'MINECRAFTSTYLE_LABEL' => NexusUtill::getLanguage('connections', 'minecraftstyle'),
+    'MINECRAFTSTYLE_INFO_LABEL' => NexusUtill::getLanguage('connections', 'minecraftstyle_info'),
+    'SIMPLE_LABEL' => NexusUtill::getLanguage('connections', 'simple'),
+    'ADVANCED_LABEL' => NexusUtill::getLanguage('connections', 'advanced'),
 
 // Arc
-  'ARC_LABEL' => NexusUtill::getLanguage('arc', 'arc_label'),
-  'ARC_URL_LABEL' => NexusUtill::getLanguage('arc', 'arc_url_label'),
-  'ARC_INFO_1' => NexusUtill::getLanguage('arc', 'arc_info_1'),
-  'ARC_INFO_2' => NexusUtill::getLanguage('arc', 'arc_info_2'),
-  'ARC_INFO_3' => NexusUtill::getLanguage('arc', 'arc_info_3'),
-  'ARC_INFO_4' => NexusUtill::getLanguage('arc', 'arc_info_4'),
-  'ARC_INFO_5' => NexusUtill::getLanguage('arc', 'arc_info_5'),
+  'ARCVIEW_LABEL' => NexusUtill::getLanguage('arc', 'arcview'),
+  'ARCVIEW_INFO_LABEL' => NexusUtill::getLanguage('arc', 'arcview_info'),
+  'ARCURL_LABEL' => NexusUtill::getLanguage('arc', 'arcurl'),
 
 // Widgets
   // Donation Widget
-    'DONATE_WIDGET_LABEL' => NexusUtill::getLanguage('widgets', 'donate_widget_label'),
-    'DONATE_EMAIL_LABEL' => NexusUtill::getLanguage('widgets', 'donate_email_label'),
-    'FIRST_AMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'first_amount_label'),
-    'SECOND_AMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'second_amount_label'),
-    'THIRD_AMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'third_amount_label'),
+    'DONATEWIDGET_LABEL' => NexusUtill::getLanguage('widgets', 'donatewidget'),
+    'DONATEEMAIL_LABEL' => NexusUtill::getLanguage('widgets', 'donateemail'),
+    'DONATEFIRSTAMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'donatefirstamount'),
+    'DONATESECONDAMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'donatesecondamount'),
+    'DONATETHIRDAMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'donatethirdamount'),
 
   // Message Widget
-    'MESSAGE_WIDGET_LABEL' => NexusUtill::getLanguage('widgets', 'message_widget_label'),
-    'MESSAGE_TITLE_LABEL' => NexusUtill::getLanguage('widgets', 'message_title_label'),
-    'MESSAGE_TEXT_LABEL' => NexusUtill::getLanguage('widgets', 'message_text_label'),
-    'MESSAGE_ICON_LABEL' => NexusUtill::getLanguage('widgets', 'message_icon_label'),
+    'MESSAGEWIDGET_LABEL' => NexusUtill::getLanguage('widgets', 'messagewidget'),
+    'MESSAGETITLE_LABEL' => NexusUtill::getLanguage('widgets', 'messagetitle'),
+    'MESSAGETEXT_LABEL' => NexusUtill::getLanguage('widgets', 'messagetext'),
+    'MESSAGEICON_LABEL' => NexusUtill::getLanguage('widgets', 'messageicon'),
+    'MESSAGEICON_INFO_LABEL' => NexusUtill::getLanguage('widgets', 'messageicon_info'),
 
 // Embed
-  'EMBED_HEAD_LABEL' => NexusUtill::getLanguage('embed', 'embed_head_label'),
-  'EMBED_DESC_LABEL' => NexusUtill::getLanguage('embed', 'embed_desc_label'),
-  'EMBED_COLOR_LABEL' => NexusUtill::getLanguage('embed', 'embed_color_label'),
-  'EMBED_IMAGE_LABEL' => NexusUtill::getLanguage('embed', 'embed_image_label'),
-  'EMBED_KEYWORDS_LABEL' => NexusUtill::getLanguage('embed', 'embed_keywords_label'),
-  'EMBED_IMAGE_INFO_LABEL' => NexusUtill::getLanguage('embed', 'embed_image_info_label'),
-  'EMBED_KEYWORDS_INFO_LABEL' => NexusUtill::getLanguage('embed', 'embed_keywords_info_label'),
-  'EMBED_PREVIEW_LABEL' => NexusUtill::getLanguage('embed', 'embed_preview_label'),
+  'EMBEDTITLE_LABEL' => NexusUtill::getLanguage('embed', 'embedtitle'),
+  'EMBEDTEXT_LABEL' => NexusUtill::getLanguage('embed', 'embedtext'),
+  'EMBEDCOLOR_LABEL' => NexusUtill::getLanguage('embed', 'embedcolor'),
+  'EMBEDICON_LABEL' => NexusUtill::getLanguage('embed', 'embedicon'),
+  'EMBEDICON_INFO_LABEL' => NexusUtill::getLanguage('embed', 'embedicon_info'),
+  'EMBEDKEYWORDS_LABEL' => NexusUtill::getLanguage('embed', 'embedkeywords'),
+  'EMBEDKEYWORDS_INFO_LABEL' => NexusUtill::getLanguage('embed', 'embedkeywords_info'),
+  'EMBEDPREVIEW_LABEL' => NexusUtill::getLanguage('embed', 'embedpreview'),
+  'EMBEDTEMPLATE_LABEL' => NexusUtill::getLanguage('embed', 'embedtemplate'),
+  'EMBEDBOT_LABEL' => NexusUtill::getLanguage('embed', 'embedbot'),
+  'EMBEDMESSAGEPREVIEW_LABEL' => NexusUtill::getLanguage('embed', 'embedmessagepreview'),
 ));

@@ -1,25 +1,26 @@
 <?php
 /*
- *    Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr12
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
- *  Nexus By Mubeen & xGIGABAITx
+ *  Nexus By Vertisan
 */
 
-$language = array(
+$language = [
     // Donation Widget
-        'donate_widget_label' => 'Donation widget',
-        'donate_email_label' => 'PayPal email',
-        'first_amount_label' => 'First amount',
-        'second_amount_label' => 'Second amount',
-        'third_amount_label' => 'Third amount',
+        'donatewidget' => 'Donation widget',
+        'donateemail' => 'PayPal email',
+        'donatefirstamount' => 'First amount',
+        'donatesecondamount' => 'Second amount',
+        'donatethirdamount' => 'Third amount',
 
     // Message Widget
-        'message_widget_label' => 'Message widget',
-        'message_title_label' => 'Widget title',
-        'message_text_label' => 'Widget text',
-        'message_icon_label' => 'Widget icon',
-);
+        'messagewidget' => 'Message widget',
+        'messagetitle' => 'Widget title',
+        'messagetext' => 'Widget text',
+        'messageicon' => 'Widget icon',
+        'messageicon_info' => 'You need to paste what is in class. You can get icons from https://fomantic-ui.com or https://fontawesome.com.',
+];

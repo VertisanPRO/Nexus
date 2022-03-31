@@ -1,41 +1,43 @@
 <?php
 /*
- *	NamelessMC by Samerton | Template by Mubeen
+ *	NamelessMC by Samerton
  *	https://github.com/NamelessMC/Nameless/
- *	NamelessMC version 2.0.0-pr12
+ *	NamelessMC version 2.0.0-pr13
 
  *	License: MIT
  *
- *	Nexus Template
+ *	Nexus By Vertisan
  */
 
 class Nexus_Template extends TemplateBase
 {
-  private $_template;
+  private array $_template;
     
     /** @var Language */
-    private $_language;
+    private Language $_language;
 
     /** @var User */
-    private $_user;
+    private User $_user;
 
     /** @var Pages */
-    private $_pages;
+    private Pages $_pages;
 
     public function __construct($cache, $smarty, $language, $user, $pages)
     {
   
-      $template = array(
+      $template = [
         'name' => 'Nexus',
         'version' => '1.6.1',
-        'nl_version' => '2.0.0-pr12',
-        'author' => '<a href="https://github.com/GIGABAIT-Official" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
-      );
+        'nl_version' => '2.0.0-pr13',
+        'author' => '<a href="https://github.com/Vertisan" target="_blank" rel="nofollow noopener">GIGABAIT Official</a>',
+      ];
   
       $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
   
       parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
   
+      $this->_settings = ROOT_PATH . '/custom/templates/Nexus/template_settings/settings.php';
+
       $this->addCSSFiles(array(
         $template['path'] . 'css/fomantic.min.css' => array(),
         $template['path'] . 'css/toastr.min.css' => array(),
@@ -48,7 +50,13 @@ class Nexus_Template extends TemplateBase
         $template['path'] . 'js/fomantic.min.js' => array(),
         $template['path'] . 'js/toastr.min.js' => array(),
       ));
-  
+
+// Caches
+include 'template_settings/includes/caches.php';
+
+// Functions
+include 'template_settings/includes/functions.php';
+
       $smarty->assign('TEMPLATE', $template);
   
       // Other variables
