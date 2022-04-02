@@ -42,6 +42,7 @@ $smarty->assign(array(
         'INFO' => $language->get('general', 'info'),
         'ENABLED' => $language->get('admin', 'enabled'),
         'DISABLED' => $language->get('admin', 'disabled'),
+        'DISCORD_LINK' => NexusUtill::getDsServer(456464564646),
   
   // Navigation
   'NAVIGATION' => NexusUtill::getLanguage('navigation', 'navigation'),
