@@ -25,7 +25,31 @@ $template_file = 'tpl/nexus.tpl';
 
 include 'includes/functions.php';
 
-$ds = NexusUtill::getDsServer(760945720470667294);
+
+
+if (defined('FRONT_END')) {
+
+  if ($user->isLoggedIn()) {
+    $smarty->assign(array(
+      'USER_LOGIN' => 1
+    ));
+  }
+  $settings_data = NexusUtill::getSettingsToSmarty();
+  $smarty->assign($settings_data);
+
+  if ($cache->isCached('ds_status_ping')) {
+    $discord_server = $cache->retrieve('ds_status_ping');
+  } else {
+    $discord_server = NexusUtill::getDsServer($settings_data['DISCORD_ID']);
+  }
+  $cache->store('ds_status_ping', $discord_server, 60);
+  $smarty->assign(array(
+    'DISCORD_SERVER' => $discord_server,
+    'DISCORD_LINK' => $discord_server['link'],
+    'DISCORD_MEMBRRS' => $discord_server['members'],
+    'DISCORD_NAME' => $discord_server['name'],
+  ));
+}
 
 $smarty->assign(array(
     // Functions
@@ -44,9 +68,6 @@ $smarty->assign(array(
         'INFO' => $language->get('general', 'info'),
         'ENABLED' => $language->get('admin', 'enabled'),
         'DISABLED' => $language->get('admin', 'disabled'),
-        'DISCORD_LINK' => $ds['link'],
-        'DISCORD_MEMBRRS' => $ds['members'],
-        'DISCORD_NAME' => $ds['name'],
   
   // Navigation
   'NAVIGATION' => NexusUtill::getLanguage('navigation', 'navigation'),
