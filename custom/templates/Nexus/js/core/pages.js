@@ -6,6 +6,7 @@ if (page !== '') {
 			$(".server").each(function() {
 				let serverID = $(this).data("id");
 				let serverBungee = $(this).data("bungee");
+				let serverBedrock = $(this).data("bedrock");
 				let serverPlayerList = $(this).data("players");
 				let serverElem = '#server' + serverID + '[data-id=' + serverID + ']';
 
@@ -19,25 +20,18 @@ if (page !== '') {
 						content = data.player_count + "/" + data.player_count_max;
 						if (serverBungee === 1) {
 							players = bungeeInstance;
+						} else if (serverBedrock === 1) {
+							players = '';
 						} else {
 							if (serverPlayerList === 1) {
 								if (data.player_list.length > 0) {
-                  var promises = [];
-                  $.each(data.player_list, function (key, value) {
-                    var request = $.get(URLBuild('profile/' + value.name), function() {
-                        players += '<a href="' + URLBuild('profile/' + value.name) + '" data-tooltip="' + value.name + '" data-variation="mini" data-inverted="" data-position="bottom center"><img class="ui mini circular image" src="' + avatarSource.replace('{x}', value.id).replace('{y}', 64) + '" alt="' + value.name + '"></a>';
-                    }).fail(function() {
-                        players += '<a data-tooltip="' + value.name + '" data-variation="mini" data-inverted="" data-position="bottom center"><img class="ui mini circular image" src="' + avatarSource.replace('{x}', value.id).replace('{y}', 64) + '" alt="' + value.name + '"></a>';
-                      });
-                    promises.push(request);
-                  });
-                  
-                  $.when.apply($, promises).always(function () {
-                    if(data.player_list.length < data.player_count) {
-                      players += '<span class="ui blue circular label">+' + (data.player_count - data.player_list.length) + '</span>';
-                    }
-                    $(serverElem).find('#server-players').html(players);
-                  });
+									for (var i = 0; i < data.player_list.length; i++) {
+										players += '<a href="' + URLBuild('profile/' + data.player_list[i].name) + '" data-tooltip="' + data.player_list[i].name + '" data-variation="mini" data-inverted="" data-position="bottom center"><img class="ui mini circular image" src="' + avatarSource.replace('{x}', data.player_list[i].id).replace('{y}', 64) + '" alt="' + data.player_list[i].name + '"></a>';
+									}
+
+									if(data.player_list.length < data.player_count) {
+										players += '<span class="ui blue circular label">+' + (data.player_count - data.player_list.length) + '</span>';
+									}
 
 								} else {
 									players += noPlayersOnline;

@@ -15,11 +15,20 @@ function redirect(url) {
     window.location.href = url;
 }
 
+function copy(element) {
+    var $temp = $('<input>');
+    $('body').append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand('copy');
+    $temp.remove();
+    toastr.success(copied);
+}
 $(function () {
 
     $('.ui.sidebar').sidebar('attach events', '.toc.item');
 
-    $('.ui.dropdown:not(.search)').dropdown();
+    $('.ui.dropdown:not(.search):not(.upward)').dropdown();
+    $('.ui.dropdown.upward:not(.search)').dropdown({ direction: 'upward' });
 
     $('[data-toggle="tooltip"]').popup({
         hoverable: true
@@ -34,8 +43,6 @@ $(function () {
         let att = $(this).attr("data-target");
         $(att).modal('show');
     });
-
-    $('.menu .item').tab();
 
     $('.message .close').on('click', function () {
         $(this).closest('.message').transition('fade');

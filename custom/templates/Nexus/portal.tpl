@@ -1,1 +1,1 @@
-<h1> Upload your portal content to custom/templates/Nexus/portal.tpl</h1>
+Placeholder - use this template for your own custom portal.

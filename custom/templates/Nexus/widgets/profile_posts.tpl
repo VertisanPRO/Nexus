@@ -1,8 +1,6 @@
 <div class="ui fluid card" id="widget-latest-posts">
     <div class="content">
-		<a class="ui {if isset($WIDGET_LABEL_COLOR)} {$WIDGET_LABEL_COLOR}{else} violet{/if} ribbon label" style="
-    margin-bottom: 10px;"><i
-				class="fas fa-user-edit"></i> {$LATEST_PROFILE_POSTS}</a>
+        <h4 class="ui header">{$LATEST_PROFILE_POSTS}</h4>
         <div class="description">
             {if isset($PROFILE_POSTS_ARRAY)}
                 {foreach from=$PROFILE_POSTS_ARRAY name=profile_posts item=post}
