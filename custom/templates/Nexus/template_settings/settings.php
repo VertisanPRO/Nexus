@@ -25,6 +25,8 @@ $template_file = 'tpl/nexus.tpl';
 
 include 'includes/functions.php';
 
+$ds = NexusUtill::getDsServer(760945720470667294);
+
 $smarty->assign(array(
     // Functions
     'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
@@ -42,7 +44,9 @@ $smarty->assign(array(
         'INFO' => $language->get('general', 'info'),
         'ENABLED' => $language->get('admin', 'enabled'),
         'DISABLED' => $language->get('admin', 'disabled'),
-        'DISCORD_LINK' => NexusUtill::getDsServer(456464564646),
+        'DISCORD_LINK' => $ds['link'],
+        'DISCORD_MEMBRRS' => $ds['members'],
+        'DISCORD_NAME' => $ds['name'],
   
   // Navigation
   'NAVIGATION' => NexusUtill::getLanguage('navigation', 'navigation'),
