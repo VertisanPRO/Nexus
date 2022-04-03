@@ -1,0 +1,44 @@
+.ui.small.default.icon.button {
+	background-color: {$PRIMARYCOLOR} !important;
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+}
+
+.label {
+    background-color: {$PRIMARYCOLOR} !important;
+    border-color: #2185d0 !important;
+    color: #fff !important;
+}
+
+.ui.small.primary.icon.button {
+    background-color: #2185d0;
+}
+
+.ui.header {
+    border: none;
+    margin: calc(2rem - .14285714em) 0 1rem;
+    padding: 0 0;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    line-height: 1.28571429em;
+    text-transform: none;
+    color: {$PRIMARYCOLOR} !important;
+}
+
+{if $OUTLINECOLOR != '#000000'}
+.ui.segment {
+    box-shadow: 0 1px 3px 0 {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR} !important;
+}
+
+.ui.card, .ui.cards>.card {
+    box-shadow: 0 1px 3px 0 {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR} !important;
+}
+.ui.segment {
+    box-shadow: 0 1px 3px 0 {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR} !important;
+}
+
+.ui.card, .ui.cards>.card {
+    box-shadow: 0 1px 3px 0 {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR} !important;
+}
+{/if}

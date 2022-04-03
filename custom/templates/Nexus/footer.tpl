@@ -20,8 +20,7 @@
       {if $SOCIAL_MEDIA_ICONS|count eq '0'} <div class="six wide column">
         <h4>About</h4>
         <p>
-          {if isset($TEMPLATE_ABOUT)} {$TEMPLATE_ABOUT}{else}We are an online platform to help users
-          around the world connect through NamelessMC powered forums. {/if}
+          {$FOOTERABOUT}
         </p>
       </div>
       {/if}
@@ -62,8 +61,7 @@
       <div class="five wide column">
         <h4>About</h4>
         <p>
-          {if isset($TEMPLATE_ABOUT)} {$TEMPLATE_ABOUT}{else}We are an online platform to help users
-          around the world connect through NamelessMC powered forums. {/if}
+          {$FOOTERABOUT}
         </p>
       </div>
       {/if}
@@ -113,6 +111,12 @@
 {if !isset($EXCLUDE_END_BODY)}
 {if isset($DEBUGBAR_HTML)}
 {$DEBUGBAR_HTML}
+{/if}
+
+{if $CUSTOMJS != ''}
+<script type="text/javascript">
+  {$CUSTOMJS}
+</script>
 {/if}
 </body>
 

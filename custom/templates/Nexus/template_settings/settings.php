@@ -25,6 +25,30 @@ $template_file = 'tpl/nexus.tpl';
 
 include 'includes/functions.php';
 
+if (defined('FRONT_END')) {
+
+  if ($user->isLoggedIn()) {
+    $smarty->assign(array(
+      'USER_LOGIN' => 1
+    ));
+  }
+  $settings_data = NexusUtill::getSettingsToSmarty();
+  $smarty->assign($settings_data);
+
+  if ($cache->isCached('ds_status_ping')) {
+    $discord_server = $cache->retrieve('ds_status_ping');
+  } else {
+    $discord_server = NexusUtill::getDsServer($settings_data['DISCORD_ID']);
+  }
+  $cache->store('ds_status_ping', $discord_server, 60);
+  $smarty->assign(array(
+    'DISCORD_SERVER' => $discord_server,
+    'DISCORD_LINK' => $discord_server['link'],
+    'DISCORD_MEMBRRS' => $discord_server['members'],
+    'DISCORD_NAME' => $discord_server['name'],
+  ));
+}
+
 $smarty->assign(array(
     // Functions
     'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
@@ -67,10 +91,14 @@ $smarty->assign(array(
 
 // Colors
   'DARKMODE_LABEL' => NexusUtill::getLanguage('colors', 'darkmode'),
+  'COLORSSTYLE_LABEL' => NexusUtill::getLanguage('colors', 'colorsstyle'),
+  'COLORSSTYLE_NORMAL_LABEL' => NexusUtill::getLanguage('colors', 'colorsstyle_normal'),
+  'COLORSSTYLE_COLORS_LABEL' => NexusUtill::getLanguage('colors', 'colorsstyle_colors'),
   'PRIMARYCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'primarycolor'),
   'NAVBARCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'navbarcolor'),
   'FOOTERCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'footercolor'),
   'OUTLINECOLOR_LABEL' => NexusUtill::getLanguage('colors', 'outlinecolor'),
+  'OUTLINECOLOR_INFO_LABEL' => NexusUtill::getLanguage('colors', 'outlinecolor_info'),
   'COLORS_INFO_LABEL' => NexusUtill::getLanguage('colors', 'colors_info'),
   'NAVBARTEXTCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'navbartextcolor'),
   'NAVBARTEXTBLACK_LABEL' => NexusUtill::getLanguage('colors', 'navbartextblack'),

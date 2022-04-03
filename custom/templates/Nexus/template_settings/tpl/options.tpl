@@ -19,16 +19,16 @@
                                     class="fas fa-question-circle" data-container="body" data-toggle="popover"
                                     data-placement="top" data-content="{$CUSTOMCSS_INFO_LABEL}"
                                     data-original-title="{$INFO}"></i></span></label>
-                        <textarea name="customCSS" style="height: 150px;" class="form-control" id="inputCustomCSS"
-                            value="{$CUSTOMCSS}"></textarea>
+                        <textarea name="customCSS" style="height: 150px;" class="form-control"
+                            id="inputCustomCSS">{$CUSTOMCSS}</textarea>
                     </div>
                     <div class="col-md-6">
                         <label for="customJS">{$CUSTOMJS_LABEL} <span class="badge badge-info"><i
                                     class="fas fa-question-circle" data-container="body" data-toggle="popover"
                                     data-placement="top" data-content="{$CUSTOMJS_INFO_LABEL}"
                                     data-original-title="{$INFO}"></i></span></label>
-                        <textarea name="customJS" style="height: 150px;" class="form-control" id="inputCustomJS"
-                            value="{$CUSTOMJS}"></textarea>
+                        <textarea name="customJS" style="height: 150px;" class="form-control"
+                            id="inputCustomJS">{$CUSTOMJS}</textarea>
                     </div>
                 </div>
             </div>

@@ -21,8 +21,8 @@
 
 <div class="pusher">
   <div id="wrapper">
-    <div class="ui secondary small menu" style="background: {if (" {$NAVBAR_COLOR}"=="#000000" )}
-      {$TEMPLATE_COLOR}{else}{$NAVBAR_COLOR}{/if};" id="navbar">
+    <div class="ui secondary small menu" style="background: {if $NAVBARCOLOR eq '#000000'}
+      {$PRIMARYCOLOR}{else}{$NAVBARCOLOR}{/if};" id="navbar">
       <div class="ui container">
         {foreach from=$NAV_LINKS key=name item=item}
         {if isset($item.items)}

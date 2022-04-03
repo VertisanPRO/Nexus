@@ -21,6 +21,10 @@ if (Input::exists()) {
                 $cache->store('darkMode', $_POST['darkMode']);
             }
 
+            if (isset($_POST['colorsStyle'])) {
+                $cache->store('colorsStyle', $_POST['colorsStyle']);
+            }
+
             if (isset($_POST['primaryColor'])) {
                 $cache->store('primaryColor', $_POST['primaryColor']);
             }

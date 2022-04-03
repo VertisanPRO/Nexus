@@ -7,6 +7,7 @@ $smarty->assign(array(
 
     // Colors
         'DARKMODE' => $darkMode,
+        'COLORSSTYLE' => $colorsStyle,
         'PRIMARYCOLOR' => $primaryColor,
         'NAVBARCOLOR' => $navbarColor,
         'FOOTERCOLOR' => $footerColor,

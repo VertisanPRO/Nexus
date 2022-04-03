@@ -993,10 +993,6 @@ body.dark .ui.popup, body.dark .ui.secondary.menu .ui.popup, body.dark .ui.menu 
     min-width: 200px;
 }
 
-.ui.white.button {
-    background: transparent;
-}
-
 body.dark .ui.button, body.dark .ui.default.button, body.dark .ui.mini.icon.button, body.dark .ui.top.right.attached.label {
     background-color: #282828;
     color: rgba(255, 255, 255, 0.6);
@@ -1236,6 +1232,11 @@ body.dark .white {
 /*
  *  Nexus
  */
+
 .ui.steps {
     border: none;
+}
+
+.ui.vertical.white.animated.button {
+    background: transparent;
 }

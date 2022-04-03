@@ -29,6 +29,13 @@ $cache->setCache('template_settings');
         $cache->store('darkMode', $darkMode);
     }
 
+    if ($cache->isCached('colorsStyle')) {
+        $colorsStyle = $cache->retrieve('colorsStyle');
+    } else {
+        $colorsStyle = '0';
+        $cache->store('colorsStyle', $colorsStyle);
+    }
+
     if ($cache->isCached('primaryColor')) {
         $primaryColor = $cache->retrieve('primaryColor');
     } else {

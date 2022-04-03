@@ -6,6 +6,7 @@
 
 // Colors
     var_dump($cache->retrieve('darkMode'));
+    var_dump($cache->retrieve('colorsStyle'));
     var_dump($cache->retrieve('primaryColor'));
     var_dump($cache->retrieve('navbarColor'));
     var_dump($cache->retrieve('footerColor'));
