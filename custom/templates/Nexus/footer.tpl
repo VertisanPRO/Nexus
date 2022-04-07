@@ -93,17 +93,6 @@
 </script>
 {/if}
 
-<script type="text/javascript">
-  function toggleDarkLightMode() {
-    $.post("{$DARK_LIGHT_MODE_ACTION}", { token: "{$DARK_LIGHT_MODE_TOKEN}" })
-      .done(function () {
-        window.location.reload();
-      });
-
-    return false;
-  }
-</script>
-
 {if isset($NEW_UPDATE) && ($NEW_UPDATE_URGENT != true)}
 <script src="{$TEMPLATE.path}/js/core/update.js"></script>
 {/if}
@@ -113,11 +102,66 @@
 {$DEBUGBAR_HTML}
 {/if}
 
-{if $CUSTOMJS != ''}
-<script type="text/javascript">
+<script>
+  function toggleDarkLightMode() {
+    $.post("{$DARK_LIGHT_MODE_ACTION}", { token: "{$DARK_LIGHT_MODE_TOKEN}" })
+      .done(function () {
+        window.location.reload();
+      });
+
+    return false;
+  }
+
+  function dsInvite(link) {
+    if (link !== '') {
+      window.open(link);
+    }
+    return false;
+  }
+
+  {if $NEXUS_DARK_MODE eq '1' }
+  $(function () {
+    $('#copied-ip').click(function () {
+      $('body').toast({
+        showIcon: 'keyboard',
+        message: 'Copied!',
+        class: 'black',
+        progressUp: true,
+        displayTime: 2000,
+        classProgress: 'white',
+        showProgress: 'bottom',
+        pauseOnHover: false,
+      });
+    })
+  });
+  {else}
+  $(function () {
+    $('#copied-ip').click(function () {
+      $('body').toast({
+        showIcon: 'keyboard',
+        message: 'Copied!',
+        class: 'white',
+        progressUp: true,
+        displayTime: 2000,
+        classProgress: 'black',
+        showProgress: 'bottom',
+        pauseOnHover: false,
+      });
+    })
+  });
+  {/if}
+
+  function copyIP(ip) {
+    var servIP = document.createElement("textarea");
+    document.body.appendChild(servIP);
+    servIP.value = ip;
+    servIP.select();
+    document.execCommand("copy");
+    document.body.removeChild(servIP);
+  }
+
   {$CUSTOMJS}
 </script>
-{/if}
 </body>
 
 </html>

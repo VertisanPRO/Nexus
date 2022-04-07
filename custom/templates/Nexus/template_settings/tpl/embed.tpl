@@ -4,7 +4,10 @@
 	<div class="card-body">
 		<form action="" method="POST">
 			<div class="form-group">
-				<label for="embedTitle">{$EMBEDTITLE_LABEL}</label>
+				<label for="embedTitle">{$EMBEDTITLE_LABEL} <span class="badge badge-info"><i
+							class="fas fa-question-circle" data-container="body" data-toggle="popover"
+							data-placement="top" data-content="{$EMBEDTITLE_INFO_LABEL}"
+							data-original-title="{$INFO}"></i></span></label>
 				<input type="text" name="embedTitle" class="form-control" id="inputEmbedTitle" placeholder="{$TITLE}"
 					value="{$EMBEDTITLE}">
 			</div>
@@ -54,15 +57,15 @@
 					<div class="content-box">
 						<p class="content">{$EMBEDMESSAGEPREVIEW_LABEL}</p>
 						<div class="embed-box">
-							<p class="title link" onclick="window.open('/')">
-								{if isset($EMBEDTITLE)}{$EMBEDTITLE}{else}{$TITLE} •
-								{$smarty.const.SITE_NAME}{/if}</p>
+							{if $EMBEDTITLE eq '$every'}
+							<p class="title link" onclick="window.open('/')">{$TITLE} &bull; {$smarty.const.SITE_NAME}</p>
+							{else}
+							<p class="title link" onclick="window.open('/')">{$EMBEDTITLE}</p>
+							{/if}
 							<p class="description">
-								{if isset($EMBEDTEXT)}{$EMBEDTEXT}
-								{else}We are an online platform to help users around the world connect through
-								NamelessMC powered forums.{/if}
+								{$EMBEDTEXT}
 							</p>
-							<img src="{if isset($EMBEDICON)}{$EMBEDICON}{else}https://i.imgur.com/e6YHD.gif{/if}"
+							<img src="{$EMBEDICON}"
 								alt="Error: Failed to load image" class="thumbnail-picture" />
 						</div>
 					</div>
@@ -147,9 +150,10 @@
 		background-color: #161c25;
 		margin-top: -10px;
 		width: 135%;
-		height: 160px;
+		height: 145px;
         border-left: 5px solid {if isset($EMBEDCOLOR)}{$EMBEDCOLOR}{else}#46d0e6{/if};
 		border-radius: 4px;
+		position: relative;
 	}
 
 	.author {
@@ -180,9 +184,9 @@
 		width: 100px;
 		height: 100px;
 		border-radius: 5px;
+		right: 15px;
+		top: 15px;
 		position: absolute;
-		left: 260px;
-		top: 75px;
 	}
 
 	.title {

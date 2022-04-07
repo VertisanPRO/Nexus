@@ -16,24 +16,34 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
     <meta charset="{$METACHARSET}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    {if $EMBEDTITLE eq '$every'}
     <title>{$TITLE} &bull; {$smarty.const.SITE_NAME}</title>
+    {else}
+    <title>{$EMBEDTITLE}</title>
+    {/if}
 
     {if isset($FAVICON)}
     <link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
     {/if}
 
     <meta name="author" content="{$smarty.const.SITE_NAME}">
-    <meta name='description' content='{$PAGEDESCRIPTION}' />
-    <meta name='keywords' content='{$PAGEKEYWORDS}' />
+    <meta name='description' content='{$EMBEDTEXT}' />
+    <meta name='keywords' content='{$EMBEDKEYWORDS}' />
 
+    {if $EMBEDTITLE eq '$every'}
     <meta property="og:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    {else}
+    <meta property="og:title" content="{$EMBEDTITLE}" />
+    {/if}
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{$OG_URL}" />
-    <meta property="og:image" content="{$OG_IMAGE}" />
-    <meta property='og:description' content='{$PAGEDESCRIPTION}' />
+    <meta property="og:image" content="{$EMBEDICON}" />
+    <meta property='og:description' content='{$EMBEDTEXT}' />
+    <meta name="theme-color" content="{$EMBEDCOLOR}">
+    <meta content="{$EMBEDCOLOR}" data-react-helmet="true" name="theme-color" />
 
     <!-- Twitter Card Properties -->
-    <meta name="twitter:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    <meta name="twitter:title" content="{$EMBEDTITLE}" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="{$OG_IMAGE}" />
 
@@ -72,6 +82,10 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
     {if isset($DEBUGBAR_JS)}
     {$DEBUGBAR_JS}
+    {/if}
+
+    {if $ARCVIEW eq '1'}
+    <script async src="{$ARCURL}"></script>
     {/if}
   </head>
 

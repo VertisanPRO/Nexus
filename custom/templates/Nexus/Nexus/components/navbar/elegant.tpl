@@ -4,6 +4,7 @@
 {include file='Nexus/components/status/advanced.tpl'}
 {/if}
 
+{include file='Nexus/components/navbar/navbar.tpl'}
 <div class="ui stackable three column grid"
   style="background-image:url('{$BANNER_IMAGE}'); padding: 45px; margin-top:0px!important; border-bottom-left-radius: 85% 20%; border-bottom-right-radius: 85% 20%;">
   {if $DISCORDVIEW eq '1'}
@@ -37,18 +38,15 @@
     </div>
   </div>
   {if $MINECRAFTVIEW eq '1'}
-  <div class="column"
-    onclick="copyIP('{$MINECRAFTIP}{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}')"
+  <div class="column" onclick="copyIP('{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}')"
     style="text-align: center; margin-top: 2rem;">
     <div class="ui steps">
       <div class="step" style="background: transparent; color: white;">
         <i class="signal icon"></i>
-        <div class="content" id="copied-ip" class="ui text shape" id="copy-ip">
-          <div class="title">{if ($MINECRAFTDOMAIN eq '')} game.mc-tensa.com{else}{$MINECRAFTDOMAIN}{/if}</div>
-          {if $MINECRAFTSTYLE == 'false'}
-          <div class="description" style="color: white;">
-            <div id="mc_description"></div>
-          </div>
+        <div class="content" id="copied-ip" class="ui text shape">
+          <div class="title">{$MINECRAFTDOMAIN}</div>
+          {if $MINECRAFTSTYLE eq '1'}
+            <div id="minecraftdesc" style="color: white;"></div>
           {/if}
           <div class="ui vertical white animated button">
             <div class="hidden content">
@@ -56,7 +54,7 @@
             </div>
             <div class="visible content">
               <div class="description" style="color: white;"><strong>
-                  <div id="playercounter">Loading ...</div>
+                  <div id="minecraftplayers">Loading...</div>
                 </strong></div>
             </div>
           </div>
@@ -66,53 +64,3 @@
   </div>
   {/if}
 </div>
-
-<script>
-  function dsInvite(link) {
-    if (link !== '') {
-      window.open(link);
-    }
-    return false;
-  }
-
-  {if $DARKMODE eq '1'}
-  $(function () {
-    $('#copied-ip').click(function () {
-      $('body').toast({
-        showIcon: 'keyboard',
-        message: 'Copied!',
-        class: 'black',
-        progressUp: true,
-        displayTime: 2000,
-        classProgress: 'white',
-        showProgress: 'bottom',
-        pauseOnHover: false,
-      });
-    })
-  });
-  {else}
-  $(function () {
-    $('#copied-ip').click(function () {
-      $('body').toast({
-        showIcon: 'keyboard',
-        message: 'Copied!',
-        class: 'white',
-        progressUp: true,
-        displayTime: 2000,
-        classProgress: 'black',
-        showProgress: 'bottom',
-        pauseOnHover: false,
-      });
-    })
-  });
-  {/if}
-
-  function copyIP(ip) {
-    var servIP = document.createElement("textarea");
-    document.body.appendChild(servIP);
-    servIP.value = ip;
-    servIP.select();
-    document.execCommand("copy");
-    document.body.removeChild(servIP);
-  }
-</script>

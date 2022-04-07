@@ -47,6 +47,7 @@ class Nexus_Template extends TemplateBase {
             $template['path'] . 'js/jquery.cookie.js' => [],
             $template['path'] . 'js/fomantic.min.js' => [],
             $template['path'] . 'js/toastr.min.js' => [],
+            $template['path'] . 'js/nexus.js' => [],
         ]);
 
         // Caches

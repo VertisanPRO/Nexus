@@ -11,6 +11,7 @@
 
 $language = [
     'embedtitle' => 'Embed title',
+    'embedtitle_info' => 'You can put <code>$every</code> for having multiple titles on different pages.',
     'embedtext' => 'Embed description',
     'embedcolor' => 'Embed color',
     'embedicon' => 'Embed image',
