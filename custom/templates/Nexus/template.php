@@ -21,6 +21,8 @@ class Nexus_Template extends TemplateBase {
 
     /** @var Pages */
     private Pages $_pages;
+    private $_smarty;
+    private $_cache;
 
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
@@ -35,6 +37,9 @@ class Nexus_Template extends TemplateBase {
         parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
 
         $this->_settings = ROOT_PATH . '/custom/templates/Nexus/template_settings/settings.php';
+
+        $this->_smarty = $smarty;
+        $this->_cache = $cache;
 
         $this->addCSSFiles([
             $template['path'] . 'css/fomantic.min.css' => [],
@@ -156,6 +161,8 @@ class Nexus_Template extends TemplateBase {
         foreach ($this->_pages->getAjaxScripts() as $script) {
             $this->addJSScript('$.getJSON(\'' . $script . '\', function(data) {});');
         }
+
+        require_once('template_settings/frontend.php');
     }
 }
 

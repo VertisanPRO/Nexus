@@ -26,8 +26,8 @@
     {else}
     {include file='Nexus/components/navbar/dynamic.tpl'}
     {/if}
-
-    <div class="ui container">
+    <br />
+    <div class="ui container" id="context">
       <div class="ui negative icon message" id="ie-message">
         <i class="exclamation triangle icon"></i>
         <div class="content">

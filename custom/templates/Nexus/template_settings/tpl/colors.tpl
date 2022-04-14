@@ -3,6 +3,7 @@
   <h3 class="card-header mb-3 text-center">{$COLORS_PAGE}</h3>
   <div class="card-body">
     <form action="" method="POST">
+      <input type="hidden" name="sel_btn_session" value="colors" />
       <div class="form-group">
         <label for="darkMode">{$DARKMODE_LABEL}</label>
         <select id="inputDarkMode" class="form-control mr-sm-2" name="darkMode">
@@ -43,8 +44,9 @@
       <div class="form-group">
         <label for="navbarTextColor">{$NAVBARTEXTCOLOR_LABEL}</label>
         <select id="inputNavbarTextColor" class="form-control mr-sm-2" name="navbarTextColor">
-          <option value="0" {if $NAVBARTEXTCOLOR eq '0' } selected{/if}>{$NAVBARTEXTBLACK_LABEL}</option>
-          <option value="1" {if $NAVBARTEXTCOLOR eq '1' } selected{/if}>{$NAVBARTEXTWHITE_LABEL}</option>
+          <option value="0" {if $NAVBARTEXTCOLOR eq '0' } selected{/if}>{$NAVBARTEXT_NORMAL_LABEL}</option>
+          <option value="1" {if $NAVBARTEXTCOLOR eq '1' } selected{/if}>{$NAVBARTEXT_BLACK_LABEL}</option>
+          <option value="2" {if $NAVBARTEXTCOLOR eq '2' } selected{/if}>{$NAVBARTEXT_WHITE_LABEL}</option>
         </select>
       </div>
       {/if}

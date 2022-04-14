@@ -1,2 +1,4 @@
 $('.ui.sticky')
-    .sticky();
+    .sticky({
+        context: '#context'
+    });

@@ -151,13 +151,30 @@
   });
   {/if}
 
-  function copyIP(ip) {
+  function copyIP(element) {
+
     var servIP = document.createElement("textarea");
     document.body.appendChild(servIP);
     servIP.value = ip;
     servIP.select();
     document.execCommand("copy");
     document.body.removeChild(servIP);
+
+    var $temp = $('<input>');
+    $('body').append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand('copy');
+    $temp.remove();
+    $('body').toast({
+        showIcon: 'checkmark',
+        message: copied,
+        class: 'success',
+        progressUp: true,
+        displayTime: 6000,
+        showProgress: 'bottom',
+        pauseOnHover: false,
+        position: 'bottom left',
+    });
   }
 
   {$CUSTOMJS}

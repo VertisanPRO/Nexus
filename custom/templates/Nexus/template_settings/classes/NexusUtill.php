@@ -20,6 +20,7 @@ class NexusUtill {
     return $result;
   } 
 
+  // Достанет данные дс сервера использую ид (name, members, link)
   public static function getDsServer($id)
   {
     $discord_server = array();
@@ -43,6 +44,7 @@ class NexusUtill {
       return $discord_server;
   }
 
+  // $settings_data = NexusUtill::getSettingsToSmarty(); - достанет все из бд и переобразует в смарти пример: discord_id => {$DISCORD_ID}
   public static function getSettingsToSmarty()
   {
     $queries = new Queries();
@@ -59,5 +61,64 @@ class NexusUtill {
     }
 
     return $result;
+  }
+
+
+  public static function updateOrCreateParam($key, $value)
+  {
+    $queries = new Queries();
+    $data = end($queries->getWhere('nexus_settings', array('name', '=', $key)));
+    if (!empty($data)) {
+      $queries->update('nexus_settings', $data->id, array(
+        'value' => $value
+      ));
+    } else {
+      $queries->create('nexus_settings', array(
+        'name' => $key,
+        'value' => $value
+      ));
+    }
+    return;
+  }
+
+
+
+  public static function initialise()
+  {
+
+    $queries = new Queries();
+
+    try {
+      $group = $queries->getWhere('groups', array('id', '=', 2));
+      $group = $group[0];
+
+      $group_permissions = json_decode($group->permissions, TRUE);
+      $group_permissions['admincp.nexus'] = 1;
+
+      $group_permissions = json_encode($group_permissions);
+      $queries->update('groups', 2, array('permissions' => $group_permissions));
+    } catch (Exception $e) {
+      // Error
+    }
+
+    try {
+      $engine = Config::get('mysql/engine');
+      $charset = Config::get('mysql/charset');
+    } catch (Exception $e) {
+      $engine = 'InnoDB';
+      $charset = 'utf8mb4';
+    }
+    if (!$engine || is_array($engine))
+      $engine = 'InnoDB';
+
+    if (!$charset || is_array($charset))
+      $charset = 'latin1';
+
+    try {
+      $queries->createTable("nexus_settings", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)", "ENGINE=$engine DEFAULT CHARSET=$charset");
+    } catch (Exception $e) {
+      // Error
+    }
+
   }
 }

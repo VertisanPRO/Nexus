@@ -12,20 +12,20 @@
 
 $language = [
     // Discord
-        'discord' => 'Дискорд',
-        'discordview' => 'Дискорд статус',
-        'discordview_info' => 'Это находится в панели навигации слево. Что бы это заработало, вы должны включить виджет сервера в Discord сервер > Настройки сервера > Виджет. Не забудьте сделать Канал для приглашений.',
-        'discordid' => 'Дискорд Сервер ID',
-        'discordid_info' => 'Чтобы получить ID Сервера, перейдите в Discord сервер > Настройки сервера > Виджет > ID Сервера > Копировать.',
+        'discord_label' => 'Дискорд',
+        'discordview_label' => 'Дискорд статус',
+        'discordview_info_label' => 'Это находится в панели навигации слево. Что бы это заработало, вы должны включить виджет сервера в Discord сервер > Настройки сервера > Виджет. Не забудьте сделать Канал для приглашений.',
+        'discordid_label' => 'Дискорд Сервер ID',
+        'discordid_info_label' => 'Чтобы получить ID Сервера, перейдите в Discord сервер > Настройки сервера > Виджет > ID Сервера > Копировать.',
 
     // Minecraft
-        'minecraft' => 'Майнкрафт',
-        'minecraftview' => 'Майнкрафт Сервер статус',
-        'minecraftdomain' => 'Домен сервера',
-        'minecraftip' => 'Айпи-адрес сервера',
-        'minecraftport' => 'Порт сервера',
-        'minecraftstyle' => 'Стиль',
-        'minecraftstyle_info' => 'Лёгкий стиль без MOTD. Продвинутый стиль с MOTD.',
-        'simple' => 'Лёгкий',
-        'advanced' => 'Продвинутый'
+        'minecraft_label' => 'Майнкрафт',
+        'minecraftview_label' => 'Майнкрафт Сервер статус',
+        'minecraftdomain_label' => 'Домен сервера',
+        'minecraftip_label' => 'Айпи-адрес сервера',
+        'minecraftport_label' => 'Порт сервера',
+        'minecraftstyle_label' => 'Стиль',
+        'minecraftstyle_info_label' => 'Лёгкий стиль без MOTD. Продвинутый стиль с MOTD.',
+        'simple_label' => 'Лёгкий',
+        'advanced_label' => 'Продвинутый'
 ];

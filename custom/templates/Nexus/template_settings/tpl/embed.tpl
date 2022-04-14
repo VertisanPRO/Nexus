@@ -3,6 +3,7 @@
 	<h3 class="card-header mb-3 text-center">{$EMBED_PAGE}</h3>
 	<div class="card-body">
 		<form action="" method="POST">
+		<input type="hidden" name="sel_btn_session" value="embed" />
 			<div class="form-group">
 				<label for="embedTitle">{$EMBEDTITLE_LABEL} <span class="badge badge-info"><i
 							class="fas fa-question-circle" data-container="body" data-toggle="popover"

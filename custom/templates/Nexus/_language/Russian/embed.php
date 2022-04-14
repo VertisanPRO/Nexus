@@ -11,16 +11,16 @@
 */
 
 $language = [
-    'embedtitle' => 'Название панели',
-    'embedtitle_info' => 'Вы можете поставить <code>$every</code> что бы иметь множество названий на разных страницах.',
-    'embedtext' => 'Описание панели',
-    'embedcolor' => 'Цвет полоски панели',
-    'embedicon' => 'Картинка в панели',
-    'embedicon_info' => 'Напишите действительную ссылку с окончанием на .png, .jpeg, .gif.',
-    'embedkeywords' => 'Ключевые слова',
-    'embedkeywords_info' => 'Поисковики используют ключевые слова для лучших результатов поиска. Используйте \',\' как разделитель (Пример: mc, website).',
-    'embedpreview' => 'Предпросмотр панели',
-    'embedtemplate' => 'Тема',
-    'embedbot' => 'БОТ',
-    'embedmessagepreview' => 'Это предпоказ!'
+    'embedtitle_label' => 'Название панели',
+    'embedtitle_info_label' => 'Вы можете поставить <code>$every</code> что бы иметь множество названий на разных страницах.',
+    'embedtext_label' => 'Описание панели',
+    'embedcolor_label' => 'Цвет полоски панели',
+    'embedicon_label' => 'Картинка в панели',
+    'embedicon_info_label' => 'Напишите действительную ссылку с окончанием на .png, .jpeg, .gif.',
+    'embedkeywords_label' => 'Ключевые слова',
+    'embedkeywords_info_label' => 'Поисковики используют ключевые слова для лучших результатов поиска. Используйте \',\' как разделитель (Пример: mc, website).',
+    'embedpreview_label' => 'Предпросмотр панели',
+    'embedtemplate_label' => 'Тема',
+    'embedbot_label' => 'БОТ',
+    'embedmessagepreview_label' => 'Это предпоказ!'
 ];

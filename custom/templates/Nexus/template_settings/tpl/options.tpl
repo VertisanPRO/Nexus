@@ -7,6 +7,7 @@
             {$NOTE_REVIEW}
         </div>
         <form action="" method="POST">
+            <input type="hidden" name="sel_btn_session" value="options" />
             <div class="form-group">
                 <label for="footerAbout">{$FOOTERABOUT_LABEL}</label>
                 <input type="text" name="footerAbout" class="form-control" id="inputFooterAbout"

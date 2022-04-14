@@ -1,6 +1,6 @@
 <?php
 /*
- *Made by Samerton
+ *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
  *  NamelessMC version 2.0.0-pr13
  *
@@ -9,160 +9,85 @@
  *  Nexus By Vertisan
  */
 
-require_once('classes/NexusUtill.php');
-
-// Cache Store
-include 'includes/cachestore.php';
-
-// Caches
-include 'includes/caches.php';
-
-// Debugging
-// include 'includes/debug.php';
-
-// Functions & Text
 $template_file = 'tpl/nexus.tpl';
 
-include 'includes/functions.php';
+require_once('classes/NexusUtill.php');
+require_once(ROOT_PATH . '/core/templates/backend_init.php');
+NexusUtill::initialise();
 
-if (defined('FRONT_END')) {
-  if ($user->isLoggedIn()) {
-    $smarty->assign(array(
-      'USER_LOGIN' => 1
-    ));
-  }
-  $settings_data = NexusUtill::getSettingsToSmarty();
-  $smarty->assign($settings_data);
-
-  if ($cache->isCached('ds_status_ping')) {
-    $discord_server = $cache->retrieve('ds_status_ping');
-  } else {
-    $discord_server = NexusUtill::getDsServer($settings_data['DISCORD_ID']);
-  }
-  $cache->store('ds_status_ping', $discord_server, 60);
-  $smarty->assign(array(
-    'DISCORD_SERVER' => $discord_server,
-    'DISCORD_LINK' => $discord_server['link'],
-    'DISCORD_MEMBRRS' => $discord_server['members'],
-    'DISCORD_NAME' => $discord_server['name'],
-  ));
-}
-
+$smarty->assign(NexusUtill::getSettingsToSmarty());
 $smarty->assign(array(
-    // Functions
+  // Functions
     'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
     'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Nexus/template_settings/' . $template_file,
 
-    // Text
-      // NamelessMC 
-        'SUBMIT' => $language->get('general', 'submit'),
-        'YES' => $language->get('general', 'yes'),
-        'NO' => $language->get('general', 'no'),
-        'BACK' => $language->get('general', 'back'),
-        'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
-        'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
-        'NAME' => $language->get('admin', 'name'),
-        'INFO' => $language->get('general', 'info'),
-        'ENABLED' => $language->get('admin', 'enabled'),
-        'DISABLED' => $language->get('admin', 'disabled'),
+  // Text
+    'SUBMIT' => $language->get('general', 'submit'),
+    'YES' => $language->get('general', 'yes'),
+    'NO' => $language->get('general', 'no'),
+    'BACK' => $language->get('general', 'back'),
+    'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
+    'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
+    'NAME' => $language->get('admin', 'name'),
+    'INFO' => $language->get('general', 'info'),
+    'ENABLED' => $language->get('admin', 'enabled'),
+    'DISABLED' => $language->get('admin', 'disabled'),
+));
 
-      // Navigation
-        'NAVIGATION' => NexusUtill::getLanguage('navigation', 'navigation'),
-        'OPTIONS_PAGE' => NexusUtill::getLanguage('navigation', 'options_page'),
-        'COLORS_PAGE' => NexusUtill::getLanguage('navigation', 'colors_page'),
-        'NAVBAR_PAGE' => NexusUtill::getLanguage('navigation', 'navbar_page'),
-        'CONNECTIONS_PAGE' => NexusUtill::getLanguage('navigation', 'connections_page'),
-        'ARC_PAGE' => NexusUtill::getLanguage('navigation', 'arc_page'),
-        'WIDGETS_PAGE' => NexusUtill::getLanguage('navigation', 'widgets_page'),
-        'EMBED_PAGE' => NexusUtill::getLanguage('navigation', 'embed_page'),
-        'UPDATES_PAGE' => NexusUtill::getLanguage('navigation', 'updates_page'),
-        'SUPPORT_PAGE' => NexusUtill::getLanguage('navigation', 'support_page'),
+$smarty->assign(NexusUtill::languageFileToSmarty('navigation'));
+$smarty->assign(NexusUtill::languageFileToSmarty('options'));
+$smarty->assign(NexusUtill::languageFileToSmarty('colors'));
+$smarty->assign(NexusUtill::languageFileToSmarty('navbar'));
+$smarty->assign(NexusUtill::languageFileToSmarty('connections'));
+$smarty->assign(NexusUtill::languageFileToSmarty('arc'));
+$smarty->assign(NexusUtill::languageFileToSmarty('widgets'));
+$smarty->assign(NexusUtill::languageFileToSmarty('embed'));
+if (isset($_POST['sel_btn_session'])) {
+  Session::flash('sel_btn_session', $_POST['sel_btn_session']);
+}
 
-      // Options
-        'NOTE' => NexusUtill::getLanguage('options', 'note'),
-        'NOTE_REVIEW' => NexusUtill::getLanguage('options', 'note_review'),
-        'FOOTERABOUT_LABEL' => NexusUtill::getLanguage('options', 'footerabout'),
-        'FOOTERABOUT_PLACEHOLDER_LABEL' => NexusUtill::getLanguage('options', 'footerabout_placeholder'),
-        'CUSTOMCSS_LABEL' => NexusUtill::getLanguage('options', 'customcss'),
-        'CUSTOMCSS_INFO_LABEL' => NexusUtill::getLanguage('options', 'customcss_info'),
-        'CUSTOMJS_LABEL' => NexusUtill::getLanguage('options', 'customjs'),
-        'CUSTOMJS_INFO_LABEL' => NexusUtill::getLanguage('options', 'customjs_info'),
+if (!isset($_POST['sel_btn'])) {
+  if (Input::exists()) {
+    $errors = array();
 
-      // Colors
-        'DARKMODE_LABEL' => NexusUtill::getLanguage('colors', 'darkmode'),
-        'COLORSSTYLE_LABEL' => NexusUtill::getLanguage('colors', 'colorsstyle'),
-        'COLORSSTYLE_NORMAL_LABEL' => NexusUtill::getLanguage('colors', 'colorsstyle_normal'),
-        'COLORSSTYLE_COLORS_LABEL' => NexusUtill::getLanguage('colors', 'colorsstyle_colors'),
-        'PRIMARYCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'primarycolor'),
-        'NAVBARCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'navbarcolor'),
-        'FOOTERCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'footercolor'),
-        'OUTLINECOLOR_LABEL' => NexusUtill::getLanguage('colors', 'outlinecolor'),
-        'OUTLINECOLOR_INFO_LABEL' => NexusUtill::getLanguage('colors', 'outlinecolor_info'),
-        'COLORS_INFO_LABEL' => NexusUtill::getLanguage('colors', 'colors_info'),
-        'NAVBARTEXTCOLOR_LABEL' => NexusUtill::getLanguage('colors', 'navbartextcolor'),
-        'NAVBARTEXTBLACK_LABEL' => NexusUtill::getLanguage('colors', 'navbartextblack'),
-        'NAVBARTEXTWHITE_LABEL' => NexusUtill::getLanguage('colors', 'navbartextwhite'),
+      foreach ($_POST as $key => $value) {
+        if ($key == 'token' or $key == 'sel_btn_session') {
+          continue;
+        }
+        NexusUtill::updateOrCreateParam($key, $value);
+      }
 
-      // Navbar
-        'NAVBARLOGO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarlogo'),
-        'NAVBARLOGO_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarlogo_info'),
-        'NAVBARSTICKY_LABEL' => NexusUtill::getLanguage('navbar', 'navbarsticky'),
-        'NAVBARSTICKY_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarsticky_info'),
-        'NAVBARSTYLE_LABEL' => NexusUtill::getLanguage('navbar', 'navbarstyle'),
-        'NAVBARSTYLE_INFO_LABEL' => NexusUtill::getLanguage('navbar', 'navbarstyle_info'),
-        'NAVBARELEGANT_LABEL' => NexusUtill::getLanguage('navbar', 'navbarelegant'),
-        'NAVBARDYNAMIC_LABEL' => NexusUtill::getLanguage('navbar', 'navbardynamic'),
+      if (empty($errors)) {
+        Session::flash('staff', $language->get('admin', 'successfully_updated'));
+        Redirect::to(URL::build($_SESSION['last_page']));
+        die();
+      }
+    }
+}
 
-      // Connections
-        // Discord
-          'DISCORD_LABEL' => NexusUtill::getLanguage('connections', 'discord'),
-          'DISCORDVIEW_LABEL' => NexusUtill::getLanguage('connections', 'discordview'),
-          'DISCORDVIEW_INFO_LABEL' => NexusUtill::getLanguage('connections', 'discordview_info'),
-          'DISCORDID_LABEL' => NexusUtill::getLanguage('connections', 'discordid'),
-          'DISCORDID_INFO_LABEL' => NexusUtill::getLanguage('connections', 'discordid_info'),
+if (Session::exists('staff'))
+  $success = Session::flash('staff');
 
-        // Minecraft
-          'MINECRAFT_LABEL' => NexusUtill::getLanguage('connections', 'minecraft'),
-          'MINECRAFTVIEW_LABEL' => NexusUtill::getLanguage('connections', 'minecraftview'),
-          'MINECRAFTDOMAIN_LABEL' => NexusUtill::getLanguage('connections', 'minecraftdomain'),
-          'MINECRAFTIP_LABEL' => NexusUtill::getLanguage('connections', 'minecraftip'),
-          'MINECRAFTPORT_LABEL' => NexusUtill::getLanguage('connections', 'minecraftport'),
-          'MINECRAFTSTYLE_LABEL' => NexusUtill::getLanguage('connections', 'minecraftstyle'),
-          'MINECRAFTSTYLE_INFO_LABEL' => NexusUtill::getLanguage('connections', 'minecraftstyle_info'),
-          'SIMPLE_LABEL' => NexusUtill::getLanguage('connections', 'simple'),
-          'ADVANCED_LABEL' => NexusUtill::getLanguage('connections', 'advanced'),
+$TPL_NAME_SESSION = '';
+if (Session::exists('sel_btn_session'))
+  $TPL_NAME_SESSION = Session::flash('sel_btn_session');
 
-      // Arc
-        'ARCVIEW_LABEL' => NexusUtill::getLanguage('arc', 'arcview'),
-        'ARCVIEW_INFO_LABEL' => NexusUtill::getLanguage('arc', 'arcview_info'),
-        'ARCURL_LABEL' => NexusUtill::getLanguage('arc', 'arcurl'),
+$smarty->assign(array(
+  'TPL_NAME_SESSION' => $TPL_NAME_SESSION
+));
 
-      // Widgets
-        // Donation Widget
-          'DONATEWIDGET_LABEL' => NexusUtill::getLanguage('widgets', 'donatewidget'),
-          'DONATEEMAIL_LABEL' => NexusUtill::getLanguage('widgets', 'donateemail'),
-          'DONATEFIRSTAMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'donatefirstamount'),
-          'DONATESECONDAMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'donatesecondamount'),
-          'DONATETHIRDAMOUNT_LABEL' => NexusUtill::getLanguage('widgets', 'donatethirdamount'),
+if (isset($success))
+  $smarty->assign(array(
+    'SUCCESS' => $success,
+    'SUCCESS_TITLE' => $language->get('general', 'success')
+  ));
 
-      // Message Widget
-        'MESSAGEWIDGET_LABEL' => NexusUtill::getLanguage('widgets', 'messagewidget'),
-        'MESSAGETITLE_LABEL' => NexusUtill::getLanguage('widgets', 'messagetitle'),
-        'MESSAGETEXT_LABEL' => NexusUtill::getLanguage('widgets', 'messagetext'),
-        'MESSAGEICON_LABEL' => NexusUtill::getLanguage('widgets', 'messageicon'),
-        'MESSAGEICON_INFO_LABEL' => NexusUtill::getLanguage('widgets', 'messageicon_info'),
+if (isset($errors) && count($errors))
+  $smarty->assign(array(
+    'ERRORS' => $errors,
+    'ERRORS_TITLE' => $language->get('general', 'error')
+  ));
 
-      // Embed
-        'EMBEDTITLE_LABEL' => NexusUtill::getLanguage('embed', 'embedtitle'),
-        'EMBEDTITLE_INFO_LABEL' => NexusUtill::getLanguage('embed', 'embedtitle_info'),
-        'EMBEDTEXT_LABEL' => NexusUtill::getLanguage('embed', 'embedtext'),
-        'EMBEDCOLOR_LABEL' => NexusUtill::getLanguage('embed', 'embedcolor'),
-        'EMBEDICON_LABEL' => NexusUtill::getLanguage('embed', 'embedicon'),
-        'EMBEDICON_INFO_LABEL' => NexusUtill::getLanguage('embed', 'embedicon_info'),
-        'EMBEDKEYWORDS_LABEL' => NexusUtill::getLanguage('embed', 'embedkeywords'),
-        'EMBEDKEYWORDS_INFO_LABEL' => NexusUtill::getLanguage('embed', 'embedkeywords_info'),
-        'EMBEDPREVIEW_LABEL' => NexusUtill::getLanguage('embed', 'embedpreview'),
-        'EMBEDTEMPLATE_LABEL' => NexusUtill::getLanguage('embed', 'embedtemplate'),
-        'EMBEDBOT_LABEL' => NexusUtill::getLanguage('embed', 'embedbot'),
-        'EMBEDMESSAGEPREVIEW_LABEL' => NexusUtill::getLanguage('embed', 'embedmessagepreview'),
+$smarty->assign(array(
+  'TOKEN' => Token::get(),
 ));
