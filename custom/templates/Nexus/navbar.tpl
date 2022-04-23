@@ -1,12 +1,10 @@
 {if $PRELOADERVIEW eq '1'}
 <div class="preloader">
-  <div class="ui inverted segment">
-    <div class="ui active {if $PRELOADERSPEED eq 'normal'}{else}{$PRELOADERSPEED}{/if} {if $PRELOADERSTYLE eq 'normal'}{else}{$PRELOADERSTYLE}{/if} {$PRELOADERCOLOR} large inverted loader"></div>
-    <br />
-    <br />
-    <br />
-    <h3><span class="ui inverted {$PRELOADERCOLOR} text">{$PRELOADERTEXT}</span></h3>
-  </div>
+  <div class="ui active {if $PRELOADERSPEED eq 'normal'}{else}{$PRELOADERSPEED}{/if} {if $PRELOADERSTYLE eq 'normal'}{else}{$PRELOADERSTYLE}{/if} {$PRELOADERCOLOR} large inverted loader"></div>
+  <br />
+  <br />
+  <br />
+  <h3><span class="ui inverted {$PRELOADERCOLOR} text">{$PRELOADERTEXT}</span></h3>
 </div>
 {/if}
 

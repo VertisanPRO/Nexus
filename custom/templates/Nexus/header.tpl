@@ -43,7 +43,11 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
     <meta content="{$EMBEDCOLOR}" data-react-helmet="true" name="theme-color" />
 
     <!-- Twitter Card Properties -->
+    {if $EMBEDTITLE eq '$every'}
     <meta name="twitter:title" content="{$EMBEDTITLE}" />
+    {else}
+    <meta name="twitter:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    {/if}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="{$OG_IMAGE}" />
 
