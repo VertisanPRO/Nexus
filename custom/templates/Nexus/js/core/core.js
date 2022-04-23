@@ -58,7 +58,6 @@ $(function () {
 
 $(function () {
     var cachedUsers = {};
-    var timeoutId;
 
     $('*[data-poload]').mouseenter(function () {
         var elem = this;

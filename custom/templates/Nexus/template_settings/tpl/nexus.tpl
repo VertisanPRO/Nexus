@@ -1,4 +1,4 @@
-<!-- Page Content  -->
+<!-- Page Content -->
 <div class="row">
   <div class="col-sm-3">
     {include file="{$TPL_PATH}sittings-menu.tpl"}
@@ -17,6 +17,14 @@
         aria-labelledby="v-pills-navbar-tab">
         {include file="{$TPL_PATH}navbar.tpl"}
       </div>
+      <div class="tab-pane fade {if $TPL_NAME_SESSION == 'connections'}show active{/if}" id="v-pills-connections"
+        role="tabpanel" aria-labelledby="v-pills-connections-tab">
+        {include file="{$TPL_PATH}connections.tpl"}
+      </div>
+      <div class="tab-pane fade {if $TPL_NAME_SESSION == 'preloader'}show active{/if}" id="v-pills-preloader"
+        role="tabpanel" aria-labelledby="v-pills-preloader-tab">
+        {include file="{$TPL_PATH}preloader.tpl"}
+      </div>
       <div class="tab-pane fade {if $TPL_NAME_SESSION == 'arc'}show active{/if}" id="v-pills-arc" role="tabpanel"
         aria-labelledby="v-pills-arc-tab">
         {include file="{$TPL_PATH}arc.tpl"}
@@ -28,11 +36,7 @@
       <div class="tab-pane fade {if $TPL_NAME_SESSION == 'embed'}show active{/if}" id="v-pills-embed" role="tabpanel"
         aria-labelledby="v-pills-embed-tab">
         {include file="{$TPL_PATH}embed.tpl"}
-      </div>
-      <div class="tab-pane fade {if $TPL_NAME_SESSION == 'connections'}show active{/if}" id="v-pills-connections"
-        role="tabpanel" aria-labelledby="v-pills-connections-tab">
-        {include file="{$TPL_PATH}connections.tpl"}
-      </div>
+      </div>  
       <div class="tab-pane fade {if $TPL_NAME_SESSION == 'update'}show active{/if}" id="v-pills-update" role="tabpanel"
         aria-labelledby="v-pills-update-tab">
         {include file="{$TPL_PATH}update.tpl"}

@@ -40,14 +40,7 @@ a {
 }
 
 {if $OUTLINECOLOR != '#000000'}
-.ui.segment {
-    box-shadow: 0 1px 3px 0 {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR} !important;
-}
-
-.ui.card, .ui.cards>.card {
-    box-shadow: 0 1px 3px 0 {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR} !important;
-}
-.ui.segment {
+.ui.segment:not(.ui.inverted.segment) {
     box-shadow: 0 1px 3px 0 {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR}, 0 0 0 1px {$OUTLINECOLOR} !important;
 }
 
@@ -57,11 +50,11 @@ a {
 {/if}
 
 #navbar {
-    background: {if $NAVBARCOLOR eq '#000000'}{$PRIMARYCOLOR}{else}{$NAVBARCOLOR}{/if};"
+    background: {if $NAVBARCOLOR eq '#000000'}{$PRIMARYCOLOR}{else}{$NAVBARCOLOR}{/if};
 }
 
 #footer {
-    background: {if $FOOTERCOLOR eq '#000000'}{$PRIMARYCOLOR}{else}{$FOOTERCOLOR}{/if};"
+    background: {if $FOOTERCOLOR eq '#000000'}{$PRIMARYCOLOR}{else}{$FOOTERCOLOR}{/if};
 }
 
 {if $NAVBARTEXTCOLOR != '0'}
