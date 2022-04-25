@@ -1,14 +1,16 @@
+{if $MINECRAFTVIEW eq '1'}
 {if $MINECRAFTSTYLE eq '0'}
 {include file='Nexus/components/status/simple.tpl'}
 {else}
 {include file='Nexus/components/status/advanced.tpl'}
+{/if}
 {/if}
 
 {include file='Nexus/components/navbar/navbar.tpl'}
 <div class="ui stackable three column grid"
   style="background-image:url('{$BANNER_IMAGE}'); padding: 45px; margin-top:0px!important; border-bottom-left-radius: 85% 20%; border-bottom-right-radius: 85% 20%;">
   {if $DISCORDVIEW eq '1'}
-  <div onclick="dsInvite('{$DISCORD_SERVER['link']}')" class="column" style="text-align: center; margin-top: 5rem;">
+  <div onclick="dsInvite('{$DISCORD_SERVER['link']}')" class="column" style="text-align: center; margin-top: 2.8rem;">
     <div class="ui steps">
       <div class="step" style="background: transparent;color: white;">
         <i class="discord icon"></i>
@@ -38,17 +40,16 @@
     </div>
   </div>
   {if $MINECRAFTVIEW eq '1'}
-  <div class="column" onclick="copyIP('{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}')"
-    style="text-align: center; margin-top: 2rem;">
+  <div class="column" style="text-align: center; margin-top: 2rem;">
     <div class="ui steps">
       <div class="step" style="background: transparent; color: white;">
         <i class="signal icon"></i>
-        <div class="content" id="copied-ip" class="ui text shape">
+        <div class="content" class="ui text shape">
           <div class="title">{$MINECRAFTDOMAIN}</div>
           {if $MINECRAFTSTYLE eq '1'}
-            <div id="minecraftdesc" style="color: white;"></div>
+          <div id="minecraftdesc" style="color: white;"></div>
           {/if}
-          <div class="ui vertical white animated button">
+          <div class="ui vertical white animated button" onclick="copy('#ip')">
             <div class="hidden content">
               <div class="description" style="color: white;"><strong>Click to copy</strong></div>
             </div>
@@ -64,3 +65,5 @@
   </div>
   {/if}
 </div>
+
+<span style="visibility: hidden;" id="ip">{$MINECRAFTIP}{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}</span>
