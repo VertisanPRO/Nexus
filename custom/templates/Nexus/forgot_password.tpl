@@ -7,21 +7,21 @@
 </h2>
 
 {if isset($ERROR)}
-<div class="ui error icon message">
-  <i class="x icon"></i>
-  <div class="content">
-    <div class="header">Error</div>
-    {$ERROR}
+  <div class="ui error icon message">
+    <i class="x icon"></i>
+    <div class="content">
+      <div class="header">Error</div>
+      {$ERROR}
+    </div>
   </div>
-</div>
 {else if isset($SUCCESS)}
-<div class="ui success icon message">
-  <i class="check icon"></i>
-  <div class="content">
-    <div class="header">Success</div>
-    {$SUCCESS}
+  <div class="ui success icon message">
+    <i class="check icon"></i>
+    <div class="content">
+      <div class="header">Success</div>
+      {$SUCCESS}
+    </div>
   </div>
-</div>
 {/if}
 
 <div class="ui padded segment" id="forgot-password">

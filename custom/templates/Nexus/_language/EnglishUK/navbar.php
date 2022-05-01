@@ -10,12 +10,12 @@
 */
 
 $language = [
-    'navbarlogo' => 'Logo URL',
-    'navbarlogo_info' => 'This is a logo in the middle of navbar.',
-    'navbarsticky' => 'Sticky navbar?',
-    'navbarsticky_info' => 'This is an experimental feature. It may not work on your site yet.',
-    'navbarstyle' => 'Navigation style',
-    'navbarstyle_info' => 'Elegant style has links at the top. Dynamic style has links below the banner.',
-    'navbarelegant' => 'Elegant',
-    'navbardynamic' => 'Dynamic'
+    'navbarlogo_label' => 'Logo URL',
+    'navbarlogo_info_label' => 'This is a logo in the middle of navbar.',
+    'navbarsticky_label' => 'Sticky navbar?',
+    'navbarsticky_info_label' => 'This is an experimental feature. It may not work on your site yet.',
+    'navbarstyle_label' => 'Navigation style',
+    'navbarstyle_info_label' => 'Elegant style has links at the top. Dynamic style has links below the banner.',
+    'navbarelegant_label' => 'Elegant',
+    'navbardynamic_label' => 'Dynamic'
 ];

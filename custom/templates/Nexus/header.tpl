@@ -12,69 +12,90 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 <!DOCTYPE html>
 <html{$HTMLCLASS}{$HTMLLANG}{$HTMLRTL}>
 
-	<head>
+  <head>
 
-		<link rel="shortcut icon"
-			href="{if isset($FAVICON)}{$FAVICON}{else}https://cdn.resourcemc.net/zAsa7/rIBOyeRU58.png/raw{/if}">
+    <meta charset="{$METACHARSET}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    {if $EMBEDTITLE eq '$every'}
+    <title>{$TITLE} &bull; {$smarty.const.SITE_NAME}</title>
+    {else}
+    <title>{$EMBEDTITLE}</title>
+    {/if}
 
-		<meta charset="{$METACHARSET}">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    {if isset($FAVICON)}
+    <link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
+    {/if}
 
-		<title>{$TITLE} • {$smarty.const.SITE_NAME}</title>
+    {if $EMBEDTITLE eq '$every'}
+    <meta name="author" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    {else}
+    <meta name="author" content="{$EMBEDTITLE}" />
+    {/if}
+    <meta name='description' content='{$EMBEDTEXT}' />
+    <meta name='keywords' content='{$EMBEDKEYWORDS}' />
 
-		{if isset($FAVICON)}
-		<link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
-		{/if}
+    {if $EMBEDTITLE eq '$every'}
+    <meta property="og:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    {else}
+    <meta property="og:title" content="{$EMBEDTITLE}" />
+    {/if}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{$OG_URL}" />
+    <meta property="og:image" content="{$EMBEDICON}" />
+    <meta property='og:description' content='{$EMBEDTEXT}' />
+    <meta name="theme-color" content="{$EMBEDCOLOR}">
+    <meta content="{$EMBEDCOLOR}" data-react-helmet="true" name="theme-color" />
 
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Twitter Card Properties -->
+    {if $EMBEDTITLE eq '$every'}
+    <meta name="twitter:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    {else}
+    <meta name="twitter:title" content="{$EMBEDTITLE}" />
+    {/if}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="{$OG_IMAGE}" />
 
-		<meta name="author" content="{$TITLE} • {$smarty.const.SITE_NAME}">
-		<meta name="description"
-			content="{if isset($OPAL_EMBED_DESCRIPTION)}{$OPAL_EMBED_DESCRIPTION}{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}">
-		<meta name="keywords"
-			content="{if isset($OPAL_EMBED_KEYWORDS)}{$OPAL_EMBED_KEYWORDS}{else}Minecraft, Minecraft Sever, Forums, NamelessMC{/if}">
+    {if isset($PAGE_DESCRIPTION) && $PAGE_DESCRIPTION|count_characters > 0}
+    <meta name="twitter:description" content="{$PAGE_DESCRIPTION}" />
+    {/if}
 
-		<meta name="theme-color" content="{if isset($OPAL_EMBED_COLOR)}{$OPAL_EMBED_COLOR}{else}#46d0e6{/if}">
-		<meta property="author" content="{$TITLE} • {$smarty.const.SITE_NAME}" />
-		<meta property="og:title" content="{if isset($OPAL_EMBED_HEADING)}{$OPAL_EMBED_HEADING}{else}Home{/if}">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="{$OG_URL}">
-		<meta property="og:image"
-			content="{if isset($OPAL_EMBED_IMAGE)}{$OPAL_EMBED_IMAGE}{else}https://i.imgur.com/e6YHD.gif{/if}">
-		<meta property="og:description"
-			content="{if isset($OPAL_EMBED_DESCRIPTION)}{$OPAL_EMBED_DESCRIPTION}{else}We are an online platform to help users around the world connect through NamelessMC powered forums.{/if}">
+    {foreach from=$TEMPLATE_CSS item=css}
+    {$css}
+    {/foreach}
 
+    {if $CUSTOMCSS != ''}
+    <style>
+      {$CUSTOMCSS}
+    </style>
+    {/if}
 
+    {if $COLORSSTYLE eq '1'}
+    {include file='Nexus/colors.tpl'}
+    {/if}
 
-		<!-- Twitter Card Properties -->
-		<meta name="twitter:title" content="{$TITLE} • {$smarty.const.SITE_NAME}" />
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:image" content="{$OG_IMAGE}" />
+    {include file='Nexus/scrollbar.tpl'}
 
-		{if isset($PAGE_DESCRIPTION) && $PAGE_DESCRIPTION|count_characters > 0}
-		<meta name="twitter:description" content="{$PAGE_DESCRIPTION}" />
-		{/if}
+    {if isset($ANALYTICS_ID)}
+    {literal}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={/literal}{$ANALYTICS_ID}{literal}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-		{foreach from=$TEMPLATE_CSS item=css}
-		{$css}
-		{/foreach}
+      gtag('config', '{/literal}{$ANALYTICS_ID}{literal}');
+    </script>
+    {/literal}
+    {/if}
 
-		{if isset($ANALYTICS_ID)}
-		{literal}
-		<script async src="https://www.googletagmanager.com/gtag/js?id={/literal}{$ANALYTICS_ID}{literal}"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
+    {if isset($DEBUGBAR_JS)}
+    {$DEBUGBAR_JS}
+    {/if}
 
-			gtag('config', '{/literal}{$ANALYTICS_ID}{literal}');
-		</script>
-		{/literal}
-		{/if}
-	</head>
+    {if $ARCVIEW eq '1'}
+    <script async src="{$ARCURL}"></script>
+    {/if}
+  </head>
 
-	<body{if $DEFAULT_REVAMP_DARK_MODE} class="dark" {/if}
-		id="page-{if is_numeric($smarty.const.PAGE)}{$TITLE}{else}{$smarty.const.PAGE}{/if}">
+  <body{if $NEXUS_DARK_MODE} class="dark" {/if}
+    id="page-{if is_numeric($smarty.const.PAGE)}{$TITLE}{else}{$smarty.const.PAGE}{/if}">

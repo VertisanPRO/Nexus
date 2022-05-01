@@ -4,10 +4,6 @@ if (Input::exists()) {
         $cache->setCache('template_settings');
 
         // Options
-            if (isset($_POST['footerView'])) {
-                $cache->store('footerView', $_POST['footerView']);
-            }
-
             if (isset($_POST['footerAbout'])) {
                 $cache->store('footerAbout', $_POST['footerAbout']);
             }
@@ -23,6 +19,10 @@ if (Input::exists()) {
         // Colors
             if (isset($_POST['darkMode'])) {
                 $cache->store('darkMode', $_POST['darkMode']);
+            }
+
+            if (isset($_POST['colorsStyle'])) {
+                $cache->store('colorsStyle', $_POST['colorsStyle']);
             }
 
             if (isset($_POST['primaryColor'])) {

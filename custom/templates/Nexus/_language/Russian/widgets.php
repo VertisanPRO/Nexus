@@ -12,16 +12,16 @@
 
 $language = [
     // Donation Widget
-        'donatewidget' => 'Донат-виджет',
-        'donateemail' => 'Почта PayPal',
-        'donatefirstamount' => 'Первая сумма',
-        'donatesecondamount' => 'Вторая сумма',
-        'donatethirdamount' => 'Третья сумма',
+        'donatewidget_label' => 'Донат-виджет',
+        'donateemail_label' => 'Почта PayPal',
+        'donatefirstamount_label' => 'Первая сумма',
+        'donatesecondamount_label' => 'Вторая сумма',
+        'donatethirdamount_label' => 'Третья сумма',
 
     // Message Widget
-        'messagewidget' => 'Виджет сообщения',
-        'messagetitle' => 'Название виджета',
-        'messagetext' => 'Текст виджета',
-        'messageicon' => 'Картинка виджета',
-        'messageicon_info' => 'Вы должны вставить что находится в class. Вы можете найти иконки на https://fomantic-ui.com или на https://fontawesome.com.'
+        'messagewidget_label' => 'Виджет сообщения',
+        'messagetitle_label' => 'Название виджета',
+        'messagetext_label' => 'Текст виджета',
+        'messageicon_label' => 'Картинка виджета',
+        'messageicon_info_label' => 'Вы должны вставить что находится в class. Вы можете найти иконки на https://fomantic-ui.com или на https://fontawesome.com.'
 ];

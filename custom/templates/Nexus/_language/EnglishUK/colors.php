@@ -10,13 +10,18 @@
 */
 
 $language = [
-    'darkmode' => 'Darkmode',
-    'primarycolor' => 'Primary colour',
-    'navbarcolor' => 'Navbar colour',
-    'footercolor' => 'Footer colour',
-    'outlinecolor' => 'Border outline colour',
-    'colors_info' => '#000000 makes it primary colour',
-    'navbartextcolor' => 'Navbar text colour',
-    'navbartextblack' => 'Black',
-    'navbartextwhite' => 'White'
+    'darkmode_label' => 'Darkmode',
+    'colorsstyle_label' => 'Color manager',
+    'colorsstyle_normal_label' => 'Pure white/dark mode',
+    'colorsstyle_colors_label' => 'Your own colors',
+    'primarycolor_label' => 'Primary colour',
+    'navbarcolor_label' => 'Navbar colour',
+    'footercolor_label' => 'Footer colour',
+    'outlinecolor_label' => 'Border outline colour',
+    'outlinecolor_info_label' => '#000000 disables this function',
+    'colors_info_label' => '#000000 makes it primary colour',
+    'navbartextcolor_label' => 'Navbar text colour',
+    'navbartext_normal_label' => 'Depending on white/dark mode',
+    'navbartext_black_label' => 'Black',
+    'navbartext_white_label' => 'White'
 ];

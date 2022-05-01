@@ -2,13 +2,6 @@
 $cache->setCache('template_settings');
 
 // Options
-    if ($cache->isCached('footerView')) {
-        $footerView = $cache->retrieve('footerView');
-    } else {
-        $footerView = '1';
-        $cache->store('footerView', $footerView);
-    }
-
     if ($cache->isCached('footerAbout')) {
         $footerAbout = $cache->retrieve('footerAbout');
     } else {
@@ -34,6 +27,13 @@ $cache->setCache('template_settings');
     } else {
         $darkMode = '0';
         $cache->store('darkMode', $darkMode);
+    }
+
+    if ($cache->isCached('colorsStyle')) {
+        $colorsStyle = $cache->retrieve('colorsStyle');
+    } else {
+        $colorsStyle = '0';
+        $cache->store('colorsStyle', $colorsStyle);
     }
 
     if ($cache->isCached('primaryColor')) {

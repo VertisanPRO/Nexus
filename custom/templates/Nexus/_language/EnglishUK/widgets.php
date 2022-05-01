@@ -11,16 +11,16 @@
 
 $language = [
     // Donation Widget
-        'donatewidget' => 'Donation widget',
-        'donateemail' => 'PayPal email',
-        'donatefirstamount' => 'First amount',
-        'donatesecondamount' => 'Second amount',
-        'donatethirdamount' => 'Third amount',
+        'donatewidget_label' => 'Donation widget',
+        'donateemail_label' => 'PayPal email',
+        'donatefirstamount_label' => 'First amount',
+        'donatesecondamount_label' => 'Second amount',
+        'donatethirdamount_label' => 'Third amount',
 
     // Message Widget
-        'messagewidget' => 'Message widget',
-        'messagetitle' => 'Widget title',
-        'messagetext' => 'Widget text',
-        'messageicon' => 'Widget icon',
-        'messageicon_info' => 'You need to paste what is in class. You can get icons from https://fomantic-ui.com or https://fontawesome.com.'
+        'messagewidget_label' => 'Message widget',
+        'messagetitle_label' => 'Widget title',
+        'messagetext_label' => 'Widget text',
+        'messageicon_label' => 'Widget icon',
+        'messageicon_info_label' => 'You need to paste what is in class. You can get icons from https://fomantic-ui.com or https://fontawesome.com.'
 ];

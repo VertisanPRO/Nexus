@@ -19,7 +19,8 @@ $(function () {
 
     $('.ui.sidebar').sidebar('attach events', '.toc.item');
 
-    $('.ui.dropdown:not(.search)').dropdown();
+    $('.ui.dropdown:not(.search):not(.upward)').dropdown();
+    $('.ui.dropdown.upward:not(.search)').dropdown({ direction: 'upward' });
 
     $('[data-toggle="tooltip"]').popup({
         hoverable: true
@@ -35,8 +36,6 @@ $(function () {
         $(att).modal('show');
     });
 
-    $('.menu .item').tab();
-
     $('.message .close').on('click', function () {
         $(this).closest('.message').transition('fade');
     });
@@ -51,7 +50,6 @@ $(function () {
 
 $(function () {
     var cachedUsers = {};
-    var timeoutId;
 
     $('*[data-poload]').mouseenter(function () {
         var elem = this;

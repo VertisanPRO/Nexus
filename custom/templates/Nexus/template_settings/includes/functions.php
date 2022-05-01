@@ -1,13 +1,13 @@
 <?php
 $smarty->assign(array(
     // Options
-        'FOOTERVIEW' => $footerView,
         'FOOTERABOUT' => $footerAbout,
         'CUSTOMCSS' => $customCSS,
         'CUSTOMJS' => $customJS,
 
     // Colors
         'DARKMODE' => $darkMode,
+        'COLORSSTYLE' => $colorsStyle,
         'PRIMARYCOLOR' => $primaryColor,
         'NAVBARCOLOR' => $navbarColor,
         'FOOTERCOLOR' => $footerColor,

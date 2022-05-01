@@ -3,6 +3,7 @@
     <h3 class="card-header mb-3 text-center">{$NAVBAR_PAGE}</h3>
     <div class="card-body">
         <form action="" method="POST">
+            <input type="hidden" name="sel_btn_session" value="navbar" />
             <div class="form-group">
                 <label for="navbarLogo">{$NAVBARLOGO_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"

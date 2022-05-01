@@ -1,12 +1,12 @@
 <?php
 // Options
-    var_dump($cache->retrieve('footerView'));
     var_dump($cache->retrieve('footerAbout'));
     var_dump($cache->retrieve('customCSS'));
     var_dump($cache->retrieve('customJS'));
 
 // Colors
     var_dump($cache->retrieve('darkMode'));
+    var_dump($cache->retrieve('colorsStyle'));
     var_dump($cache->retrieve('primaryColor'));
     var_dump($cache->retrieve('navbarColor'));
     var_dump($cache->retrieve('footerColor'));
