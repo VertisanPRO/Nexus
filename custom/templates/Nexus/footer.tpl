@@ -1,3 +1,6 @@
+{if $MINECRAFTVIEW eq '1'}
+<span style="visibility: hidden;" id="ip">{$MINECRAFTIP}{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}</span>
+{/if}
 </div>
 </div>
 
@@ -87,6 +90,26 @@
 {$script}
 {/foreach}
 
+{if $WIDGETBOTVIEW eq '1'}
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+  new Crate({
+    server: '{$WIDGETBOTSERVERID}',
+    channel: '{$WIDGETBOTCHANNELID}',
+    location: ['{$WIDGETBOTVERTICALLOCATION}', '{$WIDGETBOTHORIZONTALLOCATION}'],
+    {if $WIDGETBOTCOLOR eq '0'}
+    {elseif $WIDGETBOTCOLOR eq '1'}
+    {if $NEXUS_DARK_MODE eq '1' }
+    color: '#303030',
+    {else}
+    color: '#e0e1e2',
+    {/if}
+    {elseif $WIDGETBOTCOLOR eq '2'}
+    color: '{$WIDGETBOTCUSTOMCOLOR}',
+    {/if}
+  })
+</script>
+{/if}
+
 {if isset($GLOBAL_WARNING_TITLE)}
 <script type="text/javascript">
   $('#modal-acknowledge').modal({ closable: false }).modal('show');
@@ -108,7 +131,6 @@
       .done(function () {
         window.location.reload();
       });
-
     return false;
   }
 

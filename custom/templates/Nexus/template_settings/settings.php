@@ -40,7 +40,7 @@ $smarty->assign(NexusUtill::languageFileToSmarty('colors'));
 $smarty->assign(NexusUtill::languageFileToSmarty('navbar'));
 $smarty->assign(NexusUtill::languageFileToSmarty('connections'));
 $smarty->assign(NexusUtill::languageFileToSmarty('preloader'));
-$smarty->assign(NexusUtill::languageFileToSmarty('arc'));
+$smarty->assign(NexusUtill::languageFileToSmarty('addons'));
 $smarty->assign(NexusUtill::languageFileToSmarty('widgets'));
 $smarty->assign(NexusUtill::languageFileToSmarty('embed'));
 if (isset($_POST['sel_btn_session'])) {

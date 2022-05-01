@@ -26,14 +26,14 @@
   {/foreach}
 </div>
 
+{if $NAVBARSTYLE eq '0'}
+{include file='Nexus/components/navbar/elegant.tpl'}
+{else}
+{include file='Nexus/components/navbar/dynamic.tpl'}
+{/if}
+
 <div class="pusher">
   <div id="wrapper">
-    {if $NAVBARSTYLE eq '0'}
-    {include file='Nexus/components/navbar/elegant.tpl'}
-    {else}
-    {include file='Nexus/components/navbar/dynamic.tpl'}
-    {/if}
-    <br />
     <div class="ui container" id="context">
       <div class="ui negative icon message" id="ie-message">
         <i class="exclamation triangle icon"></i>

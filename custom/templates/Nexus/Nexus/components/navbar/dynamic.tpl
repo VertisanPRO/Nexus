@@ -64,5 +64,3 @@
   {/if}
 </div>
 {include file='Nexus/components/navbar/navbar.tpl'}
-
-<span style="visibility: hidden;" id="ip">{$MINECRAFTIP}{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}</span>

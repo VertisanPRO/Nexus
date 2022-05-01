@@ -1,3 +1,16 @@
+<style>
+.ui.ribbon.label {
+    background: {$PRIMARYCOLOR} !important;
+    border-color: {$PRIMARYCOLOR} !important;
+    color: #fff;
+}
+
+.ui.ribbon.label:hover {
+    background: {$PRIMARYCOLOR} !important;
+    border-color: {$PRIMARYCOLOR} !important;
+    color: #fff;
+}
+
 .ui.small.default.icon.button {
 	background-color: {$PRIMARYCOLOR} !important;
 	color: #fff;
@@ -62,3 +75,4 @@ a {
     color: {if $NAVBARTEXTCOLOR eq '1'}black{else}white{/if} !important;
 }
 {/if}
+</style>

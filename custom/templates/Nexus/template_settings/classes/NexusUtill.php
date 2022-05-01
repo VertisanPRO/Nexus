@@ -20,7 +20,6 @@ class NexusUtill {
     return $result;
   } 
 
-  // Достанет данные дс сервера использую ид (name, members, link)
   public static function getDsServer($id)
   {
     $discord_server = array();
@@ -44,7 +43,6 @@ class NexusUtill {
       return $discord_server;
   }
 
-  // $settings_data = NexusUtill::getSettingsToSmarty(); - достанет все из бд и переобразует в смарти пример: discord_id => {$DISCORD_ID}
   public static function getSettingsToSmarty()
   {
     $queries = new Queries();

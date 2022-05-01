@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="ui breadcrumb">
+<div class="ui breadcrumb" style="margin-top: 10px;">
   {assign i 1}
   {foreach from=$BREADCRUMBS item=breadcrumb}
     {if $i ne 1}<i class="right angle icon divider"></i>{/if}

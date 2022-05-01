@@ -65,5 +65,3 @@
   </div>
   {/if}
 </div>
-
-<span style="visibility: hidden;" id="ip">{$MINECRAFTIP}{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}</span>

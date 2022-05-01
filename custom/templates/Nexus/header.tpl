@@ -26,7 +26,11 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
     <link rel="shortcut icon" href="{$FAVICON}" type="image/x-icon" />
     {/if}
 
-    <meta name="author" content="{$smarty.const.SITE_NAME}">
+    {if $EMBEDTITLE eq '$every'}
+    <meta name="author" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    {else}
+    <meta name="author" content="{$EMBEDTITLE}" />
+    {/if}
     <meta name='description' content='{$EMBEDTEXT}' />
     <meta name='keywords' content='{$EMBEDKEYWORDS}' />
 
@@ -44,9 +48,9 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
     <!-- Twitter Card Properties -->
     {if $EMBEDTITLE eq '$every'}
-    <meta name="twitter:title" content="{$EMBEDTITLE}" />
-    {else}
     <meta name="twitter:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    {else}
+    <meta name="twitter:title" content="{$EMBEDTITLE}" />
     {/if}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="{$OG_IMAGE}" />
@@ -66,10 +70,10 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
     {/if}
 
     {if $COLORSSTYLE eq '1'}
-    <style>
-    {include file='css/colors.css'}
-    </style>
+    {include file='Nexus/colors.tpl'}
     {/if}
+
+    {include file='Nexus/scrollbar.tpl'}
 
     {if isset($ANALYTICS_ID)}
     {literal}
