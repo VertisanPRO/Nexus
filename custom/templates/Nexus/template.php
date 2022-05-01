@@ -6,7 +6,7 @@
  *
  *	License: MIT
  *
- *	Nexus Template
+ *	Nexus By Vertisan
  */
 
 class Nexus_Template extends TemplateBase {

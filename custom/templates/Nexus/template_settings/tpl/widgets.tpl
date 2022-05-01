@@ -35,7 +35,7 @@
         <hr />
         <h3 class="text-center">{$MESSAGEWIDGET_LABEL}</h3>
         <form action="" method="POST">
-          <input type="hidden" name="sel_btn_session" value="widgets" />
+            <input type="hidden" name="sel_btn_session" value="widgets" />
             <div class="form-group">
                 <label for="messageTitle">{$MESSAGETITLE_LABEL}</label>
                 <input type="text" class="form-control" id="inputMessageTitle" name="messageTitle" placeholder="About"
