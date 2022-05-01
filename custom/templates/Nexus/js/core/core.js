@@ -1,3 +1,5 @@
+
+
 // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat/MIT
 toastr.options = {
     progressBar: true,
@@ -16,7 +18,6 @@ function redirect(url) {
 }
 
 $(function () {
-
     $('.ui.sidebar').sidebar('attach events', '.toc.item');
 
     $('.ui.dropdown:not(.search):not(.upward)').dropdown();
@@ -49,29 +50,29 @@ $(function () {
 });
 
 $(function () {
-    var cachedUsers = {};
+    const cachedUsers = {};
 
     $('*[data-poload]').mouseenter(function () {
-        var elem = this;
+        const elem = this;
         $.get($(elem).data('poload'),
             function (d) {
                 (debugging ? console.log(d) : '');
-                var data = JSON.parse(d);
+                const data = JSON.parse(d);
                 cachedUsers[$(elem).data('poload')] = data;
-                var tmp = document.createElement('div');
+                const tmp = document.createElement('div');
                 tmp.innerHTML = data.html;
-                var img = tmp.getElementsByTagName('img')[0];
-                var image = new Image();
+                const img = tmp.getElementsByTagName('img')[0];
+                const image = new Image();
                 image.src = img.src;
-            });
+            }
+        );
     });
 
     $('*[data-poload]').popup({
         hoverable: true,
-        variation: 'special flowing',
         html: '<i class="circle notch loading icon"></i>',
         delay: { show: 500, hide: 200 },
-        onShow: function (e) { this.html(cachedUsers[$(e).data('poload')].html) }
+        onShow: function (e) { this.html(cachedUsers[$(e).data('poload')].html); }
     });
 
     const timezone = document.getElementById('timezone');

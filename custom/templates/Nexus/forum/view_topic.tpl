@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="ui breadcrumb" style="margin-top: 10px;">
+<div class="ui breadcrumb">
   {assign i 1}
   {foreach from=$BREADCRUMBS item=breadcrumb}
     {if $i ne 1}<i class="right angle icon divider"></i>{/if}
@@ -122,9 +122,11 @@
                 {/if}
               </h3>
             </center>
+            <div class="groups">
               {foreach from=$reply.user_groups item=group}
                 {$group}
               {/foreach}
+            </div>
             <div class="ui list">
               <div class="ui divider"></div>
               <div class="item">
@@ -156,11 +158,11 @@
               <div class="ui list">
                 <div class="ui divider"></div>
                 {foreach from=$reply.fields item=field}
-                  {if !empty($field.value)}
+                  {if !empty($field->value)}
                     <div class="item">
                       <div class="content">
-                        <div class="header">{$field.name}</div>
-                        <div class="res right floated description">{$field.value}</div>
+                        <div class="header">{$field->name}</div>
+                        <div class="res right floated description">{$field->value}</div>
                       </div>
                     </div>
                   {/if}
@@ -254,7 +256,7 @@
         <div class="ui eleven wide tablet thirteen wide computer column" id="reply-content">
           <form class="ui form" action="" method="post">
             <div class="field">
-              <textarea name="content" id="quickreply">{$CONTENT}</textarea>
+              <textarea name="content" id="quickreply"></textarea>
             </div>
             <input type="hidden" name="token" value="{$TOKEN}">
             <button class="ui primary button" type="submit">{$SUBMIT}</button>

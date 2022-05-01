@@ -6,7 +6,7 @@
  *
  *	License: MIT
  *
- *	Nexus By Vertisan
+ *	Nexus Template
  */
 
 class Nexus_Template extends TemplateBase {
@@ -68,18 +68,8 @@ class Nexus_Template extends TemplateBase {
 
         $cache->setCache('template_settings');
         $smartyDarkMode = false;
-        $smartyNavbarColour = '';
 
-        $darkMode = $cache->isCached('darkMode') ? $cache->retrieve('darkMode') : '0';
-        if ($user->isLoggedIn()) {
-            $darkMode = $user->data()->night_mode !== null ? $user->data()->night_mode : $darkMode;
-        } else {
-            if (Cookie::exists('night_mode')) {
-                $darkMode = Cookie::get('night_mode');
-            }
-        }
-
-        if (isset($darkMode) && $darkMode == '1') {
+        if (defined('DARK_MODE') && DARK_MODE == '1') {
             $smartyDarkMode = true;
             define('TEMPLATE_TINY_EDITOR_DARKMODE', true);
         }
