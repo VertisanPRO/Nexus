@@ -12,7 +12,7 @@ class NexusUtil {
   }
 
   public static function languageFileToSmarty(string $file): array {
-        $path = ROOT_PATH . '/modules/Nexus/language/' . LANGUAGE . '.json';
+        $path = ROOT_PATH . '/custom/templates/Nexus/_language/' . LANGUAGE . '.json';
         $terms = json_decode(file_get_contents($path), true);
         $result = array();
         foreach ($terms as $key => $value) {
