@@ -1,6 +1,6 @@
 <?php
 
-class NexusUtill {
+class NexusUtil {
 
   private static Language $_nexus_language;
 
@@ -12,15 +12,18 @@ class NexusUtill {
   }
 
   public static function languageFileToSmarty(string $file): array {
-    require ROOT_PATH . '/custom/templates/Nexus/_language/' . LANGUAGE . DIRECTORY_SEPARATOR . $file . '.php';
-    $result = array();
-    foreach ($language as $key => $value) {
-      $result[strtoupper($key)] = $value;
+        $path = ROOT_PATH . '/modules/Nexus/language/' . LANGUAGE . '.json';
+        $terms = json_decode(file_get_contents($path), true);
+        $result = array();
+        foreach ($terms as $key => $value) {
+            if ($key === $file) {
+                $result[strtoupper($key)] = $value;
+            }
+        }
+        return $result;
     }
-    return $result;
-  } 
 
-  public static function getDsServer($id)
+    public static function getDsServer($id)
   {
     $discord_server = array();
     if ($id !== '') {

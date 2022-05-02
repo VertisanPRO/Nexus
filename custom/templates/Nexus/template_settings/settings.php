@@ -13,9 +13,9 @@ $template_file = 'tpl/nexus.tpl';
 
 require_once('classes/NexusUtill.php');
 require_once(ROOT_PATH . '/core/templates/backend_init.php');
-NexusUtill::initialise();
+NexusUtil::initialise();
 
-$smarty->assign(NexusUtill::getSettingsToSmarty());
+$smarty->assign(NexusUtil::getSettingsToSmarty());
 $smarty->assign(array(
   // Functions
     'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
@@ -34,15 +34,15 @@ $smarty->assign(array(
     'DISABLED' => $language->get('admin', 'disabled'),
 ));
 
-$smarty->assign(NexusUtill::languageFileToSmarty('navigation'));
-$smarty->assign(NexusUtill::languageFileToSmarty('options'));
-$smarty->assign(NexusUtill::languageFileToSmarty('colors'));
-$smarty->assign(NexusUtill::languageFileToSmarty('navbar'));
-$smarty->assign(NexusUtill::languageFileToSmarty('connections'));
-$smarty->assign(NexusUtill::languageFileToSmarty('preloader'));
-$smarty->assign(NexusUtill::languageFileToSmarty('addons'));
-$smarty->assign(NexusUtill::languageFileToSmarty('widgets'));
-$smarty->assign(NexusUtill::languageFileToSmarty('embed'));
+$smarty->assign(NexusUtil::languageFileToSmarty('navigation'));
+$smarty->assign(NexusUtil::languageFileToSmarty('options'));
+$smarty->assign(NexusUtil::languageFileToSmarty('colors'));
+$smarty->assign(NexusUtil::languageFileToSmarty('navbar'));
+$smarty->assign(NexusUtil::languageFileToSmarty('connections'));
+$smarty->assign(NexusUtil::languageFileToSmarty('preloader'));
+$smarty->assign(NexusUtil::languageFileToSmarty('addons'));
+$smarty->assign(NexusUtil::languageFileToSmarty('widgets'));
+$smarty->assign(NexusUtil::languageFileToSmarty('embed'));
 if (isset($_POST['sel_btn_session'])) {
   Session::flash('sel_btn_session', $_POST['sel_btn_session']);
 }
@@ -55,7 +55,7 @@ if (!isset($_POST['sel_btn'])) {
         if ($key == 'token' or $key == 'sel_btn_session') {
           continue;
         }
-        NexusUtill::updateOrCreateParam($key, $value);
+        NexusUtil::updateOrCreateParam($key, $value);
       }
 
       if (empty($errors)) {
