@@ -6,7 +6,7 @@
 {/if}
 {/if}
 
-{include file='Nexus/components/navbar/navbar.tpl'}
+{include file='Nexus/components/navbar/navbar_normal.tpl'}
 <div class="ui stackable three column grid"
   style="background-image:url('{$BANNER_IMAGE}'); padding: 45px; margin-top:0px!important; border-bottom-left-radius: 85% 20%; border-bottom-right-radius: 85% 20%;">
   {if $DISCORDVIEW eq '1'}

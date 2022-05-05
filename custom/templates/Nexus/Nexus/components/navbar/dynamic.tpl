@@ -63,4 +63,4 @@
   </div>
   {/if}
 </div>
-{include file='Nexus/components/navbar/navbar.tpl'}
+{include file='Nexus/components/navbar/navbar_normal.tpl'}

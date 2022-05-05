@@ -1,6 +1,8 @@
 {if $PRELOADERVIEW eq '1'}
 <div class="preloader">
-  <div class="ui active {if $PRELOADERSPEED eq 'normal'}{else}{$PRELOADERSPEED}{/if} {if $PRELOADERSTYLE eq 'normal'}{else}{$PRELOADERSTYLE}{/if} {$PRELOADERCOLOR} large inverted loader"></div>
+  <div
+    class="ui active {if $PRELOADERSPEED eq 'normal'}{else}{$PRELOADERSPEED}{/if} {if $PRELOADERSTYLE eq 'normal'}{else}{$PRELOADERSTYLE}{/if} {$PRELOADERCOLOR} large inverted loader">
+  </div>
   <h3 style="margin-top: 100px;"><span class="ui inverted {$PRELOADERCOLOR} text">{$PRELOADERTEXT}</span></h3>
 </div>
 {/if}
@@ -28,8 +30,10 @@
 
 {if $NAVBARSTYLE eq '0'}
 {include file='Nexus/components/navbar/elegant.tpl'}
-{else}
+{elseif $NAVBARSTYLE eq '1'}
 {include file='Nexus/components/navbar/dynamic.tpl'}
+{else}
+{include file='Nexus/components/navbar/modern.tpl'}
 {/if}
 
 <div class="pusher">

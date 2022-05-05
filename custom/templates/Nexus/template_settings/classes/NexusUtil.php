@@ -1,6 +1,6 @@
 <?php
 
-class NexusUtill {
+class NexusUtil {
 
   private static Language $_nexus_language;
 
@@ -12,16 +12,18 @@ class NexusUtill {
   }
 
   public static function languageFileToSmarty(string $file): array {
-    require ROOT_PATH . '/custom/templates/Nexus/_language/' . LANGUAGE . DIRECTORY_SEPARATOR . $file . '.php';
+    $path = ROOT_PATH . '/custom/templates/Nexus/_language/' . LANGUAGE . '.json';
+    $terms = json_decode(file_get_contents($path), true);
     $result = array();
-    foreach ($language as $key => $value) {
-      $result[strtoupper($key)] = $value;
+    foreach ($terms as $key => $value) {
+        if ($key === $file) {
+            $result[strtoupper($key)] = $value;
+        }
     }
     return $result;
-  } 
+  }
 
-  public static function getDsServer($id)
-  {
+  public static function getDsServer($id) {
     $discord_server = array();
     if ($id !== '') {
         $ch = curl_init();
@@ -33,7 +35,6 @@ class NexusUtill {
         $result = curl_exec($ch);
         $result = json_decode($result);
         curl_close($ch);
-
         $discord_server = array(
           'name' => $result->name,
           'members' => $result->presence_count,
@@ -43,8 +44,7 @@ class NexusUtill {
       return $discord_server;
   }
 
-  public static function getSettingsToSmarty()
-  {
+  public static function getSettingsToSmarty() {
     $queries = new Queries();
     $settings_data = $queries->getWhere('nexus_settings', array('id', '<>', 0));
     if (count($settings_data)) {
@@ -57,13 +57,10 @@ class NexusUtill {
         $result[strtoupper($value->name)] = htmlspecialchars_decode($settings_data_array[$value->name]['value']);
       }
     }
-
     return $result;
   }
 
-
-  public static function updateOrCreateParam($key, $value)
-  {
+  public static function updateOrCreateParam($key, $value) {
     $queries = new Queries();
     $data = end($queries->getWhere('nexus_settings', array('name', '=', $key)));
     if (!empty($data)) {
@@ -79,26 +76,18 @@ class NexusUtill {
     return;
   }
 
-
-
-  public static function initialise()
-  {
-
+  public static function initialise() {
     $queries = new Queries();
-
     try {
       $group = $queries->getWhere('groups', array('id', '=', 2));
       $group = $group[0];
-
       $group_permissions = json_decode($group->permissions, TRUE);
       $group_permissions['admincp.nexus'] = 1;
-
       $group_permissions = json_encode($group_permissions);
       $queries->update('groups', 2, array('permissions' => $group_permissions));
     } catch (Exception $e) {
       // Error
     }
-
     try {
       $engine = Config::get('mysql/engine');
       $charset = Config::get('mysql/charset');
@@ -108,15 +97,12 @@ class NexusUtill {
     }
     if (!$engine || is_array($engine))
       $engine = 'InnoDB';
-
     if (!$charset || is_array($charset))
       $charset = 'latin1';
-
     try {
       $queries->createTable("nexus_settings", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)", "ENGINE=$engine DEFAULT CHARSET=$charset");
     } catch (Exception $e) {
       // Error
     }
-
   }
 }
