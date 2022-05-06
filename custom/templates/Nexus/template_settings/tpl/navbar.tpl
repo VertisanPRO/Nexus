@@ -15,11 +15,7 @@
             </div>
             {if $NAVBARSTYLE != '2'}
             <div class="form-group">
-                <label for="navbarSticky">{$NAVBARSTICKY_LABEL} <span class="badge badge-info">
-                        <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
-                            data-placement="top" data-content="{$NAVBARSTICKY_INFO_LABEL}"
-                            data-original-title="{$INFO}"></i>
-                    </span></label>
+                <label for="navbarSticky">{$NAVBARSTICKY_LABEL}</label>
                 <select id="inputNavbarSticky" class="form-control mr-sm-2" name="navbarSticky">
                     <option value="0" {if $NAVBARSTICKY eq '0' } selected{/if}>{$DISABLED}</option>
                     <option value="1" {if $NAVBARSTICKY eq '1' } selected{/if}>{$ENABLED}</option>
