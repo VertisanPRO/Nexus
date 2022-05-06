@@ -1,1 +1,22 @@
-{}
+{
+    "addons/arc_label": "Arc",
+    "addons/arcurl_label": "Widget URL",
+    "addons/widgetbot_label": "WidgetBot",
+    "addons/widgetbotchannelid_info_label": "To get the Channel ID, go to Discord Server > <code>RMB</code> on the Channel > Copy ID.",
+    "addons/widgetbotchannelid_label": "Channel ID",
+    "addons/widgetbotcolor_custom_label": "Custom",
+    "addons/widgetbotcolor_label": "Background Color",
+    "addons/widgetbotcolor_normal_label": "White/dark",
+    "addons/widgetbotcolor_original_label": "Original (blurple)",
+    "addons/widgetbothorizontallocation_label": "Horizontal Location",
+    "colors/colors_info_label": "#000000 makes it primary color",
+    "colors/footercolor_label": "Footer color",
+    "colors/navbarcolor_label": "Navbar color",
+    "colors/navbartextcolor_label": "Navbar text color",
+    "colors/outlinecolor_label": "Border outline color",
+    "colors/primarycolor_label": "Primary color",
+    "navbar/navbarsticky_label": "Sticky navbar",
+    "preloader/preloadercolor_label": "Color",
+    "addons/arcview_info_label": "To enable Arc you need to register at https://arc.io. Then you need to add a website. Then you need to copy https://arc.io/arc-sw.js to your root website. Then you need scroll down to 'Add Arc's widget to your site' and copy the URL (not the whole thing). The last thing is to add the URL in the input below.",
+    "preloader/preloader_gray": "Gray"
+}
