@@ -61,7 +61,6 @@
     "navbar/navbarelegant_label": "Элегантный",
     "navbar/navbarlogo_info_label": "Это лого посередние панели навигации.",
     "navbar/navbarlogo_label": "Ссылка на лого",
-    "navbar/navbarsticky_info_label": "Это экспериментальная функция. Она может не работать на вашем сайте.",
     "navbar/navbarsticky_label": "Липкая панель навигации?",
     "navbar/navbarstyle_info_label": "У элегантного стиля ссылки сверху. У динамического стиля ссылки ниже панели навигации.",
     "navbar/navbarstyle_label": "Стиль навигации",
