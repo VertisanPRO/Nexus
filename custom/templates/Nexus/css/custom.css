@@ -1383,3 +1383,13 @@ body.dark .ui.ribbon.label:hover {
 body.pushable {
     background: none;
 }
+
+@media only screen and (max-width: 768px) {
+    #mobnavbar {
+        display: block !important;
+    }
+
+    #pcnavbar {
+        display: none;
+    }
+}
