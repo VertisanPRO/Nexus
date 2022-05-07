@@ -1,1 +1,16 @@
-{}
+{
+    "addons/arc_label": "Arc",
+    "addons/arcurl_label": "Widget URL",
+    "addons/widgetbot_label": "WidgetBot",
+    "addons/widgetbotchannelid_info_label": "Om de Kanaal ID te krijgen, ga naar Discord Server > <code>Rechter Muis Klik</code> op het Kanaal > Kopieer ID.",
+    "addons/widgetbotchannelid_label": "Kanaal ID",
+    "addons/widgetbotcolor_custom_label": "Aangepast",
+    "addons/widgetbotcolor_label": "Achtergrondkleur",
+    "addons/widgetbotcolor_normal_label": "Wit/Donker",
+    "addons/widgetbotcolor_original_label": "Origineel (blurple)",
+    "addons/widgetbothorizontallocation_label": "Horizontale locatie",
+    "addons/widgetbotlocation_bottom_label": "Bodem",
+    "addons/widgetbotlocation_left_label": "Links",
+    "addons/widgetbotlocation_right_label": "Rechts",
+    "addons/arcview_info_label": "Om Arc in te schakelen moet u zich registreren op https://arc.io. Dan moet je een website toevoegen. Dan moet je https://arc.io/arc-sw.js kopiëren naar je root website. Dan moet je naar beneden scrollen naar 'Arc's widget toevoegen aan je site' en de URL kopiëren (niet het hele ding). Het laatste wat je moet doen is de URL toevoegen in de invoer hieronder."
+}
