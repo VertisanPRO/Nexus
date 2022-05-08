@@ -1,1 +1,13 @@
-{}
+{
+    "colors/footercolor_label": "页脚颜色",
+    "colors/navbarcolor_label": "导航栏颜色",
+    "colors/colors_info_label": "#000000 使其成为主要颜色",
+    "colors/navbartext_black_label": "黑色",
+    "colors/navbartext_white_label": "白色",
+    "colors/outlinecolor_label": "边框轮廓颜色",
+    "colors/primarycolor_label": "主要颜色",
+    "connections/advanced_label": "高级",
+    "connections/discord_label": "",
+    "addons/arcurl_label": "小部件URL",
+    "colors/navbartextcolor_label": "导航栏文本颜色"
+}
