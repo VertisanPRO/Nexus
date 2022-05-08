@@ -23,12 +23,14 @@
         <label for="primaryColor">{$PRIMARYCOLOR_LABEL}</label>
         <input type="color" class="form-control" id="inputPrimaryColor" name="primaryColor" value="{$PRIMARYCOLOR}">
       </div>
+      {if $NAVBARSTYLE != '2'}
       <div class="form-group">
         <label for="navbarColor">{$NAVBARCOLOR_LABEL} <span class="badge badge-info"><i class="fas fa-question-circle"
               data-container="body" data-toggle="popover" data-placement="top" data-content="{$COLORS_INFO_LABEL}"
               data-original-title="{$INFO}"></i></span></label>
         <input type="color" class="form-control" id="inputNavbarColor" name="navbarColor" value="{$NAVBARCOLOR}">
       </div>
+      {/if}
       <div class="form-group">
         <label for="footerColor">{$FOOTERCOLOR_LABEL} <span class="badge badge-info"><i class="fas fa-question-circle"
               data-container="body" data-toggle="popover" data-placement="top" data-content="{$COLORS_INFO_LABEL}"
@@ -41,6 +43,7 @@
               data-original-title="{$INFO}"></i></span></label>
         <input type="color" class="form-control" id="inputOutlineColor" name="outlineColor" value="{$OUTLINECOLOR}">
       </div>
+      {if $NAVBARSTYLE != '2'}
       <div class="form-group">
         <label for="navbarTextColor">{$NAVBARTEXTCOLOR_LABEL}</label>
         <select id="inputNavbarTextColor" class="form-control mr-sm-2" name="navbarTextColor">
@@ -49,6 +52,7 @@
           <option value="2" {if $NAVBARTEXTCOLOR eq '2' } selected{/if}>{$NAVBARTEXT_WHITE_LABEL}</option>
         </select>
       </div>
+      {/if}
       {/if}
       <div class="form-group">
         <input type="hidden" name="token" value="{$TOKEN}">

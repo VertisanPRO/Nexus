@@ -7,8 +7,28 @@
 {/if}
 
 <div class="ui stackable three column grid" style="background-image:url('{$BANNER_IMAGE}'); padding: 50px;">
+  <div class="column" style="text-align: center; margin-top: 2.8rem; display: none;" id="mobnavbar">
+    <div class="ui steps">
+      <div class="step" style="background: transparent; color: white; flex-direction: row;">
+        {if $DISCORDVIEW eq '1'}
+        <i class="discord icon" onclick="dsInvite('{$DISCORD_SERVER['link']}')"></i>
+        {/if}
+        {if $DISCORDVIEW eq '1'}
+        {if $MINECRAFTVIEW eq '1'}
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        {/if}
+        {/if}
+        {if $MINECRAFTVIEW eq '1'}
+        <i class="signal icon" onclick="copy('#ip')"></i>
+        {/if}
+      </div>
+    </div>
+  </div>
   {if $DISCORDVIEW eq '1'}
-  <div onclick="dsInvite('{$DISCORD_SERVER['link']}')" class="column" style="text-align: center; margin-top: 2.8rem;">
+  <div onclick="dsInvite('{$DISCORD_SERVER['link']}')" id="pcnavbar" class="column"
+    style="text-align: center; margin-top: 2.8rem;">
     <div class="ui steps">
       <div class="step" style="background: transparent;color: white;">
         <i class="discord icon"></i>
@@ -28,7 +48,7 @@
     </div>
   </div>
   {else}
-  <div class="column"></div>
+  <div class="column" id="pcnavbar"></div>
   {/if}
   <div class="column" style="text-align: center;">
     <div class="ui medium image" href="/" target="_blank">
@@ -38,7 +58,7 @@
     </div>
   </div>
   {if $MINECRAFTVIEW eq '1'}
-  <div class="column" style="text-align: center; margin-top: 2rem;">
+  <div class="column" style="text-align: center; margin-top: 2rem;" id="pcnavbar">
     <div class="ui steps">
       <div class="step" style="background: transparent; color: white;">
         <i class="signal icon"></i>
@@ -63,4 +83,4 @@
   </div>
   {/if}
 </div>
-{include file='Nexus/components/navbar/navbar.tpl'}
+{include file='Nexus/components/navbar/navbar_normal.tpl'}

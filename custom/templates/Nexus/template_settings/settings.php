@@ -11,7 +11,7 @@
 
 $template_file = 'tpl/nexus.tpl';
 
-require_once('classes/NexusUtill.php');
+require_once('classes/NexusUtil.php');
 require_once(ROOT_PATH . '/core/templates/backend_init.php');
 NexusUtil::initialise();
 
@@ -68,8 +68,8 @@ if (!isset($_POST['sel_btn'])) {
 
 if (Session::exists('staff'))
   $success = Session::flash('staff');
+  $TPL_NAME_SESSION = '';
 
-$TPL_NAME_SESSION = '';
 if (Session::exists('sel_btn_session'))
   $TPL_NAME_SESSION = Session::flash('sel_btn_session');
 

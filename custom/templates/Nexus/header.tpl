@@ -73,6 +73,10 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
     {include file='Nexus/colors.tpl'}
     {/if}
 
+    {if $NAVBARSTYLE eq '2'}
+    {include file='Nexus/modern.tpl'}
+    {/if}
+
     {include file='Nexus/scrollbar.tpl'}
 
     {if isset($ANALYTICS_ID)}

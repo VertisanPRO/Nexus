@@ -14,3 +14,9 @@ window.onload = function () {
         document.body.classList.remove('loaded_hiding');
     }, 500);
 };
+
+$('.ui.sticky')
+    .sticky({
+        context: '#example1'
+    })
+    ;

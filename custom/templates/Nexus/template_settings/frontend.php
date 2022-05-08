@@ -1,5 +1,5 @@
 <?php
-    require_once('classes/NexusUtill.php');
+    require_once('classes/NexusUtil.php');
     $settings_data = NexusUtil::getSettingsToSmarty();
 
     $this->_smarty->assign($settings_data);

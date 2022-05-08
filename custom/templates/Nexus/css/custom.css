@@ -965,7 +965,7 @@ select {
 body.dark,
 body.dark.pushable>.pusher,
 body.dark .ui.pointing.dropdown>.menu:after {
-    background: #1b1b1b;
+    background: #1b1b1b !important;
 }
 
 body.dark .ui.secondary.menu:not(.inverted) {
@@ -1378,4 +1378,18 @@ body.dark .ui.ribbon.label:hover {
     border-color: #e0e1e2;
     color: rgba(0, 0, 0, .68);
     cursor: default;
+}
+
+body.pushable {
+    background: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #mobnavbar {
+        display: block !important;
+    }
+
+    #pcnavbar {
+        display: none;
+    }
 }
