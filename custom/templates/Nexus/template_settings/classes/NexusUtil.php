@@ -16,8 +16,9 @@ class NexusUtil {
         $terms = json_decode(file_get_contents($path), true);
         $result = array();
         foreach ($terms as $key => $value) {
-            if ($key === $file) {
-                $result[strtoupper($key)] = $value;
+            [$term_file, $term] = explode('/', $key);
+            if ($term_file === $file) {
+                $result[strtoupper($term)] = $value;
             }
         }
         return $result;
