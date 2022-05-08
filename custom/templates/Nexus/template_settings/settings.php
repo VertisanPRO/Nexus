@@ -43,7 +43,6 @@ $smarty->assign(NexusUtil::languageFileToSmarty('preloader'));
 $smarty->assign(NexusUtil::languageFileToSmarty('addons'));
 $smarty->assign(NexusUtil::languageFileToSmarty('widgets'));
 $smarty->assign(NexusUtil::languageFileToSmarty('embed'));
-
 if (isset($_POST['sel_btn_session'])) {
   Session::flash('sel_btn_session', $_POST['sel_btn_session']);
 }
