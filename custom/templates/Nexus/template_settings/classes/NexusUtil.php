@@ -18,7 +18,7 @@ class NexusUtil {
     foreach ($terms as $key => $value) {
       [$term_file, $term] = explode('/', $key);
       if ($term_file === $file) {
-          $result[strtoupper($term)] = $value;
+        $result[strtoupper($term)] = $value;
       }
     }
     return $result;
@@ -39,7 +39,7 @@ class NexusUtil {
       $discord_server = array(
         'name' => $result->name,
         'members' => $result->presence_count,
-        'link' => $result->instant_invite,
+        'link' => $result->instant_invite
       );
     }
     return $discord_server;

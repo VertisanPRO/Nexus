@@ -17,21 +17,18 @@ NexusUtil::initialise();
 
 $smarty->assign(NexusUtil::getSettingsToSmarty());
 $smarty->assign(array(
-  // Functions
-    'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
-    'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Nexus/template_settings/' . $template_file,
-
-  // Text
-    'SUBMIT' => $language->get('general', 'submit'),
-    'YES' => $language->get('general', 'yes'),
-    'NO' => $language->get('general', 'no'),
-    'BACK' => $language->get('general', 'back'),
-    'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
-    'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
-    'NAME' => $language->get('admin', 'name'),
-    'INFO' => $language->get('general', 'info'),
-    'ENABLED' => $language->get('admin', 'enabled'),
-    'DISABLED' => $language->get('admin', 'disabled'),
+  'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
+  'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Nexus/template_settings/' . $template_file,
+  'SUBMIT' => $language->get('general', 'submit'),
+  'YES' => $language->get('general', 'yes'),
+  'NO' => $language->get('general', 'no'),
+  'BACK' => $language->get('general', 'back'),
+  'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
+  'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
+  'NAME' => $language->get('admin', 'name'),
+  'INFO' => $language->get('general', 'info'),
+  'ENABLED' => $language->get('admin', 'enabled'),
+  'DISABLED' => $language->get('admin', 'disabled'),
 ));
 
 $smarty->assign(NexusUtil::languageFileToSmarty('navigation'));
@@ -43,6 +40,7 @@ $smarty->assign(NexusUtil::languageFileToSmarty('preloader'));
 $smarty->assign(NexusUtil::languageFileToSmarty('addons'));
 $smarty->assign(NexusUtil::languageFileToSmarty('widgets'));
 $smarty->assign(NexusUtil::languageFileToSmarty('embed'));
+
 if (isset($_POST['sel_btn_session'])) {
   Session::flash('sel_btn_session', $_POST['sel_btn_session']);
 }

@@ -25,7 +25,7 @@ $cache->setCache('template_settings');
     if ($cache->isCached('darkMode')) {
         $darkMode = $cache->retrieve('darkMode');
     } else {
-        $darkMode = '0';
+        $darkMode = '1';
         $cache->store('darkMode', $darkMode);
     }
 

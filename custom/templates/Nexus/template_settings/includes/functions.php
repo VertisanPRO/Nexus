@@ -6,7 +6,7 @@ $smarty->assign(array(
         'CUSTOMJS' => $customJS,
 
     // Colors
-        'DARKMODE' => $darkMode,
+        'DARK_MODE' => $darkMode,
         'COLORSSTYLE' => $colorsStyle,
         'PRIMARYCOLOR' => $primaryColor,
         'NAVBARCOLOR' => $navbarColor,

@@ -12,10 +12,10 @@
 }
 
 .ui.small.default.icon.button {
-	background-color: {$PRIMARYCOLOR} !important;
-	color: #fff;
-	text-shadow: none;
-	background-image: none;
+    background-color: {$PRIMARYCOLOR} !important;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
 }
 
 .label {
@@ -31,14 +31,14 @@
 .ui.primary.buttons,
 .button,
 .ui.primary.icon.button {
-	background-color: {$PRIMARYCOLOR};
-	color: #fff;
-	text-shadow: none;
-	background-image: none;
+    background-color: {$PRIMARYCOLOR};
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
 }
 
 a {
-	color: {$PRIMARYCOLOR};
+    color: {$PRIMARYCOLOR};
 }
 
 .ui.header {

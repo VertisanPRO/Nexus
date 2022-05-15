@@ -563,7 +563,7 @@ body.pushable>.pusher {
     color: #fff;
 }
 
-.cc-revoke.cc-bottom.cc-right.cc-animate {
+.cc-revoke.cc-bottom.cc-right {
     color: #fff;
 }
 
@@ -963,7 +963,7 @@ select {
  */
 
 body.dark,
-body.dark.pushable>.pusher,
+body.dark>.pusher,
 body.dark .ui.pointing.dropdown>.menu:after {
     background: #1b1b1b !important;
 }

@@ -1,12 +1,12 @@
 <?php
 /*
- *	Made by Samerton
- *	https://github.com/NamelessMC/Nameless/
- *	NamelessMC version 2.0.0-pr13
+ *    Made by Samerton
+ *    https://github.com/NamelessMC/Nameless/
+ *    NamelessMC version 2.0.0-pr13
  *
- *	License: MIT
+ *    License: MIT
  *
- *	Nexus Template
+ *    Nexus Template
  */
 
 class Nexus_Template extends TemplateBase {
@@ -41,17 +41,18 @@ class Nexus_Template extends TemplateBase {
         $this->_smarty = $smarty;
         $this->_cache = $cache;
 
+        $this->assets()->include([
+            AssetTree::FONT_AWESOME,
+            AssetTree::JQUERY,
+            AssetTree::JQUERY_COOKIE,
+        ]);
+
         $this->addCSSFiles([
             $template['path'] . 'css/fomantic.min.css' => [],
-            $template['path'] . 'css/toastr.min.css' => [],
-            (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/core/assets/css/font-awesome.min.css' => [],
         ]);
 
         $this->addJSFiles([
-            $template['path'] . 'js/jquery.min.js' => [],
-            $template['path'] . 'js/jquery.cookie.js' => [],
             $template['path'] . 'js/fomantic.min.js' => [],
-            $template['path'] . 'js/toastr.min.js' => [],
             $template['path'] . 'js/nexus.js?v=1.7.0' => [],
         ]);
 
@@ -127,8 +128,8 @@ class Nexus_Template extends TemplateBase {
         ];
 
         if (strpos($route, '/forum/topic/') !== false || PAGE == 'profile') {
-            $this->addJSFiles([
-                $this->_template['path'] . 'js/jquery-ui.min.js' => []
+            $this->assets()->include([
+                AssetTree::JQUERY_UI,
             ]);
         }
 
