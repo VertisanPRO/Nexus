@@ -113,5 +113,11 @@
     "widgets/messageicon_label": "Icono del widget",
     "widgets/messagetext_label": "Texto del widget",
     "widgets/messagetitle_label": "Título del widget",
-    "widgets/messagewidget_label": "Widget de mensajes"
+    "widgets/messagewidget_label": "Widget de mensajes",
+    "embed/embedicon_label": "Imagen del embed",
+    "embed/embedkeywords_label": "Palabras clave del embed",
+    "embed/embedpreview_label": "Previsualización del embed",
+    "embed/embedtext_label": "Descripción del embed",
+    "embed/embedtitle_label": "Título del embed",
+    "navigation/embed_page": "Embed"
 }
