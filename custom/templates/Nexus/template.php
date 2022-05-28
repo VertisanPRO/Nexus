@@ -91,6 +91,9 @@ class Nexus_Template extends TemplateBase {
         $this->_language = $language;
         $this->_user = $user;
         $this->_pages = $pages;
+
+        require_once('template_settings/classes/NexusUtil.php');
+        NexusUtil::initialise();
     }
 
     public function onPageLoad() {

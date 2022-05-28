@@ -13,7 +13,6 @@ $template_file = 'tpl/nexus.tpl';
 
 require_once('classes/NexusUtil.php');
 require_once(ROOT_PATH . '/core/templates/backend_init.php');
-NexusUtil::initialise();
 
 $smarty->assign(NexusUtil::getSettingsToSmarty());
 $smarty->assign([
