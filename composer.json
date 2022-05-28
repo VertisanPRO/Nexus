@@ -1,7 +1,0 @@
-{
-    "name": "vertisanpro/nexus",
-    "type": "project",
-    "require-dev": {
-        "phpstan/phpstan": "^1.4"
-    }
-}
