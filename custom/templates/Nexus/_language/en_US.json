@@ -87,7 +87,6 @@
     "preloader/preloader_elastic": "Elastic",
     "preloader/preloader_fast": "Fast",
     "preloader/preloader_normal": "Normal",
-    "preloader/preloader_red": "Red",
     "preloader/preloader_slow": "Slow",
     "preloader/preloaderloading_label": "Loading...",
     "preloader/preloaderspeed_label": "Speed",
