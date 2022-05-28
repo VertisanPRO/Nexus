@@ -1272,8 +1272,21 @@ body.dark .tox .tox-tbtn svg {
     fill: #fff;
 }
 
-body.dark .tox .tox-statusbar {
+body.dark .tox .tox-menu,
+body.dark .tox .tox-statusbar,
+body.dark .tox .tox-menubar,
+body.dark .tox .tox-toolbar,
+body.dark .tox .tox-toolbar__overflow,
+body.dark .tox .tox-toolbar__primary {
     background-color: #1b1b1b;
+}
+
+body.dark .tox .tox-collection--list .tox-collection__item--enabled {
+    background-color: #1c1c1c;
+}
+
+body.dark .tox .tox-collection--list .tox-collection__item--active {
+    background-color: #1d1d1d;
 }
 
 body.dark .ui.cards>.green.card,

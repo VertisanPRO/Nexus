@@ -1,5 +1,5 @@
 <?php
-$smarty->assign(array(
+$smarty->assign([
     // Options
         'FOOTERABOUT' => $footerAbout,
         'CUSTOMCSS' => $customCSS,
@@ -53,4 +53,4 @@ $smarty->assign(array(
         'EMBEDCOLOR' => $embedColor,
         'EMBEDICON' => $embedIcon,
         'EMBEDKEYWORDS' => $embedKeywords
-));
+]);

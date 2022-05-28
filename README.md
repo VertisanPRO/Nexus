@@ -1,4 +1,4 @@
-# Nexus Template 1.6.1
+# Nexus Template 1.7.0
 
 For better experience read "README.html"
 
@@ -8,10 +8,10 @@ Upload "custom" and the "modules" folder to your NamelessMC Root directory (publ
 ## Installing Template
 Open your NamelessMC dashboard => Layout => Templates => Click on "Install" - Enable after you've installed it.
 
-## Installing Backend
+## Installing the Module
 Open your NamelessMC dashboard => Modules => Click on "Install" - Enable after you've installed it. You're done :)
 
-Get your support here https://resourcemc.net/discord
+Get your support [here](https://resourcemc.net/discord)
 
 ## Contribution
 #### Pull Requests

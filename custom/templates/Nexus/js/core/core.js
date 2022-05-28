@@ -70,7 +70,10 @@ $(function () {
     const timezone = document.getElementById('timezone');
 
     if (timezone) {
-        timezone.value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const timezoneValue = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (timezoneValue) {
+            timezone.value = timezoneValue;
+        }
     }
 
 });

@@ -6,6 +6,6 @@
 
     $discord_server = NexusUtil::getDsServer($settings_data['DISCORDID']);
     $this->_cache->store('ds_status_ping', $discord_server, 60);
-    $this->_smarty->assign(array(
+    $this->_smarty->assign([
         'DISCORD_SERVER' => $discord_server,
-    ));
+    ]);
