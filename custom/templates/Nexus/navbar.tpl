@@ -73,7 +73,7 @@
                 {foreach from=$ANNOUNCEMENTS item=$ANNOUNCEMENT}
                 <div class="ui {if $ANNOUNCEMENT->icon} icon {/if} message announcement"
                     id="announcement-{$ANNOUNCEMENT->id}"
-                    style="background-color:{$ANNOUNCEMENT->background_colour}; color:{$ANNOUNCEMENT->text_colour}">
+                    style="border-top-style: solid; border-top-color:{$ANNOUNCEMENT->background_colour};">
                     {if $ANNOUNCEMENT->closable}
                     <i class="close icon"></i>
                     {/if}

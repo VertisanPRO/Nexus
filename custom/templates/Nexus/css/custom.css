@@ -1406,3 +1406,13 @@ body.pushable {
         display: none;
     }
 }
+
+.message.announcement {
+    background-color: #fff;
+    color: rgba(0,0,0,.68);
+}
+
+body.dark .message.announcement {
+    background-color: #202020;
+    color: #fff;
+}
