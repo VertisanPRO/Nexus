@@ -136,7 +136,5 @@ class NexusUtil {
             // Error
           }
         }
-
-
     }
 }
