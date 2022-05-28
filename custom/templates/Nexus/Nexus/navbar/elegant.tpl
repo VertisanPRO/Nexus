@@ -1,12 +1,6 @@
-{if $MINECRAFTVIEW eq '1'}
-{if $MINECRAFTSTYLE eq '0'}
-{include file='Nexus/components/status/simple.tpl'}
-{else}
-{include file='Nexus/components/status/advanced.tpl'}
-{/if}
-{/if}
-
-<div class="ui stackable three column grid" style="background-image:url('{$BANNER_IMAGE}'); padding: 50px;">
+{include file='Nexus/navbar/navbar_normal.tpl'}
+<div class="ui stackable three column grid"
+  style="background-image:url('{$BANNER_IMAGE}'); padding: 45px; margin-top:0px!important; border-bottom-left-radius: 85% 20%; border-bottom-right-radius: 85% 20%;">
   <div class="column" style="text-align: center; margin-top: 2.8rem; display: none;" id="mobnavbar">
     <div class="ui steps">
       <div class="step" style="background: transparent; color: white; flex-direction: row;">
@@ -83,4 +77,3 @@
   </div>
   {/if}
 </div>
-{include file='Nexus/components/navbar/navbar_normal.tpl'}

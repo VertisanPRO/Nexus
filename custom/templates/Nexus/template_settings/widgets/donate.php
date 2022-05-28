@@ -2,17 +2,15 @@
 /*
  *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.0.0-pr9
+ *  NamelessMC version 2.0.0-pr13
  *
  *  License: MIT
  *
  *  Nexus By Vertisan
  */
-class Donate extends WidgetBase
-{
+class Donate extends WidgetBase {
     private $_smarty;
-    public function __construct($pages = array(), $smarty, $user)
-    {
+    public function __construct($pages = array(), $smarty, $user) {
         parent::__construct($pages);
         $this->_smarty = $smarty;
         $this->_user = $user;
@@ -26,9 +24,7 @@ class Donate extends WidgetBase
         $this->_description = 'Donate Widget';
         $this->_order = $order->order;
     }
-    public function initialise()
-    {
-
+    public function initialise() {
         $this->_content = $this->_smarty->fetch($this->_module . '/widgets/donate.tpl');
     }
 }

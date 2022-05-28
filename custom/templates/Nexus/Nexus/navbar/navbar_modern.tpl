@@ -9,7 +9,7 @@
             <button class="ui grey tertiary button"
                 style="cursor: pointer; color: rgba(255, 255, 255, 0.6);">{$item.icon}
                 {$item.title} <i class="dropdown icon navbar-item"></i></button>
-            <div class="menu">
+            <div class="menu" style="margin-left: -30px;">
                 <div class="header">{$item.title}</div>
                 {foreach from=$item.items item=dropdown}
                 {if isset($dropdown.separator)}

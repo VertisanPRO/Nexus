@@ -1,7 +1,7 @@
 <style>
 {if $NEXUS_DARK_MODE eq '1' }
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 6px;
     background-color: #1b1b1b;
 }
 
@@ -15,7 +15,7 @@
 }
 {else}
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 6px;
     background-color: #f3f6fa;
 }
 

@@ -2,8 +2,9 @@
     <div class="ui container">
         {foreach from=$NAV_LINKS key=name item=item}
         {if isset($item.items)}
-        <div class="ui pointing dropdown link item">
-            <span class="text navbar-item">{$item.icon} {$item.title}</span> <i class="dropdown icon navbar-item"></i>
+        <div class="ui dropdown item">
+            {$item.icon} {$item.title}
+            <i class="dropdown icon"></i>
             <div class="menu">
                 <div class="header">{$item.title}</div>
                 {foreach from=$item.items item=dropdown}
@@ -17,7 +18,8 @@
             </div>
         </div>
         {else}
-        <a class="item{if isset($item.active)} active{/if} navbar-item" href="{$item.link}" target="{$item.target}">{$item.icon}
+        <a class="item{if isset($item.active)} active{/if} navbar-item" href="{$item.link}"
+            target="{$item.target}">{$item.icon}
             {$item.title}</a>
         {/if}
         {/foreach}

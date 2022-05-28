@@ -4,11 +4,11 @@ class NexusUtil {
 
   private static Language $_nexus_language;
 
-  public static function getLanguage(string $file, string $term): string {
+  public static function getLanguage(string $file, string $term, array $variables = []): string {
     if (!isset(self::$_nexus_language)) {
       self::$_nexus_language = new Language(ROOT_PATH . '/custom/templates/Nexus/_language', LANGUAGE);
     }
-    return self::$_nexus_language->get($file, $term);
+    return self::$_nexus_language->get($file, $term, $variables);
   }
 
   public static function languageFileToSmarty(string $file): array {

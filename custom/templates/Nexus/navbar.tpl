@@ -29,11 +29,11 @@
 </div>
 
 {if $NAVBARSTYLE eq '0'}
-{include file='Nexus/components/navbar/elegant.tpl'}
+{include file='Nexus/navbar/elegant.tpl'}
 {elseif $NAVBARSTYLE eq '1'}
-{include file='Nexus/components/navbar/dynamic.tpl'}
+{include file='Nexus/navbar/dynamic.tpl'}
 {else}
-{include file='Nexus/components/navbar/modern.tpl'}
+{include file='Nexus/navbar/modern.tpl'}
 {/if}
 
 <div class="pusher">

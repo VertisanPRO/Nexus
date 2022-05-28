@@ -90,6 +90,14 @@
 {$script}
 {/foreach}
 
+{if $MINECRAFTVIEW eq '1'}
+{if $MINECRAFTSTYLE eq '0'}
+{include file='Nexus/status/simple.tpl'}
+{else}
+{include file='Nexus/status/advanced.tpl'}
+{/if}
+{/if}
+
 {if $WIDGETBOTVIEW eq '1'}
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
   new Crate({
