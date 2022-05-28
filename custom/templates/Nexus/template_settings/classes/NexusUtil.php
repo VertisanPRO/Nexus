@@ -92,5 +92,41 @@ class NexusUtil {
         } catch (Exception $e) {
             // Error
         }
+
+
+        // INSERT INTO `nl2_nexus_settings` (`id`, `name`, `value`) VALUES
+        // (1, 'darkMode', '1'),
+        // (2, 'colorsStyle', '0'),
+        // (3, 'footerAbout', 'We are an online platform to help users around the world connect through NamelessMC powered forums.'),
+        // (4, 'customCSS', ''),
+        // (5, 'customJS', ''),
+        // (6, 'navbarLogo', 'https://namelessmc.com/uploads/resources_icons/162.png'),
+        // (7, 'navbarSticky', '0'),
+        // (8, 'navbarStyle', '0'),
+        // (9, 'minecraftView', '1'),
+        // (10, 'preloaderView', '0'),
+        // (11, 'arcView', '0'),
+        // (12, 'donateEmail', 'mubeenullah323@gmail.com'),
+        // (13, 'donateFirstAmount', '5'),
+        // (14, 'donateSecondAmount', '10'),
+        // (15, 'donateThirdAmount', '20'),
+        // (16, 'messageTitle', 'About'),
+        // (17, 'messageText', ''),
+        // (18, 'messageIcon', 'fas fa-hand-holding-usd'),
+        // (19, 'embedTitle', 'Nexus'),
+        // (20, 'embedText', 'We are an online platform to help users around the world connect through NamelessMC powered forums.'),
+        // (21, 'embedColor', '#46d0e6'),
+        // (22, 'embedIcon', 'https://i.imgur.com/e6YHD.gif'),
+        // (23, 'embedKeywords', ''),
+        // (24, 'minecraftDomain', 'game.mc-tensa.com'),
+        // (25, 'minecraftIP', '95.217.119.207'),
+        // (26, 'minecraftPort', '25565'),
+        // (27, 'minecraftStyle', '0'),
+        // (28, 'discordView', '1'),
+        // (29, 'discordID', '760945720470667294'),
+        // (30, 'preloaderText', ''),
+        // (31, 'preloaderColor', 'red'),
+        // (32, 'preloaderSpeed', 'slow'),
+        // (33, 'preloaderStyle', 'normal');
     }
 }

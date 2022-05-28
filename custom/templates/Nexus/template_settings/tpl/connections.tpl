@@ -4,7 +4,7 @@
     <div class="card-body">
         <h3 class="text-center">{$DISCORD_LABEL}</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="discord" />
+          <input type="hidden" name="sel_btn_session" value="connections" />
             <div class="form-group">
                 <label for="discordView">{$DISCORDVIEW_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
@@ -37,7 +37,7 @@
         <hr />
         <h3 class="text-center">{$MINECRAFT_LABEL}</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="minecraft" />
+          <input type="hidden" name="sel_btn_session" value="connections" />
             <div class="form-group">
                 <label for="minecraftView">{$MINECRAFTVIEW_LABEL}</label>
                 <select id="inputMinecraftView" class="form-control mr-sm-2" name="minecraftView">
