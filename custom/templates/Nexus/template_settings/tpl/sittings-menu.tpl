@@ -2,7 +2,7 @@
     <h3 class="card-header mb-3 text-center">{$NAVIGATION}</h3>
     <div class="card-body">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link {if !isset($TPL_NAME_SESSION) or $TPL_NAME_SESSION eq 'options'}active{/if}"
+            <a class="nav-link {if empty($TPL_NAME_SESSION) or $TPL_NAME_SESSION eq 'options'}active{/if}"
                 id="v-pills-options-tab" data-toggle="pill" href="#v-pills-options" role="tab"
                 aria-controls="v-pills-options" aria-selected="true"><i class="fa-solid fa-cog"></i> {$OPTIONS_PAGE}</a>
             <a class="nav-link {if $TPL_NAME_SESSION eq 'colors'}active{/if}" id="v-pills-colors-tab" data-toggle="pill"

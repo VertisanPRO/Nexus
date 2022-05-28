@@ -3,9 +3,10 @@
     <div class="col-sm-3">
         {include file="{$TPL_PATH}sittings-menu.tpl"}
     </div>
+
     <div class="col-sm-9">
         <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade {if !isset($TPL_NAME_SESSION) or $TPL_NAME_SESSION eq 'options'}show active{/if}"
+            <div class="tab-pane fade {if empty($TPL_NAME_SESSION) or $TPL_NAME_SESSION eq 'options'}show active{/if}"
                 id="v-pills-options" role="tabpanel" aria-labelledby="v-pills-options-tab">
                 {include file="{$TPL_PATH}options.tpl"}
             </div>
