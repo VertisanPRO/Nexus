@@ -93,40 +93,131 @@ class NexusUtil {
             // Error
         }
 
+        try {
+          // Insert data
+          $queries->create('nexus_settings', array(
+            'name' => 'darkMode',
+            'value' => 1,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'colorsStyle',
+            'value' => 0,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'footerAbout',
+            'value' => 'We are an online platform to help users around the world connect through NamelessMC powered forums.',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'navbarLogo',
+            'value' => 'https://namelessmc.com/uploads/resources_icons/162.png',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'navbarSticky',
+            'value' => 0,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'navbarStyle',
+            'value' => 0,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'minecraftView',
+            'value' => 1,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'preloaderView',
+            'value' => 0,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'arcView',
+            'value' => 0,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'donateEmail',
+            'value' => 'mubeenullah323@gmail.com',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'donateFirstAmount',
+            'value' => 5,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'donateSecondAmount',
+            'value' => 10,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'donateThirdAmount',
+            'value' => 20,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'messageTitle',
+            'value' => 'About',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'messageText',
+            'value' => '',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'messageIcon',
+            'value' => 'fas fa-hand-holding-usd',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'embedTitle',
+            'value' => 'Nexus',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'embedText',
+            'value' => 'We are an online platform to help users around the world connect through NamelessMC powered forums.',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'embedColor',
+            'value' => '#46d0e6',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'embedIcon',
+            'value' => 'https://i.imgur.com/e6YHD.gif',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'minecraftDomain',
+            'value' => 'game.mc-tensa.com',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'minecraftIP',
+            'value' => 'tensa.co.ua',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'minecraftPort',
+            'value' => 25565,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'minecraftStyle',
+            'value' => 0,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'discordView',
+            'value' => 1,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'discordID',
+            'value' => 760945720470667294,
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'preloaderText',
+            'value' => 'Wait',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'preloaderColor',
+            'value' => 'red',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'preloaderSpeed',
+            'value' => 'slow',
+          ));
+          $queries->create('nexus_settings', array(
+            'name' => 'preloaderStyle',
+            'value' => 'normal',
+          ));
+        } catch (Exception $e) {
+          // Error
+        }
 
-        // INSERT INTO `nl2_nexus_settings` (`id`, `name`, `value`) VALUES
-        // (1, 'darkMode', '1'),
-        // (2, 'colorsStyle', '0'),
-        // (3, 'footerAbout', 'We are an online platform to help users around the world connect through NamelessMC powered forums.'),
-        // (4, 'customCSS', ''),
-        // (5, 'customJS', ''),
-        // (6, 'navbarLogo', 'https://namelessmc.com/uploads/resources_icons/162.png'),
-        // (7, 'navbarSticky', '0'),
-        // (8, 'navbarStyle', '0'),
-        // (9, 'minecraftView', '1'),
-        // (10, 'preloaderView', '0'),
-        // (11, 'arcView', '0'),
-        // (12, 'donateEmail', 'mubeenullah323@gmail.com'),
-        // (13, 'donateFirstAmount', '5'),
-        // (14, 'donateSecondAmount', '10'),
-        // (15, 'donateThirdAmount', '20'),
-        // (16, 'messageTitle', 'About'),
-        // (17, 'messageText', ''),
-        // (18, 'messageIcon', 'fas fa-hand-holding-usd'),
-        // (19, 'embedTitle', 'Nexus'),
-        // (20, 'embedText', 'We are an online platform to help users around the world connect through NamelessMC powered forums.'),
-        // (21, 'embedColor', '#46d0e6'),
-        // (22, 'embedIcon', 'https://i.imgur.com/e6YHD.gif'),
-        // (23, 'embedKeywords', ''),
-        // (24, 'minecraftDomain', 'game.mc-tensa.com'),
-        // (25, 'minecraftIP', '95.217.119.207'),
-        // (26, 'minecraftPort', '25565'),
-        // (27, 'minecraftStyle', '0'),
-        // (28, 'discordView', '1'),
-        // (29, 'discordID', '760945720470667294'),
-        // (30, 'preloaderText', ''),
-        // (31, 'preloaderColor', 'red'),
-        // (32, 'preloaderSpeed', 'slow'),
-        // (33, 'preloaderStyle', 'normal');
     }
 }
