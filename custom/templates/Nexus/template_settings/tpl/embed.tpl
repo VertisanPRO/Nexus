@@ -9,7 +9,7 @@
                             class="fas fa-question-circle" data-container="body" data-toggle="popover"
                             data-placement="top" data-content="{$EMBEDTITLE_INFO_LABEL}"
                             data-original-title="{$INFO}"></i></span></label>
-                <input type="text" name="embedTitle" class="form-control" id="inputEmbedTitle" placeholder="{$TITLE}"
+                <input type="text" name="embedTitle" class="form-control" id="inputEmbedTitle" placeholder="{$smarty.const.SITE_NAME}"
                     value="{$EMBEDTITLE}">
             </div>
             <div class="form-group">

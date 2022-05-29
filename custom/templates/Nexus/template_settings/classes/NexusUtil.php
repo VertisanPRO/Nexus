@@ -66,6 +66,11 @@ class NexusUtil {
 
     public static function initialise() {
         $queries = new Queries();
+
+        if ($queries->tableExists('nexus_settings')) {
+            return;
+        }
+
         try {
             $group = $queries->getWhere('groups', ['id', '=', 2]);
             $group = $group[0];

@@ -1,6 +1,8 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
+<h2 class="ui header" style="visibility: hidden;">FOR SPACING</h2>
+
 {if isset($HOME_SESSION_FLASH)}
 <div class="ui success icon message">
     <i class="check icon"></i>
