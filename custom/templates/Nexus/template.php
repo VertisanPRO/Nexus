@@ -157,6 +157,18 @@ class Nexus_Template extends TemplateBase {
         }
 
         require_once('template_settings/frontend.php');
+
+
+    // require_once(ROOT_PATH . '/modules/McTrade/widgets/McTradeBalance.php');
+    // $module_pages = $widgets->getPages('McTradeBalance');
+    // $McTradeLanguage = $this->_McTradeLanguage;
+    // $McTradeBalance = new McTradeBalance($module_pages, $smarty, $cache, $user, $McTradeLanguage);
+    // $widgets->add($McTradeBalance);
+
+    // require_once ROOT_PATH . '/modules/DemoModule/widgets/DemoWidget.php';
+    // $widget_pages = $widgets->getPages('Demo Widget');
+    // $demo_widget = new Demo_Widget($widget_pages);
+    // $widgets->add($demo_widget);
     }
 }
 
