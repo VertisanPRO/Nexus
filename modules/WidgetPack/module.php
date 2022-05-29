@@ -44,7 +44,7 @@ class WidgetPack_Module extends Module
     // Not necessary
   }
 
-  public function onPageLoad($user, $pages, $cache, $smarty, $navs, $widgets, $template)
+  public function onPageLoad(User $user, Pages $pages, Cache $cache, Smarty $smarty, $navs, Widgets $widgets, ?TemplateBase $template)
   {
 
 
@@ -67,7 +67,20 @@ class WidgetPack_Module extends Module
 
         $navs[2]->addItemToDropdown('widget_pack_configuration', 'widget_pack_settings', $this->_widget_language->get('general', 'widget_pack_settings'), URL::build('/panel/widget-pack/settings'), 'top', $order, $dba_icon);
       }
+    }
 
+
+    if (defined('FRONT_END') || (defined('PANEL_PAGE') && str_contains(PANEL_PAGE, 'widget'))) {
+
+      $widgets_pack = scandir(ROOT_PATH . "/modules/WidgetPack/widgets/");
+      foreach ($widgets_pack as $value) {
+        if ($value == '..' or $value == '.') {
+          continue;
+        }
+        $class = basename($value, '.php');
+        require_once(ROOT_PATH . "/modules/WidgetPack/widgets/{$value}");
+        $widgets->add(new $class($smarty));
+      }
     }
   }
 
