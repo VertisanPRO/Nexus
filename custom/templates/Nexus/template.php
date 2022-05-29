@@ -56,12 +56,6 @@ class Nexus_Template extends TemplateBase {
             $template['path'] . 'js/nexus.js?v=1.7.0' => [],
         ]);
 
-        // Caches
-            include 'template_settings/includes/caches.php';
-
-        // Functions
-            include 'template_settings/includes/functions.php';
-
         $smarty->assign('TEMPLATE', $template);
 
         // Other variables
@@ -97,9 +91,11 @@ class Nexus_Template extends TemplateBase {
     }
 
     public function onPageLoad() {
+        $page_load = microtime(true) - PAGE_START_TIME;
+        define('PAGE_LOAD_TIME', $this->_language->get('general', 'page_loaded_in', ['time' => round($page_load, 3)]));
 
         $this->addCSSFiles([
-            $this->_template['path'] . 'css/custom.css?v=2pr12' => []
+            $this->_template['path'] . 'css/custom.css?v=2pr13' => []
         ]);
 
         $route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
@@ -120,6 +116,8 @@ class Nexus_Template extends TemplateBase {
             'newAlertsX' => $this->_language->get('user', 'x_new_alerts'),
             'bungeeInstance' => $this->_language->get('general', 'bungee_instance'),
             'andMoreX' => $this->_language->get('general', 'and_x_more'),
+            'onePlayerOnline' => $this->_language->get('general', 'currently_1_player_online'),
+            'xPlayersOnline' => $this->_language->get('general', 'currently_x_players_online'),
             'noPlayersOnline' => $this->_language->get('general', 'no_players_online'),
             'offline' => $this->_language->get('general', 'offline'),
             'confirmDelete' => $this->_language->get('general', 'confirm_deletion'),

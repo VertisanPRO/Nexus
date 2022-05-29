@@ -27,8 +27,7 @@
             </div>
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
-                <button type="submit" class="btn btn-primary w-100"><i
-                        class="fas fa-save"></i>
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
                     {$SUBMIT}</button>
             </div>
         </form>
@@ -57,8 +56,7 @@
             </div>
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
-                <button type="submit" class="btn btn-primary w-100"><i
-                        class="fas fa-save"></i>
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
                     {$SUBMIT}</button>
             </div>
         </form>

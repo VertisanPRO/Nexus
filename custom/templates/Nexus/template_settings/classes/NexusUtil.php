@@ -98,48 +98,64 @@ class NexusUtil {
             // Error
         }
 
-        $settings_data = array(
-          'darkMode' => 1,
-          'colorsStyle' => 0,
-          'footerAbout' => 'We are an online platform to help users around the world connect through NamelessMC powered forums.',
-          'navbarLogo' => 'https://namelessmc.com/uploads/resources_icons/162.png',
-          'navbarSticky' => 0,
-          'navbarStyle' => 0,
-          'minecraftView' => 1,
-          'preloaderView' => 0,
-          'arcView' => 0,
-          'donateEmail' => 'mubeenullah323@gmail.com',
-          'donateFirstAmount' => 5,
-          'donateSecondAmount' => 10,
-          'donateThirdAmount' => 20,
-          'messageTitle' => 'About',
-          'messageText' => 'Nexus template by Vertisan',
-          'messageIcon' => 'fas fa-hand-holding-usd',
-          'embedTitle' => 'Nexus',
-          'embedText' => 'We are an online platform to help users around the world connect through NamelessMC powered forums.',
-          'embedColor' => '#46d0e6',
-          'embedIcon' => 'https://i.imgur.com/e6YHD.gif',
-          'minecraftDomain' => 'tensa.co.ua',
-          'minecraftIP' => 'tensa.co.ua',
-          'minecraftPort' => 25565,
-          'minecraftStyle' => 0,
-          'discordView' => 1,
-          'discordID' => 760945720470667294,
-          'preloaderText' => 'Wait',
-          'preloaderColor' => 'red',
-          'preloaderSpeed' => 'slow',
-          'preloaderStyle' => 'normal',
-        );
+        $settings_data = [
+            'footerAbout' => 'We are an online platform to help users around the world connect through NamelessMC powered forums.',
+            'customCSS' => '',
+            'customJS' => '',
+            'darkMode' => 1,
+            'colorsStyle' => 0,
+            'primaryColor' => '#dc3545',
+            'navbarColor' => '#000000',
+            'footerColor' => '#000000',
+            'outlineColor' => '#000000',
+            'navbarTextColor' => 0,
+            'navbarLogo' => 'https://namelessmc.com/uploads/resources_icons/162.png',
+            'navbarSticky' => 0,
+            'navbarStyle' => 0,
+            'discordView' => 1,
+            'discordID' => 760945720470667294,
+            'minecraftView' => 1,
+            'minecraftDomain' => 'tensa.co.ua',
+            'minecraftIP' => 'tensa.co.ua',
+            'minecraftPort' => 25565,
+            'minecraftStyle' => 0,
+            'preloaderView' => 0,
+            'preloaderText' => 'Loading...',
+            'preloaderColor' => 'red',
+            'preloaderSpeed' => normal,
+            'preloaderStyle' => normal,
+            'widgetBotView' => 0,
+            'widgetBotServerID' => '760945720470667294',
+            'widgetBotChannelID' => '760945722559299668',
+            'widgetBotVerticalLocation' => bottom,
+            'widgetBotHorizontalLocation' => right,
+            'widgetBotColor' => 1,
+            'widgetBotCustomColor' => '#dc3545',
+            'arcView' => 0,
+            'arcURL' => 'https://arc.io/widget.min.js#9YB4rHQn',
+            'donateEmail' => 'mubeenullah323@gmail.com',
+            'donateFirstAmount' => 5,
+            'donateSecondAmount' => 10,
+            'donateThirdAmount' => 20,
+            'messageTitle' => 'About',
+            'messageText' => 'Nexus template by Vertisan',
+            'messageIcon' => 'fa-solid fa-address-card',
+            'embedTitle' => 'Nexus',
+            'embedText' => 'We are an online platform to help users around the world connect through NamelessMC powered forums.',
+            'embedColor' => '#dc3545',
+            'embedIcon' => 'https://i.imgur.com/e6YHD.gif',
+            'embedKeywords' => ''
+        ];
 
         foreach ($settings_data as $key => $value) {
-          try {
-            $queries->create('nexus_settings', array(
-              'name' => $key,
-              'value' => $value,
-            ));
-          } catch (Exception $e) {
-            // Error
-          }
+            try {
+                $queries->create('nexus_settings', [
+                    'name' => $key,
+                    'value' => $value,
+                ]);
+            } catch (Exception $e) {
+                // Error
+            }
         }
     }
 }
