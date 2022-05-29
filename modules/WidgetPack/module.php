@@ -18,7 +18,7 @@ class WidgetPack_Module extends Module
     parent::__construct($this, $name, $author, $module_version, $nameless_version);
 
 
-    // $pages->add($name, '/wigget-pack', 'pages/panel/wigget_pack.php');
+    $pages->add($name, '/panel/widget-pack', 'pages/panel/wigget_pack.php');
 
   }
 
@@ -49,29 +49,20 @@ class WidgetPack_Module extends Module
 
 
     if (defined('BACK_END')) {
-      $cache->setCache('panel_sidebar');
-
       PermissionHandler::registerPermissions('WidgetPack', array(
         'widget_pack.manage' => $this->_widget_language->get('general', 'widget_pack_manage_perm'),
       ));
 
       $order = end($navs[2]->returnNav())['order'] + 5.5;
       $navs[2]->add('widget_pack_divider', mb_strtoupper($this->_widget_language->get('general', 'widget_pack_module'), 'UTF-8'), 'divider', 'top', null, $order, '');
-      $module_icon = '<i class="nav-icon fas fa-tasks"></i>';
-      $navs[2]->addDropdown('widget_pack_configuration', $this->_widget_language->get('general', 'widget_pack_module'), 'top', $order + 0.1, $module_icon);
-
-
-      if ($user->hasPermission('widget_pack.manage')) {
-
-        $dba_icon = '<i class="nav-icon fas fa-user-plus"></i>';
-
-        $navs[2]->addItemToDropdown('widget_pack_configuration', 'widget_pack_settings', $this->_widget_language->get('general', 'widget_pack_settings'), URL::build('/panel/widget-pack/settings'), 'top', $order, $dba_icon);
-      }
+      $module_icon = '<i class="nav-icon fas fa-th fa-fw"></i>';
+      $navs[2]->add('widget_pack_widgets', $this->_widget_language->get('general', 'widget_pack_module'), URL::build('/panel/widget-pack'), 'top', null, $order + 0.1, $module_icon);
     }
 
 
     if (defined('FRONT_END') || (defined('PANEL_PAGE') && str_contains(PANEL_PAGE, 'widget'))) {
-
+      require_once(ROOT_PATH . "/modules/WidgetPack/classes/WPUtil.php");
+      $wpu = new WPUtil();
       $widgets_pack = scandir(ROOT_PATH . "/modules/WidgetPack/widgets/");
       foreach ($widgets_pack as $value) {
         if ($value == '..' or $value == '.') {
@@ -79,7 +70,7 @@ class WidgetPack_Module extends Module
         }
         $class = basename($value, '.php');
         require_once(ROOT_PATH . "/modules/WidgetPack/widgets/{$value}");
-        $widgets->add(new $class($smarty));
+        $widgets->add(new $class($smarty, $cache, $user, new Queries(), $wpu, $class));
       }
     }
   }
@@ -113,14 +104,11 @@ class WidgetPack_Module extends Module
       $prefix = 'nl2_';
     }
 
-    if (!$engine || is_array($engine))
-      $engine = 'InnoDB';
-
-    if (!$charset || is_array($charset))
-      $charset = 'latin1';
-
-    if (!$prefix || is_array($prefix))
-      $prefix = 'nl2_';
+    try {
+      $queries->createTable("widgets_pack", " `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) DEFAULT NULL, `data` text DEFAULT NULL, `type` int(11) NOT NULL DEFAULT '0', PRIMARY KEY (`id`)", "ENGINE=$engine DEFAULT CHARSET=$charset");
+    } catch (Exception $e) {
+      // Error
+    }
   }
 
   public function getDebugInfo(): array {

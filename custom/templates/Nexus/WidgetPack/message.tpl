@@ -1,33 +1,34 @@
 <!-- Widgets Content -->
-<div class="card mb-3">
-    <h3 class="card-header mb-3 text-center">WIDGETS_PAGE</h3>
-    <div class="card-body">
-        <h3 class="text-center">MESSAGEWIDGET_LABEL</h3>
-        <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="widgets" />
-            <div class="form-group">
-                <label for="messageTitle">MESSAGETITLE_LABEL</label>
-                <input type="text" class="form-control" id="inputMessageTitle" name="messageTitle" placeholder="About"
-                    value="MESSAGETITLE">
-            </div>
-            <div class="form-group">
-                <label for="messageText">MESSAGETEXT_LABEL</label>
-                <textarea type="text" class="form-control" id="inputMessageText" name="messageText"
-                    value="MESSAGETEXT"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="messageIcon">MESSAGEICON_LABEL <span class="badge badge-info">
-                        <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
-                            data-placement="top" data-content="MESSAGEICON_INFO_LABEL"
-                            data-original-title="INFO"></i>
-                    </span></label>
-                <input type="text" class="form-control" id="inputMessageIcon" name="messageIcon"
-                    placeholder="fas fa-hand-holding-usd" value="MESSAGEICON">
-            </div>
-            <div class="form-group">
-                <input type="hidden" name="token" value="TOKEN">
-                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>SUBMIT</button>
-            </div>
-        </form>
+<div class="ui fluid card" id="widget-latest-posts">
+  <div class="content">
+    <a class="ui {if isset($WIDGET_LABEL_COLOR)} {$WIDGET_LABEL_COLOR}{/if} ribbon label">
+      {if isset($MESSAGE_WIDGET_ICON)}
+        {$MESSAGE_WIDGET_ICON}
+      {else}
+        <i class="bullhorn icon"></i>
+      {/if}
+      {if isset($MESSAGE_WIDGET_TITLE)}
+        {$MESSAGE_WIDGET_TITLE}
+      {else}
+        Message Widget
+      {/if}
+    </a>
+    <div class="description">
+      <h3 style="margin-top: 10px;">
+        {if isset($MESSAGE_WIDGET_TITLE)}
+          {$MESSAGE_WIDGET_TITLE}
+        {else}
+          Nexus TextBox
+        {/if}
+      </h3>
+      <p>
+        {if isset($WIDGET_TEXT)}
+          {$WIDGET_TEXT}
+        {else}
+          Setup your custom text message in panel > Nexus > Widgets > Messages
+        {/if}
+      </p>
     </div>
+
+  </div>
 </div>
