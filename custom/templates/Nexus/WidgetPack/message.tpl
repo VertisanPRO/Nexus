@@ -2,36 +2,6 @@
 <div class="card mb-3">
     <h3 class="card-header mb-3 text-center">WIDGETS_PAGE</h3>
     <div class="card-body">
-        {* <h3 class="text-center">{$DONATEWIDGET_LABEL}</h3>
-        <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="widgets" />
-            <div class="form-group">
-                <label for="donateEmail">{$DONATEEMAIL_LABEL}</label>
-                <input type="text" class="form-control" id="inputDonateEmail" name="donateEmail"
-                    placeholder="mubeenullah323@gmail.com" value="{$DONATEEMAIL}">
-            </div>
-            <div class="form-group">
-                <label for="donateFirstAmount">{$DONATEFIRSTAMOUNT_LABEL}</label>
-                <input type="text" class="form-control" id="inputDonateFirstAmount" name="donateFirstAmount"
-                    placeholder="5" value="{$DONATEFIRSTAMOUNT}">
-            </div>
-            <div class="form-group">
-                <label for="donateSecondAmount">{$DONATESECONDAMOUNT_LABEL}</label>
-                <input type="text" class="form-control" id="inputDonateSecondAmount" name="donateSecondAmount"
-                    placeholder="10" value="{$DONATESECONDAMOUNT}">
-            </div>
-            <div class="form-group">
-                <label for="donateThirdAmount">{$DONATETHIRDAMOUNT_LABEL}</label>
-                <input type="text" class="form-control" id="inputDonateThirdAmount" name="donateThirdAmount"
-                    placeholder="20" value="{$DONATETHIRDAMOUNT}">
-            </div>
-            <div class="form-group">
-                <input type="hidden" name="token" value="{$TOKEN}">
-                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
-                    {$SUBMIT}</button>
-            </div>
-        </form>
-        <hr /> *}
         <h3 class="text-center">MESSAGEWIDGET_LABEL</h3>
         <form action="" method="POST">
             <input type="hidden" name="sel_btn_session" value="widgets" />
@@ -56,8 +26,7 @@
             </div>
             <div class="form-group">
                 <input type="hidden" name="token" value="TOKEN">
-                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
-                    SUBMIT</button>
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>SUBMIT</button>
             </div>
         </form>
     </div>

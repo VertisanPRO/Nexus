@@ -18,7 +18,6 @@ class Message extends WidgetBase {
     public function initialise(): void {
         // Generate HTML code for widget
         $this->_smarty->assign('LATEST_POSTS_ARRAY', ['sadas', 'asda']);
-
         $this->_content = $this->_smarty->fetch($this->_module . '/widgets/message.tpl');
 
     }
