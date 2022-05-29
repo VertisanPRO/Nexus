@@ -42,8 +42,8 @@
             </div>
             <div class="form-group">
                 <label for="messageText">{$MESSAGETEXT_LABEL}</label>
-                <textarea type="text" class="form-control" id="inputMessageText" name="messageText"
-                    value="{$MESSAGETEXT}"></textarea>
+                <textarea type="text" class="form-control" id="inputMessageText"
+                    name="messageText">{$MESSAGETEXT}</textarea>
             </div>
             <div class="form-group">
                 <label for="messageIcon">{$MESSAGEICON_LABEL} <span class="badge badge-info">
