@@ -16,19 +16,19 @@ require_once(ROOT_PATH . '/core/templates/backend_init.php');
 
 $smarty->assign(NexusUtil::getSettingsToSmarty());
 $smarty->assign([
-    'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
-    'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Nexus/template_settings/' . $template_file,
-    'SUBMIT' => $language->get('general', 'submit'),
-    'YES' => $language->get('general', 'yes'),
-    'NO' => $language->get('general', 'no'),
-    'BACK' => $language->get('general', 'back'),
-    'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
-    'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
-    'NAME' => $language->get('admin', 'name'),
-    'INFO' => $language->get('general', 'info'),
-    'ENABLED' => $language->get('admin', 'enabled'),
-    'DISABLED' => $language->get('admin', 'disabled'),
-
+    // NamelessMC
+        'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
+        'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Nexus/template_settings/' . $template_file,
+        'SUBMIT' => $language->get('general', 'submit'),
+        'YES' => $language->get('general', 'yes'),
+        'NO' => $language->get('general', 'no'),
+        'BACK' => $language->get('general', 'back'),
+        'ARE_YOU_SURE' => $language->get('general', 'are_you_sure'),
+        'CONFIRM_DELETE' => $language->get('general', 'confirm_delete'),
+        'NAME' => $language->get('admin', 'name'),
+        'INFO' => $language->get('general', 'info'),
+        'ENABLED' => $language->get('admin', 'enabled'),
+        'DISABLED' => $language->get('admin', 'disabled'),
 
     // Navigation
         'NAVIGATION' => NexusUtil::getLanguage('navigation', 'navigation'),
@@ -36,7 +36,7 @@ $smarty->assign([
         'COLORS_PAGE' => NexusUtil::getLanguage('navigation', 'colors_page'),
         'NAVBAR_PAGE' => NexusUtil::getLanguage('navigation', 'navbar_page'),
         'CONNECTIONS_PAGE' => NexusUtil::getLanguage('navigation', 'connections_page'),
-            'PRELOADER_PAGE' => NexusUtil::getLanguage('navigation', 'preloader_page'),
+        'PRELOADER_PAGE' => NexusUtil::getLanguage('navigation', 'preloader_page'),
         'ADDONS_PAGE' => NexusUtil::getLanguage('navigation', 'addons_page'),
         'WIDGETS_PAGE' => NexusUtil::getLanguage('navigation', 'widgets_page'),
         'EMBED_PAGE' => NexusUtil::getLanguage('navigation', 'embed_page'),
@@ -139,8 +139,8 @@ $smarty->assign([
         // WidgetBot
             'WIDGETBOT_LABEL' => NexusUtil::getLanguage('addons', 'widgetbot_label'),
             'WIDGETBOTVIEW_INFO_LABEL' => NexusUtil::getLanguage('addons', 'widgetbotview_info_label', [
-                        'WIDGETBOTLinkStart' => '<a href=\'https://add.widgetbot.io\' target=\'_blank\'>',
-                        'WIDGETBOTLinkEnd' => '</a>'
+                'widgetbotLinkStart' => '<a href=\'https://add.widgetbot.io\' target=\'_blank\'>',
+                'widgetbotLinkEnd' => '</a>'
             ]),
             'WIDGETBOTSERVERID_LABEL' => NexusUtil::getLanguage('addons', 'widgetbotserverid_label'),
             'WIDGETBOTSERVERID_INFO_LABEL' => NexusUtil::getLanguage('addons', 'widgetbotserverid_info_label', [

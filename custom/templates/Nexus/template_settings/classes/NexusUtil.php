@@ -68,7 +68,7 @@ class NexusUtil {
         $queries = new Queries();
 
         if ($queries->tableExists('nexus_settings')) {
-          return;
+            return;
         }
 
         try {
