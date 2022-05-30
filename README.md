@@ -5,7 +5,44 @@ For better experience for installing Nexus, read "README.html"
 
 ## Features
 
-* Fill this later
+* ⚙️ Options
+  * 📜 About your website will be shown in footer
+  * 🛠️ Custom CSS & JS
+* 🌈 Colors
+  * ☯️ Darkmode by default
+  * 🛠️ Make your own colors or use pure white/dark mode
+    * Primary color
+    * Navbar color
+    * Footer color
+    * Border outline color
+    * Navbar text color
+* 🧭 Navbar
+  * 📷 Logo in the middle
+  * 🟩 Sticky navbar
+  * 😶 Navbar style
+    * Elegant
+    * Dynamic
+    * Modern
+* 📶 Connections
+  * 🪨 Minecraft
+  * 📱 Discord
+* 🔄 Preloader
+  * 📝 Text
+  * 🌈 Color
+  * 🚶 Speed
+  * 😶 Style
+* 🧩 Addons
+  * 🤖 [WidgetBot](https://widgetbot.io)
+  * 🔽 [Arc](https://arc.io)
+* 🕋 Widgets
+  * 💰 Donation widget
+  * 📝 Message widget
+* 🔗 Embed
+  * 📝 Title
+  * 📃 Description
+  * 🌈 Color
+  * 📷 Image
+  * 📰 Keywords
 
 ## Installing
 
