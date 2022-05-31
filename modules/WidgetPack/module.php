@@ -19,6 +19,7 @@ class WidgetPack_Module extends Module
 
 
     $pages->add($name, '/panel/widget-pack', 'pages/panel/wigget_pack.php');
+    $pages->add($name, '/panel/widget-pack/edit', 'pages/panel/widget_pack_edit.php');
 
   }
 
@@ -106,6 +107,9 @@ class WidgetPack_Module extends Module
 
     try {
       $queries->createTable("widgets_pack", " `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) DEFAULT NULL, `data` text DEFAULT NULL, `type` int(11) NOT NULL DEFAULT '0', PRIMARY KEY (`id`)", "ENGINE=$engine DEFAULT CHARSET=$charset");
+
+      require_once(ROOT_PATH . "/modules/WidgetPack/classes/WPUtil.php");
+      $wgpacks->updatePacks();
     } catch (Exception $e) {
       // Error
     }

@@ -23,6 +23,7 @@
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">{$WG_TITLE}</h1>
+            <form method="POST"><button type="submit" name="update_widgets_pack" class="btn btn-success">{$WG_UPDATE_LABEL}</button></form>
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
               <li class="breadcrumb-item active">{$WG_TITLE}</li>
@@ -45,11 +46,11 @@
                       {foreach from=$WGPACKS item=item name=wg}
                         <tr data-id="{$item->id}">
                           <td>
-                            <a href="">{$item->name}</a>
+                            <a href="{$EDIT_URL}?id={$item->id}">{$item->name}</a>
                           </td>
                           <td>
                             <div class="float-md-right">
-                              <a href="" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+                              <a href="{$EDIT_URL}?id={$item->id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
                             </div>
                           </td>
                         </tr>
