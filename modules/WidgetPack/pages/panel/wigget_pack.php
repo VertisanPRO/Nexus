@@ -44,12 +44,14 @@ if (Input::exists()) {
   }
 }
 
+
 $smarty->assign(
   array(
     'WG_TITLE' => $widget_language->get('general', 'widget_pack_module'),
     'WG_UPDATE_LABEL' => $widget_language->get('general', 'widget_pack_update_label'),
-    'WGPACKS' => $wgpacks->getAll(),
-    'EDIT_URL' => URL::build('/panel/widget-pack/edit/')
+    'WGPACKS' => $wgpacks->getAllWdgetsData(),
+    'EDIT_URL' => URL::build('/panel/widget-pack/edit/'),
+    'SETTING_URL' => URL::build('/panel/core/widgets/')
   )
 );
 

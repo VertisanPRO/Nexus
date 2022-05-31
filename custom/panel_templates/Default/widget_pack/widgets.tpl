@@ -44,13 +44,14 @@
                   <table class="table">
                     <tbody id="sortable">
                       {foreach from=$WGPACKS item=item name=wg}
-                        <tr data-id="{$item->id}">
+                        <tr data-id="{$item['pack']->id}">
                           <td>
-                            <a href="{$EDIT_URL}?id={$item->id}">{$item->name}</a>
+                            <a href="{$EDIT_URL}?id={$item['pack']->id}">{$item['pack']->name}</a>
                           </td>
                           <td>
                             <div class="float-md-right">
-                              <a href="{$EDIT_URL}?id={$item->id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+                              <a href="{$EDIT_URL}?id={$item['pack']->id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+                              <a href="{$SETTING_URL}?action=edit&w={$item['widget']->id}" class="btn btn-success btn-sm"><i class="fa-solid fa-gear"></i></a>
                             </div>
                           </td>
                         </tr>

@@ -36,8 +36,8 @@ class WPUtil
   {
     $wgs = $this->_queries->getWhere('widgets_pack', array('id', '<>', 0));
     foreach ($wgs as $key => $value) {
-      $resp = array(
-        'data' => $this->getWgData($value->name),
+      $resp[] = array(
+        'pack' => $this->getWgData($value->name),
         'widget' => end($this->_queries->getWhere('widgets', array('name', '=', $value->name)))
       );
     }
