@@ -47,6 +47,11 @@
                     value="{if isset($IFRAME_WIDGET_HEADER)}{$IFRAME_WIDGET_HEADER}{/if}" />
                 </div>
                 <div class="form-group">
+                  <label for="iframe_widget_header_url">{$I_WG_HEADER_URL_LABEL}</label>
+                  <input type="text" class="form-control" id="iframe_widget_header_url" name="iframe_widget_header_url"
+                    value="{if isset($IFRAME_WIDGET_HEADER_URL)}{$IFRAME_WIDGET_HEADER_URL}{/if}" />
+                </div>
+                <div class="form-group">
                   <label for="iframe_widget_url">{$I_WG_URL_LABEL}</label>
                   <input type="text" class="form-control" id="iframe_widget_url" name="iframe_widget_url"
                     value="{if isset($IFRAME_WIDGET_URL)}{$IFRAME_WIDGET_URL}{/if}" />

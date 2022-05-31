@@ -26,5 +26,6 @@
     "iframe/i_wg_label": "Iframe Widget",
     "iframe/i_wg_url_label": "Iframe Url",
     "iframe/i_wg_icon_label": "Iframe Icon",
-    "iframe/i_wg_header_label": "Iframe Header"
+    "iframe/i_wg_header_label": "Iframe Header",
+    "iframe/i_wg_header_url_label": "Iframe Header Url"
 }
