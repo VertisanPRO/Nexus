@@ -47,15 +47,9 @@
                     value="{if isset($IFRAME_WIDGET_HEADER)}{$IFRAME_WIDGET_HEADER}{/if}" />
                 </div>
                 <div class="form-group">
-                  <label for="iframe_widget_title">{$I_WG_TITLE_LABEL}</label>
-                  <input type="text" class="form-control" id="iframe_widget_title" name="iframe_widget_title"
-                    value="{if isset($IFRAME_WIDGET_TITLE)}{$IFRAME_WIDGET_TITLE}{/if}" />
-                </div>
-
-                <div class="form-group">
-                  <label for="iframe_widget_text">{$I_WG_TEXT_LABEL}</label>
-                  <textarea type="text" class="form-control" id="iframe_widget_text" name="iframe_widget_text" rows="6"
-                    style="height: 100%;">{if isset($IFRAME_WIDGET_TEXT)}{$IFRAME_WIDGET_TEXT}{/if}</textarea>
+                  <label for="iframe_widget_url">{$I_WG_URL_LABEL}</label>
+                  <input type="text" class="form-control" id="iframe_widget_url" name="iframe_widget_url"
+                    value="{if isset($IFRAME_WIDGET_URL)}{$IFRAME_WIDGET_URL}{/if}" />
                 </div>
 
                 <div class="form-group">

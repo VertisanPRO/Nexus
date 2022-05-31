@@ -142,7 +142,7 @@ class WPUtil
       return;
     }
     $widget_file = file_get_contents(ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/messages.tpl");
-    $widget_file = str_replace('MESSAGE', strtoupper($class_name), $widget_file);
+    $widget_file = str_replace('MESSAGES', strtoupper($class_name), $widget_file);
     $widget_tpl_content = str_replace('message', strtolower($class_name), $widget_file);
     $widget_tpl_save_path = ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/" . strtolower($class_name) . ".tpl";
     file_put_contents($widget_tpl_save_path, $widget_tpl_content);
