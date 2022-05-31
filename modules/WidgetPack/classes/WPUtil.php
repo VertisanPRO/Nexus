@@ -113,12 +113,41 @@ class WPUtil
     return self::$_widget_language->get($file, $term, $variables);
   }
 
+  // Remove Widget
+  public function removeWG($id)
+  {
+    $protect_wg = [
+      'Messages' => true,
+      'Donate' => true, 
+      'Iframe' => true, 
+    ];
+    $wg = end($this->_queries->getWhere('widgets_pack', array('id', '=', $id)));
+    if (empty($wg) or isset($protect_wg[$wg->name])) {
+      Session::flash('wg_packs_errors', "Widget {$wg->name} protected");
+      Redirect::to(URL::build('/panel/widget-pack'));
+      return;
+    }
+    unlink(ROOT_PATH . "/modules/WidgetPack/widgets/".ucfirst($wg->name).".php");
+    unlink(ROOT_PATH . "/custom/panel_templates/Default/widget_pack/widgets/".strtolower($wg->name).".tpl");
+    $template = end($this->_queries->getWhere('templates', array('is_default', '=', 1)));
+    if (empty($template)) {
+      $template = 'Nexus';
+    }
+    unlink(ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/".strtolower($wg->name).".tpl");
+    DB::getInstance()->delete('widgets_pack', ['id', $wg->id]);
+    $this->updatePacks();
+    Session::flash('wg_packs_success', "Widget {$wg->name} removed");
+    Redirect::to(URL::build('/panel/widget-pack'));
 
+  }
+
+
+  // Widget Generator
   public function generateNewWG($class_name)
   {
     // Generate widget class
     $class_file = file_get_contents(ROOT_PATH . "/modules/WidgetPack/widgets/Messages.php");
-    $class_name = ucfirst($class_name);
+    $class_name = str_replace(' ', '', ucfirst($class_name));
     $tpl_name = strtolower($class_name);
     $class_file = str_replace('Messages', $class_name, $class_file);
     $class_content = str_replace('messages', strtolower($tpl_name), $class_file);
@@ -139,7 +168,7 @@ class WPUtil
     // Generate widget tpl file
     $template = end($this->_queries->getWhere('templates', array('is_default', '=', 1)));
     if (empty($template)) {
-      return;
+      $template = 'Nexus';
     }
     $widget_file = file_get_contents(ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/messages.tpl");
     $widget_file = str_replace('MESSAGES', strtoupper($class_name), $widget_file);

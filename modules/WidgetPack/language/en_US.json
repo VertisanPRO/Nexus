@@ -3,6 +3,8 @@
     "general/widgets": "Widgets",
     "general/widget_pack_manage_perm": "WidgetPack admin permission",
     "general/widget_pack_update_label": "Update Widgets Pack",
+    "general/widget_pack_create_label": "Create New Widget",
+    "general/widget_pack_remove_label": "Are you sure? Once confirmed, the widget will be removed without the ability to restore it",
     "general/widget_pack_update_succses": "Widgets successfully updated",
     "general/widget_pack_edit_succses": "Widget successfully edited",
 

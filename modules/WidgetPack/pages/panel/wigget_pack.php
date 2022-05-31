@@ -1,7 +1,5 @@
 <?php
 
-use JetBrains\PhpStorm\Language;
-
 $page_title = $widget_language->get('general', 'widget_pack_module');
 
 
@@ -42,18 +40,26 @@ if (Input::exists()) {
     Session::flash('wg_packs_success', $widget_language->get('general', 'widget_pack_update_succses'));
     Redirect::to(URL::build('/panel/widget-pack'));
   }
+  if (isset($_POST['create_wg'])) {
+    $wgpacks->generateNewWG($_POST['class_name']);
+  }
+  if (isset($_POST['remove_wg'])) {
+    $wgpacks->removeWG($_POST['wg_id']);
+  }
 }
-
-$class_name = 'iframe';
-$wgpacks->generateNewWG($class_name);
 
 $smarty->assign(
   array(
     'WG_TITLE' => $widget_language->get('general', 'widget_pack_module'),
     'WG_UPDATE_LABEL' => $widget_language->get('general', 'widget_pack_update_label'),
+    'WG_CREATE_LABEL' => $widget_language->get('general', 'widget_pack_create_label'),
+    'WG_REMOVE_LABEL' => $widget_language->get('general', 'widget_pack_remove_label'),
     'WGPACKS' => $wgpacks->getAllWdgetsData(),
     'EDIT_URL' => URL::build('/panel/widget-pack/edit/'),
-    'SETTING_URL' => URL::build('/panel/core/widgets/')
+    'SETTING_URL' => URL::build('/panel/core/widgets/'),
+    'BACK_URL' => URL::build('/panel/widget-pack/'),
+    'SUBMIT' => $language->get('general', 'submit'),
+    'CLOSE' => $language->get('general', 'close'),
   )
 );
 
