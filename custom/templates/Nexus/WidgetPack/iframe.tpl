@@ -9,13 +9,11 @@
       {/if}
       {if isset($IFRAME_WG['iframe_widget_header'])}
         {$IFRAME_WG['iframe_widget_header']}
-      {else}
-        Message Widget
       {/if}
     </a>
     <div class="description">
-
+      <iframe title="{if isset($IFRAME_WG['iframe_widget_header'])}{$IFRAME_WG['iframe_widget_header']}{/if}" src="{if isset($IFRAME_WG['iframe_widget_url'])}{$IFRAME_WG['iframe_widget_url']}{/if}">
+      </iframe>
     </div>
-
   </div>
 </div>
