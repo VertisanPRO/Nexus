@@ -44,6 +44,8 @@ if (Input::exists()) {
   }
 }
 
+$class_name = 'iframe';
+$wgpacks->generateNewWG($class_name);
 
 $smarty->assign(
   array(

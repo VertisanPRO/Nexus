@@ -1,6 +1,6 @@
 <?php
 
-class Messages extends WidgetBase
+class Iframe extends WidgetBase
 {
   public function __construct(Smarty $smarty, Cache $cache, User $user, Queries $queries, WPUtil $wpu, $class_name)
   {
@@ -27,6 +27,6 @@ class Messages extends WidgetBase
   {
     // Generate HTML code for widget
     $this->_smarty->assign($this->_wg_name . '_WG', $this->_wpu->data);
-    $this->_content = $this->_smarty->fetch($this->_module . '/messages.tpl');
+    $this->_content = $this->_smarty->fetch($this->_module . '/iframe.tpl');
   }
 }

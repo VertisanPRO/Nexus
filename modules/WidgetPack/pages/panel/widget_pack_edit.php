@@ -69,7 +69,7 @@ $smarty->assign(array(
 
 
 
-$template_file = 'widget_pack\widgets\\' . $widget->name . '.tpl';
+$template_file = 'widget_pack\widgets\\' . strtolower($widget->name) . '.tpl';
 
 // Load modules + template
 Module::loadPage($user, $pages, $cache, $smarty, [$navigation, $cc_nav, $staffcp_nav], $widgets, $template);

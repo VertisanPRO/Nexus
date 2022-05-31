@@ -112,4 +112,55 @@ class WPUtil
     }
     return self::$_widget_language->get($file, $term, $variables);
   }
+
+
+  public function generateNewWG($class_name)
+  {
+    // Generate widget class
+    $class_file = file_get_contents(ROOT_PATH . "/modules/WidgetPack/widgets/Messages.php");
+    $class_name = ucfirst($class_name);
+    $tpl_name = strtolower($class_name);
+    $class_file = str_replace('Messages', $class_name, $class_file);
+    $class_content = str_replace('messages', strtolower($tpl_name), $class_file);
+    $class_file_save_path = ROOT_PATH . "/modules/WidgetPack/widgets/{$class_name}.php";
+    if (file_exists($class_file_save_path)) {
+      return;
+    }
+    file_put_contents($class_file_save_path, $class_content);
+
+    // Generate panel tpl file
+    $panel_file = file_get_contents(ROOT_PATH . "/custom/panel_templates/Default/widget_pack/widgets/messages.tpl");
+    $panel_file = str_replace('MESSAGE', strtoupper($class_name), $panel_file);
+    $panel_file = str_replace('message', strtolower($class_name), $panel_file);
+    $panel_tpl_content = str_replace('M_WG', strtoupper($class_name['0'] . '_WG'), $panel_file);
+    $panel_tpl_save_path = ROOT_PATH . "/custom/panel_templates/Default/widget_pack/widgets/" . strtolower($class_name) . ".tpl";
+    file_put_contents($panel_tpl_save_path, $panel_tpl_content);
+
+    // Generate widget tpl file
+    $template = end($this->_queries->getWhere('templates', array('is_default', '=', 1)));
+    if (empty($template)) {
+      return;
+    }
+    $widget_file = file_get_contents(ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/messages.tpl");
+    $widget_file = str_replace('MESSAGE', strtoupper($class_name), $widget_file);
+    $widget_tpl_content = str_replace('message', strtolower($class_name), $widget_file);
+    $widget_tpl_save_path = ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/" . strtolower($class_name) . ".tpl";
+    file_put_contents($widget_tpl_save_path, $widget_tpl_content);
+
+    $langs = json_decode(file_get_contents(ROOT_PATH . '/modules/WidgetPack/language/' . LANGUAGE . '.json'), true);
+    $langs["{$tpl_name}/{$tpl_name['0']}_wg_label"] = "{$class_name} Widget";
+    $langs["{$tpl_name}/{$tpl_name['0']}_wg_title_label"] = "{$class_name} Label";
+    $langs["{$tpl_name}/{$tpl_name['0']}_wg_text_label"] = "{$class_name} Text";
+    $langs["{$tpl_name}/{$tpl_name['0']}_wg_icon_label"] = "{$class_name} Icon";
+    $langs["{$tpl_name}/{$tpl_name['0']}_wg_header_label"] = "{$class_name} Header";
+    file_put_contents(ROOT_PATH . '/modules/WidgetPack/language/' . LANGUAGE . '.json', json_encode($langs, JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT));
+
+
+    $this->updatePacks();
+    Session::flash('wg_packs_success', "Widget editing files:
+    <p>{$panel_tpl_save_path}</p>
+    <p>{$widget_tpl_save_path}</p>
+    ");
+    Redirect::to(URL::build('/panel/widget-pack'));
+  }
 }

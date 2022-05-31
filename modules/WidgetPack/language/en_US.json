@@ -1,27 +1,31 @@
 {
-  "general/widget_pack_module": "WidgetPack",
-  "general/widgets": "Widgets",
-  "general/widget_pack_manage_perm": "WidgetPack admin permission",
-  "general/widget_pack_update_label": "Update Widgets Pack",
-  "general/widget_pack_update_succses": "Widgets successfully updated",
-  "general/widget_pack_edit_succses": "Widget successfully edited",
-  
+    "general/widget_pack_module": "WidgetPack",
+    "general/widgets": "Widgets",
+    "general/widget_pack_manage_perm": "WidgetPack admin permission",
+    "general/widget_pack_update_label": "Update Widgets Pack",
+    "general/widget_pack_update_succses": "Widgets successfully updated",
+    "general/widget_pack_edit_succses": "Widget successfully edited",
 
 
-  "messages/m_wg_label": "Message Widget",
-  "messages/m_wg_title_label": "Message Label",
-  "messages/m_wg_text_label": "Message Text",
-  "messages/m_wg_icon_label": "Message Icon",
-  "messages/m_wg_header_label": "Message Header",
+    "messages/m_wg_label": "Message Widget",
+    "messages/m_wg_title_label": "Message Label",
+    "messages/m_wg_text_label": "Message Text",
+    "messages/m_wg_icon_label": "Message Icon",
+    "messages/m_wg_header_label": "Message Header",
 
 
-  "donate/d_wg_label": "Donate Widget",
-  "donate/d_title_label": "Donate Widget Title",
-  "donate/d_email_label": "PayPal email",
-  "donate/d_first_amount_label": "First amount",
-  "donate/d_second_amount_label": "Second amount",
-  "donate/d_third_amount_label": "Third amount",
-  "donate/d_wg_icon_label": "Donate Icon"
+    "donate/d_wg_label": "Donate Widget",
+    "donate/d_title_label": "Donate Widget Title",
+    "donate/d_email_label": "PayPal email",
+    "donate/d_first_amount_label": "First amount",
+    "donate/d_second_amount_label": "Second amount",
+    "donate/d_third_amount_label": "Third amount",
+    "donate/d_wg_icon_label": "Donate Icon",
+
+
+    "iframe/i_wg_label": "Iframe Widget",
+    "iframe/i_wg_title_label": "Iframe Label",
+    "iframe/i_wg_text_label": "Iframe Text",
+    "iframe/i_wg_icon_label": "Iframe Icon",
+    "iframe/i_wg_header_label": "Iframe Header"
 }
-
-
