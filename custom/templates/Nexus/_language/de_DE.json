@@ -68,7 +68,7 @@
     "preloader/preloaderview_info_label": "Wenn aktiviert, wird beim Laden der Website ein Ladebildschirm angezeigt.",
     "preloader/preloaderview_label": "Preloader",
     "widgets/donateemail_label": "Paypal Email",
-    "navbar/navbarstyle_label": "Navigationsstil",
+    "navbar/navbarstyle_label": "Navbar-Stil",
     "navigation/addons_page": "Addons",
     "navigation/colors_page": "Farben",
     "navigation/connections_page": "Verbindungen",
