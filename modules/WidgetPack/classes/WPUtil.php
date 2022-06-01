@@ -61,9 +61,14 @@ class WPUtil
   {
     $widgets_pack = scandir(ROOT_PATH . "/modules/WidgetPack/widgets/");
     $installed = $this->_queries->getWhere('widgets_pack', array('id', '<>', 0));
-    foreach ($installed as $key => $value) {
-      $installed_wg[$value->name] = true;
+    if (empty($installed)) {
+      $installed_wg = [];
+    } else {
+      foreach ($installed as $key => $value) {
+        $installed_wg[$value->name] = true;
+      }
     }
+
 
     foreach ($widgets_pack as $value) {
       if ($value == '..' or $value == '.') {
