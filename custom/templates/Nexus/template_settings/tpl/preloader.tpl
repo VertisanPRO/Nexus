@@ -52,8 +52,7 @@
                 <select id="inputPreloaderStyle" class="form-control mr-sm-2" name="preloaderStyle">
                     <option value="normal" {if $PRELOADERSTYLE eq 'normal' } selected{/if}>{$PRELOADER_NORMAL}</option>
                     <option value="double" {if $PRELOADERSTYLE eq 'double' } selected{/if}>{$PRELOADER_DOUBLE}</option>
-                    <option value="elastic" {if $PRELOADERSTYLE eq 'elastic' } selected{/if}>{$PRELOADER_ELASTIC}
-                    </option>
+                    <option value="elastic" {if $PRELOADERSTYLE eq 'elastic' } selected{/if}>{$PRELOADER_ELASTIC}</option>
                 </select>
             </div>
             {/if}

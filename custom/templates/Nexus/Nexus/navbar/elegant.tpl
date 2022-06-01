@@ -9,9 +9,7 @@
                 {/if}
                 {if $DISCORDVIEW eq '1'}
                 {if $MINECRAFTVIEW eq '1'}
-                &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 {/if}
                 {/if}
                 {if $MINECRAFTVIEW eq '1'}

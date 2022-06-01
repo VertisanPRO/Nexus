@@ -27,7 +27,8 @@
             </div>
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
-                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
+                <button type="submit" class="btn btn-primary w-100"><i
+                        class="fas fa-save"></i>
                     {$SUBMIT}</button>
             </div>
         </form>
@@ -42,8 +43,8 @@
             </div>
             <div class="form-group">
                 <label for="messageText">{$MESSAGETEXT_LABEL}</label>
-                <textarea type="text" class="form-control" id="inputMessageText"
-                    name="messageText">{$MESSAGETEXT}</textarea>
+                <textarea type="text" class="form-control" id="inputMessageText" name="messageText"
+                    value="{$MESSAGETEXT}"></textarea>
             </div>
             <div class="form-group">
                 <label for="messageIcon">{$MESSAGEICON_LABEL} <span class="badge badge-info">
@@ -56,7 +57,8 @@
             </div>
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
-                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
+                <button type="submit" class="btn btn-primary w-100"><i
+                        class="fas fa-save"></i>
                     {$SUBMIT}</button>
             </div>
         </form>

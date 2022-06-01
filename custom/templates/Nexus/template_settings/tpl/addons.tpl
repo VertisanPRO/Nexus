@@ -4,7 +4,7 @@
     <div class="card-body">
         <h3 class="text-center">{$WIDGETBOT_LABEL}</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="addons" />
+          <input type="hidden" name="sel_btn_session" value="addons" />
             <div class="form-group">
                 <label for="widgetBotView">{$WIDGETBOT_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
@@ -83,7 +83,7 @@
         <hr />
         <h3 class="text-center">{$ARC_LABEL}</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="addons" />
+        <input type="hidden" name="sel_btn_session" value="addons" />
             <div class="form-group">
                 <label for="arcView">{$ARC_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
