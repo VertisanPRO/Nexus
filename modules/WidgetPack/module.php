@@ -39,6 +39,7 @@ class WidgetPack_Module extends Module
     // Check if we need to initialise again
     $this->initialise();
     require_once(ROOT_PATH . "/modules/WidgetPack/classes/WPUtil.php");
+    $wgpacks = new WPUtil;
     $wgpacks->updatePacks();
   }
 
