@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 
 <body id="page-top">
-
+ 
   <!-- Wrapper -->
   <div id="wrapper">
 

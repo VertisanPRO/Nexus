@@ -29,7 +29,7 @@
               <li class="breadcrumb-item active">{$WG->name}</li>
             </ol>
           </div>
-
+ 
           <!-- Update Notification -->
           {include file='includes/update.tpl'}
 
