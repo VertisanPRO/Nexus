@@ -75,7 +75,7 @@ if (Session::exists('wg_packs_success'))
   $success = Session::flash('wg_packs_success');
 
 if (Session::exists('wg_packs_errors'))
-  $errors = Session::flash('wg_packs_errors');
+  $errors = [Session::flash('wg_packs_errors')];
 
 if (isset($success))
   $smarty->assign(array(
