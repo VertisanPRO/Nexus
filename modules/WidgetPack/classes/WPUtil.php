@@ -69,7 +69,6 @@ class WPUtil
       }
     }
 
-
     foreach ($widgets_pack as $value) {
       if ($value == '..' or $value == '.') {
         continue;
