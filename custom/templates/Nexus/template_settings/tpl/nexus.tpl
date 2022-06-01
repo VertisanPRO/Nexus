@@ -30,10 +30,6 @@
                 role="tabpanel" aria-labelledby="v-pills-addons-tab">
                 {include file="{$TPL_PATH}addons.tpl"}
             </div>
-            <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'widgets'}show active{/if}" id="v-pills-widgets"
-                role="tabpanel" aria-labelledby="v-pills-widgets-tab">
-                {include file="{$TPL_PATH}widgets.tpl"}
-            </div>
             <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'embed'}show active{/if}" id="v-pills-embed"
                 role="tabpanel" aria-labelledby="v-pills-embed-tab">
                 {include file="{$TPL_PATH}embed.tpl"}

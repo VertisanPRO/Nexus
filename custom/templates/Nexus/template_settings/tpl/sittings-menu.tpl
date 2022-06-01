@@ -20,9 +20,6 @@
             <a class="nav-link {if $TPL_NAME_SESSION eq 'addons'}active{/if}" id="v-pills-addons-tab" data-toggle="pill"
                 href="#v-pills-addons" role="tab" aria-controls="v-pills-addons" aria-selected="false"><i
                     class="fa-solid fa-puzzle-piece"></i> {$ADDONS_PAGE}</a>
-            <a class="nav-link {if $TPL_NAME_SESSION eq 'widgets'}active{/if}" id="v-pills-widgets-tab"
-                data-toggle="pill" href="#v-pills-widgets" role="tab" aria-controls="v-pills-widgets"
-                aria-selected="false"><i class="fa-solid fa-th-large"></i> {$WIDGETS_PAGE}</a>
             <a class="nav-link {if $TPL_NAME_SESSION eq 'embed'}active{/if}" id="v-pills-embed-tab" data-toggle="pill"
                 href="#v-pills-embed" role="tab" aria-controls="v-pills-embed" aria-selected="false"><i
                     class="fa-solid fa-link"></i>
