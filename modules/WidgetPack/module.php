@@ -38,6 +38,8 @@ class WidgetPack_Module extends Module
   {
     // Check if we need to initialise again
     $this->initialise();
+    require_once(ROOT_PATH . "/modules/WidgetPack/classes/WPUtil.php");
+    $wgpacks->updatePacks();
   }
 
   public function onDisable()
@@ -107,9 +109,6 @@ class WidgetPack_Module extends Module
 
     try {
       $queries->createTable("widgets_pack", " `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) DEFAULT NULL, `data` text DEFAULT NULL, `type` int(11) NOT NULL DEFAULT '0', PRIMARY KEY (`id`)", "ENGINE=$engine DEFAULT CHARSET=$charset");
-
-      require_once(ROOT_PATH . "/modules/WidgetPack/classes/WPUtil.php");
-      $wgpacks->updatePacks();
     } catch (Exception $e) {
       // Error
     }
