@@ -30,7 +30,7 @@ class Donate extends WidgetBase
     $this->_content = $this->_smarty->fetch($this->_module . '/donate.tpl');
   }
 
-  public function get($key, $default)
+  public function get($key, $default = '')
   {
     if (isset($this->_wpu->data[$key])) {
       return $this->_wpu->data[$key];
