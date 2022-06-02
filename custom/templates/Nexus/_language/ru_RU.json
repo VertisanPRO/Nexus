@@ -49,7 +49,7 @@
     "embed/embedcolor_label": "Цвет полоски панели",
     "embed/embedicon_info_label": "Напишите действительную ссылку с окончанием на {{typeCodeStart}}.png{{typeCodeEnd}}, {{typeCodeStart}}.jpeg{{typeCodeEnd}}, {{typeCodeStart}}.gif{{typeCodeEnd}}.",
     "embed/embedicon_label": "Картинка в панели",
-    "embed/embedkeywords_info_label": "Поисковики используют ключевые слова для лучших результатов поиска. Используйте {{keywordsCodeStart}},{{keywordsCodeEnd}} как разделитель, например: {{keywordsCodeStart}}mc, server, website{{keywordsCodeEnd}} & другое.",
+    "embed/embedkeywords_info_label": "Поисковики используют ключевые слова для лучших результатов поиска. Используйте {{keywordsCodeStart}},{{keywordsCodeEnd}} как разделитель, например: {{keywordsCodeStart}}майнкрафт, сервер, сайт{{keywordsCodeEnd}} & другое.",
     "embed/embedkeywords_label": "Ключевые слова",
     "embed/embedmessagepreview_label": "Это предпоказ!",
     "embed/embedpreview_label": "Предпросмотр панели",
