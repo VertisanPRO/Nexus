@@ -136,8 +136,10 @@ class WPUtil
     $template = end($this->_queries->getWhere('templates', array('is_default', '=', 1)));
     if (empty($template)) {
       $template = 'Nexus';
+    } else {
+      $template = $template->name;
     }
-    unlink(ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/".strtolower($wg->name).".tpl");
+    unlink(ROOT_PATH . "/custom/templates/{$template}/WidgetPack/".strtolower($wg->name).".tpl");
     DB::getInstance()->delete('widgets_pack', ['id', $wg->id]);
     $this->updatePacks();
     Session::flash('wg_packs_success', "Widget {$wg->name} removed");
@@ -173,11 +175,13 @@ class WPUtil
     $template = end($this->_queries->getWhere('templates', array('is_default', '=', 1)));
     if (empty($template)) {
       $template = 'Nexus';
+    } else {
+      $template = $template->name;
     }
-    $widget_file = file_get_contents(ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/messages.tpl");
+    $widget_file = file_get_contents(ROOT_PATH . "/custom/templates/{$template}/WidgetPack/messages.tpl");
     $widget_file = str_replace('MESSAGES', strtoupper($class_name), $widget_file);
     $widget_tpl_content = str_replace('message', strtolower($class_name), $widget_file);
-    $widget_tpl_save_path = ROOT_PATH . "/custom/templates/{$template->name}/WidgetPack/" . strtolower($class_name) . ".tpl";
+    $widget_tpl_save_path = ROOT_PATH . "/custom/templates/{$template}/WidgetPack/" . strtolower($class_name) . ".tpl";
     file_put_contents($widget_tpl_save_path, $widget_tpl_content);
 
     $langs = json_decode(file_get_contents(ROOT_PATH . '/modules/WidgetPack/language/' . LANGUAGE . '.json'), true);
