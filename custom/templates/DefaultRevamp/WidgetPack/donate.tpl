@@ -1,11 +1,7 @@
 <div class="ui fluid card" id="widget-latest-posts">
   <div class="content">
     <h4 class="ui header">
-      {if isset($DONATE_WG['donate_title_label'])}
-        {$DONATE_WG['donate_title_label']}
-      {else}
-        Donate
-      {/if}
+      {$DONATE_WG->get('donate_title_label', 'Donate')}
     </h4>
     </a>
     <div class="description">
@@ -20,21 +16,12 @@
 
               <div class="fixed-values mb-2">
                 <div class="mb-2" style="margin-top: 8px; margin-bottom: 8px;">Choose amount</div>
-                <a href="#" class="ui primary button"
-                  data-value="{if isset($DONATE_WG['donate_first_amount'])}{$DONATE_WG['donate_first_amount']}{else}5{/if}"
-                  style="padding: .78571429em 1.2em .78571429em;margin-bottom:15px;">{if
-                  isset($DONATE_WG['donate_first_amount'])}{$DONATE_WG['donate_first_amount']}{else}5
-                  {/if}€</a>
-                <a href="#" class="ui primary button"
-                  data-value="{if isset($DONATE_WG['donate_second_amount'])}{$DONATE_WG['donate_second_amount']}{else}10{/if}"
-                  style="padding: .78571429em 1.2em .78571429em;">{if
-                  isset($DONATE_WG['donate_second_amount'])}{$DONATE_WG['donate_second_amount']}{else}10
-                  {/if}€</a>
-                <a href="#" class="ui primary button"
-                  data-value="{if isset($DONATE_WG['donate_third_amount'])}{$DONATE_WG['donate_third_amount']}{else}20{/if}"
-                  style="padding: .78571429em 1.2em .78571429em;">{if
-                  isset($DONATE_WG['donate_third_amount'])}{$DONATE_WG['donate_third_amount']}{else}20
-                  {/if}€</a>
+                <a href="#" class="ui primary button" data-value="{$DONATE_WG->get('donate_first_amount', '5')}"
+                  style="padding: .78571429em 1.2em .78571429em;margin-bottom:15px;">{$DONATE_WG->get('donate_first_amount', '5')}€</a>
+                <a href="#" class="ui primary button" data-value="{$DONATE_WG->get('donate_second_amount', '10')}"
+                  style="padding: .78571429em 1.2em .78571429em;">{$DONATE_WG->get('donate_second_amount', '10')}€</a>
+                <a href="#" class="ui primary button" data-value="{$DONATE_WG->get('donate_third_amount', '20')}"
+                  style="padding: .78571429em 1.2em .78571429em;">{$DONATE_WG->get('donate_third_amount', '20')}€</a>
               </div>
 
 
@@ -61,7 +48,7 @@
               </div>
 
               <input type="hidden" name="business"
-                value="{if isset($DONATE_WG['donate_widget_email'])}{$DONATE_WG['donate_widget_email']}{else}lectrichost@gmail.com{/if}">
+                value="{$DONATE_WG->get('donate_widget_email', 'lectrichost@gmail.com')}">
               <input type="hidden" name="a3" value="10" id="a3">
               <input type="hidden" name="amount" value="10" id="amount">
               <input type="hidden" name="currency_code" value="EUR">

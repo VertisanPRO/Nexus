@@ -2,19 +2,13 @@
 <div class="ui fluid card" id="widget-latest-posts">
   <div class="content">
     <h4 class="ui header">
-      <a target="_blank"
-        href="{if isset($IFRAME_WG['iframe_widget_header_url'])}{$IFRAME_WG['iframe_widget_header_url']}{/if}">
-        {if isset($IFRAME_WG['iframe_widget_header'])}
-          {$IFRAME_WG['iframe_widget_header']}
-        {else}
-          Iframe Widget
-        {/if}
+      <a target="_blank" href="{$IFRAME_WG->get('iframe_widget_header_url', '#')}">
+        {$IFRAME_WG->get('iframe_widget_header', 'Iframe Widget')}
       </a>
     </h4>
     <div class="description">
-      <iframe style="width: 100%;"
-        title="{if isset($IFRAME_WG['iframe_widget_header'])}{$IFRAME_WG['iframe_widget_header']}{/if}"
-        src="{if isset($IFRAME_WG['iframe_widget_url'])}{$IFRAME_WG['iframe_widget_url']}{/if}">
+      <iframe style="width: 100%;" title="{$IFRAME_WG->get('iframe_widget_header', '#')}"
+        src="{$IFRAME_WG->get('iframe_widget_url', '#')}">
       </iframe>
     </div>
   </div>

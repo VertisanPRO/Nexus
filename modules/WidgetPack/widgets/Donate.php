@@ -26,7 +26,16 @@ class Donate extends WidgetBase
   public function initialise(): void
   {
     // Generate HTML code for widget
-    $this->_smarty->assign($this->_wg_name . '_WG', $this->_wpu->data);
+    $this->_smarty->assign($this->_wg_name . '_WG', $this);
     $this->_content = $this->_smarty->fetch($this->_module . '/donate.tpl');
+  }
+
+  public function get($key, $default)
+  {
+    if (isset($this->_wpu->data[$key])) {
+      return $this->_wpu->data[$key];
+    } else {
+      return $default;
+    }
   }
 }

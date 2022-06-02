@@ -1,25 +1,14 @@
 <!-- Widgets Content -->
 <div class="ui fluid card" id="widget-latest-posts">
   <div class="content">
-    <a target="_blank"
-      href="{if isset($IFRAME_WG['iframe_widget_header_url'])}{$IFRAME_WG['iframe_widget_header_url']}{/if}"
+    <a target="_blank" href="{$IFRAME_WG->get('iframe_widget_header_url', '#')}"
       class="ui {if isset($WIDGET_LABEL_COLOR)} {$WIDGET_LABEL_COLOR}{/if} ribbon label">
-      {if isset($IFRAME_WG['iframe_widget_icon'])}
-        {$IFRAME_WG['iframe_widget_icon']}
-      {else}
-        <i class="bullhorn icon"></i>
-      {/if}
-      {if isset($IFRAME_WG['iframe_widget_header'])}
-        {$IFRAME_WG['iframe_widget_header']}
-      {else}
-        Iframe Widget
-      {/if}
+      {$IFRAME_WG->get('iframe_widget_icon', '<i class="bullhorn icon"></i>')}
+      {$IFRAME_WG->get('iframe_widget_header', 'Iframe Widget')}
     </a>
     <div class="description">
-      <iframe style="width: 100%;"
-        title="{if isset($IFRAME_WG['iframe_widget_header'])}{$IFRAME_WG['iframe_widget_header']}{/if}"
-        src="{if isset($IFRAME_WG['iframe_widget_url'])}{$IFRAME_WG['iframe_widget_url']}{/if}">
-      </iframe>
+      <iframe style="width: 100%;" title="{$IFRAME_WG->get('iframe_widget_header', '#')}"
+        src="{$IFRAME_WG->get('iframe_widget_url', '#')}"></iframe>
     </div>
   </div>
 </div>
