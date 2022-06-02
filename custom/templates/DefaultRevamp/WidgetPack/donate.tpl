@@ -1,16 +1,12 @@
 <div class="ui fluid card" id="widget-latest-posts">
   <div class="content">
-    <a class="ui {if isset($WIDGET_LABEL_COLOR)} {$WIDGET_LABEL_COLOR}{/if} ribbon label">
-      {if isset($DONATE_WG['donate_widget_icon'])}
-        {$DONATE_WG['donate_widget_icon']}
-      {else}
-        <i class="fas fa-donate"></i>
-      {/if}
+    <h4 class="ui header">
       {if isset($DONATE_WG['donate_title_label'])}
         {$DONATE_WG['donate_title_label']}
       {else}
         Donate
       {/if}
+    </h4>
     </a>
     <div class="description">
 
