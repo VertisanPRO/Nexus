@@ -44,7 +44,7 @@
                 <div class="form-group">
                   <label for="message_widget_header">{$M_WG_HEADER_LABEL}</label>
                   <input type="text" class="form-control" id="message_widget_header" name="message_widget_header"
-                    value="{if isset($MESSAGE_WIDGET_TITLE)}{$MESSAGE_WIDGET_TITLE}{/if}" />
+                    value="{if isset($MESSAGE_WIDGET_HEADER)}{$MESSAGE_WIDGET_HEADER}{/if}" />
                 </div>
                 <div class="form-group">
                   <label for="message_widget_title">{$M_WG_TITLE_LABEL}</label>
