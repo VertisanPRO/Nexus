@@ -39,48 +39,33 @@
                             <!-- Success and Error Alerts -->
                             {include file='includes/alerts.tpl'}
 
-                            <h4 class="text-center">{$D_WG_LABEL}</h4>
+                            <h4 class="text-center">{$M_WG_LABEL}</h4>
                             <form action="" method="POST">
-
                                 <div class="form-group">
-                                    <label for="donate_title_label">{$D_TITLE_LABEL}</label>
-                                    <input type="text" class="form-control" id="donate_title_label"
-                                        name="donate_title_label"
-                                        value="{if isset($DONATE_TITLE_LABEL)}{$DONATE_TITLE_LABEL}{/if}" />
+                                    <label for="message_widget_header">{$M_WG_HEADER_LABEL}</label>
+                                    <input type="text" class="form-control" id="message_widget_header"
+                                        name="message_widget_header"
+                                        value="{if isset($MESSAGE_WIDGET_HEADER)}{$MESSAGE_WIDGET_HEADER}{/if}" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="donate_widget_email">{$D_EMAIL_LABEL}</label>
-                                    <input type="text" class="form-control" id="donate_widget_email"
-                                        name="donate_widget_email"
-                                        value="{if isset($DONATE_WIDGET_EMAIL)}{$DONATE_WIDGET_EMAIL}{/if}" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="donate_first_amount">{$D_FIRST_AMOUNT_LABEL}</label>
-                                    <input type="text" class="form-control" id="donate_first_amount"
-                                        name="donate_first_amount"
-                                        value="{if isset($DONATE_FIRST_AMOUNT)}{$DONATE_FIRST_AMOUNT}{/if}" />
+                                    <label for="message_widget_title">{$M_WG_TITLE_LABEL}</label>
+                                    <input type="text" class="form-control" id="message_widget_title"
+                                        name="message_widget_title"
+                                        value="{if isset($MESSAGE_WIDGET_TITLE)}{$MESSAGE_WIDGET_TITLE}{/if}" />
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="donate_second_amount">{$D_SECOND_AMOUNT_LABEL}</label>
-                                    <input type="text" class="form-control" id="donate_second_amount"
-                                        name="donate_second_amount"
-                                        value="{if isset($DONATE_SECOND_AMOUNT)}{$DONATE_SECOND_AMOUNT}{/if}" />
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="donate_third_amount">{$D_THIRD_AMOUNT_LABEL}</label>
-                                    <input type="text" class="form-control" id="donate_third_amount"
-                                        name="donate_third_amount"
-                                        value="{if isset($DONATE_THIRD_AMOUNT)}{$DONATE_THIRD_AMOUNT}{/if}" />
+                                    <label for="message_widget_text">{$M_WG_TEXT_LABEL}</label>
+                                    <textarea type="text" class="form-control" id="message_widget_text"
+                                        name="message_widget_text" rows="6"
+                                        style="height: 100%;">{if isset($MESSAGE_WIDGET_TEXT)}{$MESSAGE_WIDGET_TEXT}{/if}</textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="donate_widget_icon">{$D_WG_ICON_LABEL}</label>
-                                    <input type="text" class="form-control" id="donate_widget_icon"
-                                        name="donate_widget_icon" placeholder='<i class="fas fa-hand-holding-usd"></i>'
-                                        value="{if isset($DONATE_WIDGET_ICON)}{$DONATE_WIDGET_ICON|escape:'html'}{/if}" />
+                                    <label for="message_widget_icon">{$M_WG_ICON_LABEL}</label>
+                                    <input type="text" class="form-control" id="message_widget_icon"
+                                        name="message_widget_icon" placeholder='<i class="fas fa-hand-holding-usd"></i>'
+                                        value="{if isset($MESSAGE_WIDGET_ICON)}{$MESSAGE_WIDGET_ICON|escape:'html'}{/if}" />
                                 </div>
 
                                 <div class="form-group">

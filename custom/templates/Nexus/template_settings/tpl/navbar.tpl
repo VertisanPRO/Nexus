@@ -14,13 +14,13 @@
                     placeholder="https://example.com/img/logo.png" value="{$NAVBARLOGO}">
             </div>
             {if $NAVBARSTYLE != '2'}
-            <div class="form-group">
-                <label for="navbarSticky">{$NAVBARSTICKY_LABEL}</label>
-                <select id="inputNavbarSticky" class="form-control mr-sm-2" name="navbarSticky">
-                    <option value="0" {if $NAVBARSTICKY eq '0' } selected{/if}>{$DISABLED}</option>
-                    <option value="1" {if $NAVBARSTICKY eq '1' } selected{/if}>{$ENABLED}</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label for="navbarSticky">{$NAVBARSTICKY_LABEL}</label>
+                    <select id="inputNavbarSticky" class="form-control mr-sm-2" name="navbarSticky">
+                        <option value="0" {if $NAVBARSTICKY eq '0' } selected{/if}>{$DISABLED}</option>
+                        <option value="1" {if $NAVBARSTICKY eq '1' } selected{/if}>{$ENABLED}</option>
+                    </select>
+                </div>
             {/if}
             <div class="form-group">
                 <label for="navbarStyle">{$NAVBARSTYLE_LABEL} <span class="badge badge-info">
@@ -36,8 +36,7 @@
             </div>
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
-                <button type="submit" class="btn btn-primary w-100"><i
-                        class="fas fa-save"></i>
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
                     {$SUBMIT}</button>
             </div>
         </form>

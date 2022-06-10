@@ -3,14 +3,14 @@
     <h3 class="card-header mb-3 text-center">{$EMBED_PAGE}</h3>
     <div class="card-body">
         <form action="" method="POST">
-        <input type="hidden" name="sel_btn_session" value="embed" />
+            <input type="hidden" name="sel_btn_session" value="embed" />
             <div class="form-group">
                 <label for="embedTitle">{$EMBEDTITLE_LABEL} <span class="badge badge-info"><i
                             class="fas fa-question-circle" data-container="body" data-toggle="popover"
                             data-placement="top" data-content="{$EMBEDTITLE_INFO_LABEL}"
                             data-original-title="{$INFO}"></i></span></label>
-                <input type="text" name="embedTitle" class="form-control" id="inputEmbedTitle" placeholder="{$smarty.const.SITE_NAME}"
-                    value="{$EMBEDTITLE}">
+                <input type="text" name="embedTitle" class="form-control" id="inputEmbedTitle"
+                    placeholder="{$smarty.const.SITE_NAME}" value="{$EMBEDTITLE}">
             </div>
             <div class="form-group">
                 <label for="embedText">{$EMBEDTEXT_LABEL}</label>
@@ -59,15 +59,15 @@
                         <p class="content">{$EMBEDMESSAGEPREVIEW_LABEL}</p>
                         <div class="embed-box">
                             {if $EMBEDTITLE eq '$every'}
-                            <p class="title link" onclick="window.open('/')">{$TITLE} &bull; {$smarty.const.SITE_NAME}</p>
+                                <p class="title link" onclick="window.open('/')">{$TITLE} &bull; {$smarty.const.SITE_NAME}
+                                </p>
                             {else}
-                            <p class="title link" onclick="window.open('/')">{$EMBEDTITLE}</p>
+                                <p class="title link" onclick="window.open('/')">{$EMBEDTITLE}</p>
                             {/if}
                             <p class="description">
                                 {$EMBEDTEXT}
                             </p>
-                            <img src="{$EMBEDICON}"
-                                alt="Error: Failed to load image" class="thumbnail-picture" />
+                            <img src="{$EMBEDICON}" alt="Error: Failed to load image" class="thumbnail-picture" />
                         </div>
                     </div>
                 </div>

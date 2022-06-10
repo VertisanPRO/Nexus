@@ -1,6 +1,6 @@
 <?php
 
-class Iframe extends WidgetBase {
+class Message extends WidgetBase {
 
     private string $_wg_name;
     /**
@@ -28,8 +28,11 @@ class Iframe extends WidgetBase {
         $this->_order = $widget_query->order ?? null;
     }
 
+    /**
+     * @throws SmartyException
+     */
     public function initialise(): void {
         $this->_smarty->assign($this->_wg_name . '_WG', $this->_wpu->data);
-        $this->_content = $this->_smarty->fetch($this->_module . '/iframe.tpl');
+        $this->_content = $this->_smarty->fetch($this->_module . '/message.tpl');
     }
 }

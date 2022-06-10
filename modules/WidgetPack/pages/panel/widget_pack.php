@@ -22,10 +22,6 @@ if ($user->isLoggedIn()) {
     die();
 }
 
-if (!isset($_GET['id'])) {
-    Redirect::to(URL::build('/panel/widget-pack'));
-}
-
 define('PAGE', 'panel');
 define('PARENT_PAGE', 'widget_pack_configuration');
 define('PANEL_PAGE', 'widget_pack_widgets');
@@ -34,37 +30,37 @@ require_once(ROOT_PATH . '/core/templates/backend_init.php');
 require_once(ROOT_PATH . "/modules/WidgetPack/classes/WPUtil.php");
 
 $wgpacks = new WPUtil();
-$widget = $wgpacks->getWgById($_GET['id']);
-
-foreach ($wgpacks->getWgData($widget->name)->data as $key => $value) {
-    $wg_data[strtoupper($key)] = $value;
-}
-
-$smarty->assign($wg_data);
 
 if (Input::exists()) {
-    if (Token::check()) {
-        if (isset($_POST['wg_save'])) {
-            $wgpacks->wgSaveData($_GET['id'], $_POST);
-            Session::flash('wg_packs_success', $widget_language->get('general', 'widget_pack_edit_success'));
-            Redirect::to(URL::build('/panel/widget-pack'));
-        }
+    if (isset($_POST['update_widgets_pack'])) {
+        $wgpacks->updatePacks();
+        Session::flash('wg_packs_success', $widget_language->get('general', 'widget_pack_update_success'));
+        Redirect::to(URL::build('/panel/widget-pack'));
+    }
+    if (isset($_POST['create_wg'])) {
+        $wgpacks->generateNewWG($_POST['class_name']);
+    }
+    if (isset($_POST['remove_wg'])) {
+        $wgpacks->removeWG($_POST['wg_id']);
     }
 }
-$smarty->assign(WPUtil::getWgLangsSection($widget->name));
 
 $smarty->assign([
     'WG_TITLE' => $widget_language->get('general', 'widget_pack_module'),
-    'WGPACKS' => $wgpacks->getAll(),
-    'BACK_URL' => URL::build('/panel/widget-pack'),
-    'WG' => $widget
+    'WG_UPDATE_LABEL' => $widget_language->get('general', 'widget_pack_update_label'),
+    'WG_CREATE_LABEL' => $widget_language->get('general', 'widget_pack_create_label'),
+    'WG_REMOVE_LABEL' => $widget_language->get('general', 'widget_pack_remove_label'),
+    'WGPACKS' => $wgpacks->getAllWidgetsData(),
+    'EDIT_URL' => URL::build('/panel/widget-pack/edit/'),
+    'SETTING_URL' => URL::build('/panel/core/widgets/'),
+    'BACK_URL' => URL::build('/panel/widget-pack/'),
+    'SUBMIT' => $language->get('general', 'submit'),
+    'CLOSE' => $language->get('general', 'close'),
 ]);
 
-$template_file = 'widget_pack/widgets/' . strtolower($widget->name) . '.tpl';
+$template_file = 'widget_pack/widgets.tpl';
 
 Module::loadPage($user, $pages, $cache, $smarty, [$navigation, $cc_nav, $staffcp_nav], $widgets, $template);
-$page_load = microtime(true) - $start;
-define('PAGE_LOAD_TIME', str_replace('{x}', round($page_load, 3), $language->get('general', 'page_loaded_in')));
 $template->onPageLoad();
 
 if (Session::exists('wg_packs_success'))
