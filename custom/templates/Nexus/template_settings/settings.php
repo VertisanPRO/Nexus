@@ -16,7 +16,7 @@ require_once(ROOT_PATH . '/core/templates/backend_init.php');
 
 $smarty->assign(NexusUtil::getSettingsToSmarty());
 $smarty->assign([
-    // NamelessMC
+    // Everything else
         'TPL_PATH' => ROOT_PATH . '/custom/templates/Nexus/template_settings/tpl/',
         'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Nexus/template_settings/' . $template_file,
         'SUBMIT' => $language->get('general', 'submit'),
@@ -29,6 +29,7 @@ $smarty->assign([
         'INFO' => $language->get('general', 'info'),
         'ENABLED' => $language->get('admin', 'enabled'),
         'DISABLED' => $language->get('admin', 'disabled'),
+        'NOTE' => NexusUtil::getLanguage('general', 'note'),
 
     // Navigation
         'NAVIGATION' => NexusUtil::getLanguage('navigation', 'navigation'),
@@ -44,8 +45,10 @@ $smarty->assign([
         'SUPPORT_PAGE' => NexusUtil::getLanguage('navigation', 'support_page'),
 
     // Options
-        'NOTE' => NexusUtil::getLanguage('options', 'note'),
-        'NOTE_REVIEW' => NexusUtil::getLanguage('options', 'note_review'),
+        'NOTE_REVIEW' => NexusUtil::getLanguage('options', 'note_review', [
+            'reviewLinkStart' => '<a class=\'text-success\' href=\'https://namelessmc.com/resources/resource/162\' target=\'_blank\'>',
+            'reviewLinkEnd' => '</a>'
+        ]),
         'FOOTERABOUT_LABEL' => NexusUtil::getLanguage('options', 'footerabout_label'),
         'FOOTERABOUT_PLACEHOLDER_LABEL' => NexusUtil::getLanguage('options', 'footerabout_placeholder_label'),
         'CUSTOMCSS_LABEL' => NexusUtil::getLanguage('options', 'customcss_label'),
@@ -176,24 +179,10 @@ $smarty->assign([
             'ARCURL_LABEL' => NexusUtil::getLanguage('addons', 'arcurl_label'),
 
     // Widgets
-        // Donation Widget
-            'DONATEWIDGET_LABEL' => NexusUtil::getLanguage('widgets', 'donatewidget_label'),
-            'DONATEEMAIL_LABEL' => NexusUtil::getLanguage('widgets', 'donateemail_label'),
-            'DONATEFIRSTAMOUNT_LABEL' => NexusUtil::getLanguage('widgets', 'donatefirstamount_label'),
-            'DONATESECONDAMOUNT_LABEL' => NexusUtil::getLanguage('widgets', 'donatesecondamount_label'),
-            'DONATETHIRDAMOUNT_LABEL' => NexusUtil::getLanguage('widgets', 'donatethirdamount_label'),
-
-        // Message Widget
-            'MESSAGEWIDGET_LABEL' => NexusUtil::getLanguage('widgets', 'messagewidget_label'),
-            'MESSAGETITLE_LABEL' => NexusUtil::getLanguage('widgets', 'messagetitle_label'),
-            'MESSAGETEXT_LABEL' => NexusUtil::getLanguage('widgets', 'messagetext_label'),
-            'MESSAGEICON_LABEL' => NexusUtil::getLanguage('widgets', 'messageicon_label'),
-            'MESSAGEICON_INFO_LABEL' => NexusUtil::getLanguage('widgets', 'messageicon_info_label', [
-                'fomanticLinkStart' => '<a href=\'https://fomantic-ui.com\' target=\'_blank\'>',
-                'fomanticLinkEnd' => '</a>',
-                'fontawesomeLinkStart' => '<a href=\'https://fontawesome.com\' target=\'_blank\'>',
-                'fontawesomeLinkEnd' => '</a>'
-            ]),
+        'NOTE_WIDGETS' => NexusUtil::getLanguage('widgets', 'note_widgets', [
+            'downloadLinkStart' => '<a class=\'text-success\' href=\'https://github.com/VertisanPRO/WidgetPack\' target=\'_blank\'>',
+            'downloadLinkEnd' => '</a>'
+        ]),
 
     // Embed
         'EMBEDTITLE_LABEL' => NexusUtil::getLanguage('embed', 'embedtitle_label'),

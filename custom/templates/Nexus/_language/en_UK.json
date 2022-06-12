@@ -1,4 +1,5 @@
 {
+    "general/note": "Note",
     "addons/arc_label": "Arc",
     "addons/arcurl_label": "Widget URL",
     "addons/arcview_info_label": "To enable Arc you need to {{registerLinkStart}}register{{registerLinkEnd}}. Then you need to add a website. Then you need to copy {{scriptLinkStart}}arc-sw.js{{scriptLinkEnd}} to your root website. Then you need scroll down to {{addwidgetCodeStart}}Add Arc's widget to your site{{addwidgetCodeEnd}} and copy the URL (not the whole thing). The last thing is to add the URL in the input below.",
@@ -83,8 +84,7 @@
     "options/customjs_label": "Custom JS",
     "options/footerabout_label": "About",
     "options/footerabout_placeholder_label": "write something about your website",
-    "options/note": "Note",
-    "options/note_review": "If you like the theme, we would appreciate getting a review <a class=\"text-secondary\" href=\"https:\/\/namelessmc.com\/resources\/resource\/162\">here<\/a>.",
+    "options/note_review": "If you like the theme, we would appreciate getting a review {{reviewLinkStart}}here{{reviewLinkEnd}}.",
     "preloader/preloader_black": "Black",
     "preloader/preloader_double": "Double",
     "preloader/preloader_elastic": "Elastic",
@@ -98,14 +98,5 @@
     "preloader/preloadertext_label": "Text",
     "preloader/preloaderview_info_label": "If enabled, a loading screen will show when loading the website.",
     "preloader/preloaderview_label": "Preloader",
-    "widgets/donateemail_label": "PayPal email",
-    "widgets/donatefirstamount_label": "First amount",
-    "widgets/donatesecondamount_label": "Second amount",
-    "widgets/donatethirdamount_label": "Third amount",
-    "widgets/donatewidget_label": "Donation widget",
-    "widgets/messageicon_info_label": "You need to paste what is in class. You can get icons from {{fomanticLinkStart}}Fomantic UI{{fomanticLinkEnd}} or {{fontawesomeLinkStart}}Font Awesome{{fontawesomeLinkEnd}}.",
-    "widgets/messageicon_label": "Widget icon",
-    "widgets/messagetext_label": "Widget text",
-    "widgets/messagetitle_label": "Widget title",
-    "widgets/messagewidget_label": "Message widget"
+    "widgets/note_widgets": "We don't provide widgets anymore. But we created a new module called {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}."
 }
