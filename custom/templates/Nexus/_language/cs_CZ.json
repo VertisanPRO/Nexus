@@ -76,7 +76,6 @@
     "options/customjs_info_label": "Sem můžete vložit váš JS.",
     "options/customjs_label": "Vlastní JS",
     "options/footerabout_label": "O šabloně",
-    "options/note": "Poznámka",
     "preloader/preloader_black": "Černý",
     "preloader/preloader_double": "Dvojitý",
     "preloader/preloader_fast": "Rychlý",
@@ -88,15 +87,10 @@
     "preloader/preloaderstyle_label": "Styl",
     "preloader/preloadertext_label": "Text",
     "preloader/preloaderview_label": "Ukazatel načítání",
-    "widgets/donateemail_label": "E-mail PayPal účtu",
     "widgets/donatefirstamount_label": "První množství",
-    "widgets/donatesecondamount_label": "Druhé množství",
     "widgets/donatethirdamount_label": "Třetí množství",
-    "widgets/donatewidget_label": "Widget přispění",
     "widgets/messageicon_label": "Ikona widgetu",
-    "widgets/messagetext_label": "Text widgetu",
     "widgets/messagetitle_label": "Nadpis widgetu",
-    "widgets/messagewidget_label": "Zpráva widgetu",
     "addons/arcview_info_label": "Pro povolení Arcu se musíte {{registerLinkStart}}zaregistrovat{{registerLinkEnd}} a poté přidat web. Následně musíte zkopírovat soubor {{scriptLinkStart}}arc-sw.js{{scriptLinkEnd}} do kořenového adresáře vaší instalace NamelessMC. Poté najděte oblast {{addwidgetCodeStart}}Add Arc's widget to your site{{addwidgetCodeEnd}} a zkopírujte URL (ne celý řádek). Nakonec musíte vložit URL do pole níže.",
     "colors/navbartextcolor_label": "Barva textu navigační lišty",
     "connections/discordid_info_label": "Pro získání ID serveru jděte do vašeho Discord serveru > Nastavení serveru > Widget > ID serveru > Kopírovat. Více informací lze nalézt {{moreinfoLinkStart}}zde{{moreinfoLinkEnd}}.",
@@ -106,6 +100,5 @@
     "options/footerabout_placeholder_label": "napište něco o vašem webu",
     "options/note_review": "Pokud se vám šablona líbí, budeme rádi za recenzi <a class=\"text-secondary\" href=\"https://namelessmc.com/resources/resource/162\">zde</a>.",
     "preloader/preloader_elastic": "Elastický",
-    "preloader/preloaderview_info_label": "Pokud je povoleno, zobrazí se při načítání webu načítací obrazovka.",
-    "widgets/messageicon_info_label": "Musíte vložit hodnotu z pole class. Ikony získáte na {{fomanticLinkStart}}Fomantic UI{{fomanticLinkEnd}} nebo {{fontawesomeLinkStart}}Font Awesome{{fontawesomeLinkEnd}}."
+    "preloader/preloaderview_info_label": "Pokud je povoleno, zobrazí se při načítání webu načítací obrazovka."
 }
