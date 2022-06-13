@@ -1,3 +1,4 @@
+{assign var="navbarexcludeexploded" value="/"|@explode:$NAVBAREXCLUDE}
 <div class="ui secondary small menu" id="navbar" style="background: transparent !important;">
     <a class="toc item">
         <i class="sidebar icon navbar-item"></i>
@@ -15,16 +16,20 @@
                             {if isset($dropdown.separator)}
                                 <div class="divider navbar-item"></div>
                             {else}
-                                <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
-                                    {$dropdown.title}</a>
+                                {if !in_array($dropdown.title, $navbarexcludeexploded)}
+                                    <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
+                                        {$dropdown.title}</a>
+                                {/if}
                             {/if}
                         {/foreach}
                     </div>
                 </div>
             {else}
-                <button class="ui grey tertiary button" onclick="location.href='{$item.link}'"
-                    style="cursor: pointer; color: rgba(255, 255, 255, 0.6);">{$item.icon}
-                    {$item.title}</button>
+                {if !in_array($item.title, $navbarexcludeexploded)}
+                    <button class="ui grey tertiary button" onclick="location.href='{$item.link}'"
+                        style="cursor: pointer; color: rgba(255, 255, 255, 0.6);">{$item.icon}
+                        {$item.title}</button>
+                {/if}
             {/if}
         {/foreach}
     </div>

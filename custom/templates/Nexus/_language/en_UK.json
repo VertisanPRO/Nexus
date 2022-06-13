@@ -64,6 +64,8 @@
     "navbar/navbarmodern_label": "Modern",
     "navbar/navbarlogo_info_label": "This is a logo in the middle of navbar.",
     "navbar/navbarlogo_label": "Logo URL",
+    "navbar/navbarexclude_label": "Exclude Links",
+    "navbar/navbarexclude_info_label": "Exclude specified links seperated with '/' from the navigation bar.",
     "navbar/navbarsticky_label": "Sticky navbar",
     "navbar/navbarstyle_info_label": "Elegant style has links at the top. Dynamic style has links below the banner.",
     "navbar/navbarstyle_label": "Navbar style",
