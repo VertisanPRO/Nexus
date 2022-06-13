@@ -88,7 +88,6 @@
     "preloader/preloader_elastic": "Elastisch",
     "preloader/preloader_fast": "Schnell",
     "preloader/preloader_normal": "Normal",
-    "widgets/donatewidget_label": "Spenden-Widget",
     "widgets/messagetitle_label": "Widget-Titel",
     "addons/arcview_info_label": "Um Arc zu aktivieren, musst du dich {{registerLinkStart}}registrieren{{registerLinkEnd}}. Dann musst du eine Website hinzufügen. Kopiere dann {{scriptLinkStart}}arc-sw.js{{scriptLinkEnd}} auf deine root website. Scrolle dann nach unten zu {{addwidgetCodeStart}}Arc's Widget zu Ihrer Website hinzufügen{{addwidgetCodeEnd}} und kopiere die URL (nicht den ganzen Text). Als Letztes fügst du die URL in die Eingabe unten ein.",
     "addons/widgetbotview_info_label": "Wenn es aktiviert ist, muss es konfiguriert werden. Es ist ein Widget, mit dem du auf der Website mit Discord chatten kannst. Stelle sicher, dass du {{widgetbotLinkStart}}den Bot{{widgetbotLinkEnd}} einlädst.",
