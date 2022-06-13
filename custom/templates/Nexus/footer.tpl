@@ -35,7 +35,7 @@
                 <div class="ui inverted link list">
                     {foreach from=$FOOTER_NAVIGATION key=name item=item}
                         {if isset($item.items)}
-                            <div class="ui pointing dropdown link item">
+                            <div class="ui dropdown item">
                                 <span class="text">{$item.icon} {$item.title}</span> <i class="dropdown icon"></i>
                                 <div class="menu">
                                     <div class="header">{$item.title}</div>
