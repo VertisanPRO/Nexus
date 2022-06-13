@@ -87,7 +87,6 @@
     "preloader/preloaderstyle_label": "Styl",
     "preloader/preloadertext_label": "Text",
     "preloader/preloaderview_label": "Ukazatel načítání",
-    "widgets/donatethirdamount_label": "Třetí množství",
     "widgets/messagetitle_label": "Nadpis widgetu",
     "addons/arcview_info_label": "Pro povolení Arcu se musíte {{registerLinkStart}}zaregistrovat{{registerLinkEnd}} a poté přidat web. Následně musíte zkopírovat soubor {{scriptLinkStart}}arc-sw.js{{scriptLinkEnd}} do kořenového adresáře vaší instalace NamelessMC. Poté najděte oblast {{addwidgetCodeStart}}Add Arc's widget to your site{{addwidgetCodeEnd}} a zkopírujte URL (ne celý řádek). Nakonec musíte vložit URL do pole níže.",
     "colors/navbartextcolor_label": "Barva textu navigační lišty",
