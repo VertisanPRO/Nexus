@@ -20,7 +20,7 @@
                             data-original-title="{$INFO}"></i>
                     </span></label>
                 <input type="text" class="form-control" id="inputNavbarExclude" name="navbarExclude"
-                    placeholder="Page1/Page2" value="{$NAVBAREXCLUDE}">
+                    placeholder="page1/page2" value="{$NAVBAREXCLUDE}">
             </div>
             {if $NAVBARSTYLE != '2'}
                 <div class="form-group">
