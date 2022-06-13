@@ -81,6 +81,8 @@ $smarty->assign([
     // Navbar
         'NAVBARLOGO_LABEL' => NexusUtil::getLanguage('navbar', 'navbarlogo_label'),
         'NAVBARLOGO_INFO_LABEL' => NexusUtil::getLanguage('navbar', 'navbarlogo_info_label'),
+        'NAVBAREXCLUDE_LABEL' => NexusUtil::getLanguage('navbar', 'navbarexclude_label'),
+        'NAVBAREXCLUDE_INFO_LABEL' => NexusUtil::getLanguage('navbar', 'navbarexclude_info_label'),
         'NAVBARSTICKY_LABEL' => NexusUtil::getLanguage('navbar', 'navbarsticky_label'),
         'NAVBARSTICKY_INFO_LABEL' => NexusUtil::getLanguage('navbar', 'navbarsticky_info_label'),
         'NAVBARSTYLE_LABEL' => NexusUtil::getLanguage('navbar', 'navbarstyle_label'),

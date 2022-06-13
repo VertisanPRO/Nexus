@@ -1,3 +1,4 @@
+{assign var="navbarexcludeexploded" value="/"|@explode:$NAVBAREXCLUDE}
 <div class="ui {if $NAVBARSTICKY eq '1'}sticky{/if} secondary small menu" id="navbar">
     <div class="ui container">
         {foreach from=$NAV_LINKS key=name item=item}
@@ -11,16 +12,20 @@
                             {if isset($dropdown.separator)}
                                 <div class="divider navbar-item"></div>
                             {else}
-                                <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
-                                    {$dropdown.title}</a>
+                                {if !in_array($dropdown.title, $navbarexcludeexploded)}
+                                    <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
+                                        {$dropdown.title}</a>
+                                {/if}
                             {/if}
                         {/foreach}
                     </div>
                 </div>
             {else}
-                <a class="item{if isset($item.active)} active{/if} navbar-item" href="{$item.link}"
-                    target="{$item.target}">{$item.icon}
-                    {$item.title}</a>
+                {if !in_array($item.title, $navbarexcludeexploded)}
+                    <a class="item{if isset($item.active)} active{/if} navbar-item" href="{$item.link}"
+                        target="{$item.target}">{$item.icon}
+                        {$item.title}</a>
+                {/if}
             {/if}
         {/foreach}
         <a class="toc item">

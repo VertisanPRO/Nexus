@@ -115,6 +115,7 @@ class NexusUtil
       'outlineColor' => '#000000',
       'navbarTextColor' => 0,
       'navbarLogo' => 'https://namelessmc.com/uploads/resources_icons/162.png',
+      'navbarExclude' => 'Page1/Page2',
       'navbarSticky' => 0,
       'navbarStyle' => 0,
       'discordView' => 1,

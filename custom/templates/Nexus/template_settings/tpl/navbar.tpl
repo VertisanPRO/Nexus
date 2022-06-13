@@ -13,6 +13,15 @@
                 <input type="text" class="form-control" id="inputNavbarLogo" name="navbarLogo"
                     placeholder="https://example.com/img/logo.png" value="{$NAVBARLOGO}">
             </div>
+            <div class="form-group">
+                <label for="navbarExclude">{$NAVBAREXCLUDE_LABEL} <span class="badge badge-info">
+                        <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
+                            data-placement="top" data-content="{$NAVBAREXCLUDE_INFO_LABEL}"
+                            data-original-title="{$INFO}"></i>
+                    </span></label>
+                <input type="text" class="form-control" id="inputNavbarExclude" name="navbarExclude"
+                    placeholder="Page1/Page2" value="{$NAVBAREXCLUDE}">
+            </div>
             {if $NAVBARSTYLE != '2'}
                 <div class="form-group">
                     <label for="navbarSticky">{$NAVBARSTICKY_LABEL}</label>
