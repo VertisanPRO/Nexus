@@ -88,9 +88,7 @@
     "preloader/preloader_elastic": "Elastisch",
     "preloader/preloader_fast": "Schnell",
     "preloader/preloader_normal": "Normal",
-    "widgets/donatesecondamount_label": "Zweiter Beitrag",
     "widgets/donatewidget_label": "Spenden-Widget",
-    "widgets/messageicon_label": "Widget-Symbol",
     "widgets/messagetitle_label": "Widget-Titel",
     "addons/arcview_info_label": "Um Arc zu aktivieren, musst du dich {{registerLinkStart}}registrieren{{registerLinkEnd}}. Dann musst du eine Website hinzufügen. Kopiere dann {{scriptLinkStart}}arc-sw.js{{scriptLinkEnd}} auf deine root website. Scrolle dann nach unten zu {{addwidgetCodeStart}}Arc's Widget zu Ihrer Website hinzufügen{{addwidgetCodeEnd}} und kopiere die URL (nicht den ganzen Text). Als Letztes fügst du die URL in die Eingabe unten ein.",
     "addons/widgetbotview_info_label": "Wenn es aktiviert ist, muss es konfiguriert werden. Es ist ein Widget, mit dem du auf der Website mit Discord chatten kannst. Stelle sicher, dass du {{widgetbotLinkStart}}den Bot{{widgetbotLinkEnd}} einlädst.",
@@ -100,5 +98,7 @@
     "navbar/navbarstyle_info_label": "Eleganter Stil hat Links an der Spitze. Der dynamische Stil enthält Links unter dem Banner.",
     "options/customjs_info_label": "Hier kannst du dein JS einfügen.",
     "options/footerabout_placeholder_label": "Schreibe etwas über deine Website",
-    "options/note_review": "Wenn dir die Vorlage gefällt, würden wir uns über eine Bewertung <a class=\"text-secondary\" href=\"https://namelessmc.com/resources/resource/162\">hier</a> freuen."
+    "options/note_review": "Wenn dir das Theme gefällt, würden wir uns über eine Bewertung {{reviewLinkStart}}hier{{reviewLinkEnd}} freuen.",
+    "general/note": "Hinweis",
+    "widgets/note_widgets": "Wir bieten keine Widgets mehr an. Aber wir haben ein neues Modul namens {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}} erstellt."
 }
