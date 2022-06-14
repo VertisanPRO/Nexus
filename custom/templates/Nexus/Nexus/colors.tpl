@@ -78,4 +78,31 @@
         }
 
     {/if}
+/*
+ * 	[ GHOST MODULE ]
+ */
+
+ .post-card-large,
+ .post-card-medium,
+ .post-card-small,
+ .cf-full-post {
+     background: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}rgba(255, 255, 255, 0.03){else}white{/if}{else}{if $NEXUS_DARK_MODE}rgba(255, 255, 255, 0.03){else}white{/if}{/if} !important;
+ }
+
+ .ghost-readtime,
+ .readtime {
+     color: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{else}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{/if} !important;
+     background-color: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}rgba(255, 255, 255, 0.03){else}rgba(247, 247, 247, 1){/if}{else}{if $NEXUS_DARK_MODE}rgba(255, 255, 255, 0.03){else}rgba(247, 247, 247, 1){/if}{/if} !important;
+ }
+ .ghost-card-content {
+     color: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{else}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{/if} !important;
+ }
+
+ .cf-full-post-title {
+     color: {$PRIMARYCOLOR};
+ }
+ .cf-more-posts,
+ .cf-full-post-content {
+     color: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{else}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{/if} !important;
+ }
 </style>
