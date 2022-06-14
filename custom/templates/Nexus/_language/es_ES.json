@@ -1,7 +1,7 @@
 {
     "navbar/navbarsticky_label": "Barra de navegación fija",
     "navbar/navbarstyle_info_label": "El estilo elegante tiene enlaces en la parte superior. El estilo dinámico tiene enlaces debajo del banner.",
-    "options/note_review": "Si te gusta el tema, te agradeceríamos que nos dieras una reseña <a class=\"text-secondary\" href=\"https://namelessmc.com/resources/resource/162\">aquí</a>.",
+    "options/note_review": "Si te gusta el tema, te agradeceríamos que nos dieras una reseña {{reviewLinkStart}}aquí{{reviewLinkEnd}}.",
     "preloader/preloaderloading_label": "Cargando...",
     "preloader/preloaderview_info_label": "Si se activa, se mostrará una pantalla de carga al cargar el sitio web.",
     "addons/arc_label": "Arc",
