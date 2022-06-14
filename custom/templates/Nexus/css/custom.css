@@ -1143,7 +1143,8 @@ body.dark .ui.relaxed.list .item .content,
 body.dark .ui.horizontal.divider,
 body.dark .ui.dropdown .menu>.header:not(.ui),
 body.dark .ui.link.list.list .active.item,
-body.dark .ui.link.list.list .active.item a:not(.ui) {
+body.dark .ui.link.list.list .active.item a:not(.ui),
+body.dark .text {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
@@ -1446,4 +1447,13 @@ body.dark .message.announcement {
 
 html {
     scroll-behavior: smooth;
+}
+
+body.dark #chatInput {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #1c1c1c;
+}
+
+body.dark .comment.icon.chatbox {
+    color: rgba(255, 255, 255, 0.6);
 }

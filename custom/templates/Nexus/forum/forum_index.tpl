@@ -128,7 +128,7 @@
                                     <div class="centered row">
                                         <div class="one wide column mobile hidden">{if empty($subforum->icon)}<i
                                                 class="ui large comment icon middle aligned"></i>{else}{$subforum->icon}
-                                                {/if}</div>
+                                            {/if}</div>
                                         <div class="fifteen wide column">
                                             <a class="header" data-toggle="modal" {if isset($subforum->redirect_confirm)} href="#"
                                                 data-target="#modal-redirect-{$subforum->id}" {else} href="{$subforum->redirect_url}"

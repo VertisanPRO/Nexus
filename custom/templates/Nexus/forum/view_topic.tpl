@@ -12,7 +12,7 @@
 
 <h2 class="ui header">
     <div class="topic title">{if count($TOPIC_LABELS)}
-        {foreach from=$TOPIC_LABELS item=label}{$label}
+            {foreach from=$TOPIC_LABELS item=label}{$label}
             {/foreach}
         {/if}{$TOPIC_TITLE}</div>
     <div class="sub header">

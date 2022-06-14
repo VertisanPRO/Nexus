@@ -52,8 +52,8 @@
 						{foreach from=$PAYMENT_LIST item=payment}
 							{if $payment.enabled == 1}
 								<div class="field">
-									<input onclick="{$payment.name}()" class="ui positive button" type="submit" value="{$payment.name}"
-										style="width: 100%;">
+									<input onclick="{$payment.name}()" class="ui positive button" type="submit"
+										value="{$payment.name}" style="width: 100%;">
 								</div>
 
 							{/if}

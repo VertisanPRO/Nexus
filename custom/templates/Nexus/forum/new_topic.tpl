@@ -34,13 +34,13 @@
                             {foreach from=$LABELS item=label}
                                 <div class="field">
                                     <div class="ui checkbox">
-                                        <input type="checkbox" name="topic_label[]" id="{$label.id}" value="{$label.id}" {if
-                                        $label.checked} checked{/if} hidden>
-                                    <label for="{$label.id}">{$label.html}</label>
+                                        <input type="checkbox" name="topic_label[]" id="{$label.id}" value="{$label.id}"
+                                            {if $label.checked} checked{/if} hidden>
+                                        <label for="{$label.id}">{$label.html}</label>
+                                    </div>
                                 </div>
-                            </div>
-                        {/foreach}
-                    </div>
+                            {/foreach}
+                        </div>
                     {/if}
                     <div class="field">
                         <label for="reply">{$CONTENT_LABEL}</label>

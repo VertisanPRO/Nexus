@@ -5,14 +5,15 @@
 	<div class="ui centered row">
 
 
-  {if !empty($WIDGETS_LEFT)}
-    <div class="ui five wide tablet four wide computer column">
-        {foreach from=$WIDGETS_LEFT item=widget}
-            {$widget}
-        {/foreach}
-    </div>
-  {/if}
-  <div class="ui {if !empty($WIDGETS_LEFT) && !empty($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif !empty($WIDGETS_LEFT) || !empty($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
+		{if !empty($WIDGETS_LEFT)}
+			<div class="ui five wide tablet four wide computer column">
+				{foreach from=$WIDGETS_LEFT item=widget}
+					{$widget}
+				{/foreach}
+			</div>
+		{/if}
+		<div
+			class="ui {if !empty($WIDGETS_LEFT) && !empty($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif !empty($WIDGETS_LEFT) || !empty($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
 
 
 			{if isset($SUCCESS)}
@@ -45,13 +46,13 @@
 
 
 		</div>
-    {if !empty($WIDGETS_RIGHT)}
-      <div class="ui five wide tablet four wide computer column">
-          {foreach from=$WIDGETS_RIGHT item=widget}
-            {$widget}
-          {/foreach}
-      </div>
-    {/if}
+		{if !empty($WIDGETS_RIGHT)}
+			<div class="ui five wide tablet four wide computer column">
+				{foreach from=$WIDGETS_RIGHT item=widget}
+					{$widget}
+				{/foreach}
+			</div>
+		{/if}
 	</div>
 </div>
 

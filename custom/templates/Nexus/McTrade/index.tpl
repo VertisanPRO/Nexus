@@ -103,13 +103,15 @@
 										<span id="eco_info{$product.id}"></span>
 
 									{/if}
-								{if ($VALIDATION != 1)}
-								<div class="ui field">
-								<input type="text" required placeholder="{$NICKNAME}" id="user_name" name="user_name">
-								</div>
-								{/if}
+									{if ($VALIDATION != 1)}
+										<div class="ui field">
+											<input type="text" required placeholder="{$NICKNAME}" id="user_name"
+												name="user_name">
+										</div>
+									{/if}
 									<div class="field">
-										<button type="submit" class="ui primary button"><i class="checkmark icon"></i>{$TO_BUY}</button>
+										<button type="submit" class="ui primary button"><i
+												class="checkmark icon"></i>{$TO_BUY}</button>
 									</div>
 								</div>
 							</form>
