@@ -22,7 +22,7 @@
     }
 </style>
 {include file='navbar.tpl'}
-<br><br>
+<br/>
 <div class="ui grid">
     <div class="ui sixteen wide mobile twelve wide tablet twelve wide computer column">
         <div class="ui segments">
