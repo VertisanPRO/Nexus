@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="ui breadcrumb" style="margin-top: 2rem">
+<div class="ui breadcrumb"><br><br>
     <a class="section active" style="color: {$PRIMARYCOLOR}" href="{$BREADCRUMB_URL}">{$BREADCRUMB_TEXT}</a>
 </div>
 
