@@ -12,7 +12,7 @@
 
 <div class="ui stackable padded grid" id="forum-view">
     <div class="ui centered row">
-        <div class="ui eleven wide tablet twelve wide computer column">
+        <div class="ui ten wide tablet twelve wide computer column">
             <h2 class="ui header">
                 {$FORUM_TITLE}
 
