@@ -22,15 +22,15 @@
     }
 </style>
 {include file='navbar.tpl'}
-<br />
+<br><br>
 <div class="ui grid">
     <div class="ui sixteen wide mobile twelve wide tablet twelve wide computer column">
         <div class="ui segments">
-            <div class="ui segment header">
+            <div class="ui segment">
                 <div class="ui grid">
                     <div class="eight wide column" style="margin: auto;">
                         <div class="ui breadcrumb">
-                            <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
+                            <a style="color: {$PRIMARYCOLOR}" href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                             <div class="divider"> / </div>
                             <div class="active section">{$SEARCH_RESULTS_LANG} {$SEARCH_RESULT}</div>
                         </div>
@@ -48,7 +48,7 @@
                         {foreach from=$SEARCH_RESULTS item=result}
                             <div class="item" style="padding: .5em">
                                 <div class="right floated content">
-                                    <a href="../wiki/{$result->nameid}" class="ui button">View</a>
+                                    <a href="../wiki/{$result->nameid}" class="ui primary button">View</a>
                                 </div>
                                 <i class="{$result->icon} ui avatar image"></i>
                                 <!-- <img class="ui avatar image"> <h5 class="ui header">{if isset($result->icon) && $result->icon|count_characters > 0} <i class="{$result->icon}"></i>{/if}</h5> -->

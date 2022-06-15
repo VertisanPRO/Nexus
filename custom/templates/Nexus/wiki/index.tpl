@@ -24,30 +24,30 @@
 </style>
 
 {include file='navbar.tpl'}
-<br />
+<br><br>
 <div class="ui grid" style="min-height: 73vh">
     <div class="ui sixteen wide mobile twelve wide tablet twelve wide computer column" id="main_container">
         <div class="ui segments">
-            <div class="ui segment header">
+            <div class="ui segment">
                 <div class="ui grid">
                     <div class="eight wide column" style="margin: auto">
                         <div class="ui breadcrumb">
                             {if $PAGE_RESULT == 0}
-                                <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
+                                <a style="color: {$PRIMARYCOLOR}" href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                             {elseif $PAGE_RESULT == 1}
                                 {if $WP_TYPE}
-                                    <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
+                                    <a style="color: {$PRIMARYCOLOR}" href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                                     <div class="divider"> / </div>
-                                    <a href="../{$WP_CATID}" class="active section">{$WP_PARENT}</a>
+                                    <a style="color: {$PRIMARYCOLOR}" href="../{$WP_CATID}" class="active section">{$WP_PARENT}</a>
                                     <div class="divider"> / </div>
-                                    <a href="{$WP_NAMEID}" class="active section">{$WP_TITLE}</a>
+                                    <a style="color: {$PRIMARYCOLOR}" href="{$WP_NAMEID}" class="active section">{$WP_TITLE}</a>
                                 {else}
-                                    <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
+                                    <a style="color: {$PRIMARYCOLOR}" href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                                     <div class="divider"> / </div>
-                                    <a href="{$WP_NAMEID}" class="active section">{$WP_TITLE}</a>
+                                    <a style="color: {$PRIMARYCOLOR}" href="{$WP_NAMEID}" class="active section">{$WP_TITLE}</a>
                                 {/if}
                             {elseif $PAGE_RESULT == 2}
-                                <a href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
+                                <a style="color: {$PRIMARYCOLOR}" href="{$WIKI_HOME_LINK}" class="section">{$WIKI}</a>
                             {/if}
                         </div>
                     </div>
