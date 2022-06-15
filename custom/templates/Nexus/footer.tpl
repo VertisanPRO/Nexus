@@ -166,7 +166,7 @@
             return false;
         }
 
-        { $CUSTOMJS }
+        {$CUSTOMJS}
     </script>
 
     {if $NEXUS_DARK_MODE eq '1' }
