@@ -8,7 +8,7 @@
                 <div class="readtime" style="margin-left: auto; margin-right: 0">{$post_readtime}</div>
             </div>
             <div class="ui grid">
-                  <a style="display: flex; align-items: center; padding-right: 0.25rem" href="{$post_author_profile}"><img class="avatar-img" src="{$post_avatar}" alt="{$post_author}"
+                  <a style="display: flex; align-items: center; padding-right: 0.25rem" href="{$post_author_profile}"><img class="ui mini circular image" src="{$post_avatar}" alt="{$post_author}"
                         style="height: 25px; width: 25px" /></a>
                 <div class="twelve wide column cf-full-post-info" style="padding-left: 0">
                     <span class="cf-full-post-author"><a class="username"
