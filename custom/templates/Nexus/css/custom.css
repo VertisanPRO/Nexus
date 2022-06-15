@@ -940,6 +940,14 @@ a.badge-dark:focus {
     grid-gap: 1.5rem;
 }
 
+.post-card-large {
+    grid-area: span 1 / span 6;
+    display: flex;
+    flex-direction: row;
+    background-color: #303030;
+    border-radius: 0.25rem;
+}
+
 .post-card-large .ghost-card-img {
     flex: 1 1 60%;
     overflow: hidden;
