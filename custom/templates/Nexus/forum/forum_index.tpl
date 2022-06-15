@@ -1,8 +1,8 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="ui breadcrumb" style="margin-bottom: 10px; margin-top: 10px;">
-    <a class="section active" href="{$BREADCRUMB_URL}">{$BREADCRUMB_TEXT}</a>
+<div class="ui breadcrumb" style="margin-top: 2rem">
+    <a class="section active" style="color: {$PRIMARYCOLOR}" href="{$BREADCRUMB_URL}">{$BREADCRUMB_TEXT}</a>
 </div>
 
 <div class="ui stackable padded grid" id="forum-index">
