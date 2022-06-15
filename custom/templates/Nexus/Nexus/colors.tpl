@@ -105,4 +105,11 @@
  .cf-full-post-content {
      color: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{else}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{/if} !important;
  }
+ .latest-news-name {
+     color: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{else}{if $NEXUS_DARK_MODE}white{else}#303030{/if}{/if} !important;
+ }
+ .latest-news-date,
+ .latest-news-readtime {
+    color: {if $DARKMODE eq '1'}{if $NEXUS_DARK_MODE}rgba(255, 255, 255, 0.6){else}rgb(189 189 189);{/if}{else}{if $NEXUS_DARK_MODE}rgba(255, 255, 255, 0.6){else}rgb(189 189 189);{/if}{/if} !important;
+ }
 </style>
