@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-
+<br />
 <div class="ui stackable grid">
 	<div class="ui centered row">
 

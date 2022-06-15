@@ -1,4 +1,4 @@
-\{include file='header.tpl'}
+{include file='header.tpl'}
 {include file='navbar.tpl'}
 
 <h2 class="ui header">
