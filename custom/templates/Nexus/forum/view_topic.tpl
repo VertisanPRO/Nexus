@@ -5,7 +5,8 @@
     {assign i 1}
     {foreach from=$BREADCRUMBS item=breadcrumb}
         {if $i ne 1}<i class="right angle icon divider"></i>{/if}
-        <a class="section{if isset($breadcrumb.active)} active{/if}" style="color: {$PRIMARYCOLOR}" href="{$breadcrumb.link}">{$breadcrumb.forum_title}</a>
+        <a class="section{if isset($breadcrumb.active)} active{/if}" style="color: {$PRIMARYCOLOR}"
+            href="{$breadcrumb.link}">{$breadcrumb.forum_title}</a>
         {assign i $i+1}
     {/foreach}
 </div>
@@ -23,8 +24,8 @@
 </h2>
 
 {if isset($SESSION_SUCCESS_POST)}
-    <div class="ui success icon message">
-        <i class="check icon"></i>
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #5cb85c;">
+        <i class="check icon" style="color: #5cb85c;"></i>
         <div class="content">
             <div class="header">{$SUCCESS}</div>
             {$SESSION_SUCCESS_POST}
@@ -33,8 +34,8 @@
 {/if}
 
 {if isset($SESSION_FAILURE_POST)}
-    <div class="ui error icon message">
-        <i class="x icon"></i>
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+        <i class="x icon" style="color: #d9534f;"></i>
         <div class="content">
             <div class="header">{$ERROR}</div>
             {$SESSION_FAILURE_POST}
@@ -43,8 +44,8 @@
 {/if}
 
 {if isset($ERRORS)}
-    <div class="ui error icon message">
-        <i class="x icon"></i>
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+        <i class="x icon" style="color: #d9534f;"></i>
         <div class="content">
             <div class="header">{$ERROR_TITLE}</div>
             <ul class="list">

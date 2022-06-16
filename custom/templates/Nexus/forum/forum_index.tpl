@@ -37,8 +37,8 @@
         <div
             class="ui {if count($WIDGETS_LEFT) && count($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif count($WIDGETS_LEFT) || count($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
             {if isset($SPAM_INFO)}
-                <div class="ui warning icon message">
-                    <i class="exclamation icon"></i>
+                <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #f0ad4e;">
+                    <i class="exclamation icon" style="color: #f0ad4e;"></i>
                     <div class="content">
                         <div class="header">{$FORUM_SPAM_WARNING_TITLE}</div>
                         {$SPAM_INFO}

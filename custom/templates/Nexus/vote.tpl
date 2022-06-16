@@ -17,7 +17,8 @@
         <div
             class="ui {if count($WIDGETS_LEFT) && count($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif count($WIDGETS_LEFT) || count($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
             {if isset($MESSAGE_ENABLED)}
-                <div class="ui info message">
+                <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #0275d8;">
+                    <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
                     <div class="content">
                         {$MESSAGE}
                     </div>

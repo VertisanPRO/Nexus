@@ -1,7 +1,5 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
-
-<br />
 <div class="ui stackable grid">
     <div class="ui centered row">
 
@@ -24,10 +22,11 @@
                     {$CONTENT}
 
                     {if isset($NO_PRODUCTS)}
-                        <div class="ui icon message">
-                            <i class="info icon"></i>
+                        <div class="ui message icon announcement"
+                            style="border-top-style: solid; border-top-color: #0275d8;">
+                            <i class="info icon" style="color: #0275d8;"></i>
                             <div class="content">
-                                <p>{$NO_PRODUCTS}</p>
+                                {$NO_PRODUCTS}
                             </div>
                         </div>
                     {else}

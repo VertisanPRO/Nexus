@@ -38,26 +38,29 @@
 
 <div class="pusher">
     <div id="wrapper">
+        <br />
         <div class="ui container" id="context">
-            <div class="ui negative icon message" id="ie-message">
-                <i class="exclamation triangle icon"></i>
+            <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;"
+                id="ie-message">
+                <i class="exclamation triangle icon" style="color: #d9534f;"></i>
                 <div class="content">
-                    <div class="header">
-                        {$INTERNET_EXPLORER_HEADER}
-                    </div>
-                    <p>{$INTERNET_EXPLORER_INFO}</p>
+                    <div class="header">{$INTERNET_EXPLORER_HEADER}</div>
+                    {$INTERNET_EXPLORER_INFO}
                 </div>
             </div>
 
             {if isset($NEW_UPDATE)}
                 {if $NEW_UPDATE_URGENT eq true}
-                    <div class="ui negative icon message" id="update-message">
+                    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;"
+                        id="update-message">
                     {else}
-                        <div class="ui info icon message" id="update-message">
+                        <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #0275d8;"
+                            id="update-message">
                             <i class="close icon"></i>
                         {/if}
                         <a href="{$UPDATE_LINK}">
-                            <i class="download icon"></i>
+                            <i class="download icon" style="color: {if $NEW_UPDATE_URGENT eq true}#d9534f
+                            {else}#0275d8;{/if}"></i>
                         </a>
                         <div class="content">
                             <div class="header">{$NEW_UPDATE}</div>
@@ -78,7 +81,7 @@
                                 <i class="close icon"></i>
                             {/if}
                             {if $ANNOUNCEMENT->icon}
-                                <i class="{$ANNOUNCEMENT->icon} icon"></i>
+                                <i class="{$ANNOUNCEMENT->icon} icon" style="color: {$ANNOUNCEMENT->background_colour};"></i>
                             {/if}
                             <div class="content">
                                 <div class="header">{$ANNOUNCEMENT->header}</div>

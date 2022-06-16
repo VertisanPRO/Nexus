@@ -6,8 +6,8 @@
 </h2>
 
 {if isset($ERRORS)}
-    <div class="ui error icon message">
-        <i class="x icon"></i>
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+        <i class="x icon" style="color: #d9534f;"></i>
         <div class="content">
             <div class="header">{$ERROR}</div>
             <ul class="list">
@@ -23,8 +23,8 @@
     <div class="ui stackable grid">
         <div class="ui centered row">
             <div class="ui sixteen wide tablet ten wide computer column">
-                <div class="ui success icon message">
-                    <i class="check icon"></i>
+                <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #5cb85c;">
+                    <i class="check icon" style="color: #5cb85c;"></i>
                     <div class="content">
                         <div class="header">{$AUTHME_SUCCESS}</div>
                         {$AUTHME_INFO}

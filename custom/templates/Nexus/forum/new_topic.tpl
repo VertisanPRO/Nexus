@@ -6,12 +6,12 @@
 </h2>
 
 {if isset($ERROR)}
-    <div class="ui error icon message">
-        <i class="x icon"></i>
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+        <i class="x icon" style="color: #d9534f;"></i>
         <div class="content">
             <div class="header">{$ERROR_TITLE}</div>
             <ul class="list">
-                {foreach from=$ERROR item=error}
+                {foreach from=$ERRORS item=error}
                     <li>{$error}</li>
                 {/foreach}
             </ul>

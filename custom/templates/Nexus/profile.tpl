@@ -52,8 +52,8 @@
         <div
             class="ui {if count($WIDGETS_LEFT) && count($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif count($WIDGETS_LEFT) || count($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
             {if isset($SUCCESS)}
-                <div class="ui success icon message">
-                    <i class="check icon"></i>
+                <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #5cb85c;">
+                    <i class="check icon" style="color: #5cb85c;"></i>
                     <div class="content">
                         <div class="header">{$SUCCESS_TITLE}</div>
                         {$SUCCESS}
@@ -61,8 +61,8 @@
                 </div>
             {/if}
             {if isset($ERROR)}
-                <div class="ui negative icon message">
-                    <i class="x icon"></i>
+                <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+                    <i class="x icon" style="color: #d9534f;"></i>
                     <div class="content">
                         <div class="header">{$ERROR_TITLE}</div>
                         {$ERROR}
@@ -110,112 +110,111 @@
                                             {if isset($LOGGED_IN_USER)}
                                                 {if $post.user_id ne $VIEWER_ID}
                                                     <a href="{if $post.reactions_link !== " #"}{$post.reactions_link}{else}#{/if}"
-                                                        data-toggle="popup">Like {if ($post.reactions.count|regex_replace:'/[^0-9]+/':'' !=
-                                                    0)}({$post.reactions.count|regex_replace:'/[^0-9]+/':''}){/if}</a>
+                                                        data-toggle="popup">Like
+                                                        {if ($post.reactions.count|regex_replace:'/[^0-9]+/':'' != 0)}({$post.reactions.count|regex_replace:'/[^0-9]+/':''}){/if}</a>
+                                                {/if}
+                                                <a data-toggle="modal" data-target="#modal-reply-{$post.id}">{$REPLY}
+                                                    {if ($post.replies.count|regex_replace:'/[^0-9]+/':'' != 0)}({$post.replies.count|regex_replace:'/[^0-9]+/':''}){/if}</a>
                                             {/if}
-                                            <a data-toggle="modal" data-target="#modal-reply-{$post.id}">{$REPLY} {if
-                                                ($post.replies.count|regex_replace:'/[^0-9]+/':'' !=
-                                            0)}({$post.replies.count|regex_replace:'/[^0-9]+/':''}){/if}</a>
-                                    {/if}
-                                    {if (isset($CAN_MODERATE) && $CAN_MODERATE == 1) || $post.self == 1}
-                                        <a data-toggle="modal" data-target="#modal-edit-{$post.id}">{$EDIT}</a>
-                                        <a
-                                            onclick="{literal}if(confirm(confirmDelete)){$('#form-delete-post-{/literal}{$post.id}{literal}').submit();}{/literal}">{$DELETE}</a>
-                                        <form action="" method="post" id="form-delete-post-{$post.id}">
-                                            <input type="hidden" name="post_id" value="{$post.id}">
-                                            <input type="hidden" name="action" value="delete">
-                                            <input type="hidden" name="token" value="{$TOKEN}">
-                                        </form>
-                                    {/if}
-                                </div>
-                            </div>
-                            {if isset($post.replies.replies)}
-                                <div class="comments">
-                                    {foreach from=$post.replies.replies item=item}
-                                        <div class="comment">
-                                            <a class="ui circular image avatar">
-                                                <img src="{$item.avatar}" alt="{$item.nickname}">
-                                            </a>
-                                            <div class="content">
-                                                <a class="author" href="{$item.profile}" style="{$item.style}">{$item.nickname}</a>
-                                                <div class="metadata">
-                                                    <span class="date" data-toggle="tooltip"
-                                                        data-content="{$item.time_full}">{$item.time_friendly}</span>
-                                                </div>
-                                                <div class="text forum_post">
-                                                    {$item.content}
-                                                </div>
-                                                <div class="actions">
-                                                    {if (isset($CAN_MODERATE) && $CAN_MODERATE eq 1) || $post.self eq 1}
-                                                        <form class="ui form" action="" method="post" id="form-delete-{$item.id}">
-                                                            <input type="hidden" name="action" value="deleteReply">
-                                                            <input type="hidden" name="token" value="{$TOKEN}">
-                                                            <input type="hidden" name="post_id" value="{$item.id}">
-                                                        </form>
-                                                        <a
-                                                            onclick="{literal}if(confirm(confirmDelete)){$('#form-delete-{/literal}{$item.id}{literal}').submit();}{/literal}">{$DELETE}</a>
-                                                    {/if}
-                                                </div>
-                                            </div>
+                                            {if (isset($CAN_MODERATE) && $CAN_MODERATE == 1) || $post.self == 1}
+                                                <a data-toggle="modal" data-target="#modal-edit-{$post.id}">{$EDIT}</a>
+                                                <a
+                                                    onclick="{literal}if(confirm(confirmDelete)){$('#form-delete-post-{/literal}{$post.id}{literal}').submit();}{/literal}">{$DELETE}</a>
+                                                <form action="" method="post" id="form-delete-post-{$post.id}">
+                                                    <input type="hidden" name="post_id" value="{$post.id}">
+                                                    <input type="hidden" name="action" value="delete">
+                                                    <input type="hidden" name="token" value="{$TOKEN}">
+                                                </form>
+                                            {/if}
                                         </div>
-                                    {/foreach}
+                                    </div>
+                                    {if isset($post.replies.replies)}
+                                        <div class="comments">
+                                            {foreach from=$post.replies.replies item=item}
+                                                <div class="comment">
+                                                    <a class="ui circular image avatar">
+                                                        <img src="{$item.avatar}" alt="{$item.nickname}">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a class="author" href="{$item.profile}" style="{$item.style}">{$item.nickname}</a>
+                                                        <div class="metadata">
+                                                            <span class="date" data-toggle="tooltip"
+                                                                data-content="{$item.time_full}">{$item.time_friendly}</span>
+                                                        </div>
+                                                        <div class="text forum_post">
+                                                            {$item.content}
+                                                        </div>
+                                                        <div class="actions">
+                                                            {if (isset($CAN_MODERATE) && $CAN_MODERATE eq 1) || $post.self eq 1}
+                                                                <form class="ui form" action="" method="post" id="form-delete-{$item.id}">
+                                                                    <input type="hidden" name="action" value="deleteReply">
+                                                                    <input type="hidden" name="token" value="{$TOKEN}">
+                                                                    <input type="hidden" name="post_id" value="{$item.id}">
+                                                                </form>
+                                                                <a
+                                                                    onclick="{literal}if(confirm(confirmDelete)){$('#form-delete-{/literal}{$item.id}{literal}').submit();}{/literal}">{$DELETE}</a>
+                                                            {/if}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {/foreach}
+                                        </div>
+                                    {/if}
                                 </div>
-                            {/if}
+                            {/foreach}
                         </div>
-                    {/foreach}
+                        {$PAGINATION}
+                    {else}
+                        <div class="ui info message">
+                            <div class="content">
+                                {$NO_WALL_POSTS}
+                            </div>
+                        </div>
+                    {/if}
                 </div>
-                {$PAGINATION}
-                {else}
-                <div class="ui info message">
-                    <div class="content">
-                        {$NO_WALL_POSTS}
-                    </div>
-                </div>
-                {/if}
-            </div>
-            <div class="ui bottom attached tab segment" data-tab="about" id="profile-about">
-                <h3 class="ui header">{$ABOUT}</h3>
-                <div class="ui relaxed list">
-                    <div class="item">
-                        <i class="middle aligned user add icon"></i>
-                        <div class="middle aligned content" data-toggle="popup">
-                            <div class="header">{$ABOUT_FIELDS.registered.title}</div>
-                            <div class="description">{$ABOUT_FIELDS.registered.value}</div>
-                        </div>
-                        <div class="ui wide popup">
-                            <h4 class="ui header">{$ABOUT_FIELDS.registered.title|replace:':':''}</h4>
-                            <br />
-                            {$ABOUT_FIELDS.registered.tooltip}
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="middle aligned clock icon"></i>
-                        <div class="middle aligned content" data-toggle="popup">
-                            <div class="header">{$ABOUT_FIELDS.last_seen.title}</div>
-                            <div class="description">{$ABOUT_FIELDS.last_seen.value}</div>
-                        </div>
-                        <div class="ui wide popup">
-                            <h4 class="ui header">{$ABOUT_FIELDS.last_seen.title|replace:':':''}</h4>
-                            <br />
-                            {$ABOUT_FIELDS.last_seen.tooltip}
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="middle aligned eye icon"></i>
-                        <div class="middle aligned content">
-                            <div class="header">{$ABOUT_FIELDS.profile_views.title}</div>
-                            <div class="description">{$ABOUT_FIELDS.profile_views.value}</div>
-                        </div>
-                    </div>
-                </div>
-                {if count($ABOUT_FIELDS)}
+                <div class="ui bottom attached tab segment" data-tab="about" id="profile-about">
+                    <h3 class="ui header">{$ABOUT}</h3>
                     <div class="ui relaxed list">
-                        {foreach from=$ABOUT_FIELDS key=key item=field}
-                            {if is_numeric($key)}
-                                <div class="item">
-                                    <i
-                                        class="middle aligned {if $field.type eq 'date'}calendar alternate{else}dot circle{/if} icon"></i>
-                                    <div class="middle aligned content" {if $field.tooltip} data-toggle="popup" {/if}">
+                        <div class="item">
+                            <i class="middle aligned user add icon"></i>
+                            <div class="middle aligned content" data-toggle="popup">
+                                <div class="header">{$ABOUT_FIELDS.registered.title}</div>
+                                <div class="description">{$ABOUT_FIELDS.registered.value}</div>
+                            </div>
+                            <div class="ui wide popup">
+                                <h4 class="ui header">{$ABOUT_FIELDS.registered.title|replace:':':''}</h4>
+                                <br />
+                                {$ABOUT_FIELDS.registered.tooltip}
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="middle aligned clock icon"></i>
+                            <div class="middle aligned content" data-toggle="popup">
+                                <div class="header">{$ABOUT_FIELDS.last_seen.title}</div>
+                                <div class="description">{$ABOUT_FIELDS.last_seen.value}</div>
+                            </div>
+                            <div class="ui wide popup">
+                                <h4 class="ui header">{$ABOUT_FIELDS.last_seen.title|replace:':':''}</h4>
+                                <br />
+                                {$ABOUT_FIELDS.last_seen.tooltip}
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="middle aligned eye icon"></i>
+                            <div class="middle aligned content">
+                                <div class="header">{$ABOUT_FIELDS.profile_views.title}</div>
+                                <div class="description">{$ABOUT_FIELDS.profile_views.value}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {if count($ABOUT_FIELDS)}
+                        <div class="ui relaxed list">
+                            {foreach from=$ABOUT_FIELDS key=key item=field}
+                                {if is_numeric($key)}
+                                    <div class="item">
+                                        <i
+                                            class="middle aligned {if $field.type eq 'date'}calendar alternate{else}dot circle{/if} icon"></i>
+                                        <div class="middle aligned content" {if $field.tooltip} data-toggle="popup" {/if}">
                             <div class="header">{$field.title}</div>
                             <div class="description">{$field.value}</div>
                         </div>
@@ -363,9 +362,9 @@
     <div class="actions">
         <button class="ui negative button">{$CANCEL}</button>
         <button class="ui positive button" onclick="document.updateBanner.submit()">{$SUBMIT}</button>
+                    </div>
                 </div>
-            </div>
+            {/if}
         {/if}
-    {/if}
 
-    {include file='footer.tpl'}
+        {include file='footer.tpl'}

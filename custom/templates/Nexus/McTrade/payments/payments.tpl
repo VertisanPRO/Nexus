@@ -18,8 +18,8 @@
 
 
 			{if isset($SUCCESS)}
-				<div class="ui success icon message">
-					<i class="check icon"></i>
+				<div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #5cb85c;">
+					<i class="check icon" style="color: #5cb85c;"></i>
 					<div class="content">
 						{$SUCCESS}
 					</div>
@@ -27,8 +27,8 @@
 			{/if}
 
 			{if isset($ERRORS)}
-				<div class="ui negative icon message">
-					<i class="x icon"></i>
+				<div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+					<i class="x icon" style="color: #d9534f;"></i>
 					<div class="content">
 						{foreach from=$ERRORS item=error}
 							{$error}<br />

@@ -31,8 +31,8 @@
         {/foreach}
     </div>
 {else}
-    <div class="ui error icon message">
-        <i class="x icon"></i>
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+        <i class="x icon" style="color: #d9534f;"></i>
         <div class="content">
             <div class="header">{$ERROR_TITLE}</div>
             {$NO_SERVERS}
