@@ -1671,17 +1671,43 @@ body.dark .cf-full-post {
     background: rgba(255, 255, 255, 0.03) !important;
 }
 
+body.dark .ghost-readtime,
+body.dark .readtime {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+body.dark .ghost-card-content {
+    color: white !important;
+}
+
+body.dark .cf-full-post-title {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.dark .cf-more-posts,
+body.dark .cf-full-post-content {
+    color: white !important;
+}
+
+body.dark .latest-news-name {
+    color: white !important;
+}
+
+body.dark .latest-news-date,
+body.dark .latest-news-readtime {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.dark .cf-home-title {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .post-card-large,
 .post-card-medium,
 .post-card-small,
 .cf-full-post {
     background: white !important;
-}
-
-body.dark .ghost-readtime,
-body.dark .readtime {
-    color: white !important;
-    background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
 .ghost-readtime,
@@ -1690,33 +1716,16 @@ body.dark .readtime {
     background-color: rgba(247, 247, 247, 1) !important;
 }
 
-body.dark .ghost-card-content {
-    color: white !important;
-}
-
 .ghost-card-content {
     color: #303030 !important;
 }
 
-body.dark .cf-full-post-title {
-    color: rgba(255, 255, 255, 0.6) !important;
-}
-
 .cf-full-post-title {
     color: rgba(0, 0, 0, .87) !important;
 }
 
-body.dark .cf-full-post-title {
-    color: rgba(255, 255, 255, 0.6) !important;
-}
-
 .cf-full-post-title {
     color: rgba(0, 0, 0, .87) !important;
-}
-
-body.dark .cf-more-posts,
-body.dark .cf-full-post-content {
-    color: white !important;
 }
 
 .cf-more-posts,
@@ -1724,17 +1733,8 @@ body.dark .cf-full-post-content {
     color: #303030 !important;
 }
 
-body.dark .latest-news-name {
-    color: white !important;
-}
-
 .latest-news-name {
     color: #303030 !important;
-}
-
-body.dark .latest-news-date,
-body.dark .latest-news-readtime {
-    color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .latest-news-date,
@@ -1742,17 +1742,9 @@ body.dark .latest-news-readtime {
     color: rgb(189 189 189) !important;
 }
 
-body.dark .cf-home-title {
-    color: rgba(255, 255, 255, 0.6);
-}
-
 .cf-home-title {
     color: rgba(0, 0, 0, .87);
 }
-
-/*
-* Ghost idk
- */
 
 .outside-footer {
     padding: 1.5rem 2rem;
@@ -1793,7 +1785,7 @@ body.dark .cf-home-title {
 
 .cf-full-post-title {
     font-weight: 600;
-    font-size: 2.7rem;
+    font-size: 2rem;
 }
 
 .cf-full-post .readtime {

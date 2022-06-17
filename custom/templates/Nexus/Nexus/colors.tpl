@@ -75,7 +75,7 @@
 
     {/if}
 
-    .fluid.ui.small.primary.button,
+    body.dark .fluid.ui.small.primary.button,
     .header,
     .cf-home-title,
     .left.aligned.twelve.wide.column.cf-full-post-title {
