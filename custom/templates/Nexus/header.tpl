@@ -13,9 +13,8 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
 <!DOCTYPE html>
 <html{$HTMLCLASS}{$HTMLLANG}{$HTMLRTL}>
-
+    <!-- Nexus 1.7.0 by VertisanPRO | https://github.com/VertisanPRO/nexus -->
     <head>
-
         <meta charset="{$METACHARSET}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         {if $EMBEDTITLE eq '$every'}
@@ -104,5 +103,6 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
         {/if}
     </head>
 
-    <body{if $NEXUS_DARK_MODE} class="dark" {/if}
-id="page-{if is_numeric($smarty.const.PAGE)}{$TITLE}{else}{$smarty.const.PAGE}{/if}">
+    {* Don't do ```<body{if $NEXUS_DARK_MODE} class="dark" {/if} 
+    id="page-{if is_numeric($smarty.const.PAGE)}{$TITLE}{else}{$smarty.const.PAGE}{/if}">``` as it will ruin fomantic *}
+    <body{if $NEXUS_DARK_MODE} class="dark" {/if} id="page-{if is_numeric($smarty.const.PAGE)}{$TITLE}{else}{$smarty.const.PAGE}{/if}">
