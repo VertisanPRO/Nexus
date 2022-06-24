@@ -68,12 +68,6 @@ If you would like to assist with the NamelessMC development by translating to yo
 
 Nexus is licensed under the GNU General Public License v3.0. Please see [`LICENSE.md`](https://github.com/VertisanPRO/nexus/blob/main/LICENSE.md) for more info.
 
-Template By
-* [Mubeen](https://github.com/Mubeen142)
-* [xGIGABAITx](https://github.com/GIGABAIT93)
-* [PadowYT2](https://github.com/PadowYT2)
-* [Sylensky](https://github.com/Sylensky)
-
 ## Special Thanks
 - All Nexus [contributors](https://github.com/VertisanPRO/nexus/graphs/contributors).
 - [JetBrains](https://www.jetbrains.com) & [Visual Studio Code](https://code.visualstudio.com).
