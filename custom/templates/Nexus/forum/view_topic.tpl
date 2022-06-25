@@ -163,6 +163,9 @@
                                         {$reply.user_posts_count|regex_replace:'/[^0-9]+/':''}</div>
                                 </div>
                             </div>
+                            {if isset($USER_BADGES_LIST)}
+                                {include file='badges/forum_bdg.tpl'}
+                            {/if}
                         </div>
                         {if count($reply.fields)}
                             <div class="ui list">

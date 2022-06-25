@@ -5,7 +5,7 @@
         <div class="cf-full-post-body">
             <div class="ui grid">
                 <div class="left aligned twelve wide column cf-full-post-title">{$post_name}</div>
-                <div class="readtime" style="margin-left: auto; margin-right: 1rem;     margin-top: -2.8rem;">
+                <div class="readtime" style="margin-left: auto; margin-right: 1rem;">
                     {$post_readtime}</div>
             </div>
             <div class="ui grid">
