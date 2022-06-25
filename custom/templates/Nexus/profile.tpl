@@ -165,7 +165,8 @@
                         </div>
                         {$PAGINATION}
                     {else}
-                        <div class="ui info message">
+                        <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #0275d8;">
+                            <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
                             <div class="content">
                                 {$NO_WALL_POSTS}
                             </div>
@@ -230,7 +231,8 @@
                     {/foreach}
                 </div>
                 {else}
-                <div class="ui info message">
+                <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #0275d8;">
+                    <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
                     <div class="content">
                         {$NO_ABOUT_FIELDS}
                     </div>
@@ -243,7 +245,8 @@
             </div>
             {/foreach}
             {else}
-            <div class="ui error message">
+            <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+                <i class="x icon" style="color: #d9534f;"></i>
                 <div class="content">
                     {$PRIVATE_PROFILE}
                 </div>

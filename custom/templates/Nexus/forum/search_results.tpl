@@ -11,12 +11,15 @@
 {/if}
 
 <div class="res right floated">
-    <a href="{$NEW_SEARCH_URL}" class="ui primary button">{$NEW_SEARCH}</a>
+    <a href="{$NEW_SEARCH_URL}" class="ui primary button" style="margin-top: 1.5rem;">{$NEW_SEARCH}</a>
 </div>
 
 {if empty($RESULTS)}
-    <div class="ui error message">
-        {$NO_RESULTS}
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+        <i class="x icon" style="color: #d9534f;"></i>
+        <div class="content">
+            {$NO_RESULTS}
+        </div>
     </div>
 {else}
     {foreach from=$RESULTS item=result}

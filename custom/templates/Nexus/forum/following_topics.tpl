@@ -79,7 +79,9 @@
 
                         {$PAGINATION}
                     {else}
-                        <div class="ui info message">
+                        <div class="ui message icon announcement"
+                            style="border-top-style: solid; border-top-color: #0275d8;">
+                            <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
                             <div class="content">
                                 {$NO_TOPICS}
                             </div>

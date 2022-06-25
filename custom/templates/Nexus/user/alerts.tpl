@@ -24,7 +24,12 @@
                     {/if}
                 </h3>
                 {if isset($ERROR)}
-                    <div class="ui negative message">{$ERROR}</div>
+                    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+                        <i class="x icon" style="color: #d9534f;"></i>
+                        <div class="content">
+                            {$ERROR}
+                        </div>
+                    </div>
                 {/if}
                 <div class="ui middle aligned relaxed selection list">
                     {nocache}
@@ -49,7 +54,9 @@
                             </div>
                         {/foreach}
                     {else}
-                        <div class="ui info message">
+                        <div class="ui message icon announcement"
+                            style="border-top-style: solid; border-top-color: #0275d8;">
+                            <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
                             <div class="content">
                                 {$NO_ALERTS}
                             </div>

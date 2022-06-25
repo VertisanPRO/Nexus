@@ -103,12 +103,20 @@
 </div>
 
 {if isset($TOPIC_LOCKED_NOTICE)}
-    <div class="ui tiny warning message">
-        {$TOPIC_LOCKED_NOTICE}
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #f0ad4e;">
+        <i class="exclamation icon" style="color: #f0ad4e;"></i>
+        <div class="content">
+            <div class="header">{$FORUM_SPAM_WARNING_TITLE}</div>
+            {$TOPIC_LOCKED_NOTICE}
+        </div>
     </div>
 {elseif isset($TOPIC_LOCKED)}
-    <div class="ui tiny warning message">
-        {$TOPIC_LOCKED}
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #f0ad4e;">
+        <i class="exclamation icon" style="color: #f0ad4e;"></i>
+        <div class="content">
+            <div class="header">{$FORUM_SPAM_WARNING_TITLE}</div>
+            {$TOPIC_LOCKED}
+        </div>
     </div>
 {/if}
 
@@ -186,32 +194,36 @@
                     <div class="ui eleven wide tablet thirteen wide computer column" id="post-content">
                         <div class="forum_post">{$reply.content}</div>
                         {if (isset($LOGGED_IN_USER) && $reply.user_id !== $USER_ID || count($reply.post_reactions))}
-                            <div class="ui mini info message" id="reactions">
-                                {if (isset($LOGGED_IN_USER) && $reply.user_id !== $USER_ID)}
-                                    <a href="#" data-toggle="popup" data-position="right center">Like</a>
-                                    <div class="ui wide popup">
-                                        {if isset($REACTIONS) && count($REACTIONS)}
-                                            {foreach from=$REACTIONS item=reaction}
-                                                <form action="{$REACTIONS_URL}" method="post">
-                                                    <input type="hidden" name="token" value="{$TOKEN}">
-                                                    <input type="hidden" name="reaction" value="{$reaction->id}">
-                                                    <input type="hidden" name="post" value="{$reply.id}">
-                                                    <button type="submit" class="ui mini primary icon button">{$reaction->html}</button>
-                                                </form>
+                            <div class="ui message icon announcement"
+                                style="border-top-style: solid; border-top-color: #0275d8;" id="reactions">
+                                <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
+                                <div class="content">
+                                    {if (isset($LOGGED_IN_USER) && $reply.user_id !== $USER_ID)}
+                                        <a href="#" data-toggle="popup" data-position="right center">Like</a>
+                                        <div class="ui wide popup">
+                                            {if isset($REACTIONS) && count($REACTIONS)}
+                                                {foreach from=$REACTIONS item=reaction}
+                                                    <form action="{$REACTIONS_URL}" method="post">
+                                                        <input type="hidden" name="token" value="{$TOKEN}">
+                                                        <input type="hidden" name="reaction" value="{$reaction->id}">
+                                                        <input type="hidden" name="post" value="{$reply.id}">
+                                                        <button type="submit" class="ui mini primary icon button">{$reaction->html}</button>
+                                                    </form>
+                                                {/foreach}
+                                            {/if}
+                                        </div>
+                                    {/if}
+                                    {if count($reply.post_reactions)}
+                                        <div class="right floated" data-toggle="modal" data-target="#modal-reactions-{$reply.id}">
+                                            {assign i 1}
+                                            {foreach from=$reply.post_reactions name=reactions item=reaction}
+                                                {if $i != 1} &nbsp; {/if}
+                                                {$reaction.html}x{$reaction.count}
+                                                {assign i $i+1}
                                             {/foreach}
-                                        {/if}
-                                    </div>
-                                {/if}
-                                {if count($reply.post_reactions)}
-                                    <div class="right floated" data-toggle="modal" data-target="#modal-reactions-{$reply.id}">
-                                        {assign i 1}
-                                        {foreach from=$reply.post_reactions name=reactions item=reaction}
-                                            {if $i != 1} &nbsp; {/if}
-                                            {$reaction.html}x{$reaction.count}
-                                            {assign i $i+1}
-                                        {/foreach}
-                                    </div>
-                                {/if}
+                                        </div>
+                                    {/if}
+                                </div>
                             </div>
                         {/if}
                         {if !empty($reply.signature)}
@@ -258,8 +270,12 @@
 {/foreach}
 
 {if isset($TOPIC_LOCKED_NOTICE)}
-    <div class="ui tiny warning message">
-        {$TOPIC_LOCKED_NOTICE}
+    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #f0ad4e;">
+        <i class="exclamation icon" style="color: #f0ad4e;"></i>
+        <div class="content">
+            <div class="header">{$FORUM_SPAM_WARNING_TITLE}</div>
+            {$TOPIC_LOCKED_NOTICE}
+        </div>
     </div>
 {/if}
 

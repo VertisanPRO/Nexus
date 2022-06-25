@@ -43,8 +43,11 @@
                             <img src="{$IMG_SRC}">
                         </div>
                     </div>
-                    <div class="ui info message">
-                        {$TFA_CODE_TEXT} <strong>{$TFA_CODE}</strong>
+                    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #0275d8;">
+                        <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
+                        <div class="content">
+                            {$TFA_CODE_TEXT} <strong>{$TFA_CODE}</strong>
+                        </div>
                     </div>
                     <a class="ui primary button" href="{$LINK}">{$NEXT}</a>
                     <a class="ui red button" href="{$CANCEL_LINK}">{$CANCEL}</a>

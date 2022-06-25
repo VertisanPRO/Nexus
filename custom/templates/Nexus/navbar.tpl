@@ -92,7 +92,10 @@
                 {/if}
 
                 {if isset($MUST_VALIDATE_ACCOUNT)}
-                    <div class="ui message">
-                        {$MUST_VALIDATE_ACCOUNT}
+                    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #0275d8;">
+                        <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
+                        <div class="content">
+                            {$MUST_VALIDATE_ACCOUNT}
+                        </div>
                     </div>
 {/if}
