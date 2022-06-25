@@ -1,1 +1,5 @@
-{}
+{
+    "general/note": "注意",
+    "addons/arcurl_label": "ウィジェットURL",
+    "addons/widgetbot_label": "ウィジェットBot"
+}
