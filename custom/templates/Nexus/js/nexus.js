@@ -14,3 +14,7 @@ window.onload = function () {
         document.body.classList.remove('loaded_hiding');
     }, 500);
 };
+
+$('.ui.left.sidebar').sidebar({
+    transition: 'overlay'
+});
