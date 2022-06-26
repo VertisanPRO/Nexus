@@ -12,10 +12,8 @@
                             {if isset($dropdown.separator)}
                                 <div class="divider navbar-item"></div>
                             {else}
-                                {if !in_array($dropdown.title, $navbarexcludeexploded)}
-                                    <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
-                                        {$dropdown.title}</a>
-                                {/if}
+                                <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
+                                    {$dropdown.title}</a>
                             {/if}
                         {/foreach}
                     </div>
