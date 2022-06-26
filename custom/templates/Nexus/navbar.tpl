@@ -14,13 +14,11 @@
     </div>
     {foreach from=$NAV_LINKS key=name item=item}
         {if isset($item.items)}
-            <div class="item">
-                <div class="header">{$item.title} <span class="icon">{$item.icon}</span></div>
-                <div class="menu">
+            <div class="item" style="color:{$PRIMARYCOLOR} !important">{$item.title}<i class="icon">{$item.icon}</i></div>
+                <div class="sidebar menu left">
                     {foreach from=$item.items item=dropdown}
                         <a class="item" href="{$dropdown.link}" target="{$dropdown.target}"><i class="icon">{$dropdown.icon}</i> {$dropdown.title}</a>
                     {/foreach}
-                </div>
             </div>
         {else}
             {if !in_array($item.title, $navbarexcludeexploded)}
