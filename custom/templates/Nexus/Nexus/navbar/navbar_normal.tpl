@@ -12,8 +12,8 @@
                             {if isset($dropdown.separator)}
                                 <div class="divider navbar-item"></div>
                             {else}
-                                <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
-                                    {$dropdown.title}</a>
+                                <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">
+                                <i class="icon">{$dropdown.icon}</i>{$dropdown.title}</a>
                             {/if}
                         {/foreach}
                     </div>
@@ -21,7 +21,7 @@
             {else}
                 {if !in_array($item.title, $navbarexcludeexploded)}
                     <a class="item{if isset($item.active)} active{/if} navbar-item" href="{$item.link}"
-                        target="{$item.target}">{$item.icon}
+                        target="{$item.target}"><i class="icon">{$item.icon}</i>
                         {$item.title}</a>
                 {/if}
             {/if}

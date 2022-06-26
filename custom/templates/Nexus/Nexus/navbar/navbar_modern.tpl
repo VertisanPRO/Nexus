@@ -16,8 +16,8 @@
                             {if isset($dropdown.separator)}
                                 <div class="divider navbar-item"></div>
                             {else}
-                                <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon}
-                                    {$dropdown.title}</a>
+                                <a class="item navbar-item" href="{$dropdown.link}" target="{$dropdown.target}">
+                                    <i class="icon">{$dropdown.icon}</i>{$dropdown.title}</a>
                             {/if}
                         {/foreach}
                     </div>
@@ -25,8 +25,8 @@
             {else}
                 {if !in_array($item.title, $navbarexcludeexploded)}
                     <button class="ui grey tertiary button" onclick="location.href='{$item.link}'"
-                        style="cursor: pointer; color: rgba(255, 255, 255, 0.6);">{$item.icon}
-                        {$item.title}</button>
+                        style="cursor: pointer; color: rgba(255, 255, 255, 0.6);">
+                        <i class="icon">{$item.icon}</i>{$item.title}</button>
                 {/if}
             {/if}
         {/foreach}

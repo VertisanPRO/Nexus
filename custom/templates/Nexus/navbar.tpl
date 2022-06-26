@@ -18,14 +18,14 @@
                 <div class="header">{$item.title} <span class="icon">{$item.icon}</span></div>
                 <div class="menu">
                     {foreach from=$item.items item=dropdown}
-                        <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon} {$dropdown.title}</a>
+                        <a class="item" href="{$dropdown.link}" target="{$dropdown.target}"><i class="icon">{$dropdown.icon}</i> {$dropdown.title}</a>
                     {/foreach}
                 </div>
             </div>
         {else}
             {if !in_array($item.title, $navbarexcludeexploded)}
-            <a class="item{if isset($item.active)} active{/if}" href="{$item.link}" target="{$item.target}">{$item.icon}
-                {$item.title}</a>
+            <a class="item{if isset($item.active)} active{/if}" href="{$item.link}" target="{$item.target}">
+                <i class="icon">{$item.icon}</i>{$item.title}</a>
             {/if}
         {/if}
     {/foreach}
