@@ -1,3 +1,4 @@
+{assign var="navbarexcludeexploded" value="/"|@explode:$NAVBAREXCLUDE}
 {if $PRELOADERVIEW eq '1'}
     <div class="preloader">
         <div
@@ -22,8 +23,10 @@
                 </div>
             </div>
         {else}
+            {if !in_array($item.title, $navbarexcludeexploded)}
             <a class="item{if isset($item.active)} active{/if}" href="{$item.link}" target="{$item.target}">{$item.icon}
                 {$item.title}</a>
+            {/if}
         {/if}
     {/foreach}
 </div>
