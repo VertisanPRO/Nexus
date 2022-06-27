@@ -17,14 +17,18 @@
         <div
             class="ui {if count($WIDGETS_LEFT) && count($WIDGETS_RIGHT) }four wide tablet eight wide computer{elseif count($WIDGETS_LEFT) || count($WIDGETS_RIGHT)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
 
-            <div class="ui secondary  menu">
-                <a class="item" href="{$ALL_LINK}">
+            <div class="ui stackable grid container">
+                <div class="three wide center aligned column">
+                <button class="ui fluid secondary button" href="{$ALL_LINK}">
                     {$DISPLAY_ALL}
-                </a>
+                </button>
+                </div>
                 {foreach from=$GROUPS item=groups}
-                    <a class="item" href="{$groups.link}">
+                    <div class="three wide center aligned column">
+                    <button class="ui fluid secondary button" href="{$groups.link}">
                         {$groups.name}
-                    </a>
+                    </button>
+                    </div>
                 {/foreach}
             </div>
 
