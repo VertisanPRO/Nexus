@@ -81,14 +81,4 @@
     .left.aligned.twelve.wide.column.cf-full-post-title {
         color: {$PRIMARYCOLOR} !important;
     }
-    .pagination .page-item.active,
-    .pagination .page-item.active .page-link {
-        background-color: {$PRIMARYCOLOR} !important;
-    }
-
-    .pagination .page-item .page-link:hover {
-        border-radius: 0.25rem !important;
-        background-color: {$PRIMARYCOLOR} !important;
-    }
-
 </style>

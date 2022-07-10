@@ -651,41 +651,6 @@ body.pushable>.pusher {
     padding-top: .5rem;
 }
 
-.pagination {
-    display: flex;
-    height: 2rem;
-    margin: 0;
-    padding: 0 0.25rem;
-    align-items: center;
-    border-radius: 0.5rem;
-}
-
-.pagination .page-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 3rem;
-    height: 100%;
-}
-
-.pagination .page-item .page-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-size: 1rem;
-}
-
-.ui .pagination {
-    color: black !important;
-    background-color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.pagination .page-item.disabled .page-link,
-.pagination .page-item.active .page-link {
-    color: black !important;
-}
 /*
  *  -[ ALIGNMENTS ]-
  */
@@ -1708,15 +1673,9 @@ body.dark .cf-full-post {
 }
 
 body.dark .ghost-readtime,
-body.dark .readtime,
-body.dark .ui .pagination {
+body.dark .readtime {
     color: white !important;
     background-color: rgba(255, 255, 255, 0.03) !important;
-}
-
-body.dark .pagination .page-item.disabled .page-link,
-body.dark .pagination .page-item.active .page-link {
-    color: white !important;
 }
 
 body.dark .ghost-card-content {

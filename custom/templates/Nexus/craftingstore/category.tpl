@@ -14,10 +14,11 @@
 
                 <div class="ui bottom attached segment">
                     {if isset($NO_PACKAGES)}
-                        <div class="ui icon message">
-                            <i class="info icon"></i>
+                        <div class="ui message icon announcement"
+                            style="border-top-style: solid; border-top-color: #0275d8;">
+                            <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
                             <div class="content">
-                                <p>{$NO_PACKAGES}</p>
+                                {$NO_PACKAGES}
                             </div>
                         </div>
                     {else}
@@ -35,7 +36,8 @@
                                             <div class="ui divider"></div>
                                             {$package.price} {$CURRENCY}
                                         </div>
-                                        <div class="ui bottom attached blue button" onClick="$('#modal{$package.id}').modal('show');">
+                                        <div class="ui bottom attached blue button"
+                                            onClick="$('#modal{$package.id}').modal('show');">
                                             {$BUY} &raquo;
                                         </div>
                                     </div>
@@ -59,7 +61,8 @@
                                         <div class="ui red deny button">
                                             {$CLOSE}
                                         </div>
-                                        <a class="ui positive right labeled icon button" target="_blank" rel="nofollow noopener" href="http://{$STORE_URL}/package/{$package.id}">
+                                        <a class="ui positive right labeled icon button" target="_blank" rel="nofollow noopener"
+                                            href="http://{$STORE_URL}/package/{$package.id}">
                                             {$BUY}
                                             <i class="shopping cart icon"></i>
                                         </a>
