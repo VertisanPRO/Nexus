@@ -1,0 +1,44 @@
+.soc-like,
+.soc-comment {
+    color: #666 !important;
+}
+
+.soc-like.active {
+    color: #e64b4b !important;
+}
+
+.socialize-post img {
+    max-width: 100% !important;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.socialize-post img:hover {
+    max-width: 100% !important;
+    border-radius: 2px;
+}
+
+.socialize-post video {
+    max-width: 100% !important;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.socialize-post video:hover {
+    border-radius: 2px !important;
+}
+
+.socialize-post .mediaFile:first-child {
+    margin-top: 6px !important;
+}
+
+.socialize-post .mediaFile {
+    margin-top: 12px !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.tox.tox-tinymce {
+    border-radius: 8px !important;
+}
