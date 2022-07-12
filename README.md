@@ -47,9 +47,8 @@ For better experience for installing Nexus, read "README.html"
 
 ## Installing
 
-1. Upload "custom" and the "modules" folder to your NamelessMC Root directory (public_html, html, htdocs)
-2. Open StaffCP => Layout => Templates => Click on "Install" - Enable after you've installed it.
-3. Open StaffCP => Modules => Click on "Install" - Enable after you've installed it. You're done :)
+1. Upload "custom" and the folder to your NamelessMC Root directory (public_html, html, htdocs)
+2. Open StaffCP => Layout => Templates => Click on "Install" - Enable after you've installed it. You're done :)
 
 ## Contribution
 
