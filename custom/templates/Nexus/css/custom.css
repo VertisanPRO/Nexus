@@ -1565,16 +1565,12 @@ body.dark .cc-window.cc-floating .cc-highlight .cc-btn.cc-allow {
     border-color: transparent;
 }
 
-/*
- * Colours
- */
-
 body.dark .white {
     color: #fff;
 }
 
 /*
- * Nexus
+ * [ NEXUS ]
  */
 
 .ui.steps {
@@ -1662,7 +1658,7 @@ body.dark .comment.icon.chatbox {
 }
 
 /*
- * Ghost Module
+ * [ GHOST MODULE ]
  */
 
 body.dark .post-card-large,
@@ -1796,4 +1792,12 @@ body.dark .cf-home-title {
     border-radius: 0.5rem;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+/*
+ * [ RESOURCES MODULE ]
+ */
+
+.ui.pointing.dropdown.small.primary.button.upward .text {
+    color: #fff !important;
 }
