@@ -37,9 +37,7 @@ For better experience for installing Nexus, read "README.html"
 * 🧩 Addons
   * 🤖 [WidgetBot](https://widgetbot.io)
   * 🔽 [Arc](https://arc.io)
-* 🕋 Widgets
-  * 💰 Donation widget
-  * 📝 Message widget
+* 🕋 [Widgets (moved)](https://github.com/VertisanPRO/WidgetPack)
 * 🔗 Embed
   * 📝 Title
   * 📃 Description
