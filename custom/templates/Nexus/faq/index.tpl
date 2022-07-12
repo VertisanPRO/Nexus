@@ -65,7 +65,7 @@
     <div class="ui center aligned main_title_text">{$MAIN_TITLE}</div>
 {/if}
 {include file='footer.tpl'}
-<script>
+<script type="text/javascript">
     $(document).ready(function() {
         $('.ui.accordion').accordion();
     });

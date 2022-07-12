@@ -141,7 +141,7 @@
 
 {include file='footer.tpl'}
 
-<script>
+<script type="text/javascript">
     {include file='reviews/js/scripts.js'}
 </script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>

@@ -25,7 +25,7 @@
 </style>
 <div class="ui fluid card" id="widget-faq">
     <div class="content">
-        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-users-gear"></i>
+        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-circle-info"></i>
             {$FAQ} ({$AMOUNT})</a>
         <div class="description">
             {if isset($QUESTIONS) && count($QUESTIONS)}

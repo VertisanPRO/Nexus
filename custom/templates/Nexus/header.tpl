@@ -83,7 +83,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
         {if isset($ANALYTICS_ID)}
             {literal}
                 <script async src="https://www.googletagmanager.com/gtag/js?id={/literal}{$ANALYTICS_ID}{literal}"></script>
-                <script>
+                <script type="text/javascript">
                     window.dataLayer = window.dataLayer || [];
 
                     function gtag() { dataLayer.push(arguments); }

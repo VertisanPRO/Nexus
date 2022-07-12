@@ -160,7 +160,7 @@
 	</div>
 </div>
 
-<script>
+<script type="text/javascript">
 	function badgesModal(id) {
 		$('.ui.basic.modal.userbadges.' + id)
 			.modal('show');

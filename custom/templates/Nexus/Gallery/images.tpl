@@ -127,7 +127,7 @@
 
 {include file='footer.tpl'}
 
-<script>
+<script type="text/javascript">
     function slider() {
         $('.shape').shape('flip over');
     }

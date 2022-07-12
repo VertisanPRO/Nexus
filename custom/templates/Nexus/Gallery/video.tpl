@@ -101,7 +101,7 @@
 </div>
 {include file='footer.tpl'}
 
-<script>
+<script type="text/javascript">
     $('.ui.embed').embed();
 
     function videoModal(id) {

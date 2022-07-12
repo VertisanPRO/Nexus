@@ -1,6 +1,6 @@
 <div class="ui fluid card">
     <div class="content">
-        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-bell"></i>
+        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-newspaper"></i>
             {$GHOST_LATEST_NEWS}</a>
         <div class="ui two column grid">
             {foreach $GHOST_LATEST_NEWS_ARRAY item=post name=ghost_latest_news_array}

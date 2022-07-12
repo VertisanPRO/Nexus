@@ -129,7 +129,7 @@
 
 {include file='footer.tpl'}
 
-<script>
+<script type="text/javascript">
 	function productModal() {
 		$('.ui.modal')
 			.modal('show');

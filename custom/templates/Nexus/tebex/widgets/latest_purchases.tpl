@@ -1,6 +1,6 @@
 <div class="ui fluid card" id="widget-featured-package">
     <div class="content">
-        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-cookie"></i>
+        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-cart-plus"></i>
             {$LATEST_PURCHASES}</a>
         {if count($PURCHASES)}
             {foreach from=$PURCHASES item=purchase name=purchaseLoop}

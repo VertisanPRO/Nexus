@@ -403,7 +403,7 @@ $(document).ready(function () {
             const actionUrl = '/queries/review_like?id={$USER_ID}';
             const params = {
                 review_id: e.target.id
-            }
+            };
             $.ajax({
                 url: actionUrl,
                 type: 'POST',

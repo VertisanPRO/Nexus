@@ -63,7 +63,7 @@
 				</form>
 
 
-				<script>
+				<script type="text/javascript">
 					function PayPal() {
 						document.getElementById('payment_form').action = '{$PAYPAL_PROCESS_URL}';
 					}

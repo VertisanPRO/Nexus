@@ -136,7 +136,7 @@
         {$DEBUGBAR_HTML}
     {/if}
 
-    <script>
+    <script type="text/javascript">
         function toggleDarkLightMode() {
             $.post("{$DARK_LIGHT_MODE_ACTION}", { token: "{$DARK_LIGHT_MODE_TOKEN}" })
             .done(function() {
@@ -170,7 +170,7 @@
     </script>
 
     {if $NEXUS_DARK_MODE eq '1' }
-        <script>
+        <script type="text/javascript">
             function copy(element) {
                 const temp = $('<input>');
                 $('body').append(temp);
@@ -190,7 +190,7 @@
             };
         </script>
     {else}
-        <script>
+        <script type="text/javascript">
             function copy(element) {
                 var $temp = $('<input>');
                 $('body').append($temp);

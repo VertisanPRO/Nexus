@@ -1,4 +1,4 @@
-<script>
+<script type="text/javascript">
     var url = "https://api.minetools.eu/ping/{$MINECRAFTIP}/{$MINECRAFTPORT}";
 
     $.getJSON(url, function(r) {

@@ -1,6 +1,6 @@
 <div class="ui fluid card" id="widget-featured-package">
     <div class="content">
-        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-cookie"></i>
+        <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-certificate"></i>
             {$FEATURED_PACKAGE}</a>
         <div class="ui card">
             {if $PACKAGE.image}

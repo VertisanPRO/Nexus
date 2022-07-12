@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <script>
+        <script type="text/javascript">
             $(function() {
                 function setValue(value) {
                     $("input[name='amount'], input[name='a3']").val(value);
