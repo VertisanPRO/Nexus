@@ -1,1 +1,9 @@
-{}
+{
+    "general/note": "Poznámka",
+    "addons/widgetbotcolor_custom_label": "Vlastné",
+    "addons/widgetbotcolor_label": "Farba pozadia",
+    "addons/widgetbotcolor_normal_label": "Svetlé/tmavé",
+    "addons/widgetbotcolor_original_label": "Originál (blurple)",
+    "addons/arcurl_label": "URL widgetu",
+    "addons/widgetbotchannelid_label": "ID kanálu"
+}

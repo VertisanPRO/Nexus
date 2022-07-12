@@ -8,7 +8,7 @@
     "addons/arcurl_label": "URL del widget",
     "addons/arcview_info_label": "Para habilitar Arc es necesario {{registerLinkStart}}registrarse{{registerLinkEnd}}. Después deberás agregar un sitio web. Luego necesitas copiar {{scriptLinkStart}}arc-sw.js{{scriptLinkEnd}} a la raíz de tu sitio web. Luego tienes que desplazarte hacia abajo hasta {{addwidgetCodeStart}}Add Arc's widget to your site{{addwidgetCodeEnd}} y copiar la URL (no toda). Lo último es añadir la URL en la entrada de abajo.",
     "addons/widgetbot_label": "WidgetBot",
-    "addons/widgetbotchannelid_info_label": "Para obtener el ID del canal, ve a Servidor de Discord > <code>clic derecho</code> en el canal > Copiar ID. Puede encontrar más información {{moreinfoLinkStart}} aquí{{moreinfoLinkEnd}}.",
+    "addons/widgetbotchannelid_info_label": "Para obtener el ID del canal, vaya al servidor de Discord > <code>clic derecho</code> en el canal > Copiar ID. {{moreinfoLinkStart}}Leer más »{{moreinfoLinkEnd}}.",
     "addons/widgetbotchannelid_label": "ID del canal",
     "addons/widgetbotcolor_custom_label": "Personalizado",
     "addons/widgetbotcolor_label": "Color del fondo",
@@ -19,7 +19,7 @@
     "addons/widgetbotlocation_left_label": "Izquierda",
     "addons/widgetbotlocation_right_label": "Derecha",
     "addons/widgetbotlocation_top_label": "Parte superior",
-    "addons/widgetbotserverid_info_label": "Para obtener el ID del servidor, ve a Servidor de Discord > Configuración del servidor > Widget > ID del servidor > Copiar. Puede encontrar más información {{moreinfoLinkStart}} aquí{{moreinfoLinkEnd}}.",
+    "addons/widgetbotserverid_info_label": "Para obtener el ID del servidor, vaya al servidor de Discord > Configuración del servidor > Widget > ID del servidor > Copiar. {{moreinfoLinkStart}}Leer más »{{moreinfoLinkEnd}}.",
     "addons/widgetbotserverid_label": "ID del servidor",
     "addons/widgetbotverticallocation_label": "Ubicación vertical",
     "addons/widgetbotview_info_label": "Cuando se habilita hay que configurarlo. Es un widget en el que se puede chatear en la web con Discord. Asegúrate de invitar {{widgetbotLinkStart}}al bot{{widgetbotLinkEnd}}.",
@@ -39,7 +39,7 @@
     "colors/primarycolor_label": "Color principal",
     "connections/advanced_label": "Avanzado",
     "connections/discord_label": "Discord",
-    "connections/discordid_info_label": "Para obtener el ID del servidor, ve a Servidor de Discord > Configuración del servidor > Widget > ID del servidor > Copiar. Puede encontrar más información {{moreinfoLinkStart}} aquí{{moreinfoLinkEnd}}.",
+    "connections/discordid_info_label": "Para obtener el ID del servidor, vaya a servidor de Discord > Configuración del servidor > Widget > ID del servidor > Copiar. {{moreinfoLinkStart}}Leer más »{{moreinfoLinkEnd}}.",
     "connections/discordid_label": "ID del servidor de Discord",
     "connections/discordview_info_label": "Esto en la barra de navegación de la izquierda. Para que funcione, tienes que activar el widget del Servidor en Servidor de Discord > Configuración del Servidor > Widget. No olvides hacer un canal de invitación.",
     "connections/discordview_label": "Estado de Discord",
@@ -96,5 +96,9 @@
     "embed/embedpreview_label": "Previsualización del embed",
     "embed/embedtext_label": "Descripción del embed",
     "embed/embedtitle_label": "Título del embed",
-    "navigation/embed_page": "Embed"
+    "navigation/embed_page": "Embed",
+    "general/note": "Nota",
+    "navbar/navbarexclude_label": "Excluir los enlaces",
+    "navbar/navbarexclude_info_label": "Excluir los enlaces especificados separados con {{slashCodeStart}}/{slashCodeEnd}} de la barra de navegación.",
+    "widgets/note_widgets": "Ya no proporcionamos widgets. Pero hemos creado un nuevo módulo llamado {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}."
 }
