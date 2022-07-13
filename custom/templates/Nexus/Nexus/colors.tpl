@@ -76,7 +76,7 @@
     {/if}
 
     body.dark .fluid.ui.small.primary.button,
-    .header,
+    .header:not(.ui.message.icon.announcement .content .header):not(.ui.fluid.card .content .ui .dividing.header),
     .cf-home-title,
     .left.aligned.twelve.wide.column.cf-full-post-title {
         color: {$PRIMARYCOLOR} !important;

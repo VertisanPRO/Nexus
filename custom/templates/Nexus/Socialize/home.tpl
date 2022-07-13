@@ -9,7 +9,8 @@
                 {if $TRENDING_STATUS == 1}
                     <div class="ui fluid card" id="">
                         <div class="content">
-                            <h4 class="ui header"><i class="fas fa-fire"></i> {$LANG.trending_title}</h4>
+                            <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-fire"></i>
+                                {$LANG.trending_title}</a>
                             <div class="description">
                                 <div class="ui list">
                                     {if $TRENDING == 'Empty'}
@@ -30,7 +31,8 @@
                 {if $TOP_USERS_STATUS == 1}
                     <div class="ui fluid card" id="">
                         <div class="content">
-                            <h4 class="ui header"><i class="fas fa-medal"></i> {$LANG.top_users_title}</h4>
+                            <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-medal"></i>
+                                {$LANG.top_users_title}</a>
                             <div class="description">
                                 <div class="ui list">
                                     {foreach from=$TOPUSERS item=item}
@@ -52,7 +54,8 @@
                 {if $CHANNELS_ENABLED == 1}
                     <div class="ui fluid card" id="">
                         <div class="content">
-                            <h4 class="ui header"><i class="far fa-comment-dots"></i> Channels</h4>
+                            <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-comment-dots"></i>
+                                Channels</a>
                             <div class="description">
                                 <div class="ui list">
                                     <div class="item">
@@ -284,7 +287,8 @@ We're creating and uploading media content for your post, if files are bigger si
             {if $USERINFO.loggeduser.loggedin == 'true' && $USER_STATS_STATUS == 1}
             <div class="ui fluid card">
                 <div class="content">
-                    <h4 class="ui header"><i class="fas fa-chart-bar"></i> {$LANG.stats_title}</h4>
+                    <a class="ui ribbon label" style="margin-bottom: 10px;"><i class="fa-solid fa-chart-bar"></i>
+                        {$LANG.stats_title}</a>
                     <div class="description">
                         <div class="ui list">
                             <div class="item">

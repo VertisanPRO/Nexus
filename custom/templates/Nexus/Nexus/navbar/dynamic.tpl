@@ -42,8 +42,7 @@
     {/if}
     <div class="column" style="text-align: center;">
         <div class="ui medium image" href="/" target="_blank">
-            <img onclick="window.location.href='/'"
-                src="{if isset($TEMPLATE_LOGO)} {$TEMPLATE_LOGO}{else}https://namelessmc.com/uploads/resources_icons/162.png{/if}"
+            <img onclick="window.location.href='/'" src="{$NAVBARLOGO}"
                 style="cursor:pointer; display: unset; max-width: 100%; height: auto;">
         </div>
     </div>
