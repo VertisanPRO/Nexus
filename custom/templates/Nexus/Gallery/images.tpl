@@ -100,7 +100,7 @@
                         {foreach from=$IMAGES_LIST item=image}
                             <img src="{$image.small_src}" class="image rounded" onclick="imgModal({$i})">
 
-                        <div class="ui longer modal {$i} grid" style="{if $DARKMODE}background-color: #303030{else}background-color: #ffffff{/if}">
+                        <div class="ui longer modal {$i} grid" style="{if $NEXUS_DARK_MODE}background-color: #303030{else}background-color: #ffffff{/if}">
                                 <div class="content twelve wide row">
                                     <div class="ui fluid image rounded" style="padding-bottom: 0 !important">
                                         <img src="{$image.src}">
