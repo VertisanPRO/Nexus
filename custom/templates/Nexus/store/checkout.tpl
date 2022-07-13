@@ -33,9 +33,11 @@
                     <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
                         <i class="x icon" style="color: #d9534f;"></i>
                         <div class="content">
-                            {foreach from=$ERRORS item=error}
-                                {$error}<br />
-                            {/foreach}
+                            <ul class="list">
+                                {foreach from=$ERRORS item=error}
+                                    <li>{$error}</li>
+                                {/foreach}
+                            </ul>
                         </div>
                     </div>
                 {/if}
