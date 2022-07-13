@@ -69,8 +69,21 @@ class NexusUtil
     public static function initialise()
     {
 
-        if (DB::getInstance()->showTables('nexus_settings')) {
-            return;
+        $found = false;
+
+        foreach (DB::getInstance()->query('SELECT name FROM nl2_nexus_settings')->results() as $row) {
+            if ($row->name === 'template_about') {
+                $found = true;
+                break;
+            }
+        }
+
+        if ($found) {
+            DB::getInstance()->query('DROP TABLE nl2_nexus_settings');
+        } else {
+            if (DB::getInstance()->showTables('nexus_settings')) {
+                return;
+            }
         }
 
         try {
