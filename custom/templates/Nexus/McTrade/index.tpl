@@ -30,7 +30,7 @@
                     <i class="x icon" style="color: #d9534f;"></i>
                     <div class="content">
                         {foreach from=$ERRORS item=error}
-                            {$error}<br />
+                            <li>{$error}</li>
                         {/foreach}
                     </div>
                 </div>

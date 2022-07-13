@@ -10,7 +10,7 @@
         {if isset($ERRORS)}
             <div class="ui negative message">
                 {foreach from=$ERRORS item=error}
-                    {$error}<br />
+                    <li>{$error}</li>
                 {/foreach}
             </div>
         {/if}

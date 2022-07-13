@@ -18,6 +18,28 @@
                 <h1 style="display:inline;">{$STORE} &raquo; {$ACTIVE_CATEGORY}</h1>
                 {include file='store/navbar.tpl'}
 
+                {if isset($SUCCESS)}
+                    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #5cb85c;">
+                        <i class="check icon" style="color: #5cb85c;"></i>
+                        <div class="content">
+                            {$SUCCESS}
+                        </div>
+                    </div>
+                {/if}
+
+                {if isset($ERRORS)}
+                    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;">
+                        <i class="x icon" style="color: #d9534f;"></i>
+                        <div class="content">
+                            <ul class="list">
+                                {foreach from=$ERRORS item=error}
+                                    <li>{$error}</li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                {/if}
+
                 <div class="ui bottom attached segment">
                     {$CONTENT}
 

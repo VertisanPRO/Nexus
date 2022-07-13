@@ -18,8 +18,6 @@
                 <h1 style="display:inline;">{$STORE} &raquo; {$PRODUCT_NAME}</h1>
                 {include file='store/navbar.tpl'}
 
-                </br>
-
                 {if isset($SUCCESS)}
                     <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #5cb85c;">
                         <i class="check icon" style="color: #5cb85c;"></i>
