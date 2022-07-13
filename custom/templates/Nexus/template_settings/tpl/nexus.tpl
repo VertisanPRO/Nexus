@@ -38,10 +38,36 @@
                 role="tabpanel" aria-labelledby="v-pills-embed-tab">
                 {include file="{$TPL_PATH}embed.tpl"}
             </div>
-            <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'update'}show active{/if}" id="v-pills-update"
-                role="tabpanel" aria-labelledby="v-pills-update-tab">
-                {include file="{$TPL_PATH}update.tpl"}
+            <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'updates'}show active{/if}" id="v-pills-updates"
+                role="tabpanel" aria-labelledby="v-pills-updates-tab">
+                {include file="{$TPL_PATH}updates.tpl"}
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{$WARNING}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {$INSTALL_CONFIRM}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{$CANCEL}</button>
+                <a href="{$UPGRADE_LINK}" class="btn btn-primary">{$UPDATE}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function showConfirmModal() {
+        $('#confirmModal').modal().show();
+    }
+</script>

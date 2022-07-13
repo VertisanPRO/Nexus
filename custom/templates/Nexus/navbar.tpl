@@ -73,30 +73,54 @@
                     </div>
                 {/if}
 
-                {if !empty($ANNOUNCEMENTS)}
-                    {foreach from=$ANNOUNCEMENTS item=$ANNOUNCEMENT}
-                        <div class="ui {if $ANNOUNCEMENT->icon} icon {/if} message announcement"
-                            id="announcement-{$ANNOUNCEMENT->id}"
-                            style="border-top-style: solid; border-top-color:{$ANNOUNCEMENT->background_colour};">
-                            {if $ANNOUNCEMENT->closable}
+                {if isset($NEW_UPDATE_NEXUS)}
+                    {if $NEW_UPDATE_URGENT_NEXUS eq true}
+                        <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #d9534f;"
+                            id="update-message">
+                        {else}
+                            <div class="ui message icon announcement"
+                                style="border-top-style: solid; border-top-color: #0275d8;" id="update-message">
                                 <i class="close icon"></i>
                             {/if}
-                            {if $ANNOUNCEMENT->icon}
-                                <i class="{$ANNOUNCEMENT->icon} icon" style="color: {$ANNOUNCEMENT->background_colour};"></i>
-                            {/if}
+                            <a href="{$UPDATE_LINK_NEXUS}">
+                                <i class="download icon" style="color: {if $NEW_UPDATE_URGENT_NEXUS eq true}#d9534f
+                                {else}#0275d8;{/if}"></i>
+                            </a>
                             <div class="content">
-                                <div class="header">{$ANNOUNCEMENT->header}</div>
-                                <p>{$ANNOUNCEMENT->message|escape}</p>
+                                <div class="header">{$NEW_UPDATE_NEXUS}</div>
+                                <ul class="list">
+                                    <li>{$CURRENT_VERSION_NEXUS}</li>
+                                    <li>{$NEW_VERSION_NEXUS}</li>
+                                </ul>
                             </div>
                         </div>
-                    {/foreach}
-                {/if}
+                    {/if}
 
-                {if isset($MUST_VALIDATE_ACCOUNT)}
-                    <div class="ui message icon announcement" style="border-top-style: solid; border-top-color: #0275d8;">
-                        <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
-                        <div class="content">
-                            {$MUST_VALIDATE_ACCOUNT}
+                    {if !empty($ANNOUNCEMENTS)}
+                        {foreach from=$ANNOUNCEMENTS item=$ANNOUNCEMENT}
+                            <div class="ui {if $ANNOUNCEMENT->icon} icon {/if} message announcement"
+                                id="announcement-{$ANNOUNCEMENT->id}"
+                                style="border-top-style: solid; border-top-color:{$ANNOUNCEMENT->background_colour};">
+                                {if $ANNOUNCEMENT->closable}
+                                    <i class="close icon"></i>
+                                {/if}
+                                {if $ANNOUNCEMENT->icon}
+                                    <i class="{$ANNOUNCEMENT->icon} icon" style="color: {$ANNOUNCEMENT->background_colour};"></i>
+                                {/if}
+                                <div class="content">
+                                    <div class="header">{$ANNOUNCEMENT->header}</div>
+                                    <p>{$ANNOUNCEMENT->message|escape}</p>
+                                </div>
+                            </div>
+                        {/foreach}
+                    {/if}
+
+                    {if isset($MUST_VALIDATE_ACCOUNT)}
+                        <div class="ui message icon announcement"
+                            style="border-top-style: solid; border-top-color: #0275d8;">
+                            <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
+                            <div class="content">
+                                {$MUST_VALIDATE_ACCOUNT}
+                            </div>
                         </div>
-                    </div>
 {/if}

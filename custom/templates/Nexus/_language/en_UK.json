@@ -100,5 +100,6 @@
     "preloader/preloadertext_label": "Text",
     "preloader/preloaderview_info_label": "If enabled, a loading screen will show when loading the website.",
     "preloader/preloaderview_label": "Preloader",
-    "widgets/note_widgets": "We don't provide widgets anymore. But we created a new module called {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}."
+    "widgets/note_widgets": "We don't provide widgets anymore. But we created a new module called {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}.",
+    "updates/up_to_date": "Your Nexus is up to date!"
 }

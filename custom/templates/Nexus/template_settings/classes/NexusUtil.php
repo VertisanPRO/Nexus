@@ -1,16 +1,19 @@
 <?php
 
-class NexusUtil {
+class NexusUtil
+{
     private static Language $_nexus_language;
 
-    public static function getLanguage(string $file, string $term, array $variables = []): string {
+    public static function getLanguage(string $file, string $term, array $variables = []): string
+    {
         if (!isset(self::$_nexus_language)) {
             self::$_nexus_language = new Language(ROOT_PATH . '/custom/templates/Nexus/_language', LANGUAGE);
         }
         return self::$_nexus_language->get($file, $term, $variables);
     }
 
-    public static function getDsServer($id): array {
+    public static function getDsServer($id): array
+    {
         $discord_server = [];
         if ($id !== '') {
             $ch = curl_init();
@@ -31,10 +34,11 @@ class NexusUtil {
         return $discord_server;
     }
 
-    public static function getSettingsToSmarty(): array {
+    public static function getSettingsToSmarty(): array
+    {
         $settings_data = DB::getInstance()->get('nexus_settings', ['id', '<>', 0])->results();
+        $result = [];
         if (count($settings_data)) {
-            $result = [];
             foreach ($settings_data as $value) {
                 $settings_data_array[$value->name] = [
                     'id' => Output::getClean($value->id),
@@ -46,7 +50,8 @@ class NexusUtil {
         return $result;
     }
 
-    public static function updateOrCreateParam($key, $value) {
+    public static function updateOrCreateParam($key, $value)
+    {
         $array = DB::getInstance()->get('nexus_settings', ['name', '=', $key])->results();
         $data = end($array);
         if (!empty($data)) {
@@ -61,7 +66,8 @@ class NexusUtil {
         }
     }
 
-    public static function initialise() {
+    public static function initialise()
+    {
 
         if (DB::getInstance()->showTables('nexus_settings')) {
             return;
@@ -154,5 +160,24 @@ class NexusUtil {
                 // Error
             }
         }
+    }
+
+    /**
+     * Check for Nexus updates.
+     */
+    public static function updateCheckNexus()
+    {
+        $update_check_nexus_response = HttpClient::get('https://updates.wemx.net/api/v2/Nexus/updateCheck&version=1.7.0');
+
+        if ($update_check_nexus_response->hasError()) {
+            return $update_check_nexus_response->getError();
+        }
+
+        $update_check_nexus = new UpdateCheck($update_check_nexus_response->json(true));
+        if ($update_check_nexus->hasError()) {
+            return $update_check_nexus->getErrorMessage();
+        }
+
+        return $update_check_nexus;
     }
 }

@@ -14,6 +14,17 @@ $template_file = 'tpl/nexus.tpl';
 require_once('classes/NexusUtil.php');
 require_once(ROOT_PATH . '/core/templates/backend_init.php');
 
+if (isset($_GET['recheck'])) {
+    $cache->setCache('update_check_nexus');
+    if ($cache->isCached('update_check_nexus')) {
+        $cache->erase('update_check_nexus');
+    }
+}
+
+if (isset($_GET['nexusUpgrade'])) {
+    require_once('upgrade.php');
+}
+
 $smarty->assign(NexusUtil::getSettingsToSmarty());
 $smarty->assign([
     // Everything else
@@ -30,6 +41,9 @@ $smarty->assign([
         'ENABLED' => $language->get('admin', 'enabled'),
         'DISABLED' => $language->get('admin', 'disabled'),
         'NOTE' => NexusUtil::getLanguage('general', 'note'),
+        'UP_TO_DATE' => NexusUtil::getLanguage('updates', 'up_to_date'),
+        'CHECK_AGAIN' => $language->get('admin', 'check_again'),
+        'WARNING' => $language->get('general', 'warning'),
 
     // Navigation
         'NAVIGATION' => NexusUtil::getLanguage('navigation', 'navigation'),

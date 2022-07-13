@@ -1,15 +1,16 @@
 <?php
 /*
- *    Made by Samerton
- *    https://github.com/NamelessMC/Nameless/
- *    NamelessMC version 2.0.0-pr13
+ *  Made by Samerton
+ *  https://github.com/NamelessMC/Nameless/
+ *  NamelessMC version 2.0.0-pr13
  *
- *    License: MIT
+ *  License: MIT
  *
- *    Nexus Template
+ *  Nexus Template
  */
 
-class Nexus_Template extends TemplateBase {
+class Nexus_Template extends TemplateBase
+{
 
     private array $_template;
 
@@ -24,10 +25,11 @@ class Nexus_Template extends TemplateBase {
     private $_smarty;
     private $_cache;
 
-    public function __construct($cache, $smarty, $language, $user, $pages) {
+    public function __construct($cache, $smarty, $language, $user, $pages)
+    {
         $template = [
             'name' => 'Nexus',
-            'version' => '2.0.0-pr13',
+            'version' => '1.7.0',
             'nl_version' => '2.0.0-pr13',
             'author' => '<a href="https://github.com/VertisanPRO" target="_blank">Vertisan</a>',
         ];
@@ -69,14 +71,6 @@ class Nexus_Template extends TemplateBase {
             define('TEMPLATE_TINY_EDITOR_DARKMODE', true);
         }
 
-        if ($cache->isCached('navbarColour')) {
-            $navbarColour = $cache->retrieve('navbarColour');
-
-            if ($navbarColour != 'white') {
-                $smartyNavbarColour = $navbarColour . ' inverted';
-            }
-        }
-
         $smarty->assign([
             'NEXUS_DARK_MODE' => $smartyDarkMode
         ]);
@@ -88,9 +82,65 @@ class Nexus_Template extends TemplateBase {
 
         require_once('template_settings/classes/NexusUtil.php');
         NexusUtil::initialise();
+
+        if ($user->isLoggedIn()) {
+            if ($user->hasPermission('admincp.update')) {
+
+                $templateID = DB::getInstance()->get('templates', ['name', "Nexus"])->results();
+                if ($templateID) {
+                    $smarty->assign('CHECK_AGAIN_LINK', URL::build('/panel/core/templates/', 'recheck&action=settings&template=' . $templateID[0]->id));
+                    $smarty->assign('UPGRADE_LINK', URL::build('/panel/core/templates/', 'nexusUpgrade&action=settings&template=' . $templateID[0]->id));
+                    $smarty->assign('UPDATE_LINK_NEXUS', URL::build('/panel/core/templates/', 'action=settings&template=' . $templateID[0]->id));
+                }
+
+                $cache->setCache('update_check_nexus');
+                if ($cache->isCached('update_check_nexus')) {
+                    $update_check_nexus = $cache->retrieve('update_check_nexus');
+                } else {
+                    $update_check_nexus = NexusUtil::updateCheckNexus();
+                    $cache->store('update_check_nexus', $update_check_nexus, 3600);
+                }
+
+                if (!is_string($update_check_nexus) && $update_check_nexus->updateAvailable()) {
+                    $smarty->assign([
+                        'NEW_UPDATE_NEXUS' => $update_check_nexus->isUrgent()
+                            ? $language->get('admin', 'new_urgent_update_available')
+                            : $language->get('admin', 'new_update_available'),
+                        'NEW_UPDATE_URGENT_NEXUS' => $update_check_nexus->isUrgent(),
+                        'CURRENT_VERSION_NEXUS' => $language->get('admin', 'current_version_x', [
+                            'version' => 'Nexus (' . $template["version"] . ')'
+                        ]),
+                        'NEW_VERSION_NEXUS' => $language->get('admin', 'new_version_x', [
+                            'version' => Output::getClean($update_check_nexus->version())
+                        ]),
+                        'UPDATE_NEXUS' => $language->get('admin', 'update'),
+                    ]);
+                }
+
+                if (!is_string($update_check_nexus)) {
+                    if ($update_check_nexus->updateAvailable()) {
+                        $smarty->assign([
+                            'INSTRUCTIONS' => $language->get('admin', 'instructions'),
+                            'INSTRUCTIONS_VALUE' => Output::getDecoded($update_check_nexus->instructions()),
+                            'DOWNLOAD_LINK' => $update_check_nexus->gitHubLink(),
+                            'UPDATE' => $language->get('admin', 'update'),
+                            'DOWNLOAD' => $language->get('admin', 'download'),
+                            'INSTALL_CONFIRM' => $language->get('admin', 'install_confirm'),
+                            'WARNING' => $language->get('general', 'warning'),
+                            'CANCEL' => $language->get('general', 'cancel'),
+                        ]);
+                    }
+                } else {
+                    $smarty->assign([
+                        'UPDATE_CHECK_ERROR_NEXUS' => $update_check_nexus,
+                    ]);
+                }
+            }
+        }
     }
 
-    public function onPageLoad() {
+    public function onPageLoad()
+    {
         $page_load = microtime(true) - PAGE_START_TIME;
         define('PAGE_LOAD_TIME', $this->_language->get('general', 'page_loaded_in', ['time' => round($page_load, 3)]));
 

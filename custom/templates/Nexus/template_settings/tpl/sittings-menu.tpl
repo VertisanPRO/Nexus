@@ -27,9 +27,11 @@
                 href="#v-pills-embed" role="tab" aria-controls="v-pills-embed" aria-selected="false"><i
                     class="fa-solid fa-link"></i>
                 {$EMBED_PAGE}</a>
-            <a class="nav-link {if $TPL_NAME_SESSION eq 'update'}active{/if}" id="v-pills-update-tab" data-toggle="pill"
-                href="#v-pills-update" role="tab" aria-controls="v-pills-update" aria-selected="false"><i
-                    class="fa-solid fa-cloud-download-alt"></i> {$UPDATES_PAGE}</a>
+            <a class="nav-link {if $TPL_NAME_SESSION eq 'updates'}active{/if}" id="v-pills-updates-tab"
+                data-toggle="pill" href="#v-pills-updates" role="tab" aria-controls="v-pills-updates"
+                aria-selected="false"><i class="fa-solid fa-cloud-download-alt"></i> {$UPDATES_PAGE}
+                {if isset($NEW_UPDATE_NEXUS)} <span class="pull-right"><i class="fa-solid fa-triangle-exclamation"
+                        style="color: #f0ad4e;"></i></span>{/if}</a>
             <a class="nav-link" href="https://resourcemc.net/discord" target="_blank"><i
                     class="fa-solid fa-life-ring"></i>
                 {$SUPPORT_PAGE}</a>
