@@ -14,10 +14,13 @@
     </div>
     {foreach from=$NAV_LINKS key=name item=item}
         {if isset($item.items)}
-            <div class="item" style="color:{$PRIMARYCOLOR} !important">{$item.title}{$item.icon}</div>
+            <div class="item" style="color:{$PRIMARYCOLOR} !important">{$item.title} <div style="float: right;">{$item.icon}
+                </div>
+            </div>
             <div class="sidebar menu left">
                 {foreach from=$item.items item=dropdown}
-                    <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.icon} {$dropdown.title}</a>
+                    <a class="item" href="{$dropdown.link}" target="{$dropdown.target}">{$dropdown.title} <div
+                            style="float: right;">{$dropdown.icon}</div></a>
                 {/foreach}
             </div>
         {else}
