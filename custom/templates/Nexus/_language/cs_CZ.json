@@ -100,5 +100,6 @@
     "general/note": "Poznámka",
     "navbar/navbarexclude_info_label": "V navigační liště nezahrnovat zadané odkazy oddělené pomocí {{slashCodeStart}}/{{slashCodeEnd}}.",
     "navbar/navbarexclude_label": "Nezahrnovat odkazy",
-    "widgets/note_widgets": "Již neposkytujeme widgety. Máme ale nový doplněk s názvem {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}."
+    "widgets/note_widgets": "Již neposkytujeme widgety. Máme ale nový doplněk s názvem {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}.",
+    "updates/up_to_date": "Váš Nexus je aktuální!"
 }
