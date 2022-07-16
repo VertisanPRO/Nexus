@@ -100,5 +100,6 @@
     "general/note": "Note",
     "widgets/note_widgets": "We don't provide widgets anymore. But we created a new module called {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}.",
     "navbar/navbarexclude_label": "Exclude Links",
-    "navbar/navbarexclude_info_label": "Exclude specified links seperated with {{slashCodeStart}}/{{slashCodeEnd}} from the navigation bar."
+    "navbar/navbarexclude_info_label": "Exclude specified links seperated with {{slashCodeStart}}/{{slashCodeEnd}} from the navigation bar.",
+    "updates/up_to_date": "Your Nexus is up to date!"
 }
