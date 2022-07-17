@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-We support only two latest versions, excluding pre-releases.
+We support only versions that are ticked.
 
 | Version | Supported          |
 | ------- | ------------------ |
