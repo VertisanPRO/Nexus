@@ -100,5 +100,6 @@
     "preloader/preloader_double": "Dvojitý",
     "preloader/preloader_fast": "Rýchly",
     "preloader/preloader_slow": "Pomalý",
-    "preloader/preloader_normal": "Normálny"
+    "preloader/preloader_normal": "Normálny",
+    "updates/up_to_date": "Váš Nexus je aktuálny!"
 }
