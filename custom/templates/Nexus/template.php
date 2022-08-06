@@ -29,8 +29,8 @@ class Nexus_Template extends TemplateBase
     {
         $template = [
             'name' => 'Nexus',
-            'version' => '1.7.0',
-            'nl_version' => '2.0.0-pr13',
+            'version' => '1.7.1',
+            'nl_version' => '2.0.0',
             'author' => '<a href="https://github.com/VertisanPRO" target="_blank">Vertisan</a>',
         ];
 
