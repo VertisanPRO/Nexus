@@ -100,5 +100,6 @@
     "general/note": "Nota",
     "navbar/navbarexclude_label": "Excluir los enlaces",
     "navbar/navbarexclude_info_label": "Excluir los enlaces especificados separados con {{slashCodeStart}}/{slashCodeEnd}} de la barra de navegación.",
-    "widgets/note_widgets": "Ya no proporcionamos widgets. Pero hemos creado un nuevo módulo llamado {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}."
+    "widgets/note_widgets": "Ya no proporcionamos widgets. Pero hemos creado un nuevo módulo llamado {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}.",
+    "updates/up_to_date": "¡Nexus está actualizado!"
 }

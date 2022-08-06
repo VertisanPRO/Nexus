@@ -100,5 +100,6 @@
     "general/note": "Заметка",
     "navbar/navbarexclude_label": "Исключить Ссылки",
     "widgets/note_widgets": "Мы не предоставляем виджет больше. Но мы создали новый модуль названный {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}.",
-    "navbar/navbarexclude_info_label": "Исключайте указанные ссылки с помощью {{slashCodeStart}}/{{slashCodeEnd}} из навигации."
+    "navbar/navbarexclude_info_label": "Исключайте указанные ссылки с помощью {{slashCodeStart}}/{{slashCodeEnd}} из навигации.",
+    "updates/up_to_date": "Ваша версия Nexus находится в актуальном состоянии!"
 }

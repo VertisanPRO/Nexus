@@ -100,5 +100,6 @@
     "general/note": "Hinweis",
     "widgets/note_widgets": "Wir bieten keine Widgets mehr an. Aber wir haben ein neues Modul namens {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}} erstellt.",
     "navbar/navbarexclude_label": "Links ausschließen",
-    "navbar/navbarexclude_info_label": "Ausschluss der angegebenen Links, die mit {{slashCodeStart}}/{{slashCodeEnd}} getrennt sind, aus der Navigationsleiste."
+    "navbar/navbarexclude_info_label": "Ausschluss der angegebenen Links, die mit {{slashCodeStart}}/{{slashCodeEnd}} getrennt sind, aus der Navigationsleiste.",
+    "updates/up_to_date": "Dein Nexus ist auf dem neuesten Stand!"
 }
