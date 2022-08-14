@@ -81,7 +81,6 @@ class Nexus_Template extends TemplateBase
         $this->_pages = $pages;
 
         require_once('template_settings/classes/NexusUtil.php');
-        require_once('template_settings/classes/UpdateCheckNexus.php');
         NexusUtil::initialise();
 
         if ($user->isLoggedIn()) {
