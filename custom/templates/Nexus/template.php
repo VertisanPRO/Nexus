@@ -29,7 +29,7 @@ class Nexus_Template extends TemplateBase
     {
         $template = [
             'name' => 'Nexus',
-            'version' => '1.7.0',
+            'version' => '1.7.1',
             'nl_version' => '2.0.2',
             'author' => '<a href="https://github.com/VertisanPRO" target="_blank">Vertisan</a>',
         ];
@@ -55,7 +55,7 @@ class Nexus_Template extends TemplateBase
 
         $this->addJSFiles([
             $template['path'] . 'js/fomantic.min.js' => [],
-            $template['path'] . 'js/nexus.js?v=1.7.0' => [],
+            $template['path'] . 'js/nexus.js?v=1.7.1' => [],
         ]);
 
         $smarty->assign('TEMPLATE', $template);
