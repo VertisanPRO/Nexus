@@ -11,7 +11,7 @@
                             <a class="header" {if $purchase.user_id}href="{$purchase.profile}"
                                 data-poload="{$USER_INFO_URL}{$purchase.user_id}" {/if}
                                 style="{$purchase.style|replace:';':''}!important;margin-bottom:2px">{$purchase.username}</a>
-                            {$purchase.currency_symbol}{$purchase.price}
+                            {$purchase.currency_symbol}{$purchase.price} {$purchase.currency}
                         </div>
                     </div>
                 </div>
