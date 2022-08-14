@@ -71,7 +71,7 @@ class NexusUtil
 
         if (DB::getInstance()->showTables('nexus_settings')) {
             $found = false;
-        
+
             foreach (DB::getInstance()->query('SELECT name FROM nl2_nexus_settings')->results() as $row) {
                 if ($row->name === 'template_about') {
                     $found = true;
@@ -188,7 +188,7 @@ class NexusUtil
             return $update_check_nexus_response->getError();
         }
 
-        $update_check_nexus = new UpdateCheck($update_check_nexus_response->json(true));
+        $update_check_nexus = new UpdateCheckNexus($update_check_nexus_response);
         if ($update_check_nexus->hasError()) {
             return $update_check_nexus->getErrorMessage();
         }
