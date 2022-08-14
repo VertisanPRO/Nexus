@@ -171,7 +171,10 @@
                 {elseif isset($FORCED)}
                     <button class="ui negative button" disabled>{$DISABLE}</button>
                 {else}
-                    <a class="ui negative button" href="{$DISABLE_LINK}">{$DISABLE}</a>
+                    <form class="ui form" action="{$DISABLE_LINK}" method="post">
+                        <input type="hidden" name="token" value="{$TOKEN}">
+                        <input type="submit" value="{$DISABLE}" class="ui negative button">
+                    </form>
                 {/if}
             </div>
             {if isset($CUSTOM_AVATARS)}

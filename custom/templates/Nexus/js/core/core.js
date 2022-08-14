@@ -9,6 +9,17 @@ function redirect(url) {
     window.location.href = url;
 }
 
+$(document).ready(function () {
+    $('[data-action="logout"]').click(function () {
+        const url = $(this).data('link');
+        $.post(url, {
+            token: csrfToken
+        }).done(function () {
+            window.location.reload();
+        });
+    });
+});
+
 $(function () {
     $('.ui.sidebar').sidebar('attach events', '.toc.item');
 
@@ -33,6 +44,7 @@ $(function () {
         $(this).closest('.message').transition('fade');
     });
 
+    $('.menu.tabular .item').tab();
 });
 
 $(function () {
@@ -75,7 +87,6 @@ $(function () {
             timezone.value = timezoneValue;
         }
     }
-
 });
 
 const announcements = document.querySelectorAll('[id^="announcement"]');

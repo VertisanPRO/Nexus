@@ -62,7 +62,7 @@
                             id="update-message">
                             <i class="close icon"></i>
                         {/if}
-                        <a href="{$UPDATE_LINK}">
+                        <a href="{$NAMELESS_UPDATE_LINK}">
                             <i class="download icon" style="color: {if $NEW_UPDATE_URGENT eq true}#d9534f
                             {else}#0275d8;{/if}"></i>
                         </a>
@@ -124,6 +124,16 @@
                             <i class="info icon" style="color: #0275d8; margin-left: 0.5rem;"></i>
                             <div class="content">
                                 {$MUST_VALIDATE_ACCOUNT}
+                            </div>
+                        </div>
+                    {/if}
+
+                    {if isset($MAINTENANCE_ENABLED)}
+                        <div class="ui message icon announcement"
+                            style="border-top-style: solid; border-top-color: #f0ad4e;">
+                            <i class="exclamation icon" style="color: #f0ad4e;"></i>
+                            <div class="content">
+                                {$MAINTENANCE_ENABLED}
                             </div>
                         </div>
 {/if}
