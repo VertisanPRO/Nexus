@@ -50,6 +50,22 @@
 
         {if count($WIDGETS_RIGHT)}
             <div class="ui six wide tablet four wide computer column">
+                {if isset($LOGGED_IN_USER) && isset($SHOW_CREDITS_AMOUNT)}
+                    <div class="ui fluid card" id="widget-store-account">
+                        <div class="content">
+                            <h4 class="ui header">{$ACCOUNT}</h4>
+                            <div class="description">
+                                <div class="ui list">
+                                    <div class="item">
+                                        <span class="text">{$CREDITS}</span>
+                                        <div class="description right floated"><b>{$CURRENCY_SYMBOL}{$CREDITS_VALUE}
+                                                {$CURRENCY}</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {/if}
                 {foreach from=$WIDGETS_RIGHT item=widget}
                     {$widget}
                 {/foreach}

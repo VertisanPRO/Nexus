@@ -71,7 +71,7 @@ class NexusUtil
 
         if (DB::getInstance()->showTables('nexus_settings')) {
             $found = false;
-        
+
             foreach (DB::getInstance()->query('SELECT name FROM nl2_nexus_settings')->results() as $row) {
                 if ($row->name === 'template_about') {
                     $found = true;
@@ -182,13 +182,13 @@ class NexusUtil
      */
     public static function updateCheckNexus()
     {
-        $update_check_nexus_response = HttpClient::get('https://updates.wemx.net/api/v2/Nexus/updateCheck&version=1.7.0');
+        $update_check_nexus_response = HttpClient::get('https://updates.wemx.net/api/v2/Nexus/updateCheck&version=1.7.1');
 
         if ($update_check_nexus_response->hasError()) {
             return $update_check_nexus_response->getError();
         }
 
-        $update_check_nexus = new UpdateCheck($update_check_nexus_response->json(true));
+        $update_check_nexus = new UpdateCheckNexus($update_check_nexus_response);
         if ($update_check_nexus->hasError()) {
             return $update_check_nexus->getErrorMessage();
         }

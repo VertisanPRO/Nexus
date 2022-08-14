@@ -2,7 +2,7 @@
 /*
  *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/
- *  NamelessMC version 2.0.0-pr13
+ *  NamelessMC version 2.0.0
  *
  *  License: MIT
  *
@@ -29,8 +29,8 @@ class Nexus_Template extends TemplateBase
     {
         $template = [
             'name' => 'Nexus',
-            'version' => '1.7.0',
-            'nl_version' => '2.0.0-pr13',
+            'version' => '1.7.1',
+            'nl_version' => '2.0.2',
             'author' => '<a href="https://github.com/VertisanPRO" target="_blank">Vertisan</a>',
         ];
 
@@ -55,7 +55,7 @@ class Nexus_Template extends TemplateBase
 
         $this->addJSFiles([
             $template['path'] . 'js/fomantic.min.js' => [],
-            $template['path'] . 'js/nexus.js?v=1.7.0' => [],
+            $template['path'] . 'js/nexus.js?v=1.7.1' => [],
         ]);
 
         $smarty->assign('TEMPLATE', $template);
@@ -68,7 +68,6 @@ class Nexus_Template extends TemplateBase
 
         if (defined('DARK_MODE') && DARK_MODE == '1') {
             $smartyDarkMode = true;
-            define('TEMPLATE_TINY_EDITOR_DARKMODE', true);
         }
 
         $smarty->assign([
@@ -81,6 +80,7 @@ class Nexus_Template extends TemplateBase
         $this->_pages = $pages;
 
         require_once('template_settings/classes/NexusUtil.php');
+        require_once('template_settings/classes/UpdateCheckNexus.php');
         NexusUtil::initialise();
 
         if ($user->isLoggedIn()) {
@@ -145,7 +145,7 @@ class Nexus_Template extends TemplateBase
         define('PAGE_LOAD_TIME', $this->_language->get('general', 'page_loaded_in', ['time' => round($page_load, 3)]));
 
         $this->addCSSFiles([
-            $this->_template['path'] . 'css/custom.css?v=2pr13' => []
+            $this->_template['path'] . 'css/custom.css?v=200' => []
         ]);
 
         $route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
@@ -153,7 +153,7 @@ class Nexus_Template extends TemplateBase
         $JSVariables = [
             'siteName' => SITE_NAME,
             'siteURL' => URL::build('/'),
-            'fullSiteUrl' => Util::getSelfURL() . ltrim(URL::build('/'), '/'),
+            'fullSiteUrl' => URL::getSelfURL() . ltrim(URL::build('/'), '/'),
             'page' => PAGE,
             'avatarSource' => AvatarSource::getUrlToFormat(),
             'copied' => $this->_language->get('general', 'copied'),
@@ -175,7 +175,8 @@ class Nexus_Template extends TemplateBase
             'loggedIn' => ($this->_user->isLoggedIn() ? '1' : '0'),
             'cookie' => (defined('COOKIE_NOTICE') ? '1' : '0'),
             'loadingTime' => Util::getSetting('page_loading') === '1' ? PAGE_LOAD_TIME : '',
-            'route' => $route
+            'route' => $route,
+            'csrfToken' => Token::get(),
         ];
 
         if (strpos($route, '/forum/topic/') !== false || PAGE == 'profile') {
@@ -194,9 +195,9 @@ class Nexus_Template extends TemplateBase
         $this->addJSScript($JSVars);
 
         $this->addJSFiles([
-            $this->_template['path'] . 'js/core/core.js' => [],
+            $this->_template['path'] . 'js/core/core.js?v=202' => [],
             $this->_template['path'] . 'js/core/user.js' => [],
-            $this->_template['path'] . 'js/core/pages.js' => [],
+            $this->_template['path'] . 'js/core/pages.js?v=202' => [],
             $this->_template['path'] . 'js/scripts.js' => [],
         ]);
 
