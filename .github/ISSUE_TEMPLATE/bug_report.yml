@@ -29,11 +29,8 @@ body:
       label: Nexus Version
       description: From StaffCP -> Nexus -> Updates
       options:
-        - 1.6.1
-        - 1.6.0
-        - 1.5.0
-        - 1.4.0
-        - < 1.4.0 (Legacy)
+        - 1.7.x
+        - <= 1.6.1
     validations:
       required: true
 
@@ -46,14 +43,14 @@ body:
         3. Scroll down to '.....'
         4. See error"
     validations:
-      required: true
+      required: false
 
   - type: textarea
     attributes:
       label: Expected Behaviour
       description: What were you expecting to happen?
     validations:
-      required: true
+      required: false
 
   - type: textarea
     attributes:
