@@ -70,16 +70,16 @@ class NexusUtil
     {
 
         if (DB::getInstance()->showTables('nexus_settings')) {
-            $found = false;
+            $foundLegacy = false;
 
             foreach (DB::getInstance()->query('SELECT name FROM nl2_nexus_settings')->results() as $row) {
                 if ($row->name === 'template_about') {
-                    $found = true;
+                    $foundLegacy = true;
                     break;
                 }
             }
 
-            if ($found) {
+            if ($foundLegacy) {
                 DB::getInstance()->query('DROP TABLE nl2_nexus_settings');
             } else {
                 if (DB::getInstance()->showTables('nexus_settings')) {
@@ -151,13 +151,6 @@ class NexusUtil
             'widgetBotCustomColor' => '#dc3545',
             'arcView' => 0,
             'arcURL' => 'https://arc.io/widget.min.js#9YB4rHQn',
-            'donateEmail' => 'mubeenullah323@gmail.com',
-            'donateFirstAmount' => 5,
-            'donateSecondAmount' => 10,
-            'donateThirdAmount' => 20,
-            'messageTitle' => 'About',
-            'messageText' => 'Nexus template by Vertisan',
-            'messageIcon' => 'fa-solid fa-address-card',
             'embedTitle' => 'Nexus',
             'embedText' => 'We are an online platform to help users around the world connect through NamelessMC powered forums.',
             'embedColor' => '#dc3545',
