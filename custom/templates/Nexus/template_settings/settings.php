@@ -23,6 +23,11 @@ if (isset($_GET['recheck'])) {
 
 if (isset($_GET['nexusUpgrade'])) {
     require_once('upgrade.php');
+    $cache->setCache('update_check_nexus');
+    $update_check_nexus = NexusUtil::updateCheckNexus();
+    $cache->store('update_check_nexus', $update_check_nexus, 3600);
+    $templateID = DB::getInstance()->get('templates', ['name', "Nexus"])->results();
+    Redirect::to(URL::build('/panel/core/templates/', 'action=settings&template=' . $templateID[0]->id));
 }
 
 $smarty->assign(NexusUtil::getSettingsToSmarty());
