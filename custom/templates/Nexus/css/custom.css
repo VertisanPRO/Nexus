@@ -1583,7 +1583,7 @@ body.dark .white {
 
 .preloader {
     align-items: center;
-    background: #1b1c1d;
+    background: #fff;
     display: flex;
     height: 100%;
     justify-content: center;
@@ -1593,6 +1593,10 @@ body.dark .white {
     width: 100%;
     z-index: 9999;
     opacity: 1;
+}
+
+body.dark .preloader {
+    background: #202020;
 }
 
 .loaded_hiding .preloader {

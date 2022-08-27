@@ -1,7 +1,6 @@
-$('.ui.sticky')
-    .sticky({
-        context: '#context'
-    });
+$('.ui.sticky').sticky({
+    context: '#context'
+});
 
 window.onload = function() {
     document.body.classList.add('loaded_hiding');
