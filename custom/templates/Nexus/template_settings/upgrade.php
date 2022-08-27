@@ -1,7 +1,7 @@
 <?php
 
 # unlink('custom/templates/Nexus/...');
-# Comments are when the update is available
+# Uncomment when next update is available
 
 # DB::getInstance()->query('DELETE FROM nl2_nexus_settings WHERE donateEmail');
 # DB::getInstance()->query('DELETE FROM nl2_nexus_settings WHERE donateFirstAmount');
