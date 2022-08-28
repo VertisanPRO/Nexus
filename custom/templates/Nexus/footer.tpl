@@ -1,5 +1,5 @@
 {if $MINECRAFTVIEW eq '1'}
-    <span style="visibility: hidden;" id="ip">{$MINECRAFTIP}{if ($MINECRAFTPORT != 25565)}:{$MINECRAFTPORT}{/if}</span>
+    <span style="visibility: hidden;" id="ip">{$MINECRAFTIP}{if $MINECRAFTPORT != '25565'}:{$MINECRAFTPORT}{/if}</span>
 {/if}
 </div>
 </div>
@@ -10,9 +10,9 @@
             <div class="five wide column">
                 <h4><span class="item">&copy; {$SITE_NAME} {'Y'|date}</span></h4>
                 <div class="ui inverted link list">
-                    <span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span>
+                    <span class="item">{$POWERED_BY} <a href="https://namelessmc.com">NamelessMC</a></span>
                     {* We kindly ask to not remove the copyright *}
-                    <span class="item">Template By <a href="https://github.com/VertisanPRO" target="_blank"
+                    <span class="item">{$TEMPLATE_BY} <a href="https://github.com/VertisanPRO" target="_blank"
                             rel="nofollow noopener">Vertisan</a></span>
                     {if $PAGE_LOAD_TIME}
                         <span class="item" id="page_load"></span>
@@ -24,7 +24,7 @@
                 </div>
             </div>
             {if $SOCIAL_MEDIA_ICONS|count eq '0'} <div class="six wide column">
-                    <h4>About</h4>
+                    <h4>{$ABOUT}</h4>
                     <p>
                         {$FOOTERABOUT}
                     </p>
@@ -65,7 +65,7 @@
             {/if}
             {if $SOCIAL_MEDIA_ICONS|count > 0}
                 <div class="five wide column">
-                    <h4>About</h4>
+                    <h4>{$ABOUT}</h4>
                     <p>
                         {$FOOTERABOUT}
                     </p>
@@ -93,32 +93,8 @@
     {$script}
 {/foreach}
 
-{if $MINECRAFTVIEW eq '1'}
-    {if $MINECRAFTSTYLE eq '0'}
-        {include file='Nexus/status/simple.tpl'}
-    {else}
-        {include file='Nexus/status/advanced.tpl'}
-    {/if}
-{/if}
-
-{if $WIDGETBOTVIEW eq '1'}
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-        new Crate({
-            server: '{$WIDGETBOTSERVERID}',
-            channel: '{$WIDGETBOTCHANNELID}',
-            location: ['{$WIDGETBOTVERTICALLOCATION}', '{$WIDGETBOTHORIZONTALLOCATION}'],
-            {if $WIDGETBOTCOLOR eq '0'}
-            {elseif $WIDGETBOTCOLOR eq '1'}
-                {if $NEXUS_DARK_MODE eq '1' }
-                    color: '#303030',
-                {else}
-                    color: '#e0e1e2',
-                {/if}
-            {elseif $WIDGETBOTCOLOR eq '2'}
-                color: '{$WIDGETBOTCUSTOMCOLOR}',
-            {/if}
-        })
-    </script>
+{if $MINECRAFTVIEW eq '1' || $WIDGETBOTVIEW eq '1'}
+    {include file='Nexus/js.tpl'}
 {/if}
 
 {if isset($GLOBAL_WARNING_TITLE)}
@@ -179,7 +155,7 @@
                 temp.remove();
                 $('body').toast({
                     showIcon: 'keyboard',
-                    message: 'Copied!',
+                    message: copied,
                     class: 'black',
                     progressUp: true,
                     displayTime: 2000,
@@ -199,7 +175,7 @@
                 $temp.remove();
                 $('body').toast({
                     showIcon: 'keyboard',
-                    message: 'Copied!',
+                    message: copied,
                     class: 'white',
                     progressUp: true,
                     displayTime: 2000,

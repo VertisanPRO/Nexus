@@ -83,6 +83,17 @@ class Nexus_Template extends TemplateBase
         require_once('template_settings/classes/UpdateCheckNexus.php');
         NexusUtil::initialise();
 
+        $smarty->assign([
+            'CLICK_TO_JOIN' => NexusUtil::getLanguage('frontend', 'click_to_join'),
+            'MEMBERS_ONLINE' => NexusUtil::getLanguage('frontend', 'members_online'),
+            'CLICK_TO_COPY' => $language->get('general', 'click_to_copy_tooltip'),
+            'PLAYERS_ONLINE' => NexusUtil::getLanguage('frontend', 'players_online'),
+            'SERVER_OFFLINE' => $language->get('general', 'server_offline'),
+            'POWERED_BY' => NexusUtil::getLanguage('frontend', 'powered_by'),
+            'TEMPLATE_BY' => NexusUtil::getLanguage('frontend', 'template_by'),
+            'ABOUT' => $language->get('user', 'about')
+        ]);
+
         if ($user->isLoggedIn()) {
             if ($user->hasPermission('admincp.update')) {
 
@@ -177,6 +188,8 @@ class Nexus_Template extends TemplateBase
             'loadingTime' => Util::getSetting('page_loading') === '1' ? PAGE_LOAD_TIME : '',
             'route' => $route,
             'csrfToken' => Token::get(),
+            'serverOffline' => $this->_language->get('general', 'server_offline'),
+            'playersOnline' => NexusUtil::getLanguage('frontend', 'players_online'),
         ];
 
         if (strpos($route, '/forum/topic/') !== false || PAGE == 'profile') {

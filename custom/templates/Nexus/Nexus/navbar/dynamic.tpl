@@ -26,10 +26,10 @@
                         <div class="title">{$DISCORD_SERVER['name']}</div>
                         <div class="ui vertical white animated button">
                             <div class="hidden content">
-                                <div class="description" style="color: white;"><strong>Click to join</strong></div>
+                                <div class="description" style="color: white;"><strong>{$CLICK_TO_JOIN}</strong></div>
                             </div>
                             <div class="visible content">
-                                <div class="description" style="color: white;"><strong>Members Online:
+                                <div class="description" style="color: white;"><strong>{$MEMBERS_ONLINE}:
                                         {$DISCORD_SERVER['members']}</strong></div>
                             </div>
                         </div>
@@ -58,11 +58,11 @@
                         {/if}
                         <div class="ui vertical white animated button" onclick="copy('#ip')">
                             <div class="hidden content">
-                                <div class="description" style="color: white;"><strong>Click to copy</strong></div>
+                                <div class="description" style="color: white;"><strong>{$CLICK_TO_COPY}</strong></div>
                             </div>
                             <div class="visible content">
                                 <div class="description" style="color: white;"><strong>
-                                        <div id="minecraftplayers">Loading...</div>
+                                        <div id="minecraftplayers">{$PRELOADERLOADING_LABEL}...</div>
                                     </strong></div>
                             </div>
                         </div>
