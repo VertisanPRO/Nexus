@@ -19,15 +19,15 @@
 
             <div class="ui stackable grid container">
                 <div class="three wide center aligned column">
-                <button class="ui fluid secondary button" href="{$ALL_LINK}">
-                    {$DISPLAY_ALL}
-                </button>
+                    <a class="ui fluid secondary button" href="{$ALL_LINK}">
+                        {$DISPLAY_ALL}
+                    </a>
                 </div>
                 {foreach from=$GROUPS item=groups}
                     <div class="three wide center aligned column">
-                    <button class="ui fluid secondary button" href="{$groups.link}">
-                        {$groups.name}
-                    </button>
+                        <a class="ui fluid secondary button" href="{$groups.link}">
+                            {$groups.name}
+                        </a>
                     </div>
                 {/foreach}
             </div>
