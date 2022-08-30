@@ -87,11 +87,11 @@ class Nexus_Template extends TemplateBase
             if ($user->hasPermission('admincp.update')) {
 
                 $templateID = DB::getInstance()->get('templates', ['name', "Nexus"])->results();
-                if ($templateID) {
-                    $smarty->assign('CHECK_AGAIN_LINK', URL::build('/panel/core/templates/', 'recheck&action=settings&template=' . $templateID[0]->id));
-                    $smarty->assign('UPGRADE_LINK', URL::build('/panel/core/templates/', 'nexusUpgrade&action=settings&template=' . $templateID[0]->id));
-                    $smarty->assign('UPDATE_LINK_NEXUS', URL::build('/panel/core/templates/', 'action=settings&template=' . $templateID[0]->id));
-                }
+                $smarty->assign([
+                    'CHECK_AGAIN_LINK', URL::build('/panel/core/templates/', 'recheck&action=settings&template=' . $templateID[0]->id),
+                    'UPGRADE_LINK', URL::build('/panel/core/templates/', 'nexusUpgrade&action=settings&template=' . $templateID[0]->id),
+                    'UPDATE_LINK_NEXUS', URL::build('/panel/core/templates/', 'action=settings&template=' . $templateID[0]->id)
+                ]);
 
                 $cache->setCache('update_check_nexus');
                 if ($cache->isCached('update_check_nexus')) {
