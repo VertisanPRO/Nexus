@@ -101,5 +101,10 @@
     "navbar/navbarexclude_label": "Исключить Ссылки",
     "widgets/note_widgets": "Мы не предоставляем виджет больше. Но мы создали новый модуль названный {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}.",
     "navbar/navbarexclude_info_label": "Исключайте указанные ссылки с помощью {{slashCodeStart}}/{{slashCodeEnd}} из навигации.",
-    "updates/up_to_date": "Ваша версия Nexus находится в актуальном состоянии!"
+    "updates/up_to_date": "Ваша версия Nexus находится в актуальном состоянии!",
+    "frontend/members_online": "Пользователей в Сети",
+    "frontend/powered_by": "Создано От",
+    "frontend/template_by": "Тема От",
+    "frontend/click_to_join": "Нажмите, чтобы войти",
+    "frontend/players_online": "Игроков в Сети"
 }
