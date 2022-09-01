@@ -101,5 +101,10 @@
     "widgets/note_widgets": "We don't provide widgets anymore. But we created a new module called {{downloadLinkStart}}WidgetPack{{downloadLinkEnd}}.",
     "navbar/navbarexclude_label": "Exclude Links",
     "navbar/navbarexclude_info_label": "Exclude specified links seperated with {{slashCodeStart}}/{{slashCodeEnd}} from the navigation bar.",
-    "updates/up_to_date": "Your Nexus is up to date!"
+    "updates/up_to_date": "Your Nexus is up to date!",
+    "frontend/members_online": "Members Online",
+    "frontend/powered_by": "Powered By",
+    "frontend/template_by": "Template By",
+    "frontend/click_to_join": "Click to join",
+    "frontend/players_online": "Players Online"
 }
