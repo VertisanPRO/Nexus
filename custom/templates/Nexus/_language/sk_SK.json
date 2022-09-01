@@ -43,7 +43,7 @@
     "options/note_review": "Ak sa vám téma páči, ocenili by sme recenziu {{reviewLinkStart}}tu{{reviewLinkEnd}}.",
     "options/footerabout_placeholder_label": "napíšte niečo o svojej webstránke",
     "navbar/navbarexclude_label": "Vylúčiť odkazy",
-    "navbar/navbarexclude_info_label": "Vylúčte konkrétne odkazy oddelené znakom {{lomka CodeStart}}/{{slashCodeEnd}} z navigačnej lišty.",
+    "navbar/navbarexclude_info_label": "Vylúčte konkrétne odkazy oddelené znakom {{slashCodeStart}}/{{slashCodeEnd}} z navigačnej lišty.",
     "options/footerabout_label": "O",
     "preloader/preloadercolor_label": "Farba",
     "preloader/preloaderloading_label": "Načítavanie...",
@@ -101,5 +101,10 @@
     "preloader/preloader_fast": "Rýchly",
     "preloader/preloader_slow": "Pomalý",
     "preloader/preloader_normal": "Normálny",
-    "updates/up_to_date": "Váš Nexus je aktuálny!"
+    "updates/up_to_date": "Váš Nexus je aktuálny!",
+    "frontend/click_to_join": "Klkinite pre pripojenie",
+    "frontend/members_online": "Užívatelia online",
+    "frontend/players_online": "Hráči online",
+    "frontend/powered_by": "Poháňaný",
+    "frontend/template_by": "Šablóna od"
 }
