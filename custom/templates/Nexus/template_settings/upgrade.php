@@ -11,9 +11,5 @@
 # DB::getInstance()->query('DELETE FROM nl2_nexus_settings WHERE messageText');
 # DB::getInstance()->query('DELETE FROM nl2_nexus_settings WHERE messageIcon');
 
-$cache->setCache('update_check_nexus');
-$update_check_nexus = NexusUtil::updateCheckNexus();
-$cache->store('update_check_nexus', $update_check_nexus, 3600);
-
 # As of now this is the first release of upgrades, there's nothing
 # unlink('custom/templates/Nexus/...');
