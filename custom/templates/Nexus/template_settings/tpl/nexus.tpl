@@ -1,7 +1,7 @@
 <!-- Page Content -->
 <div class="row">
     <div class="col-sm-3">
-        {include file="{$TPL_PATH}sittings-menu.tpl"}
+        {include file="{$TPL_PATH}navigation.tpl"}
     </div>
 
     <div class="col-sm-9">

@@ -37,6 +37,7 @@ class Nexus_Template extends TemplateBase
         $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
 
         parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
+        $current_version_nexus = $template['version'];
 
         $this->_settings = ROOT_PATH . '/custom/templates/Nexus/template_settings/settings.php';
 
@@ -55,7 +56,7 @@ class Nexus_Template extends TemplateBase
 
         $this->addJSFiles([
             $template['path'] . 'js/fomantic.min.js' => [],
-            $template['path'] . 'js/nexus.js?v=1.7.2' => [],
+            $template['path'] . 'js/nexus.js?v=' . $current_version_nexus => [],
         ]);
 
         $smarty->assign('TEMPLATE', $template);
@@ -98,11 +99,15 @@ class Nexus_Template extends TemplateBase
             if ($user->hasPermission('admincp.update')) {
 
                 $templateID = DB::getInstance()->get('templates', ['name', "Nexus"])->results();
-                $smarty->assign([
-                    'CHECK_AGAIN_LINK', URL::build('/panel/core/templates/', 'recheck&action=settings&template=' . $templateID[0]->id),
-                    'UPGRADE_LINK', URL::build('/panel/core/templates/', 'nexusUpgrade&action=settings&template=' . $templateID[0]->id),
+                $smarty->assign(
+                    'CHECK_AGAIN_LINK', URL::build('/panel/core/templates/', 'recheck&action=settings&template=' . $templateID[0]->id)
+                );
+                $smarty->assign(
+                    'UPGRADE_LINK', URL::build('/panel/core/templates/', 'nexusUpgrade&action=settings&template=' . $templateID[0]->id)
+                );
+                $smarty->assign(
                     'UPDATE_LINK_NEXUS', URL::build('/panel/core/templates/', 'action=settings&template=' . $templateID[0]->id)
-                ]);
+                );
 
                 $cache->setCache('update_check_nexus');
                 if ($cache->isCached('update_check_nexus')) {
