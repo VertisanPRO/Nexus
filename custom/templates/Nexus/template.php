@@ -29,7 +29,7 @@ class Nexus_Template extends TemplateBase
     {
         $template = [
             'name' => 'Nexus',
-            'version' => '1.7.1',
+            'version' => '1.7.2',
             'nl_version' => '2.0.2',
             'author' => '<a href="https://github.com/VertisanPRO" target="_blank">Vertisan</a>',
         ];
@@ -55,7 +55,7 @@ class Nexus_Template extends TemplateBase
 
         $this->addJSFiles([
             $template['path'] . 'js/fomantic.min.js' => [],
-            $template['path'] . 'js/nexus.js?v=1.7.1' => [],
+            $template['path'] . 'js/nexus.js?v=1.7.2' => [],
         ]);
 
         $smarty->assign('TEMPLATE', $template);
@@ -133,7 +133,7 @@ class Nexus_Template extends TemplateBase
                         $smarty->assign([
                             'INSTRUCTIONS' => $language->get('admin', 'instructions'),
                             'INSTRUCTIONS_VALUE' => Output::getDecoded($update_check_nexus->instructions()),
-                            'DOWNLOAD_LINK' => $update_check_nexus->gitHubLink(),
+                            'DOWNLOAD_LINK' => $update_check_nexus->upgradeZipLink(),
                             'UPDATE' => $language->get('admin', 'update'),
                             'DOWNLOAD' => $language->get('admin', 'download'),
                             'INSTALL_CONFIRM' => $language->get('admin', 'install_confirm'),

@@ -13,7 +13,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
 <!DOCTYPE html>
 <html{$HTMLCLASS}{$HTMLLANG}{$HTMLRTL}>
-    <!-- Nexus 1.7.1 by VertisanPRO | https://github.com/VertisanPRO/nexus -->
+    <!-- Nexus 1.7.2 by VertisanPRO | https://github.com/VertisanPRO/nexus -->
     <head>
         <meta charset="{$METACHARSET}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
