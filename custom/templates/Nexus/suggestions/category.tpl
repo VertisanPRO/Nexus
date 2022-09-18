@@ -15,7 +15,9 @@
                                 <a rel="noopener nofollow" class="item" href="{$SORT_LIKES_LINK}">{$LIKES}</a>
                             </div>
                         </div>
-                        <a class="ui small primary button" href="{$NEW_SUGGESTION_LINK}">{$NEW_SUGGESTION}</a>
+                        {if isset($CAN_CREATE)}
+                            <a class="ui small primary button" href="{$NEW_SUGGESTION_LINK}">{$NEW_SUGGESTION}</a>
+                        {/if}
                     </span>
                     <hr>
 
