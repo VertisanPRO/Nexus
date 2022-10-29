@@ -46,7 +46,6 @@ class UpdateCheckNexus {
         return $this->_response['github_link'];
     }
 
-    // TODO: @samerton
     public function checksum(): string {
         return $this->_response['checksum'];
     }

@@ -175,7 +175,7 @@ class NexusUtil
      */
     public static function updateCheckNexus()
     {
-        $update_check_nexus_response = HttpClient::get('https://updates.wemx.net/api/v2/Nexus/updateCheck&version=1.7.2');
+        $update_check_nexus_response = HttpClient::get('https://namelessmc.xyz/api/v2/Nexus/updateCheck&version=1.7.2');
 
         if ($update_check_nexus_response->hasError()) {
             return $update_check_nexus_response->getError();

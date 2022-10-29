@@ -17,7 +17,7 @@
             <button class="btn btn-primary" type="button" onclick="showConfirmModal()">{$UPDATE}</button>
         {elseif isset($UPDATE_CHECK_ERROR_NEXUS)}
             <div class="alert bg-danger text-white">
-                <span><i class="icon fa fa-x"></i>&nbsp;&nbsp;{$UPDATE_CHECK_ERROR_NEXUS}</span>
+                <span><i class="icon fa fa-xmark"></i>&nbsp;&nbsp;{$UPDATE_CHECK_ERROR_NEXUS}</span>
             </div>
             <a href="{$CHECK_AGAIN_LINK}" class="btn btn-primary">{$CHECK_AGAIN}</a>
         {else}
