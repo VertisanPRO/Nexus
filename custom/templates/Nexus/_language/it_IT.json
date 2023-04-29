@@ -1,4 +1,14 @@
 {
     "general/note": "Note",
-    "addons/arcurl_label": "Link Widget"
+    "addons/arcurl_label": "Link Widget",
+    "addons/widgetbotcolor_label": "Colore dello sfondo",
+    "addons/widgetbotcolor_original_label": "Originale (blurple)",
+    "addons/widgetbotlocation_bottom_label": "Sotto",
+    "addons/widgetbotlocation_left_label": "Sinistra",
+    "addons/widgetbotlocation_right_label": "Destra",
+    "addons/widgetbotlocation_top_label": "Sopra",
+    "addons/widgetbotserverid_label": "ID del server",
+    "addons/widgetbotverticallocation_label": "Posizione Verticale",
+    "addons/widgetbotview_info_label": "Quando abilitato deve essere configurato. È un widget in cui puoi chattare sul sito web con Discord. Assicurati di invitare {{widgetbotLinkStart}}il bot{{widgetbotLinkEnd}}.",
+    "addons/widgetbotserverid_info_label": "Per ottenere l'ID server, vai nel tuo server discord > Impostazioni server > Widget > ID Del server > Copia. {{moreinfoLinkStart}} Leggi di più » {{moreinfoLinkEnd}}"
 }
