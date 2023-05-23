@@ -1,9 +1,12 @@
 # Nexus Template 1.8.0
 [![Discord](https://img.shields.io/badge/Discord-Get%20support-blue?logo=discord&style=for-the-badge)](https://pterodactyl-resources.com/discord)
 
+For better reading, view the file at https://github.com/VertisanPRO/Nexus#readme
+
 ## Installing
 1. Upload "custom" and the folder to your NamelessMC Root directory (public_html, html, htdocs)
 2. Configure the template:
+
 **Q: How do I change my logo in the navbar?**
 
 A: In StaffCP > Layout > Images > Logo image
