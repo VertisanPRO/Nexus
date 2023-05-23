@@ -1,5 +1,5 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: Question?
-    url: https://resourcemc.net/discord
+  - name: Need help?
+    url: https://pterodactyl-resources.com/discord
     about: Visit our Discord server for questions.

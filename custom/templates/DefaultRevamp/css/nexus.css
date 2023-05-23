@@ -1,0 +1,21 @@
+#wrapper>.ui.container {
+    margin-top: 3rem;
+}
+
+.ui.steps {
+    border: none;
+}
+
+.ui.vertical.white.animated.button {
+    background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    #mobnavbar {
+        display: block !important;
+    }
+
+    #pcnavbar {
+        display: none;
+    }
+}

@@ -1,0 +1,332 @@
+.latest-news-image {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    margin-top: 0.3rem;
+}
+
+.latest-news-image img {
+    height: 100%;
+    max-width: none;
+}
+
+.latest-news-name {
+    font-weight: 600;
+    color: #fff;
+}
+
+.latest-news-date,
+.latest-news-readtime {
+    color: rgb(189 189 189);
+}
+
+.ghost-list {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.post-card-large {
+    grid-area: span 1 / span 6;
+    display: flex;
+    flex-direction: row;
+    background-color: #303030;
+    border-radius: 0.25rem;
+}
+
+.post-card-large .ghost-card-img {
+    flex: 1 1 60%;
+    overflow: hidden;
+    position: relative;
+}
+
+.post-card-large .ghost-card-img img {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-card-large .ghost-card-body {
+    flex: 1 1 40%;
+    padding: 2.5rem 2.5rem;
+}
+
+.post-card-large .ghost-card-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-card-large .ghost-card-footer {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.post-card-large .ghost-readtime {
+    margin: auto 0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.post-card-medium {
+    grid-area: span 1 / span 3;
+    background-color: #303030;
+    border-radius: 0.25rem;
+}
+
+.post-card-medium .ghost-card-img {
+    height: 250px;
+    position: relative;
+}
+
+.post-card-medium .ghost-card-img img {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-card-medium .ghost-card-body {
+    padding: 1.5rem 2rem;
+}
+
+.post-card-medium .ghost-card-title {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.post-card-medium .ghost-card-footer {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.post-card-medium .ghost-readtime {
+    margin: auto 0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.post-card-small {
+    grid-area: span 1 / span 2;
+    background-color: #303030;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .post-card-small {
+        grid-area: span 1 / span 6;
+    }
+
+    .post-card-medium {
+        grid-area: span 1 / span 6;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .post-card-small {
+        grid-area: span 1 / span 3;
+    }
+
+    .post-card-medium {
+        grid-area: span 1 / span 6;
+    }
+}
+
+.post-card-small .ghost-card-img {
+    height: 200px;
+    position: relative;
+}
+
+.post-card-small .ghost-card-img img {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-card-small .ghost-card-body {
+    padding: 1.5rem 2rem;
+}
+
+.post-card-small .ghost-card-title {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.post-card-small .ghost-card-footer {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.post-card-small .ghost-readtime {
+    margin: auto 0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.ghost-list .ghost-card-img img,
+.ghost-card-title {
+    transition: .25s;
+}
+
+.ghost-list .ghost-card-img {
+    overflow: hidden;
+}
+
+.ghost-list .ghost-card-img img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+body.dark .post-card-large,
+body.dark .post-card-medium,
+body.dark .post-card-small,
+body.dark .cf-full-post {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+body.dark .ghost-readtime,
+body.dark .readtime {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+body.dark .ghost-card-content {
+    color: white !important;
+}
+
+body.dark .cf-full-post-title {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.dark .cf-more-posts,
+body.dark .cf-full-post-content {
+    color: white !important;
+}
+
+body.dark .latest-news-name {
+    color: white !important;
+}
+
+body.dark .latest-news-date,
+body.dark .latest-news-readtime {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.dark .cf-home-title {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.post-card-large,
+.post-card-medium,
+.post-card-small,
+.cf-full-post {
+    background: white !important;
+}
+
+.ghost-readtime,
+.readtime {
+    color: #303030 !important;
+    background-color: rgba(247, 247, 247, 1) !important;
+}
+
+.ghost-card-content {
+    color: #303030 !important;
+}
+
+.cf-full-post-title {
+    color: rgba(0, 0, 0, .87) !important;
+}
+
+.cf-full-post-title {
+    color: rgba(0, 0, 0, .87) !important;
+}
+
+.cf-more-posts,
+.cf-full-post-content {
+    color: #303030 !important;
+}
+
+.latest-news-name {
+    color: #303030 !important;
+}
+
+.latest-news-date,
+.latest-news-readtime {
+    color: rgb(189 189 189) !important;
+}
+
+.cf-home-title {
+    color: rgba(0, 0, 0, .87);
+}
+
+.outside-footer {
+    padding: 1.5rem 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.post-card-small,
+.post-card-medium {
+    position: relative
+}
+
+.cf-full-post-img {
+    height: 300px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1rem;
+}
+
+.cf-full-post-content {
+    overflow-wrap: break-word
+}
+
+.cf-full-post-img img {
+    width: 100%;
+    height: auto;
+}
+
+.cf-full-post-body {
+    padding: 2rem 5%;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.cf-full-post-title {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.cf-full-post .readtime {
+    margin: auto 0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
