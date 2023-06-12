@@ -106,13 +106,13 @@
             <div class="column" style="text-align: center; margin-top: 2.8rem; display: none;" id="mobnavbar">
                 <div class="ui steps">
                     <div class="step" style="background: transparent; color: white; flex-direction: row;">
-                        <i class="discord icon" onclick="dsInvite('{$DISCORD_SERVER['link']}')"></i>
+                        <i class="discord icon" onclick="window.location.href = '{$DISCORD_SERVER['link']}'"></i>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <i class="signal icon" onclick="copy('#ip')"></i>
                     </div>
                 </div>
             </div>
-            <div onclick="dsInvite('{$DISCORD_SERVER['link']}')" id="pcnavbar" class="column"
+            <div onclick="window.location.href = '{$DISCORD_SERVER['link']}'" id="pcnavbar" class="column"
                 style="text-align: center; margin-top: 2.8rem;">
                 <div class="ui steps">
                     <div class="step" style="background: transparent;color: white;">
