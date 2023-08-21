@@ -152,7 +152,7 @@
                             <div class="ui vertical white animated button" onclick="copy('#ip')">
                                 <div class="hidden content">
                                     <div class="description" style="color: white;">
-                                        <strong>{$CLICK_TO_COPY}</strong>
+                                        <strong id="ip">{$CLICK_TO_COPY}</strong>
                                     </div>
                                 </div>
                                 <div class="visible content">
