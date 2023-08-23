@@ -146,13 +146,13 @@
                     <div class="step" style="background: transparent; color: white;">
                         <i class="signal icon"></i>
                         <div class="content" class="ui text shape">
-                            <div class="title">!!minecraft domain!!</div>
+                            <div class="title" id="ip">!!minecraft domain!!</div>
                             {* Uncomment line below for description *}
                             {* <div id="minecraftdesc" style="color: white;"></div> *}
                             <div class="ui vertical white animated button" onclick="copy('#ip')">
                                 <div class="hidden content">
                                     <div class="description" style="color: white;">
-                                        <strong id="ip">{$CLICK_TO_COPY}</strong>
+                                        <strong>{$CLICK_TO_COPY}</strong>
                                     </div>
                                 </div>
                                 <div class="visible content">
